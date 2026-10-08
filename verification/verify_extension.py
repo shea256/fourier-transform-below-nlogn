@@ -3,7 +3,7 @@
 
 Checks finite identities, compiler traces, representative binary-frame schedules,
 and rational numerical certificates. The asymptotic theorem uses the WRITTEN
-proof in PROOF.md and the uploaded OpenAI manuscript; this is not a Lean proof
+proof in ../manuscript.md and the cited OpenAI manuscript; this is not a Lean proof
 or an independent verification of that manuscript.
 """
 from __future__ import annotations

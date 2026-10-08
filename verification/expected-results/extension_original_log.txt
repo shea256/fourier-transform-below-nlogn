@@ -8,7 +8,7 @@ PASS: full local coefficient matrix, dirty replay, global role support trace at 
 PASS: full local coefficient matrix, dirty replay, global role support trace at h= 25
 PASS: all canonical frame edges for stages 1,2,3 at h=24,25, with explicit F2 residual checks.
 PASS: full reduced-center + shared-sum scalar word, reversed middle word, and signed bank exchange on rational dirty inputs at h=7,8.
-Certificate: /mnt/data/audit_workspace/v2/fourier130_v2/certificate.json
+Certificate: verification/certificate.json
 real 4.35
 user 4.65
 sys 0.10
