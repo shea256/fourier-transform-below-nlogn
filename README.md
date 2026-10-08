@@ -5,8 +5,7 @@ The fast Fourier transform has computed the length-`n` discrete Fourier transfor
 Under #130's exact-complex-arithmetic, specified-root, and logarithmic-word address model, the proposed all-length bound is
 
 ```math
-T(n)=O\left(n(\log n)^{1-\delta}\right),
-\qquad \boxed{\delta=7.3\times10^{-5}}
+T(n) = O\left( n (\log n)^{1-\delta} \right), \qquad \delta = 7.3 \times 10^{-5}
 ```
 
 where `T(n)` is the cost of computing the exact DFT of a length-`n` input.
@@ -40,7 +39,7 @@ The new tensor value is a certified strict witness, not the critical root. It gi
 The common ingredient in Problems #109 and #130 is a finite network for tensor powers of
 
 ```math
-C=\frac12\begin{pmatrix}1+i&1-i\\1-i&1+i\end{pmatrix}
+C = \frac{1}{2} \begin{pmatrix} 1+i & 1-i \\ 1-i & 1+i \end{pmatrix}
 ```
 
 It is not an integer-multiplication subroutine. The new construction applies the same tensor transform to arbitrary inputs, while grouping each residual block into one recursive call. Three features carry the improvement:
