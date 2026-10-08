@@ -1,0 +1,44 @@
+{
+  "repository": "https://github.com/Swapnil-jain/integer-mult-kappa",
+  "commit": "f2176bc1124821bf17eb63725bd366d7bdc020a3",
+  "license": "Apache-2.0",
+  "files_unmodified": true,
+  "files": {
+    "producer.py": {
+      "upstream_path": "independent/complex-twostage/producer.py",
+      "sha256": "e1715616ac8cafa8f63b7c0a2e7deacdba7daea94662e0a84626d5374fd27b5c"
+    },
+    "frames.py": {
+      "upstream_path": "independent/complex-twostage/frames.py",
+      "sha256": "8629850bd465250cdf298b47b86504f2ac507d5fa044f8c0d2a20b451d19aa0f"
+    },
+    "hist.py": {
+      "upstream_path": "independent/complex-twostage/hist.py",
+      "sha256": "e20d077acfc95e2f8239fcdcc03146cc15607996e2734eb2d00b68ed7d43ec64"
+    },
+    "cert.py": {
+      "upstream_path": "independent/complex-twostage/cert.py",
+      "sha256": "f9352729213b8441d076708b738d158093caa34d050fa2d838b61e07eb3a298b"
+    },
+    "run.py": {
+      "upstream_path": "independent/complex-twostage/run.py",
+      "sha256": "fff6190b4f197689aad55077be882e8c95e0b699d366eadee5882cf8ff08be44"
+    },
+    "LICENSE": {
+      "upstream_path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    "NOTICE": {
+      "upstream_path": "NOTICE",
+      "sha256": "5c55138f7acac0247bf545656e2ed1a1673e61f132d97f1d44afc32e5f844185"
+    },
+    "Round6.lean": {
+      "upstream_path": "lean/Round6.lean",
+      "sha256": "27a4b348551cb8cce209864c08096230dba5e9f4ab04e469fcfedb61bca9b78a"
+    },
+    "round6-histograms.json": {
+      "upstream_path": "lean/round6-histograms.json",
+      "sha256": "e1d955df15523fd0f83c82e2a4bc080bf378ee50deb3003fce4771ac30f4ed26"
+    }
+  }
+}

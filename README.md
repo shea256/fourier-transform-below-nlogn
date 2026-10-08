@@ -2,86 +2,72 @@
 
 This repository contains a research draft proposing a quantitative refinement of **OpenAI Math Problem #130**, *An explicit power saving for the exact discrete Fourier transform*.
 
-Under the exact-complex-arithmetic, specified-root, and logarithmic-word address model of the original paper, and using its downstream Fourier compilation and all-length reduction, the strongest proposed bound is
+Under its exact-complex-arithmetic, specified-root, and logarithmic-word address model, the updated proposed all-length bound is
 
 $$
 T(n)=O\!\left(n(\log n)^{1-\delta}\right),
-\qquad \delta=5.5\times10^{-10}.
+\qquad \boxed{\delta=7.3\times10^{-5}}.
 $$
 
-OpenAI's published headline corollary gives the same form with $\delta=10^{-13}$. This is a **5,500-fold increase in the stated exponent-saving parameter**, **not** a 5,500-fold measured runtime speedup.
+The update transfers **Swapnil Jain's round-six complex network**, including attributed whole-residual batching, two-stage topology and copied-centre scheduling, into the Fourier paper's uniform array model. The source is pinned to [`f2176bc`](https://github.com/Swapnil-jain/integer-mult-kappa/tree/f2176bc1124821bf17eb63725bd366d7bdc020a3). The network improvements belong to their cited authors; this draft supplies a proposed Fourier transfer and additional finite checks.
 
-> **Research status:** This is a proposed result supported by a written argument and exact-arithmetic computational checks. It has undergone same-assistant adversarial review, **not independent mathematical review or formal verification**. Its novelty and publication priority have not been established. The strongest claim depends on the correctness of the new phase-schedule argument and the upstream results it invokes.
+> **Research status:** A written argument and exact finite checks support this proposed result. Independent mathematical review and end-to-end formal verification remain outstanding. The external Lean source checks numerical certificates and the integer-multiplication parameter assembly; it does not formalize this Fourier theorem. The earlier, separately reviewable result is preserved as a fallback.
 
-## What's being improved?
+## What changed
 
-The common ingredient in Problems **#109** (integer multiplication) and **#130** (Fourier transforms) is **not an integer-multiplication subroutine**. It is a finite arithmetic network for more efficiently applying tensor powers of a fixed complex two-coordinate transformation:
+The common ingredient in Problems #109 and #130 is a finite network for tensor powers of
 
 $$
 C=\frac12\begin{pmatrix}1+i&1-i\\1-i&1+i\end{pmatrix}.
 $$
 
-The usual tensor-axis method for $C^{\otimes k}$ takes $O(k2^k)$ operations. The network and its recursion give $O(2^k k^\theta)$ for $\theta<1$. OpenAI's #130 paper explicitly reuses the finite complex network from #109, but **does not** import #109's later tape, precision, or integer bit-complexity arguments. The two papers share a mathematical component, not their complete algorithms.
+It is not an integer-multiplication subroutine. The new construction applies the same tensor transform to arbitrary inputs, while grouping each residual block into one recursive call. Its pair-exclusion producer shares the disjointness computation; its two stages use `m=h^2=576`; and retained centres supply readouts through temporary copies whose transformations are explicitly charged.
 
-The proposed refinements address that finite network and how its saving propagates through #130's separate all-length Fourier reduction.
-
-## Proposed changes
-
-1. **Ground-size retuning:** Use $h=24$ rather than the original explicit Fourier paper's $h=100$. **This general retuning idea is not claimed as new**: Douglas Colkitt had already investigated the unchanged complex network at $h=25$.
-2. **Rank-reduced central correction:** Remove one redundant central coordinate, replacing the readout with an equivalent linear map while preserving arbitrary initial scratch values. This is the simplest independently reviewable new argument.
-3. **Unpadded recursive batching:** Recurse over complete batches and handle the bounded remainder directly, instead of padding the role count to a power of two.
-4. **Shared-sum correction circuit:** Reuse partial sums for an intersection-two correction. This offers an additional saving but requires the more involved forward and inverse phase-label schedules.
-
-The modifications are separable: concerns about the shared-sum construction do not automatically invalidate the shorter rank-reduction argument.
+The [manuscript](manuscript.md) gives the two-stage endpoint correction, linear-time array layout, unequal-width recurrence with incomplete batches, and transfer through #130's existing compiler and all-length reduction. Integer-specific precision, tape-layout and Gaussian-resampling improvements are not dependencies of this transfer.
 
 ## Quantitative comparison
 
-| Construction | Critical saving $a=1-\theta$ | Conservative pure-power saving $\delta$ |
+| Construction | Tensor saving | Proposed or published pure-power Fourier saving |
 | --- | ---: | ---: |
-| OpenAI #130 explicit network ($h=100$, padded) | $2.10643843\times10^{-13}$ | $10^{-13}$ (published headline) |
-| Original network retuned to $h=24$, padded | $3.95761002\times10^{-10}$ | — |
-| Reduced center, original padded batching | $5.22969896\times10^{-10}$ | $5.2\times10^{-10}$ |
-| Reduced center, unpadded batching | $5.30775793\times10^{-10}$ | $5.3\times10^{-10}$ |
-| Reduced center + shared sums, unpadded batching | $5.51272588\times10^{-10}$ | **$5.5\times10^{-10}$** |
+| OpenAI #130 explicit construction | Critical saving approximately `2.10644e-13` | `1e-13` (published headline) |
+| Earlier reduced-centre fallback | Critical saving approximately `5.22970e-10` | `5.2e-10` |
+| Earlier reduced centre with remainder batching | Critical saving approximately `5.30776e-10` | `5.3e-10` |
+| Earlier shared-sum construction | Critical saving approximately `5.51273e-10` | `5.5e-10` |
+| Attributed round-six complex network | **Strict witness `a=7.3852222e-5`** | **`delta=7.3e-5`**, using the proposed transfer |
 
-The *critical* saving $a$ initially yields a bound with an additional $(\log\log n)^{4-\theta}$ factor. Any fixed $\delta<a$ absorbs that factor asymptotically. Therefore $\delta$ and $a$ should not be compared as though they were identical. The proposed critical saving is approximately **2,617 times** the original paper's critical saving; that ratio also **does not** indicate a measured runtime speedup.
+The new tensor value is a certified strict witness, not the critical root. It gives a bound with an additional `(log log n)^(4-theta)` factor, where `theta=1-a`. Choosing `delta<a` absorbs that factor. The certificate verifies both the strict moment inequality and the positive gap `a-delta=8.52222e-7`.
 
-## What this does *not* claim
+The proposed Fourier exponent saving is about **132,727 times** the previous `5.5e-10` value, and **730,000,000 times** OpenAI's published `1e-13` headline. These compare asymptotic exponent parameters, **not measured runtime speedups**. The earlier construction's gains are not added to the imported network's saving.
 
-- A speedup for ordinary finite-precision FFT implementations or practical-size inputs. The implicit constants are enormous.
-- A better **integer multiplication** bit-complexity bound for #109. Carrying these changes into that result would require a separate tape/precision analysis.
-- A finite-field, bounded-coefficient, stable numerical, or bit-complexity theorem.
-- An independently refereed, Lean-verified, or priority-checked theorem.
+## Verification and files
 
-## Repository files
+Run with standard-library Python **3.10+**:
+
+```sh
+python3 verification/run_checks.py
+```
+
+Rebuild the current PDF and LaTeX with `python3 scripts/build_manuscript.py` (requires Pandoc and pdfLaTeX).
+
+The new checks rebuild all `4,096,576` local coefficient entries, check binary labels and actual auxiliary frame paths in both orientations, reconstruct the complete child-width histogram, and certify the moment using exact rational logarithm bounds. They also test the scalar and endpoint identities and reject missing-copy, missing-endpoint and excessive-saving controls. The earlier suites continue to run and match their original reference certificates.
 
 | File | Purpose |
 | --- | --- |
-| [`manuscript.pdf`](manuscript.pdf) | Full proposed $\delta=5.5\times10^{-10}$ argument, including shared sums and phase schedules |
-| [`manuscript.md`](manuscript.md) | Markdown version of the full manuscript |
-| [`core-proof.pdf`](core-proof.pdf) | Shorter rank-reduced-center argument; $5.2\times10^{-10}$ with original batching and $5.3\times10^{-10}$ with the separate batching lemma |
-| [`announcement.md`](announcement.md) | Proposed public announcement / X post |
-| [`verification/`](verification/README.md) | Reproducible finite checks, reference certificates, and audit report |
-| [`tex/`](tex/) | LaTeX sources for both PDF manuscripts |
+| [manuscript.pdf](manuscript.pdf), [manuscript.md](manuscript.md) | Updated proposed `delta=7.3e-5` argument and attribution |
+| [tex/manuscript.tex](tex/manuscript.tex) | Updated PDF source |
+| [core-proof.pdf](core-proof.pdf) | Unchanged short `5.2e-10` / `5.3e-10` fallback |
+| [archive/three-stage/](archive/three-stage/) | Unchanged earlier `5.5e-10` manuscript, PDF and LaTeX source |
+| [verification/README.md](verification/README.md) | Reproduction and exact scope of the checks |
+| [verification/ROUND6_AUDIT.md](verification/ROUND6_AUDIT.md) | Review record for this transfer |
+| [verification/vendor/jain_round6/SOURCE.json](verification/vendor/jain_round6/SOURCE.json) | External commit pin and SHA-256 manifest |
+| [announcement.md](announcement.md) | Updated draft announcement |
 
-The exact-arithmetic checkers and reference certificates live in [`verification/`](verification/README.md). Run `python3 verification/run_checks.py` from the repository root (Python 3.10+; standard library only). Manuscript LaTeX sources are in [`tex/`](tex/). The results are **finite checks, not a Lean proof or independent validation of the entire Fourier theorem**.
+The checks are finite evidence, not an independent referee report or an execution of the enormous complete DFT algorithm. No practical FFT speedup, finite-precision stability, bounded-coefficient theorem, or new integer-multiplication bound is claimed.
 
-## Review priorities
+## Sources and review priorities
 
-In decreasing order of simplicity:
+The shared network originates in OpenAI's [#109 manuscript](https://github.com/openai/math/blob/main/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf). The transfer uses the separate [#130 explicit Fourier manuscript](https://github.com/openai/math/blob/main/preprints/An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026/main.pdf), especially Proposition 4.2 and Section 5.4.
 
-1. Check the reduced-center matrix identity, arbitrary-scratch cancellation, and retention of the original center gate labels.
-2. Check the unpadded-batch recurrence and the charging of leftover work at every recursive level.
-3. Check the shared-sum circuit's global role accounting, especially its inverse middle stage, residual orthonormal bases, and tensor lifting.
-4. Verify that each claimed finite improvement satisfies #130's complete network interface and propagates through the existing local Fourier compiler and all-length reduction with all costs charged.
-5. Check publication priority separately from mathematical correctness.
+The new finite construction is [Swapnil Jain's round-six complex network](https://github.com/Swapnil-jain/integer-mult-kappa/tree/f2176bc1124821bf17eb63725bd366d7bdc020a3/independent/complex-twostage), building on Douglas Colkitt's framework and prior contributions including icekylinx's [whole-residual batching](https://github.com/CrocSwap/integer-mult-bounds/pull/10) and [copied centres](https://github.com/CrocSwap/integer-mult-bounds/pull/36), eumemic's full complex batching, and Aurel Prosz / Paureel's two-stage topology and endpoint correction. Full attribution, licenses, and recorded AI assistance are retained in the manuscript and the [external NOTICE](verification/vendor/jain_round6/NOTICE).
 
-## Original sources and attribution
-
-- [OpenAI Math repository and manuscript map](https://github.com/openai/math) — [CONTENTS.md](https://github.com/openai/math/blob/main/CONTENTS.md).
-- [OpenAI #130: *An explicit power saving for the exact discrete Fourier transform*](https://github.com/openai/math/blob/main/preprints/An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026/main.pdf). In particular, its introduction and Section 2 identify the complex network reused from #109.
-- [OpenAI #130 companion: *Finite tensor savings and exact Fourier circuits*](https://github.com/openai/math/blob/main/preprints/Finite-tensor-savings-and-exact-Fourier-circuits-September-25-2026/main.pdf). It gives a separate qualitative nonuniform existence route; the explicit exponent refinement here does not rely on that route.
-- [OpenAI #109: *Integer multiplication below n log n*](https://github.com/openai/math/blob/main/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf) — original development of the shared finite complex network (see its Proposition 8 and Section 3.5).
-- [Douglas Colkitt / @0xdoug: `integer-mult-bounds`](https://github.com/CrocSwap/integer-mult-bounds), especially [`notes/independent-complex.tex`](https://github.com/CrocSwap/integer-mult-bounds/blob/main/notes/independent-complex.tex) for earlier ground-size retuning.
-
-This work is an investigation of quantitative improvements to those results. Attribution of the shared construction and previous retuning is intentional; neither should be presented as an independent discovery here.
+Review should prioritize the copied-read schedule, two-stage data-frame interfaces and endpoint correction, the linear-time full-residual layout, and the recurrence's remainder costs. The [earlier audit](verification/AUDIT.md) applies to the archived three-stage result; it is not an audit of this new theorem.

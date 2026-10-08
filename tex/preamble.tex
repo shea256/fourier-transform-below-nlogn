@@ -1,0 +1,7 @@
+\usepackage{xurl,needspace,etoolbox}
+\setlength{\emergencystretch}{3em}
+\AtBeginEnvironment{longtable}{\small}
+\pretocmd{\section}{\Needspace{7\baselineskip}}{}{}
+\widowpenalty=10000
+\clubpenalty=10000
+\allowdisplaybreaks

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the archived and clean-room finite verifiers and compare their certificates.
+"""Run the round-six and earlier finite verifiers and compare their certificates.
 
 Works from any working directory. Standard-library Python >=3.10 only.
 """
@@ -29,6 +29,7 @@ def main():
     run('verify_extension.py', 'extension_run.txt')
     run('clean_room_audit.py', 'clean_room_run.txt')
     run('compare_certificates.py', 'comparison_run.txt')
+    run('verify_round6.py', 'round6_run.txt')
     print('All finite checks passed and reference certificates matched.')
 
 

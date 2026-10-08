@@ -1,8 +1,11 @@
-We’re publishing a research draft tightening the result from OpenAI Problem #130: the exact discrete Fourier transform.
-Using OpenAI’s existing methods for turning a faster arithmetic circuit into a Fourier algorithm, our refinements give the proposed all-length bound:
-T(n) = O(n(log n)^(1−δ))
-with δ = 5.5×10⁻¹⁰, up from 10⁻¹³ in OpenAI’s headline corollary.
-This represents a 5,500-fold increase in the exponent-saving parameter—not a 5,500-fold runtime speedup. Comparing the sharper critical savings underlying both bounds gives approximately 2,617-fold.
-OpenAI’s Fourier proof reuses a fixed arithmetic circuit from its integer-multiplication paper (#109). Building on @0xdoug’s retuning of that shared circuit, we remove a redundant intermediate quantity, avoid unnecessary recursive batch padding, and reuse partial sums.
-Our draft carries these improvements through to a stronger Fourier bound at every input length, preserving OpenAI’s exact-arithmetic model, specified-root assumptions, and accounting for scalar preparation and indexing costs.
-We’re releasing the proof draft and reproducible exact-arithmetic checks. Independent mathematical review remains pending.
+Taking this to the Fourier side: we’re publishing a research draft on OpenAI Problem #130, the exact discrete Fourier transform below n log n.
+
+Building on Swapnil Jain’s round-six complex network for #109 and its cited predecessors, we propose an all-length Fourier bound:
+
+T(n) = O(n(log n)^(1−δ)), with δ = 7.3×10⁻⁵.
+
+OpenAI’s published headline uses δ = 10⁻¹³. Our contribution is the proposed Fourier transfer, assuming the cited upstream results. It uses OpenAI’s exact-complex-arithmetic model, with supplied roots and scalar preparation and indexing costs included.
+
+Draft, LaTeX, and exact-arithmetic verifiers: https://github.com/shea256/fourier-transform-below-nlogn
+
+Independent mathematical review and formal verification of the Fourier transfer remain pending. No practical FFT speedup is claimed.

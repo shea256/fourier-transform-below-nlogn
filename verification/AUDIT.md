@@ -1,7 +1,9 @@
+> **Historical scope after the round-six update:** This audit concerns the earlier `5.5e-10` three-stage result, now preserved in [archive/three-stage/](../archive/three-stage/). It does not audit the new `7.3e-5` transfer; see [ROUND6_AUDIT.md](ROUND6_AUDIT.md). References below to the repository manuscript identify that earlier snapshot.
+
 # Adversarial audit of the proposed #130 Fourier extension
 
 **Date:** October 8, 2026  
-**Current manuscript:** [manuscript.md](../manuscript.md); current and historical source identities are distinguished below.
+**Current manuscript:** [manuscript.md](../archive/three-stage/manuscript.md); current and historical source identities are distinguished below.
 
 **Outcome:** No theorem-changing error found in the three proposed modifications. The `5.5e-10` pure-power saving survives this audit, relative to the specified upstream results. The simpler `5.2e-10` and `5.3e-10` extensions remain separately reviewable.
 
@@ -11,7 +13,7 @@
 
 ## 1. What was actually reviewed
 
-The historical review used the uploaded 31-page *An explicit power saving for the exact discrete Fourier transform* (OpenAI, September 25, 2026), called **[O]** below; the preceding proposed proof note; and the original verification package. The current full proof and verifier are [manuscript.md](../manuscript.md) and [verify_extension.py](verify_extension.py). The upstream PDF digests below were recorded in that historical package; the uploaded PDFs and its source manifest are not included in this repository. The uploaded 49-page finite-win companion describes a separate route and is not a dependency of this explicit quantitative extension.
+The historical review used the uploaded 31-page *An explicit power saving for the exact discrete Fourier transform* (OpenAI, September 25, 2026), called **[O]** below; the preceding proposed proof note; and the original verification package. The current full proof and verifier are [manuscript.md](../archive/three-stage/manuscript.md) and [verify_extension.py](verify_extension.py). The upstream PDF digests below were recorded in that historical package; the uploaded PDFs and its source manifest are not included in this repository. The uploaded 49-page finite-win companion describes a separate route and is not a dependency of this explicit quantitative extension.
 
 I read the complete preceding proof note, inspected its verifiers, reran the existing suite, and wrote a second program that imports **no code from that package**. The new program uses topological role allocation instead of union-find, ordinary sparse integer/rational coefficient propagation, and exact binary projection matrices instead of the old nullspace-based edge checks.
 
@@ -29,7 +31,7 @@ The convention is `T(n)=O(n (log n)^(1-delta))`. A critical saving `a=1-theta` i
 | Reduced center; unpadded recursion | `5.30775793289321e-10` | `5.3e-10` | Also the remainder-batching lemma |
 | Reduced center and shared sums; unpadded recursion | `5.51272588493243e-10` | `5.5e-10` | Also both orientations of the shared-sum label schedule |
 
-These are proposed extensions of [O], not independently accepted literature results. No numerical downgrade was required by this review. All rows were recalculated with exact rational logarithm enclosures. The short proof is provided separately as [core-proof.pdf](../core-proof.pdf) and [tex/core-proof.tex](../tex/core-proof.tex); the strongest construction is in [manuscript.md](../manuscript.md) and [manuscript.pdf](../manuscript.pdf).
+These are proposed extensions of [O], not independently accepted literature results. No numerical downgrade was required by this review. All rows were recalculated with exact rational logarithm enclosures. The short proof is provided separately as [core-proof.pdf](../core-proof.pdf) and [tex/core-proof.tex](../tex/core-proof.tex); the strongest construction is in [manuscript.md](../archive/three-stage/manuscript.md) and [manuscript.pdf](../archive/three-stage/manuscript.pdf).
 
 ## 3. Central-wire reduction: the short argument survives
 
@@ -202,7 +204,7 @@ I did not independently formalize or mechanically verify the upstream exact-widt
 
 ## 10. What is ready for review
 
-The repository separates a five-page [short proof](../core-proof.pdf) from the [full shared-sum draft](../manuscript.md). The short theorem obtains `5.2e-10`; one further standalone batching lemma gives `5.3e-10`. An expert can accept or reject those without first auditing the shared-sum graph. The more involved full draft claims `5.5e-10` and survived the expanded projector-based checks.
+The repository separates a five-page [short proof](../core-proof.pdf) from the [full shared-sum draft](../archive/three-stage/manuscript.md). The short theorem obtains `5.2e-10`; one further standalone batching lemma gives `5.3e-10`. An expert can accept or reject those without first auditing the shared-sum graph. The more involved full draft claims `5.5e-10` and survived the expanded projector-based checks.
 
 My current recommendation is to lead review with the short proof, while supplying the stronger argument as an extension. The priority questions for a referee are the retained center gate labels, the inverse middle orientation, applicability of the upstream compiler/transfer, and then the tensor lifting of the full shared-sum schedule.
 
@@ -214,16 +216,16 @@ From the repository root, run `python3 verification/run_checks.py` with Python 3
 
 - [O] OpenAI, *An explicit power saving for the exact discrete Fourier transform*, September 25, 2026; uploaded `main (1).pdf`. SHA-256: `670d0115ea2553e65f22167c176d2f31218d4d41726fe4e5702e2b149cad0896`.
 - [F] OpenAI, *Finite tensor savings and exact Fourier circuits*, September 25, 2026; uploaded `main.pdf`. SHA-256: `e2165b9f6796f0189292220c7edc0c6e19789bd8329a127a24d404da1e81e06b`. This paper's separate existence argument is not a dependency.
-- [P] Current repository manuscript: [manuscript.md](../manuscript.md). SHA-256: `2677b30561ce60a181e7efc96266b57423623c03427068d9bcefdaff6974198a`. This identifies the text inspected in the October 8 repository review, rather than the earlier package's draft.
+- [P] Current repository manuscript: [manuscript.md](../archive/three-stage/manuscript.md). SHA-256: `2677b30561ce60a181e7efc96266b57423623c03427068d9bcefdaff6974198a`. This identifies the text inspected in the October 8 repository review, rather than the earlier package's draft.
 - [D] Douglas Colkitt, `CrocSwap/integer-mult-bounds`, `notes/independent-complex.tex` and `docs/research/current-status.md`, inspected October 8, 2026. https://github.com/CrocSwap/integer-mult-bounds/blob/main/notes/independent-complex.tex and https://github.com/CrocSwap/integer-mult-bounds/blob/main/docs/research/current-status.md . Limited provenance check, not a comprehensive priority search.
 
 Other current manuscript artifacts, hashed during the October 8 repository cleanup:
 
 | Artifact | SHA-256 |
 |---|---|
-| [manuscript.pdf](../manuscript.pdf) | `46c39f0a674b7e7aae138fa147c4cec47c752a9b6e4f071afddbc7bddd430b95` |
+| [manuscript.pdf](../archive/three-stage/manuscript.pdf) | `46c39f0a674b7e7aae138fa147c4cec47c752a9b6e4f071afddbc7bddd430b95` |
 | [core-proof.pdf](../core-proof.pdf) | `7e722e12d28c69fab0e1280ac8d57c72e76ffd2a26af71a262b3e999d9006dcf` |
-| [tex/manuscript.tex](../tex/manuscript.tex) | `0145804243af9c3700d1a2b010f48ce0e6309ec76c9e9ce470f06d4186db837a` |
+| [tex/manuscript.tex](../archive/three-stage/manuscript.tex) | `0145804243af9c3700d1a2b010f48ce0e6309ec76c9e9ce470f06d4186db837a` |
 | [tex/core-proof.tex](../tex/core-proof.tex) | `5fa0c43ee87818fb8c96b55c9d35ac2de2f247ecdd8c5f8229c575000f6f150e` |
 
 The original report recorded historical draft SHA-256 `26357c80fb07b4fb1f7121b0b4284ed2137f98895045bfb530e92b268ab89926`. It does **not** identify the current `manuscript.md`. The earlier draft is unavailable in this checkout, so a full comparison cannot be reconstructed here. These hashes identify artifacts; they are not proof certificates or a claim of byte-identical continuity with the historical draft.
