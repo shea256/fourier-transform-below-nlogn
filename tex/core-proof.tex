@@ -1,0 +1,182 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\C}{\mathbb C}
+\newcommand{\F}{\mathbb F}
+\newcommand{\OO}{\mathcal O}
+\title{A rank-reduced central correction\protect\\for exact Fourier transforms}
+\author{Research working note}
+\date{October 8, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+The finite phase network of~\cite{O} uses one central coordinate that is redundant in its source-to-target linear map. Removing this coordinate preserves arbitrary auxiliary data and the original gate labels, while reducing the dimension-loss budget. At ground size $h=24$, the original power-of-two batching and Fourier transfer give the proposed bound $O(n(\log n)^{1-5.2\times10^{-10}})$ in the same exact-complex/root/address model. A separate elementary batching lemma raises the safe saving to $5.3\times10^{-10}$. Both conclusions are independent of the more complicated shared-sum construction in the accompanying research draft.
+\end{abstract}
+
+\section{Model and the precise upstream dependencies}
+A field operation on exact complex registers is charged one unit. Input data are manipulated linearly with prepared, input-independent coefficients. Scalar preparation, schedule construction, initialization, and array movement are charged. Logarithmic-size integer address operations have unit cost as specified in~\cite[Section~1.1]{O}. One specified root of unity of order less than $1024n^3$ is sufficient. No bound on coefficient magnitude, numerical stability, or bit complexity is asserted.
+
+Set
+\[
+ C=\frac12\begin{pmatrix}1+i&1-i\\1-i&1+i\end{pmatrix}.
+\]
+The ingredients used from~\cite{O} are the frame-conversion lemma (Lemma~2.2), the original binary label schedule and terminal correction (Section~2.3 and Proposition~2.4), linear-time address organization (Lemma~2.5), the exact-width local compiler (Proposition~3.1), and the synchronization and all-length reduction (Proposition~4.2 and Section~5). In those last two steps, any charged tensor bound
+\[
+ C^{\otimes k}:\quad O\bigl(2^k(k+1)^\theta\bigr),\qquad 0<\theta<1,
+\]
+yields
+\begin{equation}\label{eq:transfer}
+ F_n:\quad O\bigl(n(\log n)^\theta(\log\log n)^{4-\theta}\bigr).
+\end{equation}
+The new argument changes the finite tensor interface, not that local compiler.
+
+\section{The central coordinate can be removed}
+Let $\mathcal T=\binom{[h]}3$, $v=\binom h3$, $m=h^3$, $N=v^3$, and $I=3v^2$. In one local invocation the old center has coordinates $c_1,\ldots,c_h,c_*$, with
+\[
+ (Gx)_j=\sum_{T\ni j}x_T,\qquad (Gx)_*=\sum_Tx_T,
+ \qquad (Rc)_S=\frac12\left(\sum_{j\in S}c_j-c_*\right).
+\]
+Use only $h$ center coordinates and instead put
+\begin{equation}\label{eq:newcenter}
+ (G'x)_j=\sum_{T\ni j}x_T,\qquad
+ (R'c)_S=\frac12\sum_{j\in S}c_j-\frac16\sum_{j=1}^h c_j.
+\end{equation}
+\begin{lemma}
+The replacement center has the same source-to-target matrix, restores arbitrary initial center values, and preserves the original scalar bank shear when the side corrections are unchanged.
+\end{lemma}
+\begin{proof}
+Each triple has three members, hence
+\[
+ (R'G')_{S,T}=\frac{|S\cap T|}{2}-\frac36
+              =\frac{|S\cap T|-1}{2}=(RG)_{S,T}.
+\]
+The negative and positive readouts cancel every initial center value:
+\[
+ -R'c+R'(c+G'x)=R'G'x,\qquad (c+G'x)-G'x=c.
+\]
+This is an identity for independent variables $c,x$; no relation among the initial scratch coordinates is assumed. The unchanged side contribution is $+1/2$ when $|S\cap T|=0$, $-1/2$ when $|S\cap T|=2$, and zero otherwise. Added to the central coefficient, it equals $\mathbf 1_{S=T}$. The same three bank shears therefore give the signed bank exchange and restore every auxiliary value.
+\end{proof}
+
+\paragraph{Why the phase labels still apply.}
+The old center readouts already act as one common-label gate on all target and center wires; the updates act similarly on all source and center wires. Thus the denser $R'$ in~\eqref{eq:newcenter} adds no new label requirement. Keep the surviving gate labels in Table~(2.7) of~\cite{O}. At stage $j$, write $E=B\perp P$ with $\dim P=1$, suppressing the future norm-one tensor line. The center visits
+\[
+ B\otimes\F_2^h,\quad E\otimes\F_2^h,\quad
+ B\otimes\F_2^h,\quad E\otimes\F_2^h.
+\]
+There is exactly one decrease, of dimension $h$, for each surviving central wire. In the inverse middle invocation, these are still the chronological physical labels: only the scalar word and logical source/target orientation are reversed, as in the original paper. Therefore the total loss is
+\begin{equation}\label{eq:loss}
+ L=Ih^2=3v^2h^2,
+\end{equation}
+instead of $Ih(h+1)$.
+
+All other residuals are unchanged. The source and target triple indicators are orthogonal for every retained side wire. At $h=24$, a coordinate remains outside the support of either one or two triples, which occupy at most six coordinates. Earlier and future tensor indicators occupy $3^r<24^r$ coordinates for $r>0$. The original nondegeneracy and norm-one-vector arguments therefore supply orthonormal residual bases. The exceptional endpoint vector still has weight $27$, so its translation correction is unchanged. These observations establish the modified version of the finite interface of~\cite[Proposition~2.4]{O}, relative to its frame-conversion lemma.
+
+\section{Counts and the simpler exponent}
+The original number of neighbors of a triple is
+\[
+ d=\binom{h-3}{3}+3(h-3).
+\]
+With no shared-sum substitution, the reduced-center network has
+\begin{equation}\label{eq:counts}
+ W=2v^3+3v^2(vd+h),\qquad
+ \Delta=2(N-L)=2v^2(v-3h^2),\qquad s=Wm-\Delta.
+\end{equation}
+At $h=24$, these are
+\begin{align*}
+ v&=2024,&m&=13824,& I&=12289728,\\
+ N&=8291469824,&L&=7078883328,&\Delta&=2425172992,\\
+ W&=34666930287616,&s&=479235641870830592.
+\end{align*}
+The least power of two at least $W$ is $W_*=2^{45}$. Retain the original exact-batch proof of~\cite[Theorem~2.6]{O}, with padded step count $S=W_*m-\Delta$. It gives
+\[
+ \theta_* = \log_m\!\left(m-\frac{\Delta}{W_*}\right),\qquad
+ a_* =1-\theta_* =
+ -\frac{\log(1-\varepsilon_*)}{\log m},\quad
+ \varepsilon_* = \frac{\Delta}{mW_*}=
+ \frac{2368333}{474989023199232}.
+\]
+For example, the direct base range in that proof can end at $K=m(45+1)$. Thereafter every fiber count is divisible by $2^{45}$. All newly introduced scalar operations have fixed finite cost, independent of $k$, and change only the additive linear-work constant.
+
+\begin{theorem}[Short extension, relative to the upstream interfaces]
+In the stated model, the reduced-center network at $h=24$ together with the unchanged padded recursion, local Fourier compiler, and all-length reduction yields
+\[
+ T(n)=O\bigl(n(\log n)^{1-5.2\times10^{-10}}\bigr).
+\]
+\end{theorem}
+\begin{proof}
+The exact rational comparisons
+\[
+ \sum_{j=0}^{40}\frac{(477/50)^j}{j!}>13824,
+ \qquad
+ \varepsilon_*>\frac{52}{10^{11}}\,\frac{477}{50}
+\]
+imply $\log m<9.54$ and
+\[
+ a_*>\frac{\varepsilon_*}{9.54}>\frac{52}{10^{11}}.
+\]
+For the second comparison the positive difference is exactly
+\[
+ \varepsilon_*-\frac{52}{10^{11}}\frac{477}{50}
+ =\frac{14657536271057}{579820584960000000000000}.
+\]
+Apply~\eqref{eq:transfer}. Since $a_*-52/10^{11}>0$ is fixed, $(\log\log n)^{4-\theta_*}=o((\log n)^{a_*-52/10^{11}})$. Initialization, all fixed network work, the transformed fixed convolution operand, and indexing are covered by the stated upstream interfaces. The new coefficients are rational, so the root requirement is unchanged.
+\end{proof}
+
+\section{A separate no-padding improvement}
+\begin{lemma}[Remainder batching]
+Suppose a fixed network with $W$ arbitrary roles, local dimension $m\ge2$, and $s$ directional steps satisfies the full interface of~\cite[Proposition~2.4]{O}, with $1<s/W<m$. Its charged tensor cost is
+\[
+ O\bigl(2^k(k+1)^\theta\bigr),\qquad \theta=\log_m(s/W),
+\]
+without requiring a power-of-two width.
+\end{lemma}
+\begin{proof}
+Compute $W$ transforms simultaneously. For $k\ge m$ put $f=\lfloor k/m\rfloor$. Handle the fewer than $m$ leftover tensor axes directly. In each directional step there are $F=2^{k-f}$ fibers. Recursively process $\lfloor F/W\rfloor$ complete batches. Apply the ordinary $f$-axis algorithm to the remaining $F\bmod W<W$ fibers. Linear-time packing from~\cite[Lemma~2.5]{O} makes full batches contiguous and includes their discovery and movement.
+
+For cost $T(k)$ on $W$ arrays, some fixed constants $A_0,B$ give
+\[
+ T(k)\le A_0W2^k+s\lfloor F/W\rfloor T(f)
+                 +Bs(W-1)f2^f.
+\]
+With $t(k)=T(k)/(W2^k)$,
+\[
+ t(k)\le A_0+\frac{s}{W}t(f)+Bs f2^{f-k}.
+\]
+Because $k\ge mf$, the last factor satisfies $f2^{f-k}\le f2^{-(m-1)f}\le1$ for every $f\ge1$. Thus $t(k)\le A+(s/W)t(\lfloor k/m\rfloor)$ with $A$ fixed. Unrolling gives the claimed critical exponent; $k<m$ is a fixed direct base range. A depth-first execution reuses child workspace and uses $O(k+1)$-bit addresses. The single-array procedure initializes its other $W-1$ arrays once, costing $O(2^k)$ because $W$ is fixed.
+\end{proof}
+
+Applied to~\eqref{eq:counts}, the critical saving is $5.3077579328\ldots\times10^{-10}$ and the same exact certificate method yields a safe pure-power saving $5.3\times10^{-10}$. This is still independent of the shared-sum circuit. The numerical values are reproducible from exact rational bounds in the accompanying verifier; the recurrence itself is the written proof above, not a conclusion from finite tests.
+
+\section{A scoped limit on further center compression}
+\begin{proposition}
+At $h=24$ or $25$, the central matrix $M_{S,T}=(|S\cap T|-1)/2$ has rank exactly $h$ over $\C$. Hence a single factorization $M=RG$ through $r$ central coordinates requires $r\ge h$.
+\end{proposition}
+\begin{proof}
+Let $G_{j,T}=\mathbf1_{j\in T}$ be the $h\times v$ incidence matrix, and let $J_h=\mathbf1\mathbf1^{\mathsf T}$ be the all-ones matrix. Then
+\[
+ GG^{\mathsf T}=\frac{(h-2)(h-3)}2 I_h+(h-2)J_h
+\]
+is invertible for $h\ge4$. Also
+\[
+ M=G^{\mathsf T}\left(\frac12I_h-\frac1{18}J_h\right)G.
+\]
+The middle matrix has eigenvalues $1/2$ and $(9-h)/18$, so it is invertible when $h\ne9$. Since $G$ is surjective and $G^{\mathsf T}$ injective, $M$ has rank $h$. The rank of a factorization through $r$ coordinates is at most $r$.
+\end{proof}
+This is not a lower bound for the Fourier transform or for all central schedules. It does not exclude additional passes, time-reused coordinates, different side corrections, or different finite networks.
+
+\section*{Attribution and review boundary}
+The underlying phase network, kernel, and Fourier transfer are from~\cite{O}. Colkitt already instantiated the unchanged complex network at $h=25$~\cite{D}; ground-size retuning is not claimed here as new. The proposed additions are the redundant-center removal, the separate batching argument, and (outside this short note) the shared-sum phase integration. A comparison against all other follow-ups has not been completed.
+
+The included second verifier imports no code from the earlier package. It checks exact finite operators and binary projector paths, but it was written by the same assistant. It is not independent mathematical review. In particular the short theorem should be reviewed against the surviving center gate labels, the inverse middle invocation, and the applicability of the cited upstream transfer.
+
+\begin{thebibliography}{9}
+\bibitem{O} OpenAI. \emph{An explicit power saving for the exact discrete Fourier transform}. September 25, 2026. Uploaded 31-page manuscript, \texttt{main (1).pdf}. Sections 2--5, especially Lemma 2.2, Table (2.7), Proposition 2.4, Theorem 2.6, Proposition 3.1, Proposition 4.2, and Section 5.4.
+\bibitem{D} Douglas Colkitt. \emph{An independently sized complex network}. \texttt{notes/independent-complex.tex}, repository \texttt{CrocSwap/integer-mult-bounds}, inspected October 8, 2026. \url{https://github.com/CrocSwap/integer-mult-bounds/blob/main/notes/independent-complex.tex}.
+\end{thebibliography}
+\end{document}

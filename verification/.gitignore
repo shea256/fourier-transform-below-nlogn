@@ -1,0 +1,6 @@
+# Generated when running the check suite. Reference certificates are in certificates/.
+/certificate.json
+/clean_room_certificate.json
+/outputs/
+/__pycache__/
+*.pyc
