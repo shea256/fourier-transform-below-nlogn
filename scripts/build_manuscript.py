@@ -6,6 +6,7 @@
 The current result is explicitly selected in results/registry.json.
 """
 import argparse
+import json
 import re
 from datetime import date
 from fractions import Fraction as Q
@@ -79,13 +80,33 @@ Generated from [results/registry.json](results/registry.json). Dates identify pr
             previous = d
         log += '\n\n'
     log += 'The original OpenAI #130 published headline is `delta=1e-13`. The older short proof also retains the `5.2e-10` and `5.3e-10` fallbacks. See [the update workflow](results/README.md) before adding or promoting a result.\n'
+    ratio = Q(current['fourier_saving']) / Q(1, 10**13)
+    ratio_text = f'{float(ratio):,.2f}'.rstrip('0').rstrip('.')
+    if ratio >= 10**9:
+        ratio_text = f'{float(ratio / 10**9):,.3f}'.rstrip('0').rstrip('.') + ' billion'
+    comparison = f'The proposed exponent saving is approximately **{ratio_text} times** OpenAI\'s [published headline](https://github.com/openai/math/blob/main/preprints/An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026/main.pdf) of `delta=1e-13`.'
+    round6 = next((r for r in registry['results'] if r['id'] == 'round6'), None)
+    if round6 and Q(current['fourier_saving']) > Q(round6['fourier_saving']):
+        ratio6 = Q(current['fourier_saving']) / Q(round6['fourier_saving'])
+        comparison += f' It is about **{float(ratio6):.2f} times** our [round-six result]({round6["record"]}) of `delta={exact_decimal(round6["fourier_saving"])}`.'
+    comparison += ' These ratios compare exponent parameters, not measured runtimes.'
+    certificate = json.loads((ROOT/current['certificate']).read_text())
+    transcript = certificate.get('exact_transcript')
+    evidence = ''
+    if transcript:
+        count = transcript['target_coefficient_entries']
+        evidence = f'\n\nThe [finite certificate]({current["certificate"]}) records exact rational checks of **{count:,} scalar output coefficients**, covering the input response, cancellation of initial dirty-scratch contributions, and preservation of arbitrary target values. This is a scalar-map check; the general physical-network and Fourier arguments remain written proof dependencies.'
     summary = f'''Current selection: **[{current['name']}]({current['record']})**, recorded {updated}.
 
 ```math
 T(n)=O\\left(n(\\log n)^{{1-\\delta}}\\right),\\qquad \\delta={delta}.
 ```
 
-The exact tensor witness is `a={a}` and the chosen Fourier saving is `delta={delta}`. This is a **proposed conditional transfer**, supported by a written argument and finite checks. Independent mathematical review and end-to-end formal verification remain pending.'''
+This is a **proposed conditional transfer**, supported by a written argument and finite checks. Independent mathematical review and end-to-end formal verification remain pending.
+
+{comparison}
+
+The Fourier saving is chosen below the upstream complex-tensor witness `a={a}`, leaving a positive gap to absorb the Fourier reduction's overhead. The integer-multiplication headline `kappa` is a separate parameter.{evidence}'''
     readme = (ROOT/'README.md').read_text()
     start, end = '<!-- current-result:start -->', '<!-- current-result:end -->'
     if start not in readme or end not in readme:
