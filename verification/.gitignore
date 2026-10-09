@@ -2,6 +2,8 @@
 /certificate.json
 /clean_room_certificate.json
 /round6_certificate.json
+/round10_certificate.json
+/round11_certificate.json
 /outputs/
 __pycache__/
 *.pyc

@@ -1,0 +1,124 @@
+Past the a_b/2 ceiling for integer multiplication
+Copyright 2026 Swapnil Jain
+
+This work builds on, and does not modify, the following:
+
+- OpenAI, "Integer multiplication below n log n" (September 23, 2026), pinned at
+  commit adc7f1241b42e322a6451854ab7e4b4c146bf78a of github.com/openai/math.
+- Douglas Colkitt, github.com/CrocSwap/integer-mult-bounds (Apache-2.0), commit
+  6e564879f51ae16f23d392e9e196c605f36d90df: compact controls and the conditional
+  83/10^12 witness.
+- Prior published results this witness assumes and cites (citations of prior work,
+  not collaborators), from open pull requests on that repository:
+  #3 and #5 (eumemic: compressed complex network, fast Gaussian resampling),
+  #4 (dleen), #6 (eumemic), #7 (jacklightChen: ternary five-subset
+  networks, a_b = 3/(4*10^8), a_c = 39/10^9),
+  #10 (icekylinx: batched recursion, controlled projector basis, whole-residual
+  complex children, Gaussian input-error correction),
+  #13 (eumemic: auxiliary source frames, third whole-residual complex class),
+  #15 (eumemic, head a17cab3: full complex batching of every residual rank),
+  #18 (icekylinx, head f2ab41a: partial-swap networks, producers and common rational basis),
+  #21 (jacklightChen, head 5ba6cf0: translated partial-swap frames; it also contains, independently
+  and earlier in public, the complex source-frame translation we use),
+  #16 (jacklightChen: nested controlled bases) and #29 (jacklightChen: controlled inner basis compiling local
+  edges as blocks), related to our flag basis and side-role batching, which were developed independently,
+  #36 (icekylinx: copied retained centres, used on both our interchanges in rounds six and seven),
+  #62 (ikeboy: interval strips and core-aware pair assembly; its producer builds the side DAG of both our
+  round-seven witnesses),
+  #41 (hipotures: the alternating order and links, used in those side programs),
+  #44 (rohanarun: weighted matching, which our moment-weighted choice of links follows),
+  #57 (eumemic: the joint frame compiler, which compiles the side program of our round-seven headline witness),
+  #60 (chafreaky: rank-first reclamation, the compiler's reclamation order in that witness),
+  #69 (eumemic: balanced coarse sums, used in the side DAG of that witness),
+  #24 (icekylinx, head ed90fd9: endpoint-gauge bit network; certificates/external/pr24-bit-network.json
+  extracts its published counts and child-width multiplicities, Apache-2.0; its normal form for alternating
+  residuals is used on our round-eight complex word),
+  #104 (icekylinx, head 948ce15: opposite bank orders with a common generic basis, the involution
+  factorization and the stopped interchange, used on our round-eight bit side; carrier matching and the
+  odd-denominator grid for retained centres, used on our round-eight complex word),
+  #112 (jamesyc, head 166d298: signed dependence reclamation, reimplemented from its description on our
+  round-eight complex word),
+  #117 (eumemic, head cbb05ce: the h = 24 complex addition DAG, read as data and frozen in
+  certificates/round8/pr117_dag.json.gz, Apache-2.0; the producer of our round-eight complex word; an identical copy
+  is in independent/round10-cx-prefix-build/up/ for the round-ten triple module),
+  #128 (an664, head 530588a: completed-core sharing, reimplemented from its description on our
+  round-eight complex word, and its 87-group orthonormal triple partition after Zhang and Ge (2010), frozen in
+  certificates/round8/pr128_partition_mrp24.json, Apache-2.0),
+  #129 (eumemic, head 59fade1: cited only for its pricing of exterior address adapters, a proof interface of our
+  round-eight complex side),
+  #124 (jamesyc, head 3657b5d: birth-read slot reuse, in the lineage of the round-nine complex supplier),
+  #130 (icekylinx, head 6a9970a, merged: three-stage Cayley covers, the arbitrary-subspace frame theorem, the
+  fallback and row contracts; the cover of our round-nine witness),
+  #137 (eumemic, head c205b7d: padded triple covers with sequential dirty reuse, used across the stages of our
+  round-nine cover),
+  #144 (icekylinx, head c8b22bc, merged upstream through #149 at commit
+  d1d6c070f5a8c684727ee7ec35d930f9ebfa9758: paired cubes and shared completed cores, its m = 69 bit cover with gauge
+  omission, its h = 24 complex inventory and its semantic assembly with 47 strict constraints, reimplemented in
+  scripts/certificate_round9.py; its published inventories and selected-module matching arcs are copied, unmodified, from head c8b22bc
+  into certificates/round9/pr144/, Apache-2.0, SHA-256:
+    paired-cube-bit-input.json      23461b66f3a87d4dc87ef209105df4de41d2ef076568ff29b9ea0a0747f01d96
+    paired-cube-complex-input.json  11894aa8fd4d5e258ec534726eba5fc9c9fa7b826f993e229425c31ee2ad2440
+    paired-cube-input.json          662ae85a5d70d130e704ef5a5d8665e2990988fe021ea21c3e0d43601555cc80
+    paired-cube-network.json        1fbd118f02a66f388744bbaa85128a5046bf1fc06569735523daecf97501eb93
+    matching-arcs.json              22c90ed078d765e58ac824d6f9558cc4620961b48644a32c0115bdb9852de771
+  (matching-arcs.json is references/paired-cube/selected-module/matching-arcs.json upstream)),
+  #146 (Th0rgal, head 70355a3: the exact telescoping minimum-cut choice of omitted gauges, reimplemented from its
+  description and applied to our witness 2 in round nine),
+  #161 (eumemic, head d14e29157bc905be1ced0776dd893d0714013f3a: the annealed p = 12 bit pair module and its
+  carrier arcs, research/paired-cube-bit/data/pair_module_p12.json and arcs_p12.json, read as data by the
+  round-ten bit word, Apache-2.0, SHA-256
+  9313f8d7a929ae7bbac65f7cb3e58fe3e3670ee23b7047c066d39452d6139133 and
+  c56d549cf6a785225a91a36a800fd3f6de6e03a5d95551fda89fa28da2465d24; and its merged face and edge outputs, which the
+  merged reads of both round-ten words follow),
+  #155 (eumemic: the paired-cube bit decoder with transversal-triple ports and partner-pair source mixing,
+  reimplemented from its description as the base of the round-ten bit word),
+  #168 (eumemic, commit 98c115b53742b6613ad630de4d493f37b0119da7: the annealed pair-disjoint module
+  references/paired-cube/sources/pmod_G37_w02_5.6098194e-4.json, used unchanged as data in the round-ten complex
+  word and copied unmodified into independent/round10-cx-prefix-build/data/, Apache-2.0, SHA-256
+  97173389fca3887c2aafa9ac25dbe3564d78b4152c0ef1cca9057ffb2ca1de25; and its nested-prefix all-but-one module and
+  bundle descent, reimplemented from their description in that word),
+  #150 (DaysSky: late births, in the lineage of the round-ten bit word's birth reuse),
+  #131 and #143 (eumemic, heads 3acf2f9 and 803b28a: physical frame descent and scratch reuse on covers, and late
+  compensation reads, related to the frame descent and late reads of the round-ten complex word),
+  #162 (DaysSky, head 1e8140f: the acceptance condition for extended carrier arcs, reimplemented from its
+  description as the relaxed arcs of the round-ten complex word),
+  #55 (gupt1156, head 03e991a: dual skip-suffix strips; words compiled with them motivated round ten's checker fix),
+  #168 again (eumemic, head 4a3c769e5c5430e7114c4d3e099ff34664677f17, v4: the modules and bit data of both
+  round-eleven words, read as data only, Apache-2.0; none of its code was run). Copied unmodified into
+  independent/round11-cx-recycle-build/data/ and used unchanged in the round-eleven complex word, pinned by
+  references/paired-cube/sources/SOURCE.json, SHA-256:
+    tmod_TE_TD_TB3_1_1_4_full_6.0617964e-4.json  9dcdb6f4e33410418c01f55f092862edfa7c05001ceada3974f8d1196bcd894b
+    pmod_J0_full_6.0666810e-4.json               7d1ae23430e110d32aa1cab84415abdbc918dfab6b317cb24d30756fc90c5925
+    qmod_climb3u_best.json                       3f85f6b2134af8781f16229186d0d7c1de71ab4d5235244259e1b79f2e3d14ba
+  Read as data by the round-eleven bit word (the frozen word in certificates/round11/ carries them), SHA-256:
+    research/paired-cube-bit/data/pair_module_p12.json  df5122d74add5f70de88eb14d4f6a41c79be3825a37922cb81862ca6dfa849f2
+      (the annealed bit pair module, used unchanged)
+    references/paired-cube/sources/local_L1.json        1861724ee3b58ea8acb3334416fbfd9172a9ae02ad11a6f6885a4909f8692f05
+      (the L1 local-channel association, reimplemented as constants)
+    research/paired-cube-bit/out/graph_p12.json         c2d9b3cec9686b336917c6eb2e956a1a1e193c9a301626ac30af97fdb5eca96b
+      (used only to confirm that our builder reproduces PR #168 v4's bit graph byte for byte; not an input)
+  Its paired-cube bit decoder (after #155) is the base of the round-eleven bit word, and its configurable cube-local
+  circuit is the space in which our C1 circuit was chosen),
+  #117 again: the h = 24 DAG is also copied, identical (SHA-256
+  3c034d0aae388ef567a454826f4f48b26fd8a94c71e8ffed4835271b349a783b), into
+  independent/round11-cx-recycle-build/up/ for the small-p complex recipes,
+  #184 (icekylinx, head 4b5fc7f: source-assisted common-frame compression; read as text only. The dead-copy
+  recycling of the round-eleven complex word is its Section 2a, zero-fresh recycling through a containing frame, used
+  with no source controls; the mechanism is icekylinx's, and the application, host selection, ledger and checker are
+  ours),
+  #166 (jamesyc, head 4dbc2af: the dirty-target terminal lemma; the terminal-output deletions of the round-eleven
+  complex word and the terminal sinks of the round-eleven bit word rest on it, with our own selection and checks),
+  #176 (chafreaky, head 96dc228: terminal paired cubes, the use of #166's deletions that our complex word follows),
+  #181 (chafreaky, head 7fb2194: the shared-edge choice of cube-local circuit, a configuration in the same class as
+  our C1 circuit; read as data only),
+  #146 (Th0rgal) and #162 (DaysSky) as above: the minimum-cut omission of the round-eleven bit word and the relaxed
+  carrier arcs of the round-eleven complex word,
+  #124 (jamesyc) and #143 (eumemic) as above: birth reuse and late compensation reads in both round-eleven words.
+- Upstream base of round nine: github.com/CrocSwap/integer-mult-bounds main at commit
+  d1d6c070f5a8c684727ee7ec35d930f9ebfa9758 (PR #144 merged as reviewed in PR #149).
+- Paureel, github.com/Paureel/integer-mult-bounds commit c82d09e:
+  the two-stage motif with partial-swap frames and charged endpoint correction, and its complement-frame
+  construction, which our lifted frames follow in round seven.
+
+Research, implementation and drafting were done with assistance from Claude
+(Anthropic). AI assistance is not independent review.

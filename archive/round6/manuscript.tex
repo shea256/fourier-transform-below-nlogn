@@ -1,0 +1,848 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  11pt,
+]{article}
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{xurl,needspace,etoolbox}
+\setlength{\emergencystretch}{3em}
+\AtBeginEnvironment{longtable}{\small}
+\pretocmd{\section}{\Needspace{7\baselineskip}}{}{}
+\widowpenalty=10000
+\clubpenalty=10000
+\allowdisplaybreaks
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={An Improved Exponent Bound for the Exact Discrete Fourier Transform},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{An Improved Exponent Bound for the Exact Discrete Fourier
+Transform}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Research draft: round-six complex-network transfer}
+\author{}
+\date{October 8, 2026}
+
+\begin{document}
+\maketitle
+
+Under the exact-complex-arithmetic, specified-root, and logarithmic-word
+address model of OpenAI's \emph{An explicit power saving for the exact
+discrete Fourier transform} {[}O{]}, the proposed bound is
+
+\[
+\boxed{T(n)=O\!\left(n(\log n)^{1-\delta}\right),\qquad
+\delta=\frac{73}{10^6}=7.3\times10^{-5}.}
+\]
+
+This draft transfers the attributed round-six \textbf{complex}
+construction of Swapnil Jain {[}J{]}, including prior whole-residual
+batching {[}B{]}, two-stage topology {[}P{]}, and copied-centre
+scheduling {[}C{]}, into {[}O{]}'s uniform array model. It does not
+infer a Fourier bound from an integer-multiplication running time. The
+finite network is pinned to commit
+\texttt{f2176bc1124821bf17eb63725bd366d7bdc020a3} of
+\texttt{Swapnil-jain/integer-mult-kappa}.
+
+\textbf{Status.} This is a proposed research result supported by a
+written transfer argument and reproducible exact finite checks. Neither
+this Fourier theorem nor the complete external construction has been
+independently reviewed or formally verified here. The external Lean file
+checks numerical certificates and their integer-multiplication assembly;
+it does not formalize the Fourier transfer below. No novelty or priority
+claim is made for the imported constructions.
+
+The earlier three-stage result, with proposed saving \texttt{5.5e-10},
+is preserved unchanged in \texttt{archive/three-stage/}. The separate
+short proof retains the simpler \texttt{5.2e-10} and \texttt{5.3e-10}
+fallbacks. Their proofs do not depend on this update.
+
+\subsection{1. The tensor bound sufficient for the Fourier
+transfer}\label{the-tensor-bound-sufficient-for-the-fourier-transfer}
+
+Use the same fixed kernel as {[}O{]}:
+
+\[
+ C=\frac12\begin{pmatrix}1+i&1-i\\1-i&1+i\end{pmatrix},
+ \qquad C^2=X=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+ \qquad C^{-1}=XC.
+\]
+
+The target intermediate result is an algorithm applying \(C\) on all
+\(k\) binary axes of an arbitrary complex array, in
+
+\[
+ O\!\left(2^k(k+1)^\theta\right),\qquad
+ \theta=1-a,\qquad a=\frac{36926111}{500000000000}.
+\]
+
+The cost must include scalar arithmetic, finite-table preparation, index
+preparation, array initialization, and data movement. The algorithm must
+work for every integer \(k\), and with additional spectator axes.
+Section 8 proves this statement from the finite network and its strict
+moment certificate. Section 9 then substitutes it into {[}O{]},
+Proposition 4.2 and Section 5.4.
+
+All finite network choices below are fixed independently of the
+requested Fourier length. Only rational constants and \texttt{i} are
+used by the new tensor routine. On variable data its operations are
+linear: addition, subtraction, and multiplication by prepared constants.
+The supplied root of order less than \texttt{1024\ n\^{}3} from {[}O{]}
+remains sufficient. No bit-complexity, coefficient-size, or
+numerical-stability conclusion is asserted.
+
+\subsection{2. The pinned scalar
+producer}\label{the-pinned-scalar-producer}
+
+Fix \(h=24\) and put
+
+\[
+ \mathcal T=\binom{[h]}3,\quad v=2024,\quad m=h^2=576,\quad N=v^2=4096576.
+\]
+
+{[}J{]}'s \texttt{NStar3} producer is a finite addition DAG on inputs
+\(x_T\), indexed by triples. It shares pair-exclusion sums and emits
+signed partial sums whose aggregate is
+
+\[
+ D_S-H_{2,S},\qquad
+ D_S=\sum_{T\cap S=\varnothing}x_T,\quad
+ H_{2,S}=\sum_{|T\cap S|=2}x_T.
+\]
+
+It also retains the \(h\) totals
+
+\[
+ E_j=\sum_{T:j\notin T}x_T\quad(0\le j<h-1),
+ \qquad A=\sum_Tx_T.
+\]
+
+The omitted total is recovered by
+
+\[
+ E_{h-1}=(h-3)A-\sum_{j<h-1}E_j.
+\]
+
+For a target triple \(S\), define the retained-total readout
+
+\[
+ R_S=A-\frac12\sum_{j\in S}E_j.
+\]
+
+Its coefficient on \(x_T\) is \((|S\cap T|-1)/2\). Therefore
+
+\[
+ R_S+\frac12D_S-\frac12H_{2,S}=x_S.
+ \tag{2.1}
+\]
+
+Indeed the four possible intersection sizes \(0,1,2,3\) give
+coefficients \(0,0,0,1\). The expression for the omitted \(E\) is used
+only in this source-dependent identity. No relation among arbitrary old
+scratch values is assumed.
+
+For reproducibility, the finite object is specified by the
+\textbf{unmodified, hash-pinned} producer in
+\texttt{verification/vendor/jain\_round6/producer.py}. The new checker
+rebuilds every support from the DAG's arguments and checks all
+\(v^2=4{,}096{,}576\) entries of (2.1), including zero entries. It also
+checks every retained total. This is exhaustive finite arithmetic at the
+selected size, not a proof for every possible ground size.
+
+The active producer has \texttt{28,944} addition nodes, \texttt{20,240}
+signed output uses, and \texttt{24} retained output uses. Its role
+compiler allocates one carrier per directed use and identifies one input
+carrier with the pivot output of each addition. Thus the number of
+physical auxiliary roles in one invocation is
+
+\[
+ R=28944+20240+24=49208.
+ \tag{2.2}
+\]
+
+Every addition and fan-out is implemented by reversible additions into
+arbitrary existing values. Let \(L\) denote this invertible scratch
+mixer, \(V\) the source injection, and \(J\) the combined half-weighted
+piece and retained-total readout. Equation (2.1) is \(JLV=I\). Starting
+with arbitrary scratch \(z\), the chronological word
+
+\[
+ L,\ -J,\ L^{-1},\ +V,\ L,\ +J,\ L^{-1},\ -V
+ \tag{2.3}
+\]
+
+changes the target by \(JL(z+Vx)-JLz=x\) and restores \(z\). Here the
+signs on \(J\) and \(V\) specify additions to the target and scratch,
+respectively. Reversing the word and each gate implements the inverse
+shear. The scalar correctness of this construction holds on every
+scratch value.
+
+\subsection{3. Phase frames and the two
+stages}\label{phase-frames-and-the-two-stages}
+
+All label geometry is over the binary field; payloads remain complex.
+For a nondegenerate binary subspace \(U\) of the ambient
+\(m\)-dimensional space, use {[}O{]}'s frame
+
+\[
+ \Phi_U=H_m\operatorname{diag}_y\!\left(i^{\operatorname{wt}(P_Uy)}\right)H_m,
+\]
+
+where \(P_U\) is orthogonal projection and \(H_m\) is the normalized
+Walsh matrix. The Walsh matrices establish identities and are
+\textbf{not executed} by the algorithm. A scalar gate commutes with a
+common address frame on its touched roles. Consequently the inserted
+edge quotients telescope exactly as in {[}O{]}, equation (2.6).
+
+The local binary space is \(D=\mathbb F_2^h\). Each source triple is
+labelled by its indicator line. For a producer node, use the span of its
+triple indicators when they share a common pair; otherwise use the
+coordinate space of their union. The common-pair vectors are
+orthonormal. These are {[}J{]}'s labels, with its output-piece splitting
+retained.
+
+The following forward schedule implements (2.3). \(J_{\rm ret}\) and
+\(J_{\rm piece}\) are the two parts of \(J\); a source or target line is
+the line of that particular triple.
+
+\Needspace{24\baselineskip}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.3333}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Step
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Scalar operation
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Local common label
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & Apply \(L\) & \(0\) \\
+2 & Subtract retained readout from target & \(0\) \\
+3 & Subtract piece readout from target & \(0\) \\
+4 & Apply \(L^{-1}\) & \(0\) \\
+5 & Add sources to their input carriers & Source line \\
+6 & Apply \(L\) & Producer-node label at each gate \\
+7 & Add retained readout to target & \(0\), supplied by copies as in
+Section 4 \\
+8 & Add piece readout to target & Target-line perpendicular space \\
+9 & Apply \(L^{-1}\) & \(D\) \\
+10 & Subtract sources from their input carriers & \(D\) \\
+\end{longtable}
+}
+
+The inverse schedule reverses the operations, inverts their scalar
+gates, and complements every local label in \(D\). It is not a reversal
+of the forward labels without complementation.
+
+For a data pair \((S,T)\), write \(P\) and \(Q\) for its two indicator
+lines. Stage one performs the forward shear on the first triple index,
+for every fixed second index, with lifted label \(U\otimes Q\). Stage
+two performs the inverse shear on the second triple index, with logical
+source and target exchanged, and with lifted local label
+
+\[
+ (P^\perp\otimes D)\ \perp\ (P\otimes U^\perp),
+ \tag{3.1}
+\]
+
+where \(U\) is the corresponding forward label before complementation.
+There are \(v\) invocations per stage, with \textbf{distinct} auxiliary
+banks for the two stages.
+
+The input data frames are \(\Phi_{P\otimes Q}\) on \(X\) and identity on
+\(Y\). Their terminal frames are \(\Phi_{D\otimes D}\) on \(X\) and
+\(\Phi_{(P\otimes Q)^\perp}\) on \(Y\). Each auxiliary has source frame
+identity and sink frame \(\Phi_{D\otimes D}\). Stage-one auxiliaries pay
+an exit of rank \(m-h\); stage-two auxiliaries pay an entrance of rank
+\(m-h\). No translated auxiliary-source gauge is needed for this
+particular histogram.
+
+The two interstage data residuals are both \(P^\perp\otimes Q^\perp\),
+of rank \((h-1)^2\). Each of the four remaining data-front edges has
+rank \(h-1\). A coordinate unit outside each triple supplies a norm-one
+vector in the corresponding complement; tensoring the bases preserves
+nondegeneracy and nonalternation.
+
+For the local circuit, the verifier constructs symmetric binary
+projectors and replays every physical auxiliary edge in both
+orientations. It checks nesting and the existence of an orthonormal
+residual basis. It separately reproduces {[}J{]}'s \texttt{140,064}
+label checks with zero bad edges. Thus the new construction stays within
+{[}O{]}, Lemma 2.2; it does not require the more general
+alternating-residual normal form used by some other follow-ups.
+
+\subsection{4. Copied retained centres, with their transformations
+charged}\label{copied-retained-centres-with-their-transformations-charged}
+
+The retained slots are distinct terminal output-use carriers. After the
+middle producer, they are only read by the scatter before cleanup. Let
+\(U\) be one such carrier's local label and \(r=\dim U\).
+
+In the forward invocation, its old path was
+
+\[
+ U\longrightarrow0\longrightarrow D,
+\]
+
+at cost \(r+h\). Copy the physical value at frame \(U\), transform the
+copy to frame zero, supply all scatter reads from the copy, and discard
+it. The original remains at \(U\) until its direct move to \(D\), of
+rank \(h-r\). The copied transform is an inverse residual of rank \(r\).
+The new cost is \(r+(h-r)=h\), a saving of \(r\).
+
+In the reverse complementary invocation the old path is
+\(0\to D\to U^\perp\). Advance the original from zero to \(U^\perp\), at
+rank \(h-r\); copy it and transform the copy to \(D\), at rank \(r\),
+for the early readout. The original already has the frame required by
+the subsequent inverse mixer. In both orientations, the copy's
+transformed value is exactly the value the old readout would have seen.
+Its scalar reads do not modify it, and all later original incidences are
+preserved.
+
+This is {[}C{]}'s copied-centre argument, specialized to {[}J{]}'s
+retained totals. There are \(h-1\) retained labels of dimension \(h-1\)
+and one of dimension \(h\). The loss per local invocation is therefore
+
+\[
+ \ell=(h-1)^2+h=553.
+\]
+
+After the change, the internal residual histogram \(H_r\) has mass
+
+\[
+ \sum_r rH_r=hR+\ell.
+ \tag{4.1}
+\]
+
+Every copy transform remains in \(H_r\). The original and copied values
+occupy full streams with all spectator coordinates. A fresh temporary
+need not be an additional arbitrary-input role: copying, reading and
+discarding it cost linear work, and its recursive transform is
+explicitly counted. One temporary can be reused by processing retained
+readouts sequentially. This is workspace, not an uncharged enlargement
+of the role count \(W\).
+
+\subsection{5. The paid endpoint
+correction}\label{the-paid-endpoint-correction}
+
+Two shears give the scalar data map
+
+\[
+ (x,y)\longmapsto(-y,x+y).
+\]
+
+For one data pair let \(u\) generate \(P\otimes Q\). It has binary norm
+one and integer weight nine. Set
+
+\[
+ T=\Phi_{\langle u\rangle},\qquad F=\Phi_{D\otimes D},\qquad
+ E=\Phi_{\langle u\rangle^\perp}=FT^{-1}.
+\]
+
+Starting with physical inputs \(x,y\), the two-stage common-frame
+identity gives physical outputs
+
+\[
+ A=-Fy,\qquad B=FT^{-2}x+Ey.
+ \tag{5.1}
+\]
+
+Apply \(T^{-1}\) to a \textbf{copy} of \(A\), and add that result to
+\(B\). Since \(T^{-1}A=-Ey\), the corrected \(B\) is \(FT^{-2}x\). This
+is one rank-one child per data pair, with copying, addition and erasure
+charged as linear work.
+
+A final address translation suffices to normalize this endpoint in the
+array model. From the definition of the line frame,
+
+\[
+ T^2=R_u,\qquad R_u^2=I,
+\]
+
+where \(R_u\) translates binary addresses by \(u\). All these operators
+commute. Thus \(R_uB=Fx\) after the correction, while \(-A=Fy\).
+Reordering the banks gives the desired \(F\) on both original data
+arrays. This is the same translation identity used in {[}O{]},
+Proposition 2.4, applied to the weight-nine line of the two-stage
+construction.
+
+Every auxiliary scalar value is restored by its invocation. Its
+source/sink frame quotient is \(F\), so it too receives exactly \(F\),
+on arbitrary input data. The argument tensors over every column \(f\)
+and is unchanged by spectator bits. The correction has rank \(f\) after
+tensor lifting and is charged as a rank-one child on \(f\) active axes,
+once for each of the \(N\) data pairs.
+
+\subsection{6. Whole-residual recursive calls and the physical
+histogram}\label{whole-residual-recursive-calls-and-the-physical-histogram}
+
+For a nested edge with orthonormal residual basis \(z_1,\ldots,z_r\),
+{[}O{]}, Lemma 2.2 writes its operator as the product of \(r\) forward
+or inverse directional kernels. Use \textbf{one} binary basis extension
+placing these \(r\) independent directions in the first \(r\) coordinate
+slots. On \(f\) columns, collect their \(rf\) bits into one contiguous
+field.
+
+In these coordinates all factors act on disjoint bits. The identity
+\(C^{-1}=XC\) moves every inverse into a translation of its bit, so the
+entire residual is one \(C^{\otimes rf}\) call with address permutations
+and translations before or after it. In particular, the directions'
+signs need not agree. This is whole-residual batching {[}B{]}
+specialized to the array primitives already allowed by {[}O{]}. The cost
+of the wrappers is established in Section 8, rather than assumed free.
+
+The full list of child widths consists of the following disjoint
+classes:
+
+\Needspace{12\baselineskip}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}lrr@{}}
+\toprule\noalign{}
+Class & Number of children & Width \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Internal auxiliary edges, including centre copies & \(2vH_r\) & \(r\) \\
+Auxiliary exterior edges & \(2vR\) & \(m-h=552\) \\
+Interstage data edges & \(2N\) & \((h-1)^2=529\) \\
+Data fronts & \(4N\) & \(h-1=23\) \\
+Endpoint copies & \(N\) & \(1\) \\
+\end{longtable}
+}
+
+With
+
+\[
+ W=2N+2vR=207387136,\qquad L=2v\ell=2238544,
+\]
+
+the sum of all child widths is
+
+\[
+ s=Wm-N+L=119453132304,\qquad Wm-s=1858032.
+ \tag{6.1}
+\]
+
+Both orientations give the same \(H_r\) under the physical projector
+replay. The resulting full histogram is:
+
+\Needspace{20\baselineskip}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}rrrr@{}}
+\toprule\noalign{}
+\(r\) & \(n_r\) & \(r\) & \(n_r\) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+1 & 184811440 & 14 & 14864256 \\
+2 & 107199136 & 15 & 4849504 \\
+3 & 50583808 & 16 & 13014320 \\
+4 & 53478128 & 17 & 10196912 \\
+5 & 33031680 & 18 & 33371712 \\
+6 & 27611408 & 19 & 13601280 \\
+7 & 14767104 & 20 & 22774048 \\
+8 & 20195472 & 22 & 44038192 \\
+9 & 6217728 & 23 & 16479408 \\
+10 & 14119424 & 24 & 4048 \\
+11 & 5051904 & 529 & 8193152 \\
+12 & 13742960 & 552 & 199193984 \\
+13 & 4663296 & & \\
+\end{longtable}
+}
+
+Unlisted widths have multiplicity zero. Every child has
+\(1\le r\le552<576\), so there is no same-width recursion. The verifier
+checks the complete table against both a fresh run of {[}J{]}'s
+histogram builder and the pinned inputs to \texttt{Round6.lean}.
+
+\subsection{7. An exact rational moment
+certificate}\label{an-exact-rational-moment-certificate}
+
+Define
+
+\[
+ \Psi(\theta)=\frac1W\sum_r n_r\left(\frac rm\right)^\theta.
+\]
+
+Use the rational saving actually checked by {[}J{]}'s Lean file,
+
+\[
+ a=\frac{36926111}{500000000000}=0.000073852222,
+ \qquad \theta=1-a.
+\]
+
+For rational upper bounds \(U_r\ge\log(m/r)\),
+
+\[
+ \Psi(1-a)
+ =\sum_r\frac{rn_r}{Wm}\exp\!\left(a\log\frac mr\right)
+ \le\sum_r\frac{rn_r}{Wm(1-aU_r)},
+ \tag{7.1}
+\]
+
+provided \(0\le aU_r<1\). The inequality follows by comparing the
+exponential and geometric power series. The logarithm bounds use range
+reduction by powers of two and
+
+\[
+ \log y=2\sum_{j=0}^{K-1}\frac{z^{2j+1}}{2j+1}+\mathcal R_K,
+ \quad z=\frac{y-1}{y+1},\quad
+ 0\le\mathcal R_K\le\frac{2z^{2K+1}}{(2K+1)(1-z^2)}.
+\]
+
+The new verifier uses the repository's earlier logarithm implementation,
+rounded \textbf{upward} to a rational grid, rather than importing
+{[}J{]}'s logarithm routine. Exact arithmetic gives
+
+\[
+ \sum_r\frac{rn_r}{Wm(1-aU_r)}
+ <1-\frac7{10^{14}}<1.
+ \tag{7.2}
+\]
+
+Its actual rational gap is approximately
+\(7.91950201573749\times10^{-14}\); the certificate stores the rational
+endpoints, not merely this decimal. This is a strict witness, not a
+claim to have attained the critical root of the moment equation.
+{[}J{]}'s tighter Python bound \(7.3861113\times10^{-5}\) is not needed
+here.
+
+\subsection{8. Uniform unequal-width recursion without role
+padding}\label{uniform-unequal-width-recursion-without-role-padding}
+
+\textbf{Linear-time layout lemma.} A fixed binary basis map on each of
+\(f\) columns, selection of any fixed \(r\) output slots per column, and
+fixed column translations can be implemented in \(O(2^k)\) charged
+operations for \(k=mf+b\), \(0\le b<m\).
+
+To see this, extend {[}O{]}, Lemma 2.5 from one selected slot to \(r\)
+slots. Treat each \(m\)-bit column as a digit of fixed radix \(2^m\).
+Its finite table records contributions to the selected \(rf\)-bit field
+and to the spectator fields. Precompute their displaced contributions in
+\(O(f+1)\) time. Traverse the digit prefix tree, maintaining source and
+destination address sums. Every extension uses a fixed number of word
+operations; fewer than \(2^{k+1}\) nodes are visited. At each leaf move
+the value once, using an output buffer. The inverse permutation reverses
+the source/destination addresses. Translations can be incorporated into
+the digit tables. This includes initialization, discovery and movement
+of the contiguous fibers and requires no per-entry scan of \(f\)
+columns.
+
+Now let \(T(k)\) be the cost of applying \(C^{\otimes k}\) to \(W\)
+arbitrary arrays and put \(t(k)=T(k)/(W2^k)\). Handle the fixed range
+\(k<m\) directly. For \(k\ge m\), set \(f=\lfloor k/m\rfloor\) and
+process the fewer than \(m\) leftover axes directly. Apply the finite
+network on the remaining \(mf\) axes.
+
+A child of width \(r\) acts on \(F_r=2^{k-rf}\) fibers of length
+\(2^{rf}\) in \textbf{one} original or temporary stream. Pack complete
+groups of \(W\) fibers and run this same simultaneous algorithm
+recursively. Process the fewer than \(W\) leftover fibers by the
+ordinary coordinate algorithm. This gives
+
+\[
+\begin{split}
+ T(k)\le{}&A W2^k+\sum_r n_r\left\lfloor\frac{2^{k-rf}}W\right\rfloor T(rf)\\
+ &+B(W-1)\sum_r n_r\,rf\,2^{rf}.
+\end{split}
+ \tag{8.1}
+\]
+
+The first term charges the fixed number of scalar gates, all layout
+passes, temporary copies, endpoint translations, and leftover axes. All
+constants are independent of \(k\). Since \(r<m\) and \(k\ge mf\),
+
+\[
+ rf\,2^{rf-k}\le rf\,2^{-(m-r)f}\le r.
+\]
+
+Consequently incomplete batches contribute only a bounded additive term
+after normalization:
+
+\[
+ t(k)\le A'+\frac1W\sum_r n_r\,t(r\lfloor k/m\rfloor).
+ \tag{8.2}
+\]
+
+Choose a constant \(K\) large enough for the finite base range and for
+\(K(1-\Psi(\theta))m^\theta\ge A\prime\). Strong induction on \(k\),
+using \(rf\le(r/m)k<k\), gives
+
+\[
+ t(k)\le A'+Kk^\theta\Psi(\theta)\le Kk^\theta
+ \quad(k\ge m).
+\]
+
+Thus \(T(k)=O(W2^k(k+1)^\theta)\). A single requested transform
+initializes \(W-1\) other arrays once and retains its own output;
+because \(W\) is fixed, this adds only \(O(2^k)\) work.
+
+The recursion can be performed serially with reusable buffers and
+temporary streams. Each child array has at most half as many entries as
+its parent, since \(k-rf\ge1\). The maximum axis count also contracts by
+at most \(552/576\), giving \(O(\log(k+2))\) stack depth. Summing live
+array sizes along the stack gives \(O(W2^k)\) workspace. Addresses,
+counters and strides fit a fixed number of \(O(k+1)\)-bit words. Fixed
+tables and scalar coefficients have constructive finite preparation
+procedures, so their initial construction is charged as a constant.
+These facts establish the uniform arbitrary-input tensor interface
+required by {[}O{]}.
+
+\subsection{9. Propagation to every Fourier
+length}\label{propagation-to-every-fourier-length}
+
+The proof of {[}O{]}, Proposition 4.2 uses its tensor routine only
+through the bound \(O(2^k(k+1)^\theta)\) on arbitrary complex arrays,
+including index and movement costs. Replacing that routine by Section 8
+therefore gives
+
+\[
+ O\!\left(R(\ell+1)^\theta(1+\log r_{\max})^4\right)
+ +\operatorname{poly}(\ell,r_{\max},\log(R+2)).
+\]
+
+The exact-width local Fourier compiler, its scalar preparation and
+denominator conditions are unchanged. Its sectors still carry the same
+kernel \(C\). Applying {[}O{]}'s small-prime working lengths, CRT
+permutations, and charged chirp convolution, with
+\(\ell=\Theta(\log n/\log\log n)\), gives
+
+\[
+ T(n)=O\!\left(n(\log n)^\theta(\log\log n)^{4-\theta}\right).
+ \tag{9.1}
+\]
+
+In particular, the transform of the fixed convolution operand remains
+charged. The specified root order and logarithmic-word address bounds
+remain those of {[}O{]}.
+
+Finally,
+
+\[
+ \delta=\frac{73}{10^6},\qquad
+ a-\delta=\frac{426111}{500000000000}>0.
+\]
+
+For every fixed positive exponent gap, the fixed power of \(\log\log n\)
+in (9.1) is eventually smaller than \((\log n)^{a-\delta}\). This proves
+the proposed pure-power corollary, conditional on the specified finite
+construction and upstream results. There is no integer-multiplication
+bit-network constraint or extra factor-of-two loss in this transfer.
+
+The new proposed \texttt{delta} is about \texttt{132,727} times the
+earlier \texttt{5.5e-10} value and \texttt{730,000,000} times {[}O{]}'s
+published \texttt{1e-13} headline. These ratios compare asymptotic
+exponent savings, not running times or practical FFT performance. The
+previous centre reduction and shared-sum gains are not added to the
+imported construction's saving.
+
+\subsection{10. Reproduction and proof
+boundaries}\label{reproduction-and-proof-boundaries}
+
+Run from the repository root with standard-library Python 3.10 or newer:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{python3}\NormalTok{ verification/run\_checks.py}
+\end{Highlighting}
+\end{Shaded}
+
+For the new component alone:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{python3}\NormalTok{ verification/verify\_round6.py}
+\end{Highlighting}
+\end{Shaded}
+
+The new verifier checks source hashes; reconstructs all producer
+supports and the full local coefficient matrix; reproduces the external
+binary label checks; replays physical auxiliary paths in both
+orientations using the earlier repository's binary-projector
+implementation; charges centre copies; rebuilds and compares the entire
+histogram; checks dirty-scratch scalar trials and exact endpoint
+identities; and certifies the rational moment and absorption slack.
+Negative controls reject unpaid centre copies, an omitted endpoint
+correction, and an excessive exponent saving. The report is compared
+with \texttt{verification/certificates/round6\_reference.json}.
+
+The producer and the external frame/histogram checks are vendored
+source, not independent implementations. The extra replay and
+coefficient checker were written with the same assistant and reuse
+earlier local binary algebra. The dirty-scratch executions are finite
+exact rational trials; the universal scratch statement uses (2.3) and
+the copied-read proof. Endpoint tests use exact Gaussian-integer
+algebra. The checker does not execute the astronomical full Fourier
+algorithm, prove the infinite recurrence by enumeration, or run Lean.
+The pinned Lean source and numerical inputs are included for comparison,
+with their original license and notice.
+
+Independent mathematical review should prioritize the copied-read
+timing, the lifted data-frame interfaces, the paid endpoint correction,
+the full-residual layout lemma, and the remainder recurrence. The
+original compiler and all-length reduction are invoked with their stated
+hypotheses, not re-proved here. The earlier result and its verification
+suites remain separately available.
+
+\subsection{References and
+attribution}\label{references-and-attribution}
+
+{[}O{]} OpenAI. \emph{An explicit power saving for the exact discrete
+Fourier transform}, September 25, 2026. Especially Lemmas 2.2 and 2.5,
+Proposition 2.4, Theorem 2.6, Proposition 4.2, and Section 5.
+\href{https://github.com/openai/math/blob/main/preprints/An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026/main.pdf}{Public
+manuscript}.
+
+{[}J{]} Swapnil Jain. \texttt{integer-mult-kappa}, round-six complex
+producer and certificates, pinned at
+\texttt{f2176bc1124821bf17eb63725bd366d7bdc020a3}.
+\href{https://github.com/Swapnil-jain/integer-mult-kappa/tree/f2176bc1124821bf17eb63725bd366d7bdc020a3/independent/complex-twostage}{Complex
+implementation},
+\href{https://github.com/Swapnil-jain/integer-mult-kappa/blob/f2176bc1124821bf17eb63725bd366d7bdc020a3/lean/Round6.lean}{Lean
+numerical certificate}. The source attributes research and
+implementation assistance to Claude (Anthropic); its Apache-2.0 license
+and full NOTICE are preserved locally.
+
+{[}B{]} icekylinx. Whole-residual batching and unequal-width recursion,
+PR \#10 of Colkitt's repository, commit \texttt{62691e3}; further full
+complex batching is credited to eumemic, PR \#15.
+\href{https://github.com/icekylinx/integer-mult-bounds/blob/62691e3/notes/batched-complex-rows.tex}{Batching
+proof},
+\href{https://github.com/CrocSwap/integer-mult-bounds/pull/15}{PR \#15}.
+
+{[}C{]} icekylinx. Copied retained centres and two-stage complex
+endpoint transfer, PR \#36, commit
+\texttt{11817ccacb564bb7f98789c20dc11d3fece207e3}.
+\href{https://github.com/icekylinx/integer-mult-bounds/blob/11817ccacb564bb7f98789c20dc11d3fece207e3/notes/copied-centers-lemma.tex}{Copied-centre
+lemma},
+\href{https://github.com/icekylinx/integer-mult-bounds/blob/11817ccacb564bb7f98789c20dc11d3fece207e3/notes/copied-centers-complex.tex}{complex
+endpoint argument}. The source records substantial GPT-6 Astra and Codex
+assistance.
+
+{[}P{]} Aurel Prosz (Paureel). Two-stage topology and charged
+endpoint-copy correction, commit
+\texttt{c82d09eb4781b68435e3fa3eb6beea72fa900fab} of
+\href{https://github.com/Paureel/integer-mult-bounds/tree/c82d09eb4781b68435e3fa3eb6beea72fa900fab}{integer-mult-bounds},
+as attributed in {[}J{]} and {[}C{]}.
+
+The common finite-network framework originates in OpenAI's \emph{Integer
+multiplication below n log n} (\#109); Douglas Colkitt's
+\texttt{CrocSwap/integer-mult-bounds} supplies the follow-up framework.
+Other antecedents, including contributions by Zhihao Chen /
+jacklightChen and retained-total and complex-circuit work, are
+identified in the preserved external NOTICE. This draft claims a
+proposed transfer to \#130's arithmetic model, not authorship of those
+network improvements. AI-assisted checking is not independent review.
+
+\end{document}

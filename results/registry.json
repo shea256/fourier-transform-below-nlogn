@@ -1,0 +1,61 @@
+{
+  "schema": 1,
+  "current": "round11",
+  "results": [
+    {
+      "id": "legacy-shared-sum",
+      "date": "2026-10-08",
+      "name": "Earlier shared-sum construction",
+      "status": "historical-proposed",
+      "fourier_saving": "11/20000000000",
+      "tensor_saving": null,
+      "record": "results/legacy-shared-sum.md",
+      "certificate": "verification/certificates/extension_reference.json",
+      "verifier": "verification/verify_extension.py",
+      "change": "Reduced-centre and shared-sum refinements; full publication preserved under archive/three-stage."
+    },
+    {
+      "id": "round6",
+      "date": "2026-10-08",
+      "name": "Jain round-six two-stage network",
+      "status": "proposed",
+      "fourier_saving": "73/1000000",
+      "tensor_saving": "36926111/500000000000",
+      "record": "results/round6.md",
+      "certificate": "verification/certificates/round6_reference.json",
+      "verifier": "verification/verify_round6.py",
+      "source_manifest": "verification/vendor/jain_round6/SOURCE.json",
+      "change": "Copied centres, retained totals and whole-residual batching; full publication preserved under archive/round6."
+    },
+    {
+      "id": "round10",
+      "date": "2026-10-09",
+      "name": "Jain round-ten paired-cube cover",
+      "status": "proposed",
+      "fourier_saving": "61/100000",
+      "tensor_saving": "15402419/25000000000",
+      "record": "results/round10.md",
+      "certificate": "verification/certificates/round10_reference.json",
+      "verifier": "verification/verify_round10.py",
+      "source_manifest": "verification/vendor/jain_round10/SOURCE.json",
+      "change": "Three-stage cover, arbitrary-subspace frames, shared completed cores, nested-prefix modules, and 3,180 birth-reuse pairs. New transfer argument and exact finite checks."
+    },
+    {
+      "id": "round11",
+      "date": "2026-10-09",
+      "name": "Jain round-eleven retired-copy refinement",
+      "status": "proposed",
+      "fourier_saving": "67/100000",
+      "tensor_saving": "67147467/100000000000",
+      "record": "results/round11.md",
+      "paper_records": [
+        "results/round10.md",
+        "results/round11.md"
+      ],
+      "certificate": "verification/certificates/round11_reference.json",
+      "verifier": "verification/verify_round11.py",
+      "source_manifest": "verification/vendor/jain_round11/SOURCE.json",
+      "change": "Re-chosen cube circuit, 386 retired-copy hosts and 42 terminal deletions. Recomputed compensation and exact checks of all 17,057,040 scalar output coefficients; frame and cover dependencies inherited explicitly."
+    }
+  ]
+}

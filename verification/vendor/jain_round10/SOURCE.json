@@ -1,0 +1,51 @@
+{
+  "repository": "https://github.com/Swapnil-jain/integer-mult-kappa",
+  "commit": "d2f6146ffbbd893e69b8fb06bc53b82af36d8032",
+  "files": [
+    {
+      "path": "word.json.gz",
+      "upstream_path": "certificates/round10/cx_prefix_word_p11.json.gz",
+      "sha256": "2157c98c7e054c79c0157149c0b75b1a2de7c7e0946ae9af38786128575d0f40"
+    },
+    {
+      "path": "inventory.json.gz",
+      "upstream_path": "certificates/round10/cx_prefix_inventory_p11.json.gz",
+      "sha256": "006f02fe93c1563f4ecdbfad2cd5a2ccbbf3f625a294bdf7baba3c74b6a84010"
+    },
+    {
+      "path": "check_word.py",
+      "upstream_path": "independent/round10-cx-prefix-gate/check_word.py",
+      "sha256": "5d3a810c4d271a75fe1818edb3877f51f9c20b57a145114db20cffd8ec623bb1"
+    },
+    {
+      "path": "mutate_word.py",
+      "upstream_path": "independent/round10-cx-prefix-gate/mutate_word.py",
+      "sha256": "0d8b28823772a8552df16a4ac3d66d811c4798aed3d1eb74d8f6e05c21976775"
+    },
+    {
+      "path": "Round10.lean",
+      "upstream_path": "lean/Round10.lean",
+      "sha256": "2875b62810c8f39ebc9bb26b39f271a3db82a9d33f3be0cfb70bf42b5100c3e0"
+    },
+    {
+      "path": "round10-histograms.json",
+      "upstream_path": "lean/round10-histograms.json",
+      "sha256": "de9116a90234781baddd8de10a75106e7f99f506c4bd4e41e5c975354d7e0a8c"
+    },
+    {
+      "path": "UPSTREAM_README.md",
+      "upstream_path": "README.md",
+      "sha256": "96cfd12daa69c64dd175df291f78337c8d3aec26e072fa886d71a7c09aad23f9"
+    },
+    {
+      "path": "NOTICE",
+      "upstream_path": "NOTICE",
+      "sha256": "74d54813bfde1d9eae1f0cbd26f7c26ed84dc9c259e5a23a39610e313055b161"
+    },
+    {
+      "path": "LICENSE",
+      "upstream_path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ]
+}

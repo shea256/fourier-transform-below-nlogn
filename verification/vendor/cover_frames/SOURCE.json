@@ -1,0 +1,36 @@
+{
+  "repository": "https://github.com/icekylinx/integer-mult-bounds",
+  "commit": "c8b22bc5c10dba497ac25804e27d9647d818e2ff",
+  "files": [
+    {
+      "path": "general-clifford-frames.tex",
+      "upstream_path": "notes/general-clifford-frames.tex",
+      "sha256": "c9bb9655b594583c6b4bab8cb485233f1d1e588f83858cf1e4c3530cee8fed54"
+    },
+    {
+      "path": "three-stage-cover-complex.tex",
+      "upstream_path": "notes/three-stage-cover-complex.tex",
+      "sha256": "1c5b638aa9b75365b8addec9c8eeee6bc5e499722901079b94c65fce033fde8a"
+    },
+    {
+      "path": "paired-cube-construction.tex",
+      "upstream_path": "notes/paired-cube-construction.tex",
+      "sha256": "fb478cda034c1934c62230487008c0a753867e1b153b7d0088878d6fa06856b4"
+    },
+    {
+      "path": "paired-cube-sharing.tex",
+      "upstream_path": "notes/paired-cube-sharing.tex",
+      "sha256": "57fd2290d98528bce00f2ed51b1988e917748f43b2ec25acceacaf2beae1d7e2"
+    },
+    {
+      "path": "NOTICE",
+      "upstream_path": "NOTICE",
+      "sha256": "f8511476690f8554d2ee37304b34dc7f58e385e4bff77555d5bd895bcda6212e"
+    },
+    {
+      "path": "LICENSE",
+      "upstream_path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ]
+}

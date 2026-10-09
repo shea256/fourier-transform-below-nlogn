@@ -6,7 +6,37 @@ Run from the repository root with **Python 3.10+**, standard library only:
 python3 verification/run_checks.py
 ```
 
-The runner executes the earlier two suites and their reference comparison, then the new round-six verifier. It writes fresh console transcripts under ignored `outputs/` files. Finite checks support the written proofs; they do not establish an end-to-end formal theorem or constitute independent review.
+The runner executes the earlier suites, round-six, round-ten and round-eleven verifiers, and generated-document/registry consistency checks. It writes fresh console transcripts under ignored `outputs/` files. Finite checks support the written proofs; they do not establish an end-to-end formal theorem or constitute independent review. Incorporated versions are listed in [the improvement log](../IMPROVEMENTS.md).
+
+## Round-eleven transfer: proposed Fourier saving `0.00067`
+
+```sh
+python3 verification/verify_round11.py
+```
+
+The [source manifest](vendor/jain_round11/SOURCE.json) pins the new C1 word, retirement-host matching, 42 terminals, imported checker, notices and Lean inputs. The verifier checks the complete decoder identity and imports the full-size role/frame/target-chain recount. It then separately emits the aliased scalar transcript and checks **all 17,057,040 output coefficients over the rationals**: source response, zero initial dirty-scratch response, and identity on arbitrary dirty targets. Each retained physical mixer is invertible; the written cleanup reverses those actual mixers and source loads.
+
+The independent rational moment bound accepts `67147467/100000000000`, rejects the next `1e-12` grid point, and checks the positive gap to `67/100000`. Its output must match [round11_reference.json](certificates/round11_reference.json). Additional exact controls reject wrong mix sign, omitted gauge correction and missing terminal post-shear. The imported modular trials and controls remain clearly identified.
+
+The complete scalar check does not materialize full-size complex frames or the global cover. Those and the Fourier reduction remain explicit mathematical dependencies, as described in [ROUND11_AUDIT.md](ROUND11_AUDIT.md) and the [result record](../results/round11.md). The Python runner does not execute Lean. The round-ten suite below retains the small exhaustive Clifford checks used by both records.
+
+## Round-ten transfer: proposed Fourier saving `0.00061`
+
+```sh
+python3 verification/verify_round10.py
+```
+
+The checker verifies hashes of the pinned word, upstream checker, Lean inputs and adopted proof sources. It then expands **all 1,742,400 decoder coefficients over the integers**, checks 32,071 compiled carrier operations and the exact supports of 5,170 compensation coefficients, runs the imported full-size frame/chain/alias checker, and reconstructs the complete histogram. The histogram must match the released inventory and the Lean input.
+
+The shared [network_contract.py](network_contract.py) uses the earlier local logarithm routine and rational exponential bounds. It proves a strict moment at `15402419/25000000000`, rejects the next grid point with a lower bound, and checks the positive gap to the Fourier choice `61/100000`. The reference is [round10_reference.json](certificates/round10_reference.json).
+
+[clifford_checks.py](clifford_checks.py) enumerates all 67 binary subspaces in dimension four, checks 4,489 frame-distance pairs and 513 nested transitions using exact Gaussian-integer matrices, and checks the full-frame translation square. These small exhaustive tests supplement the general written lemma; they are not a full-size physical replay.
+
+The upstream aliased dirty-scratch runs are exact **modular samples**, not universal symbolic proofs. Our complete integer coefficient check establishes the decoder identity, while the arbitrary-scratch and cover statements still use the [written transfer](../results/round10.md). The general Clifford elimination and cover/sharing results are explicit upstream dependencies. The full cover and DFT are not executed. The Python runner does not execute Lean.
+
+To run the four additional upstream word mutations, generate them into a temporary directory with `verification/vendor/jain_round10/mutate_word.py WORD.json.gz OUTDIR`, then run `verification/vendor/jain_round10/check_word.py` on each `mut_*.json.gz`; all four must return nonzero. The normal verifier already checks its own sign, compensation-target and next-grid controls and the upstream replay's three timing/read controls.
+
+See [ROUND10_AUDIT.md](ROUND10_AUDIT.md) and the [source manifest](vendor/jain_round10/SOURCE.json) for attribution and exact scope. The optimization search is not rerun; the complete frozen word is checked directly.
 
 ## Round-six transfer: proposed Fourier saving `7.3e-5`
 
@@ -29,7 +59,7 @@ The output is `round6_certificate.json`, compared with [certificates/round6_refe
 
 The third-party code is in [vendor/jain_round6/](vendor/jain_round6/), with its original license, NOTICE and source manifest. The new checker reuses the earlier local projector library and imports the external producer. It is an additional implementation of some checks, **not an independent implementation or independent review of the entire construction**.
 
-The included `Round6.lean` checks numerical certificates and the integer-multiplication assembly. The runner does not execute Lean, and the file does not prove the Fourier transfer. The infinite recurrence, linear-time index layout, arbitrary-column lifting, and all-length theorem use the written arguments in [manuscript.md](../manuscript.md). See [ROUND6_AUDIT.md](ROUND6_AUDIT.md) for the review boundary.
+The included `Round6.lean` checks numerical certificates and the integer-multiplication assembly. The runner does not execute Lean, and the file does not prove the Fourier transfer. The infinite recurrence, linear-time index layout, arbitrary-column lifting, and all-length theorem use the written arguments in the [archived round-six manuscript](../archive/round6/manuscript.md). See [ROUND6_AUDIT.md](ROUND6_AUDIT.md) for the review boundary.
 
 ## Earlier three-stage result and fallbacks
 
@@ -49,5 +79,7 @@ Their original JSON references remain in [certificates/](certificates/), and the
 | `5.3e-10` | Also the earlier incomplete-batch recurrence |
 | `5.5e-10` | Also the earlier shared-sum schedules |
 | **`7.3e-5`** | **Attributed round-six two-stage network, paid copies and endpoint correction, whole-residual recurrence, and the new Fourier transfer** |
+| `0.00061` | **Round-ten paired-cube cover, generalized exact frames, shared completed cores, and birth reuse** |
+| **`0.00067`** | **Round-eleven retired copies, terminal targets and new exact scalar map; selected by the living registry** |
 
 None of these checks establishes novelty, priority, practical runtime, finite-precision stability, bounded coefficients, or a new integer-multiplication theorem.

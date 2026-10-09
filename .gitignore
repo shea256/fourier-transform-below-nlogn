@@ -1,3 +1,4 @@
 # macOS Finder metadata, including in subdirectories.
 .DS_Store
 /tex/build/
+__pycache__/

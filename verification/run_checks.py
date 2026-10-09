@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the round-six and earlier finite verifiers and compare their certificates.
+"""Run all incorporated finite verifiers and check the living result registry.
 
 Works from any working directory. Standard-library Python >=3.10 only.
 """
@@ -30,6 +30,11 @@ def main():
     run('clean_room_audit.py', 'clean_room_run.txt')
     run('compare_certificates.py', 'comparison_run.txt')
     run('verify_round6.py', 'round6_run.txt')
+    run('verify_round10.py', 'round10_run.txt')
+    run('verify_round11.py', 'round11_run.txt')
+    process = subprocess.run([sys.executable, str(BASE.parent / 'scripts/build_manuscript.py'), '--check'], check=False)
+    if process.returncode:
+        raise SystemExit('Result registry or generated paper text is inconsistent.')
     print('All finite checks passed and reference certificates matched.')
 
 

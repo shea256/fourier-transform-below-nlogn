@@ -1,5 +1,7 @@
 # Review of the proposed round-six Fourier transfer
 
+This is a version-specific review. The unchanged round-six manuscript is now in [archive/round6](../archive/round6/manuscript.md); the current selection is listed in [the improvement log](../IMPROVEMENTS.md).
+
 **Date:** October 8, 2026.  
 **Result under review:** Proposed `delta=7.3e-5` in the exact arithmetic/root/address model of OpenAI #130.  
 **Review status:** Same-assistant mathematical review and additional finite checks. No independent mathematical review, full theorem formalization, or practical runtime claim.

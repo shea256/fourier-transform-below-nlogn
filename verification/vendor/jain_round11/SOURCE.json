@@ -1,0 +1,61 @@
+{
+  "repository": "https://github.com/Swapnil-jain/integer-mult-kappa",
+  "commit": "1a580dcc91dad5fbcffb5c80b7641a96bfa24e16",
+  "files": [
+    {
+      "path": "word.json.gz",
+      "upstream_path": "certificates/round11/cx_recycle_word_p11.json.gz",
+      "sha256": "9438003d1b0f07a4764ce2ce498f7321817272de49398aa4941ad54723757a62"
+    },
+    {
+      "path": "inventory.json.gz",
+      "upstream_path": "certificates/round11/cx_recycle_inventory_p11.json.gz",
+      "sha256": "0fb23acc167f9db068fbf2279cc6f2dbd530ec083f39dc9d37a8ced3775e08e6"
+    },
+    {
+      "path": "check_word.py",
+      "upstream_path": "independent/round11-cx-recycle-gate/check_word2_recycle.py",
+      "sha256": "493e0daf622509c9d39f981764c366897b0018a852114e1ae4bb62beaeb3be95"
+    },
+    {
+      "path": "mutate_hosts.py",
+      "upstream_path": "independent/round11-cx-recycle-gate/mutate_hosts.py",
+      "sha256": "15c41a0917b2841dbcfaff0ba27f3e90bf483e809a91307043cf5757fbae99b1"
+    },
+    {
+      "path": "COMPLEX_README.md",
+      "upstream_path": "independent/round11-cx-recycle-gate/README.md",
+      "sha256": "390e8f76f9267f4103a02ad64c5709cb51cef2b82d4d6650063a7519ff3935f3"
+    },
+    {
+      "path": "COMPLEX_NOTICE.txt",
+      "upstream_path": "independent/round11-cx-recycle-gate/NOTICE.txt",
+      "sha256": "d28c126dfdcad007433f6edfa538d51827ec4e54e2eb9606b0e69c9445d94e51"
+    },
+    {
+      "path": "Round11.lean",
+      "upstream_path": "lean/Round11.lean",
+      "sha256": "306f353e0011c48dcfc10106007fea8d25b82a97e0a25f00e2b551fe07674276"
+    },
+    {
+      "path": "round11-histograms.json",
+      "upstream_path": "lean/round11-histograms.json",
+      "sha256": "12899850039ecb274c41db7e997cef2fcebee398e2b3aeb6ab536f96424c1d9d"
+    },
+    {
+      "path": "UPSTREAM_README.md",
+      "upstream_path": "README.md",
+      "sha256": "16b639edb7009b4b3428739a6d0ae2e612e7c6baae7513010eb19b29804a8e31"
+    },
+    {
+      "path": "NOTICE",
+      "upstream_path": "NOTICE",
+      "sha256": "8b569bafcc07d33a421427581ee59b570a890c4d5326ac1ed4f81400c3e330af"
+    },
+    {
+      "path": "LICENSE",
+      "upstream_path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    }
+  ]
+}
