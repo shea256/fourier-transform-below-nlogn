@@ -4,6 +4,12 @@ A living research project on **OpenAI Math Problem #130**, *An explicit power sa
 
 <!-- current-result:start -->
 
+## Latest paper
+
+**[Read the latest paper (PDF)](manuscript.pdf)** · [Read online (Markdown)](manuscript.md) · [LaTeX source](tex/manuscript.tex)
+
+This is the complete current research draft: the reusable Fourier argument, the selected network construction and the improvement history. These links stay the same as the paper is updated; earlier drafts are preserved under [archive/](archive/).
+
 Current selection: **[Jain round-eleven retired-copy refinement](results/round11.md)**, recorded 2026-10-09.
 
 ```math
@@ -22,9 +28,8 @@ The [finite certificate](verification/certificates/round11_reference.json) recor
 
 The model uses exact complex arithmetic, unrestricted coefficients, a specified supplied root of unity, and unit-cost logarithmic-word indexing. Scalar preparation and array organization are included. These are asymptotic exponent improvements; **no practical FFT speedup is claimed**.
 
-## Read the paper and result history
+## Paper structure and result history
 
-- [Current manuscript](manuscript.pdf), [Markdown](manuscript.md), and [LaTeX](tex/manuscript.tex).
 - [Improvement log](IMPROVEMENTS.md): dated results, exact parameters, provenance and changes.
 - [Reusable transfer theorem](paper/framework.md): the finite-network contract, recurrence, array adapters, and all-length reduction.
 - [Versioned result records](results/README.md): construction arguments and the process for adding future updates.

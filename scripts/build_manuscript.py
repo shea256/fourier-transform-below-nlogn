@@ -96,7 +96,13 @@ Generated from [results/registry.json](results/registry.json). Dates identify pr
     if transcript:
         count = transcript['target_coefficient_entries']
         evidence = f'\n\nThe [finite certificate]({current["certificate"]}) records exact rational checks of **{count:,} scalar output coefficients**, covering the input response, cancellation of initial dirty-scratch contributions, and preservation of arbitrary target values. This is a scalar-map check; the general physical-network and Fourier arguments remain written proof dependencies.'
-    summary = f'''Current selection: **[{current['name']}]({current['record']})**, recorded {updated}.
+    summary = f'''## Latest paper
+
+**[Read the latest paper (PDF)](manuscript.pdf)** · [Read online (Markdown)](manuscript.md) · [LaTeX source](tex/manuscript.tex)
+
+This is the complete current research draft: the reusable Fourier argument, the selected network construction and the improvement history. These links stay the same as the paper is updated; earlier drafts are preserved under [archive/](archive/).
+
+Current selection: **[{current['name']}]({current['record']})**, recorded {updated}.
 
 ```math
 T(n)=O\\left(n(\\log n)^{{1-\\delta}}\\right),\\qquad \\delta={delta}.
