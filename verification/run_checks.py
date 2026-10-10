@@ -32,6 +32,7 @@ def main():
     run('verify_round6.py', 'round6_run.txt')
     run('verify_round10.py', 'round10_run.txt')
     run('verify_round11.py', 'round11_run.txt')
+    run('verify_five_stage.py', 'five_stage_run.txt')
     process = subprocess.run([sys.executable, str(BASE.parent / 'scripts/build_manuscript.py'), '--check'], check=False)
     if process.returncode:
         raise SystemExit('Result registry or generated paper text is inconsistent.')

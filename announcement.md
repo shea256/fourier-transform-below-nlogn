@@ -1,28 +1,26 @@
-# Announcement draft: round-eleven integration
+# Announcement text: five-stage Fourier incorporation
 
-This is a draft, not a posting record. Verify the current selection in `results/registry.json` before publishing. The original round-six announcement is preserved under `archive/round6/`.
+Prepared text, not a posting record. The selected source and proof receipt are recorded in `results/registry.json` and `verification/FIVE_STAGE_AUDIT.md`.
 
 ## Main post
 
-We're updating our research draft on OpenAI Problem #130: computing the exact discrete Fourier transform below n log n.
+We've updated our paper on OpenAI Problem #130: computing the exact discrete Fourier transform below n log n.
 
-Building on Swapnil Jain's round-eleven complex network and its cited predecessors, our draft now proposes the all-length bound
+We're incorporating the stronger Fourier result published by Jacob Sussman and Chafik Boukhalfa, built on the community's integer-multiplication networks:
 
-T(n) = O(n(log n)^(1−δ)), with δ = 6.7×10⁻⁴.
+T(n) = O(n(log n)^(1−δ)), with δ = 0.0007547360.
 
-That's about 9.18 times our previous published exponent saving of 7.3×10⁻⁵, and 6.7 billion times OpenAI's published headline of 10⁻¹³.
+That's a 12.65% increase in the exponent saving over our previous 0.00067. We've reproduced the pinned Lean project build and theorem comparisons.
 
-These are comparisons of the exponent saving, not measured runtime speedups. The Fourier transfer remains conditional on the cited upstream interfaces, with independent review and formal verification pending.
+This update credits their upstream theorem; our contribution is incorporation, a source-history audit, and reproducible checks.
 
 ## Follow-up
 
-The paper now separates the reusable Fourier transfer from versioned network witnesses, with an improvement log, immutable source pins and preserved earlier drafts.
+Sussman supplies the five-stage geometry and formal framework. Boukhalfa supplies the stronger PR233 pairing, PR256 explicit program and Fourier instantiation. The circuit retains work by icekylinx, eumemic, Avi Eisenberg, an664 and the other contributors named in our audit.
 
-For round eleven, our additional verifier checks every scalar output coefficient over exact rational arithmetic, including arbitrary dirty registers and targets. This is a finite check, not a formal proof of the full physical network or Fourier theorem.
+We also preserve the research lineage through OpenAI, Doug Colkitt, Rohan Arun and Swapnil Jain. OpenAI supplies the original Fourier model and reduction; Jain's networks supplied our earlier selected witnesses.
 
-The model uses exact complex arithmetic, unrestricted coefficients, a specified supplied root of unity and unit-cost logarithmic-word indexing. Scalar preparation and array organization are charged. No practical FFT speedup is claimed.
+The all-length theorem uses OpenAI's exact-complex-arithmetic RAM model, with a specified supplied root of unity and scalar/index preparation included. The comparison is of exponent savings. No practical FFT speedup is claimed; independent human review remains pending.
 
-Draft, LaTeX, exact certificates, verification scope and improvement log:
+Paper, LaTeX, pinned sources, exact certificates, Lean reproduction receipt and improvement history:
 https://github.com/shea256/fourier-transform-below-nlogn
-
-Network credit belongs to Jain and the cited community contributors, including icekylinx's frame/cover and retirement-reuse work, jamesyc's terminal-target compiler, eumemic's modules and compensated-reuse lineage, and an664's completed-core sharing. Douglas Colkitt's repository and the original OpenAI work provide the underlying research framework. Full attribution is in the paper and preserved source notices.

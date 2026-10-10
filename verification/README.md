@@ -6,7 +6,26 @@ Run from the repository root with **Python 3.10+**, standard library only:
 python3 verification/run_checks.py
 ```
 
-The runner executes the earlier suites, round-six, round-ten and round-eleven verifiers, and generated-document/registry consistency checks. It writes fresh console transcripts under ignored `outputs/` files. Finite checks support the written proofs; they do not establish an end-to-end formal theorem or constitute independent review. Incorporated versions are listed in [the improvement log](../IMPROVEMENTS.md).
+The runner executes the earlier suites, round-six, round-ten, round-eleven and five-stage verifiers, and generated-document/registry consistency checks. It writes fresh console transcripts under ignored `outputs/` files. Finite checks support the written proofs; they do not establish an end-to-end formal theorem or constitute independent review. The separate Lean workflow below reproduces the imported formal theorem. Incorporated versions are listed in [the improvement log](../IMPROVEMENTS.md).
+
+## Five-stage Fourier result: `0.0007547360`
+
+```sh
+python3 verification/verify_five_stage.py
+```
+
+The [source manifest](vendor/five_stage/SOURCE.json) pins Boukhalfa's PR256 explicit program and his stronger Fourier instantiation in Sussman's framework. The verifier checks hashes, invokes Sussman's exact scalar/label checker, independently constructs the five-stage histogram, and checks its rational moment, finite-fill rate, negative control and Fourier absorption gap. It binds the program, ledger, exponent and OpenAI challenge to the archived Lean source. The reference is [five_stage_reference.json](certificates/five_stage_reference.json).
+
+The scalar replay checks every source column. Arbitrary dirty-scratch restoration comes from the Lean invocation theorem, not from this Python test alone. The full program regeneration also reruns the upstream flow and exact local lifts; it passed with both emitted certificates identical to the pinned originals. Its [receipt](certificates/five_stage_regeneration_receipt.json) and compressed log are retained.
+
+Reproduce the formal theorem separately, with the pinned Lean 4.34.1 toolchain installed:
+
+```sh
+python3 verification/verify_five_stage_lean.py \
+  --work-dir /tmp/fourier-five-stage-rebuild --lake lake --threads 2
+```
+
+This extracts the archived sources, obtains the pinned Mathlib cache, checks regeneration of 41 certificate/proof files and 14 Fourier-chain files, builds the WHT and all-length DFT/convolution targets, audits their axioms, and runs Sussman's theorem/definition comparator. It writes a receipt only after all checks pass. The standard Python suite checks the retained receipt and log hashes when the registry selects `formalized`; it does not rerun Lean. See [FIVE_STAGE_AUDIT.md](FIVE_STAGE_AUDIT.md) for exact commands, results and boundaries.
 
 ## Round-eleven transfer: proposed Fourier saving `0.00067`
 
@@ -80,6 +99,8 @@ Their original JSON references remain in [certificates/](certificates/), and the
 | `5.5e-10` | Also the earlier shared-sum schedules |
 | **`7.3e-5`** | **Attributed round-six two-stage network, paid copies and endpoint correction, whole-residual recurrence, and the new Fourier transfer** |
 | `0.00061` | **Round-ten paired-cube cover, generalized exact frames, shared completed cores, and birth reuse** |
-| **`0.00067`** | **Round-eleven retired copies, terminal targets and new exact scalar map; selected by the living registry** |
+| **`0.00067`** | **Round-eleven retired copies, terminal targets and exact scalar map** |
+
+The separate five-stage record has Fourier saving `0.0007547360`; its formal verification status is recorded in the registry and [proof reproduction audit](FIVE_STAGE_AUDIT.md).
 
 None of these checks establishes novelty, priority, practical runtime, finite-precision stability, bounded coefficients, or a new integer-multiplication theorem.

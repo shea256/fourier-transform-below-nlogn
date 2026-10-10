@@ -83,18 +83,23 @@ Transform}
 
 We give a reusable conditional transfer from finite complex tensor
 networks to the exact discrete Fourier transform, together with
-versioned network witnesses. The current proposed all-length bound is
+versioned network witnesses. The current recorded all-length bound is
 
 \[
 \boxed{T(n)=O\!\left(n(\log n)^{1-\delta}\right),\qquad
-\delta=0.00067.}
+\delta=0.000754736.}
 \]
 
-The selected finite witness has strict tensor saving
-\(a=0.00067147467\). Independent mathematical review and end-to-end
-formal verification remain pending. This paper separates the reusable
-transfer theorem, the selected construction, and the history of
-incorporated improvements. No practical FFT speedup is claimed.
+The selected finite witness has strict tensor saving \(a=0.0007547361\).
+The selected bound is the upstream theorem from Jacob Sussman's
+five-stage framework and Chafik Boukhalfa's stronger instantiation of
+the community circuit, reproduced from pinned project sources with the
+standard Lean axioms and theorem/definition comparisons. Independent
+human mathematical review remains pending. The reusable written transfer
+argument in this paper is distinct from that imported formal proof. This
+paper separates the reusable transfer theorem, the selected
+construction, and the history of incorporated improvements. No practical
+FFT speedup is claimed.
 
 \section{1. Scope and the finite-network
 interface}\label{scope-and-the-finite-network-interface}
@@ -339,18 +344,23 @@ boundaries}\label{versioning-and-evidence-boundaries}
 
 The stable source of Sections 1--5 is \texttt{paper/\allowbreak{}framework.md}.
 Network-specific arguments live under \texttt{results/\allowbreak{}};
-\texttt{results/\allowbreak{}registry.json} selects the current proposed result
-explicitly. The build assembles the selected record into this paper and
-generates the improvement log. It never selects the largest upstream
-number automatically.
+\texttt{results/\allowbreak{}registry.json} selects the current result explicitly.
+The build assembles the selected record into this paper and generates
+the improvement log. It never selects the largest upstream number
+automatically.
 
 An incorporated result requires a written discharge of the network
-contract, a pinned complete witness, exact moment and absorption checks,
-a reproducible finite verifier, and a review record stating its
-limitations. The status \textbf{proposed} does not mean independently
-reviewed or formally verified. Candidates remain visibly separate from
-incorporated results. Earlier proofs, certificates and publication
-artifacts remain available even after a newer result is selected.
+contract or an imported formal Fourier theorem, a pinned complete
+witness, exact moment and absorption checks, a reproducible finite
+verifier, and a review record stating its limitations. The status
+\textbf{proposed} does not mean independently reviewed or formally
+verified. The status \textbf{formalized} identifies an incorporated
+upstream theorem with a reproduced Lean project build, axiom audit and
+statement comparisons; it does not extend that claim to these reusable
+written arguments or imply independent human review. Candidates remain
+visibly separate from incorporated results. Earlier proofs, certificates
+and publication artifacts remain available even after a newer result is
+selected.
 
 This work is AI-assisted. Additional checks written in this repository
 are not independent mathematical review. Vendor checkers are identified
@@ -363,750 +373,378 @@ The following selected witness supplies the construction-specific
 arguments and attribution. Its status and source pins belong to that
 record; future updates need not rewrite the general transfer theorem.
 
-\section{6. Base construction: round-ten paired
-cubes}\label{base-construction-round-ten-paired-cubes}
+\section{6. Sussman and Boukhalfa's five-stage Fourier
+result}\label{sussman-and-boukhalfas-five-stage-fourier-result}
 
-\textbf{Record date:} October 9, 2026. \textbf{Status:} proposed
-conditional Fourier transfer with finite checks; independent
-mathematical review and end-to-end formal verification remain pending.
+\subsection{6.1 Sources, theorem and
+status}\label{sources-theorem-and-status}
 
-The complex word is pinned to Swapnil Jain's
-\texttt{integer-mult-kappa}, commit
-\texttt{d2f6146ffb\allowbreak{}bd893e69b8\allowbreak{}fb06bc53b8\allowbreak{}2af36d8032} {[}J10{]}. Its tensor
-witness and our Fourier choice are
+This record incorporates the community complex circuit exported by
+Chafik Boukhalfa in CrocSwap PR256 {[}CB{]}, in Jacob Sussman's
+five-stage construction and formal Fourier framework {[}JS{]}. The
+explicit-program package is pinned to
+\texttt{db3f75cdc5\allowbreak{}f03f3131d4\allowbreak{}8fb220f6bf\allowbreak{}1958404ff3}; the corresponding
+Fourier proof is pinned to
+\texttt{fd19e46b72\allowbreak{}8faa414cbf\allowbreak{}bf91b01a6a\allowbreak{}0b7903375d}. The latter
+instantiates Sussman's framework with the stronger PR233 circuit. These
+are upstream constructions and theorems. This project's contribution in
+this update is their incorporation, source audit and reproducible
+checks.
 
-\[
-a=\frac{15402419}{25000000000}=0.00061609676,
-\qquad \delta=\frac{61}{100000}=0.00061.
-\tag{6.1}
-\]
-
-This record replaces the round-six finite network. It does not add
-successive networks' savings or substitute the integer-multiplication
-headline \(\kappa\) into the Fourier theorem. Its new dependencies
-include icekylinx's arbitrary-subspace frames and three-stage covers
-{[}C130{]}, paired cubes and completed-core sharing {[}C144{]}, and the
-birth-reuse and module lineage retained in {[}J10{]}'s NOTICE.
-
-\subsection{6.1 Finite word and scalar
-identity}\label{finite-word-and-scalar-identity}
-
-There are \(p=11\) coordinate pairs, \(h=22\) local binary coordinates
-and \(v=8\binom{11}{3}=1320\) ports. A port chooses one coordinate in
-each of three distinct pairs; its address \(q_S\) has norm one. The
-eight selectors on a fixed triple of pairs form a cube. The ambient
-cover has \(m=3h=66\) coordinates.
-
-For ports \(T,S\), define
+The selected exponents are
 
 \[
-B_{T,S}=\frac{|T\cap S|-1}{2},\quad
-B_{\rm block}=\bigoplus_I B|_I,\quad
-K=I-B_{\rm block},\quad H=B_{\rm block}-B.
+a=\frac{7547361}{10^{10}}=0.0007547361,\qquad
+\delta=\frac{7547360}{10^{10}}=0.0007547360,
+\qquad a-\delta=10^{-10}.
 \]
 
-Then \(K+H+B=I\). Within each cube, \(K=(P-A)/2\), where \(P\) is
-antipodal permutation and \(A\) is adjacency at selector distance one.
-Its Walsh eigenvalues are \(-1,-1,1,1\), according to selector weight,
-so \(K^2=I\). The opposite-parity blocks are signed \(4\times4\)
-Hadamard matrices divided by two.
-
-The frozen signed addition DAG supplies \(H\) and the coordinate-star
-contribution \(B\). It uses a searched restriction of eumemic's PR117
-triple module, the unchanged G37 pair module from eumemic's PR168,
-nested-prefix all-but-one modules, merged face/edge reads, and
-compatible carrier arcs. Jain's pair-aware gauge choice and
-operation-frame refinement are part of the pinned word. Re-running the
-search is unnecessary to specify this finite witness; verifying its
-final word is essential.
-
-The word has 18,259 addition nodes, 4,477 output uses, 15,132 logical
-auxiliary roles and 32,071 compiled operations. A coordinate-star role
-is read through a paid copy at frame zero while its original remains on
-its ascending chain. The total copied-star loss is \(\ell=h(h-2)=440\).
-The source registers themselves implement \(K\): their parity blocks
-meet at a common three-dimensional frame, deliver their contributions at
-the assigned target hyperplanes, and undo \(K\) at the full frame before
-source-subtraction cleanup. Each source contributes widths
-\([2,h-4,1]\); no extra \(K\) bank is free or required. These are the
-exact scalar and geometric interfaces of {[}C144{]}, instantiated on the
-new word.
-
-Our verifier expands the signed DAG as integer coefficient vectors.
-After multiplying output coefficients by six, it checks \textbf{every}
-entry of \(6(H+B+K)=6I\) and every cube's \(K^2=I\). The full
-\(1320^2=1742400\) coefficient check supplements the upstream random
-modular decoder trials. Conservative address spans include visited
-inputs even if signed coefficients cancel.
-
-\subsection{6.2 Arbitrary-subspace frames and exact
-adapters}\label{arbitrary-subspace-frames-and-exact-adapters}
-
-The round-six projector argument is insufficient for the degenerate
-subspaces in this word. We instead use {[}C130{]}'s preimage-frame
-construction. In the binary symplectic space
-\(\mathbb F_2^h\oplus\mathbb F_2^h\), put
+In OpenAI's exact-complex-arithmetic RAM model, the imported theorem
+states that one fixed program computes the exact DFT for every positive
+length in
 
 \[
-L_0=\{(0,z)\},\qquad
-F=\begin{pmatrix}I&I\\0&I\end{pmatrix},\qquad
-L_U=\{(u,u+v):u\in U,\ v\in U^\perp\}.
+T(n)=O\!\left(n(\log n)^{1-\delta}\right).
 \]
 
-Here \(F\) also denotes the exact operator \(C^{\otimes h}\); its exact
-square is a translation, although its binary symplectic square is
-identity. The spaces \(L_U\) are Lagrangian, including for degenerate
-\(U\), and
+It includes scalar preparation, array/index work and the supplied-root
+interface. The root order is computed by a program and is less than
+\(1024n^3\); the solver receives that specified root. Integer values and
+indices have a polynomial bound in \(n\). A separate theorem supplies
+exact convolution. This changes neither the model nor the absence of a
+practical FFT-speed claim.
+
+The pinned Lean project was rebuilt from source, using the pinned
+Mathlib cache. The WHT and all-length DFT/convolution statement
+comparisons passed, and the Fourier and tensor-program theorems report
+only the standard Lean axioms. The result is selected as
+\textbf{formalized}, referring to that imported theorem. The receipt,
+exact commands and limits are recorded in
+\texttt{verification/\allowbreak{}FIVE\_\allowbreak{}STAGE\_\allowbreak{}AUDIT.md}; independent human review
+remains pending.
+
+\subsection{6.2 The explicit complex
+program}\label{the-explicit-complex-program}
+
+The underlying lineage is icekylinx's paired cubes and source-assisted
+flow, eumemic's PR168 v4 modules and frames, Avi Eisenberg's
+PR191/193/194 reconstruction and pairing, and Boukhalfa's PR200/233
+maximum-weight reuse pairing. PR233 retains the operation frames and
+replaces the reuse pairing. Sussman supplies the general frame
+formalization, certificate format and checker; Boukhalfa's PR256 emitter
+lowers the flow witness and exact local lifts into that format. an664's
+sharing principle and the earlier carrier, producer and endpoint work
+retain their source credits.
+
+The certificate has \(h=22\), \(v=1320\), \(R=9412\) helper slots,
+\(12052\) numbered registers, \(18248\) frames, and \(52300\) gates
+across its two phases. Its \(69683\) transformation blocks have total
+rank \(262944\). The retained-center contribution is \(440\) units of
+rank. These counts include the retained-center copies; no center-return
+or dirty-register work is silently discarded.
+
+The Python reference checker verifies nested frame labels, gate shape
+and scatter conditions, the block ledger, and the exact response of
+every source column. It checks that each target receives the required
+source and that the sources are restored. This scalar check alone is not
+a replay of every dirty input column. The formal invocation theorem
+derives the dirty-response subtraction and inverse cleanup from the
+checked invertible program and the scalar identities. The full proof,
+rather than the Python source-column test alone, establishes the
+arbitrary-scratch behavior.
+
+The certificates supplied to the Python and Lean pipelines have
+identical mathematical fields. Only their descriptive provenance string
+differs. The local verifier checks that equality, as well as the source
+hashes and the numerical parameters used by the formal rate theorem.
+
+\subsection{6.3 Five-stage construction and its
+ledger}\label{five-stage-construction-and-its-ledger}
+
+Sussman's bridged construction gives each source pair a twin and
+arranges compatible labels so that two exchanges use five helper
+invocations in place of six. The helpers are shared across completed
+stages. Per finite-cover vertex,
 
 \[
-d(L_U,L_V)=\dim U+\dim V-2\dim(U\cap V),\qquad
-FL_U=L_{U^\perp},
-\tag{6.2}
+m=5h=110,\qquad W_0=4v+R=14692.
 \]
 
-where \(d(L,L')=h-\dim(L\cap L')\). Indeed the intersection is
-parameterized by \(u\in U\cap V\) and \(v\in(U+V)^\perp\), and the
-symplectic pairings vanish.
-
-For an invertible binary matrix \(G\) with \(GE_r=U\), choose an exact
-Gaussian-dyadic lift of
+If \(H_{\mathrm{inv}}\) is the complete block histogram of one certified
+invocation, the five-stage histogram is
 
 \[
-K_G=\begin{pmatrix}G&0\\G+G^{-T}&G^{-T}\end{pmatrix},
-\qquad T_U=K_G C_{E_r}K_G^{-1}.
+H_5=5H_{\mathrm{inv}}+2v(e_{42}+e_{21}+e_{46}+e_4),
 \]
 
-The lift \(K_G\) is a binary permutation followed by a quadratic phase.
-In coordinates its phase matrix is \(I+(GG^T)^{-1}\). Use \(T_0=I\),
-\(T_H=F\), the inherited norm-one source representatives, and
-block-factored representatives for cover offsets. The preimage
-convention is \(L(T)=T^{-1}L_0\), so a physical transition
-\(T_VT_U^{-1}\) has Fourier rank \(d(L_U,L_V)\). For \(U\subseteq V\)
-this is \(r=\dim V-\dim U\).
-
-The exact Clifford elimination interface of {[}C130{]} factors that
-transition into two rank-zero adapters and \(r\) coordinate Fourier
-factors. No new irrational constant is needed, since
-
-\[
-\frac{1+i}{2}\begin{pmatrix}1&1\\1&-1\end{pmatrix}
-=SCS,\qquad S=\operatorname{diag}(1,i).
-\]
-
-All \(rf\) coordinate factors are gathered into one recursive child. The
-adapters are the finite permutations and quadratic phases charged in
-Section 3. Registers participating in a scalar gate use the \textbf{same
-exact representative}; matching subspaces alone does not authorize the
-gate. Differently transported representatives with the same preimage are
-reconciled by their actual rank-zero quotient. Thus transitions
-telescope without assuming that distinct partial frames commute.
-
-For the reverse/complement word use \(D_U=T_UF^{-1}\). Its preimage is
-\(L_{U^\perp}\) and \(D_UD_V^{-1}=T_UT_V^{-1}\) exactly. Reverse every
-scalar operation, compensation read and cleanup, not merely the positive
-producer. Reconcile full endpoints by the actual Pauli and phase
-adapters. This preserves the transition widths while fixing their
-physical orientations.
-
-The arbitrary-dimensional Clifford factorization is an explicit upstream
-proof dependency. Our exhaustive four-dimensional checks cover all 67
-subspaces, the distance and complement identities, exact nested
-transitions, and the full-frame translation square; they do not prove
-the general factorization by enumeration.
-
-\subsection{6.3 Delayed compensation and physical register
-reuse}\label{delayed-compensation-and-physical-register-reuse}
-
-A reversible scalar program with source injection \(V\), mixer \(M\) and
-readout \(J\) satisfies
-
-\[
-JM(z+Vx)-JMz=JMVx
-\]
-
-for arbitrary dirty \(z\), and its inverse mixer and source subtraction
-restore \(z\). When centre outputs are read at an intermediate clock,
-the same identity uses the sum of their linear responses at the actual
-read clocks. Back-propagating their exact coefficients through the
-signed gates gives the compensation coefficient for each initial role.
-
-\textbf{Reuse lemma.} Suppose a recipient role has no incident operation
-before clock \(t\), and its old-value read occurs at \(t\) before its
-first incident operation. Its initial scalar value can be any \(w\): the
-output response to \(w\) is exactly its back-propagated coefficient
-times \(w\), canceled by that old-value read. Now suppose a donor has
-finished all incident operations and is not an output role. Place the
-recipient on that physical register after the donor's last operation.
-The current donor value is a permissible \(w\), even though it depends
-on earlier data and scratch. The recipient's compensation removes its
-entire contribution. The earlier part of the computation is unaffected
-because the recipient had not been touched and the donor is no longer
-read. This argument iterates down an acyclic chain of reuse pairs.
-
-The actual sequence consists only of invertible gates on distinct
-physical registers. After the readouts, reverse that sequence at the
-full frame, then subtract the original source injections. This restores
-every initial physical scratch value. Hence reuse does not require zero
-scratch, an extra fresh array or a data-dependent erasure. This is the
-birth/late-compensation mechanism of PR124 and PR143, specialized to the
-checked word.
-
-The physical hand-off additionally requires the donor's last frame to
-lie inside the recipient's entrance gauge, and all later frames on the
-joined chain to remain nested. The donor frame moves to the recipient
-frame before the read. Every positive rank difference is paid. If the
-subspace representatives differ, their exact quotient is implemented as
-in Section 6.2.
-
-For the selected witness every one of the 3,180 gauged roles is a
-recipient. The 15,132 logical roles therefore occupy 11,952 physical
-auxiliary registers. All physical chains start at a zero gauge:
-source-carrier loads from zero to their norm-one line are explicitly
-included. No unpaired gauge tail remains, and nullity-dependent sharing
-contributes no additional saving to this selected complex word.
-
-The finite checker verifies matching, acyclicity through strict time
-ordering, final donor use, the absence of donor output roles, first
-recipient use, exact compensation-target support, frame containment and
-every joined chain. It also checks the carrier payloads at centre and
-final read clocks. The imported aliased scalar replay uses two exact
-modular trials and negative controls; the universal arbitrary-scratch
-conclusion uses the reuse lemma, not those trials alone.
-
-\subsection{6.4 Three-stage cover and arbitrary-array
-endpoints}\label{three-stage-cover-and-arbitrary-array-endpoints}
-
-Use {[}C130{]}'s three-stage data cover, embedded in the \(m=3h\) space
-of {[}C144{]}. Let \(E_0=A\perp B\perp D\) have dimensions \(h,h-1,h-1\)
-and embed it as a nondegenerate subspace of the 66-dimensional ambient
-space. For each norm-one port vector \(q\), choose the explicit
-orthogonal involutions \(R_{12,q},R_{23,q}\) exchanging
-\(A\cap q^\perp\) with \(B\) or \(D\) and fixing \(q\). Extend them by
-identity outside \(E_0\). Invocation vertices are the finite group
-\(\mathcal G=O(66,2)\); a data port \((g,q)\) visits
-\(gR_{12,q},g,gR_{23,q}\).
-
-The forward, reverse/complement, forward sequence has scalar action
-
-\[
-(X,Y)\mapsto(X,Y+X)\mapsto(-Y,X+Y)\mapsto(-Y,X).
-\]
-
-The transported exit preimage of each stage equals the next entrance
-preimage. Exact rank-zero adapters reconcile representatives, so there
-are no omitted positive-width interstage connectors. In \(E_0\) the
-physical outputs are \((-F_0y,F_0T_q^{-2}x)\). Since \(T_q^2\) is the
-actual binary translation by \(q\), a paid translation, sign and bank
-permutation remove this source gauge. Each data bank also pays the
-rank-two complement call for \(E_0^\perp\), obtaining the full ambient
-transform. No two-stage mixed-term correction is silently reused from
-round six.
-
-Independently partition the ambient space into three orthogonal
-\(h\)-blocks \(P_1,P_2,P_3\). Fixed orthogonal maps \(H_j\) carry \(A\)
-to \(P_j\). Route physical auxiliary register \((g,r)\) to vertex
-\(gH_j\) in stage \(j\). Each stage routing is a bijection of the full
-finite register stock, and stages execute serially. These are
-{[}C144{]}'s shared \textbf{completed} cores: each includes all
-compensation, copied-centre work, scalar inverse cleanup and source
-subtraction.
-
-Because all physical entrance gauges are zero, a forward completed core
-acts as \(F_h\) on each arbitrary auxiliary stream and the reversed core
-as its exact inverse, with the endpoint reconciliation included.
-Transported into the three orthogonal blocks, these actions tensor. The
-inverse block differs from its forward version by a translation because
-\(F_h^2\) is Pauli. The conjugated full transform and canonical ambient
-transform have the same symplectic action; their exact Pauli and
-scalar-phase difference is implemented. Thus every auxiliary input, not
-just the two data banks, receives the full \(C^{\otimes66f}\).
-
-This applies the exact core-sharing and cover lemmas of {[}C130,
-C144{]}. The generic gauge-tail construction needs block-factored
-representatives; here all tails disappear only because every gauge is
-paired and the physical chain recount includes the replacement
-hand-offs. We retain compatible block-factored representatives rather
-than inferring physical phases from subspace dimensions alone.
-
-\subsection{6.5 Complete histogram and
-moment}\label{complete-histogram-and-moment}
-
-Let \(H_r\) be the local histogram of joined auxiliary chains, including
-source loads and paid centre copies; let \(D_r\) and \(Q_r\) count
-source and target data chains. The actual calls per cover vertex are
-
-\[
-n_r^{(0)}=3(H_r+D_r+Q_r)+2v\,\mathbf1_{r=2},
-\qquad W_0=2v+11952=14592.
-\]
-
-The factor three pays all three core invocations, and the final term
-pays both data-bank complements. There are no unpaired-gauge exterior
-children. The selected table is:
+where \(e_r\) denotes one child of width \(r\). The extra terms are the
+twins' remaining frame transitions. The resulting per-vertex histogram
+is:
 
 \Needspace{19\baselineskip}
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}rrrr@{}}
+\begin{longtable}[]{@{}rrrrrr@{}}
 \toprule\noalign{}
-\(r\) & \(n_r^{(0)}\) & \(r\) & \(n_r^{(0)}\) \\
+\(r\) & \(n_r\) & \(r\) & \(n_r\) & \(r\) & \(n_r\) \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-1 & 81012 & 11 & 1446 \\
-2 & 53466 & 12 & 2643 \\
-3 & 30099 & 13 & 1188 \\
-4 & 10314 & 14 & 2901 \\
-5 & 8394 & 15 & 5343 \\
-6 & 4788 & 16 & 1737 \\
-7 & 3396 & 18 & 6480 \\
-8 & 2742 & 19 & 1311 \\
-9 & 2067 & 20 & 6006 \\
-10 & 3396 & & \\
+1 & 145890 & 9 & 2020 & 17 & 195 \\
+2 & 63335 & 10 & 4025 & 18 & 13200 \\
+3 & 49940 & 11 & 1765 & 19 & 7205 \\
+4 & 21835 & 12 & 5705 & 20 & 110 \\
+5 & 9880 & 13 & 840 & 21 & 2640 \\
+6 & 7455 & 14 & 3625 & 42 & 2640 \\
+7 & 3210 & 15 & 3025 & 46 & 2640 \\
+8 & 7390 & 16 & 405 & & \\
 \end{longtable}
 }
 
-Unlisted widths have zero multiplicity. The recount gives
+Thus there are \(358975\) children, the largest width is \(46<110\), and
 
 \[
-\sum_r r n_r^{(0)}=961752,\qquad
-66W_0-961752=1320=2v-3\ell,\qquad \max r=20<66.
+\sum_r r n_r=1613040=110\cdot14692-3080.
 \]
 
-The actual stock is \(W=|\mathcal G|W_0\), not 14,592 arrays. The full
-role count has 2,159 bits. The finite orthogonal group can be
-constructed by enumeration of binary matrices and exact orthogonality
-tests; its order is
+The cover multiplier cancels in the normalized moment but remains part
+of the finite algorithm's stock and constants. The imported proof
+constructs the network over the orthogonal group in dimension \(110\)
+and proves its routing and adapter costs. Neither this integration nor
+the upstream implementation enumerates that enormous cover on actual
+arrays.
+
+\subsection{6.4 Exact rate and the formal tensor-to-Fourier
+connection}\label{exact-rate-and-the-formal-tensor-to-fourier-connection}
+
+Our rational checker verifies
 
 \[
-|O(66,2)|=2^{65+32^2}\prod_{i=1}^{32}(4^i-1).
+\Psi(1-a)=\frac1{14692}\sum_r n_r(r/110)^{1-a}<1,
+\qquad 1-\Psi(1-a)>8.05\cdot10^{-10}.
 \]
 
-Its size is independent of the requested Fourier length. Fixed role
-permutations, scalar work and all frame adapters are charged by Section
-3 with this full stock. Its constants are not claimed practical. The
-group factor cancels only from the normalized moment.
-
-The local rational verifier gives
+The imported recursion engine uses a finite-fill correction with
+\(s=40\). We separately check its actual rate premise:
 
 \[
-1-\Psi(1-a)>5.5931322116649\times10^{-13}
+(1-2^{-40})\Psi(1-a)+2^{-40}
+\left((109/110)^{1-a}+(1/110)^{1-a}\right)<1.
 \]
 
-at (6.1), using rational endpoints rather than this rounded display. At
-\(a+10^{-12}\) its lower moment is greater than one, rejecting that next
-grid point for this histogram. The positive absorption gap is
+The formal lemma \texttt{BlockAccounting.fold\_B2Gp233x} proves this
+rate inequality using its own rational bounds. At \(a=7547365/10^{10}\)
+the ordinary moment is greater than one, providing a negative control
+for this fixed histogram. This is not a ceiling on other networks.
 
-\[
-a-\delta=\frac{152419}{25000000000}=0.00000609676.
-\]
+The formal chain applies the checked certificate to the generalized
+frame/recursion engine. \texttt{RAM.hillsY\_program} supplies OpenAI's
+tensor-program interface, with exponent \(1-a\), for every required
+mode, color and input batch. The subsequent files under
+\texttt{Work/\allowbreak{}Fourier233/\allowbreak{}} reproduce OpenAI's Fourier reduction with the
+exponent and declaration names changed. Its overhead is absorbed using
+the positive gap \(a-\delta=10^{-10}\). The final theorem is
+\texttt{OAI.PowerSaving.transform\_mainY\ :\ DFTGoalY};
+\texttt{convolution\_mainY} proves the companion convolution statement.
 
-The physical program is finite, every child is narrower, and its
-adapters are charged linear array passes. Sections 6.1--6.4 discharge
-the finite-network contract subject to the named upstream frame, cover
-and sharing lemmas. Sections 2--4 then give the proposed all-length
-saving \(\delta=0.00061\).
+The challenge file is OpenAI's complete uniform Fourier statement with
+its exponent and seven declaration names changed, plus explanatory
+comments. Our source comparison checks those limited differences. The
+theorem comparison additionally checks the declarations on which the
+statement depends and the axioms used by its proof. The original model,
+supplied root, preparation costs and integer bounds remain in the
+statement.
 
-\subsection{6.6 Reproduction, limits and
-attribution}\label{reproduction-limits-and-attribution}
+Sections 1--5 give this paper's reusable written transfer argument. The
+selected result is also available directly through the imported formal
+theorem and its own recursion engine; the local Python moment check is
+not presented as a replacement proof of that theorem.
 
-Run \texttt{python3\ verification/\allowbreak{}verify\_\allowbreak{}round10.py} for this record,
-or \texttt{python3\ verification/\allowbreak{}run\_\allowbreak{}checks.py} for all incorporated
-witnesses. The new verifier checks source hashes, the exact decoder
-matrix, compiled carriers and compensation targets, the imported
-full-size schedule and histogram replay, small exhaustive exact Clifford
-tests, independent rational moment bounds, absorption slack and negative
-controls. The regenerated certificate must match
-\texttt{verification/\allowbreak{}certificates/\allowbreak{}round10\_\allowbreak{}reference.json}.
+\subsection{6.5 Reproduction and
+attribution}\label{reproduction-and-attribution}
 
-The frozen word and checker are imported source. Our integer coefficient
-and frame checks are additional same-assistant implementations. We do
-not enumerate the full 66-dimensional cover, execute the complete DFT,
-rerun the network optimization search, or formally prove the infinite
-recurrence. The small exact frame tests do not certify every full-size
-physical phase. Their universal justification is the written
-exact-representative argument and cited factorization. The included Lean
-file checks numerical histogram/assembly predicates; this project's
-default runner does not execute Lean, and Lean does not prove the
-Fourier transfer.
+Run \texttt{python3\ verification/\allowbreak{}verify\_\allowbreak{}five\_\allowbreak{}stage.py} for source
+hashes, exact scalar/label checks, the histogram, both rate
+inequalities, the absorption gap and binding to the Lean sources. Full
+PR256 regeneration additionally requires its pinned NumPy/SciPy
+environment. The complete upstream Lean source is preserved in
+\texttt{verification/\allowbreak{}vendor/\allowbreak{}five\_\allowbreak{}stage/\allowbreak{}fourier-proof-source.tar.gz},
+with immutable repository pins and licenses in the accompanying
+manifest.
 
-Independent review should prioritize the general Clifford factorization
-and uniform adapter cost, exact representative choices at shared gates,
-arbitrary-scratch birth reuse in both orientations, the shared
-completed-core endpoints, and the full-stock recurrence. A missing
-physical interface cannot be repaired by a successful moment
-certificate.
+The separate \texttt{verification/\allowbreak{}verify\_\allowbreak{}five\_\allowbreak{}stage\_\allowbreak{}lean.py} rebuilds
+the formal development with Lean 4.34.1 and the pinned Mathlib revision,
+regenerates the 41 certificate/proof files and 14 Fourier files, checks
+the reported axioms, and runs the upstream theorem/definition
+comparator. Its receipt distinguishes fresh project compilation from the
+downloaded Mathlib cache. These checks do not constitute independent
+human review, an execution of the DFT on large arrays, or a run of an
+independent proof kernel.
 
-Jain supplies the selected word and optimization integration. The
-three-stage cover, paired-cube identity and frame machinery are
-attributed to icekylinx; completed-core sharing to an664; the DAG,
-modules, merged reads, physical frame descent and late-compensation
-lineage include eumemic; birth reuse includes jamesyc; relaxed carrier
-arcs include DaysSky. Douglas Colkitt maintains the community framework,
-with additional predecessors recorded in the preserved NOTICE. This
-paper supplies the proposed Fourier transfer and local checks, not
-authorship of those network improvements. Original licenses and
-AI-assistance disclosures are retained.
+Sussman receives credit for the five-stage geometry and formal
+framework; Boukhalfa for the stronger pairing, explicit program and
+Fourier instantiation; Eisenberg, icekylinx, eumemic and the named
+predecessors for the underlying circuit and algorithms. SovereignSteak's
+PR250 and hcg890's PR234 are credited in the incoming package's
+five-stage composition and ledger lineage. OpenAI supplies the original
+Fourier model and all-length reduction. The source audit preserves the
+broader community and our earlier Jain-based history. This update does
+not claim a newly discovered exponent or authorship of the imported
+proof.
 
-\subsection{References for the framework and round-ten
-record}\label{references-for-the-framework-and-round-ten-record}
+\section{Acknowledgements and source
+lineage}\label{acknowledgements-and-source-lineage}
+
+We acknowledge OpenAI for the original \#109 and \#130 research and the
+exact Fourier framework {[}O, O109{]}; Douglas Colkitt for early network
+and parameter improvements, the independently sized complex network that
+informed our initial paper, and community review and integration
+{[}D{]}; Rohan Arun for fixed-basis/corner compositions and weighted
+carrier matching, the latter explicitly acknowledged in Jain's source
+lineage {[}RA{]}; and Swapnil Jain for the complex witnesses adopted in
+our rounds six, ten and eleven {[}J{]} (see the versioned result
+records). This introductory order records research context rather than a
+ranking or a linear chain of authorship. OpenAI supplies the
+tensor-to-Fourier compiler and all-length reduction.
+
+The adopted constructions also depend on icekylinx's whole-residual
+batching, copied centers, generalized Clifford frames, three-stage
+covers, paired cubes and retirement reuse; eumemic's batching,
+producers, modules, frame descent and late compensation; an664's
+completed-core sharing; James Chang's birth reuse and terminal-target
+compiler; and DaysSky's carrier extensions. Aurel Prosz's two-stage
+topology and endpoint corrections are predecessors of the earlier Jain
+witness. Chafik Boukhalfa's terminal paired-cube work is already
+credited in Jain's round-eleven source, alongside his related
+local-circuit configuration. Avi Eisenberg, Zhihao Chen, Andrew Barnes,
+David Leen and the other authors named in the preserved notices retain
+their specific predecessor credits.
+
+The selected five-stage result incorporates Jacob Sussman's general
+frame formalization, five-stage construction and formal all-length DFT
+theorem {[}JS{]}, with Chafik Boukhalfa's stronger pairing, explicit
+certificate and Fourier instantiation {[}CB{]}. Its circuit passes
+through icekylinx's source-assisted flow, eumemic's v4 modules and Avi
+Eisenberg's reconstruction and pairing; SovereignSteak and hcg890 retain
+their cited composition and ledger credits. We reproduced the pinned
+upstream Lean proof and theorem comparisons. Those network and
+formalization contributions belong to their authors. Related Fourier
+work includes eumemic's written batched-network transfer {[}EF{]} and
+danadran01's Lean development {[}DF{]}. Our project contributes its
+earlier written conditional transfers, this incorporation, the
+attribution audit and additional local checks; it does not claim
+discovery of the imported exponent or authorship of OpenAI's reduction.
+
+The repository's \texttt{ATTRIBUTION.md} records immutable revisions,
+incorporated, historical and related dependencies, source discrepancies
+and the broader contributor ledger. Contributor-specific licenses and
+AI-assistance notices are preserved. Acknowledgement does not imply
+collaboration, endorsement or independent mathematical review.
+
+\subsection{Shared source references}\label{shared-source-references}
 
 {[}O{]} OpenAI. \emph{An explicit power saving for the exact discrete
 Fourier transform}, September 25, 2026. Lemmas 2.2 and 2.5, Proposition
 2.4, Theorem 2.6, Proposition 4.2 and Section 5.4.
 \href{https://github.com/openai/math/blob/main/preprints/An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026/main.pdf}{Public
-manuscript}.
+manuscript}. The imported formal development uses
+\href{https://github.com/openai/math/tree/fd4aeeb2ee4fc729c18d98444fed42fd0529eeeb/lean}{Lean
+sources} at commit \texttt{fd4aeeb2ee\allowbreak{}4fc729c18d\allowbreak{}98444fed42\allowbreak{}fd0529eeeb};
+the 89 imported modules, original challenge and toolchain were checked
+byte for byte against that revision.
 
-{[}J10{]} Swapnil Jain. \emph{Integer multiplication: round ten}, commit
-\texttt{d2f6146ffb\allowbreak{}bd893e69b8\allowbreak{}fb06bc53b8\allowbreak{}2af36d8032}.
-\href{https://github.com/Swapnil-jain/integer-mult-kappa/blob/d2f6146ffbbd893e69b8fb06bc53b82af36d8032/README.md}{Construction
-and proof boundaries},
-\href{https://github.com/Swapnil-jain/integer-mult-kappa/blob/d2f6146ffbbd893e69b8fb06bc53b82af36d8032/certificates/round10/cx_prefix_word_p11.json.gz}{frozen
-complex word}, and
-\href{https://github.com/Swapnil-jain/integer-mult-kappa/blob/d2f6146ffbbd893e69b8fb06bc53b82af36d8032/lean/Round10.lean}{Lean
-numerical certificate}. Research and implementation assistance is
-disclosed in the preserved upstream NOTICE.
+{[}D{]} Douglas Colkitt. \emph{A sharper exponent for integer
+multiplication}.
+\href{https://github.com/CrocSwap/integer-mult-bounds/blob/6e564879f51ae16f23d392e9e196c605f36d90df/notes/independent-complex.tex}{Independently
+sized complex network}, commit
+\texttt{6e564879f5\allowbreak{}1ae16f23d3\allowbreak{}92e9e196c6\allowbreak{}05f36d90df};
+\href{https://github.com/CrocSwap/integer-mult-bounds/blob/3b6b66891c0ac888521cf591fe306c6286601d4f/CONTRIBUTORS.md}{community
+contribution and review record}. Project maintenance does not imply sole
+authorship of community results.
 
-{[}C130{]} icekylinx.
-\href{https://github.com/CrocSwap/integer-mult-bounds/pull/130}{PR130:
-three-stage Cayley covers}. The
-\href{https://github.com/icekylinx/integer-mult-bounds/blob/c8b22bc5c10dba497ac25804e27d9647d818e2ff/notes/general-clifford-frames.tex}{general
-Clifford frames} and
-\href{https://github.com/icekylinx/integer-mult-bounds/blob/c8b22bc5c10dba497ac25804e27d9647d818e2ff/notes/three-stage-cover-complex.tex}{cover
-proof} are pinned in this repository at the subsequent paired-cube
-commit.
+{[}RA{]} Rohan Arun.
+\href{https://github.com/CrocSwap/integer-mult-bounds/pull/44}{PR44:
+weighted carrier matching}, commit
+\texttt{1a21794eb5\allowbreak{}384db0e96d\allowbreak{}7bc2b11aa6\allowbreak{}f28cff7a85}; earlier
+\href{https://github.com/CrocSwap/integer-mult-bounds/pull/39}{PR39
+fixed-basis/corner composition}. Jain's notices explicitly acknowledge
+the matching precedent. The later bit-side improvements are not premises
+of this Fourier transfer.
 
-{[}C144{]} icekylinx.
-\href{https://github.com/CrocSwap/integer-mult-bounds/pull/144}{PR144:
-paired cubes and shared completed cores}, commit
-\texttt{c8b22bc5c1\allowbreak{}0dba497ac2\allowbreak{}5804e27d96\allowbreak{}47d818e2ff}.
-\href{https://github.com/icekylinx/integer-mult-bounds/blob/c8b22bc5c10dba497ac25804e27d9647d818e2ff/notes/paired-cube-construction.tex}{Paired-cube
-construction} and
-\href{https://github.com/icekylinx/integer-mult-bounds/blob/c8b22bc5c10dba497ac25804e27d9647d818e2ff/notes/paired-cube-sharing.tex}{exact
-core sharing}. These sources record GPT-6 Astra and Codex assistance and
-credit an664's PR128 sharing principle.
+{[}J{]} Swapnil Jain. \emph{Integer multiplication: complex-network
+witnesses}.
+\href{https://github.com/Swapnil-jain/integer-mult-kappa/tree/1a580dcc91dad5fbcffb5c80b7641a96bfa24e16}{Round-eleven
+construction and predecessor notices}, commit
+\texttt{1a580dcc91\allowbreak{}dad5fbcffb\allowbreak{}5c80b7641a\allowbreak{}96bfa24e16};
+\href{https://github.com/Swapnil-jain/integer-mult-kappa/tree/f2176bc1124821bf17eb63725bd366d7bdc020a3}{round-six
+source}, commit \texttt{f2176bc112\allowbreak{}4821bf17eb\allowbreak{}63725bd366\allowbreak{}d7bdc020a3}. The
+round-ten and round-eleven records preserve their separate source pins
+and contribution boundaries.
 
-{[}BR{]} jamesyc's
-\href{https://github.com/CrocSwap/integer-mult-bounds/pull/124}{PR124}
-and eumemic's
-\href{https://github.com/CrocSwap/integer-mult-bounds/pull/143}{PR143}:
-birth reuse and late compensation. {[}J10{]} pins and attributes their
-use in its construction. The module and refinement lineage also includes
-eumemic's PR117, PR161 and PR168 and DaysSky's PR162; the exact adopted
-data pins and notices are retained in
-\texttt{verification/\allowbreak{}vendor/\allowbreak{}jain\_\allowbreak{}round10/\allowbreak{}NOTICE}.
+{[}O109{]} OpenAI. \emph{Integer multiplication below n log n},
+September 23, 2026.
+\href{https://github.com/openai/math/tree/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/Integer-multiplication-below-n-log-n-September-23-2026}{Pinned
+manuscript sources}.
 
-\section{7. Round-eleven refinement: retiring copies and terminal
-targets}\label{round-eleven-refinement-retiring-copies-and-terminal-targets}
+{[}EF{]} eumemic. \emph{Exact DFT bounds}, commit
+\texttt{6f87d1a0c9\allowbreak{}ae462cdcb2\allowbreak{}034a1361c8\allowbreak{}7623221e66}.
+\href{https://github.com/eumemic/exact-dft-bounds/tree/6f87d1a0c9ae462cdcb2034a1361c87623221e66}{Written
+batched-network transfer}.
 
-\textbf{Record date:} October 9, 2026. \textbf{Status:} proposed
-conditional Fourier transfer with finite checks; independent
-mathematical review and end-to-end formal verification remain pending.
+{[}DF{]} danadran01. \emph{Exact DFT power saving}, revision
+\texttt{1a7b25e}.
+\href{https://github.com/danadran01/exact-dft-power-saving/tree/1a7b25e}{Related
+Lean development}. Not rebuilt in this attribution audit.
 
-This record uses Swapnil Jain's round-eleven complex word at commit
-\texttt{1a580dcc91\allowbreak{}dad5fbcffb\allowbreak{}5c80b7641a\allowbreak{}96bfa24e16} {[}J11{]}. It inherits
-the frame, paired-cube, cover and sharing interfaces of Sections
-6.1--6.4, with the changed scalar word and physical ledger below. Its
-parameters are
+{[}JS{]} Jacob Sussman. \emph{Walsh-Hadamard and all-length Fourier
+power savings}, commit
+\texttt{f010392c92\allowbreak{}3279e3dd59\allowbreak{}ef3aa5feda\allowbreak{}d23affc5fd}.
+\href{https://github.com/jacobalansussman/wht-power-saving-lean/tree/f010392c923279e3dd59ef3aa5fedad23affc5fd}{Formal
+development and related-work record}.
 
-\[
-a=\frac{67147467}{100000000000}=0.00067147467,
-\qquad \delta=\frac{67}{100000}=0.00067.
-\tag{7.1}
-\]
-
-The integer-multiplication announcement reports a different parameter,
-\(\kappa=0.0006685733\). We use the complex tensor witness \(a\),
-together with a positive Fourier absorption gap. The bit-side cyclic
-all-but-one program and integer assembly are not imported into this
-argument.
-
-\subsection{7.1 Changes to the finite
-word}\label{changes-to-the-finite-word}
-
-The dimensions remain \(p=11\), \(h=22\), \(m=66\) and \(v=1320\). The
-cube-local circuit changes to Jain's C1 configuration on the attributed
-PR168 v4 modules. Reverse-scan carrier matching, operation-frame descent
-and late birth reads are retained. The new signed DAG has 21,249
-addition nodes. Its 13,042 logical auxiliary roles have 2,332 gauged
-birth pairs, 42 deleted terminal roles and 386 hosted births. Thus
-
-\[
-R_{\rm physical}=13042-2332-42-386=10282,
-\qquad W_0=2v+R_{\rm physical}=12922.
-\tag{7.2}
-\]
-
-All gauged roles are paired. Hosting introduces no unpaired gauge or
-exterior tail. The source-bank cube involution \(K\), copied
-coordinate-star loss \(\ell=440\), source-return calls and two data-bank
-rank-two complements remain charged as in Section 6. The full scalar
-identity is checked afresh; the old coefficient and histogram
-certificates do not certify the changed program.
-
-\subsection{7.2 Retired-copy subtraction with arbitrary dirty
-contents}\label{retired-copy-subtraction-with-arbitrary-dirty-contents}
-
-Suppose two retired copies \(P,Q\) carry the same input response. Move
-both to the \textbf{same exact} representative of a containing frame
-\(V\), and execute \(P\leftarrow P-Q\). The input response cancels;
-arbitrary dirty contents need not vanish. A fresh nongauged role \(B\)
-is assigned to \(P\) immediately before its first operation at \(V\).
-The control \(Q\) remains a physical register and pays its climb to
-\(V\) and subsequent exit. This is the zero-source-control
-specialization of the compatible zero-fresh reuse mechanism credited to
-icekylinx's PR184 {[}R184{]}. It does not create a physically zero
-register for free.
-
-The adopted hosts are disjoint triples \((P,Q,B)\). The birth is not a
-source, gauge or deleted sink; the retired copies are not output or
-gauged roles. Their original uses finish before the mix, the control is
-never used afterward, and the pivot's subsequent uses are the renamed
-birth. Both prior frames lie inside \(V\). The source record excludes
-pairs whose dirty part depends on a late-read value. Our complete
-scalar-map check below additionally verifies the actual interaction with
-every compensated alias; equality of abstract DAG labels alone is not
-the correctness argument.
-
-Recompute the nongauged entrance compensation from the \textbf{new}
-transcript, including all subtraction gates. Retain each gauged role's
-correctly timed suffix compensation, checking its exact target support.
-The initial reads are available at frame zero. The complete
-output-coefficient identity verifies that no residual input or dirty
-response is hidden in a hosted birth. Every surviving physical mixer has
-the form
-
-\[
-z_d\leftarrow c_a z_d+c_b z_c,\qquad d\ne c,\quad c_a\in\{1,-1\}.
-\]
-
-After the readouts and paid moves to the full frame, reverse these
-actual mixers in reverse order, then subtract the original source loads.
-This restores arbitrary physical scratch exactly. The new inverse
-program, including the subtraction gates, is required.
-
-For one host, write \(u_0,u_1\) for the dimensions of the retired-copy
-frames and \(s=\dim V\). In each of the three stages, the pivot loses
-widths \(h-u_0\) and \(s\) and gains \(s-u_0\); the control loses
-\(h-u_1\) and gains \(s-u_1\) and \(h-s\). Zero widths are omitted. Rank
-mass drops by \(h\) per stage and one persistent register disappears, so
-the deficit is unchanged. This pays both copies' moves. The physical
-verifier reconstructs the complete changed chains rather than applying
-this formula in isolation.
-
-\subsection{7.3 Deleting destination-only terminal
-registers}\label{deleting-destination-only-terminal-registers}
-
-The 42 deletions use jamesyc's dirty-target terminal compiler
-{[}T166{]}, as incorporated by {[}J11{]}. A terminal role \(s\) is
-written only by additive updates \(s\leftarrow s+b_jz_j\), is never a
-control, and contributes the same coefficient \(u\) to a target set
-\(T\). Choose a pivot \(c\in T\) with no intervening compensation read
-during the terminal-write interval. All writes occur after the
-centre-read cut. The role is neither source, gauge nor reuse
-participant, and the selected target sets are disjoint.
-
-At the cut, perform \(y_t\leftarrow y_t-y_c\) for
-\(t\in T\setminus\{c\}\). Replace each terminal write by
-\(y_c\leftarrow y_c+ub_jz_j\). After its last write, perform
-\(y_t\leftarrow y_t+y_c\) for the same targets. If \(w=\sum_j ub_jz_j\),
-the pivot and every other target gain exactly \(w\), regardless of their
-original contents. Independent corrections to nonpivot targets survive
-these shears. A correction to the pivot inside the interval would be
-distributed incorrectly and is excluded. All target frame transitions,
-including these shears and replacement writes, must follow the checked
-descending chains.
-
-The omitted terminal's own initial dirty value no longer exists.
-Nevertheless, compensation columns for all \textbf{retained} roles must
-come from the full original decoder, after inserting the retirement
-mixes. They cannot be recomputed by deleting terminal outputs first: the
-replacement target writes still carry those roles' output responses.
-Full source return and reverse cleanup of retained mixers remain
-necessary.
-
-For a terminal at root-frame dimension \(r\), the three-stage histogram
-loses \(3\) children at each of widths \(r\) and \(h-r\), and \(W_0\)
-drops by one. The full chain recount verifies these differences
-simultaneously for all 42 sinks, as well as pivot cleanliness and
-disjoint target groups.
-
-\subsection{7.4 Complete scalar map and inherited physical
-lift}\label{complete-scalar-map-and-inherited-physical-lift}
-
-The local checker expands every decoder coefficient over the integers
-and verifies \(6(H+B+K)=6I\) on all \(1320^2\) entries. It then
-separately emits the actual aliased scalar read program: entrance
-corrections, source loads, centre reads, delayed gauge corrections,
-terminal target shears, retirement subtractions, renamed births and
-surviving final reads.
-
-Pulling the target coordinates backward through this program uses
-integer vectors scaled by six. All root coefficients have denominator
-dividing six; target shears are integral. The resulting map is checked
-to be
-
-\[
-y_{\rm final}=y_{\rm initial}+(H+B)x
-\]
-
-for \textbf{every} source coordinate, initially arbitrary physical
-scratch coordinate and initially arbitrary target coordinate. This is a
-finite coefficient identity over \(\mathbb Q\), not a random modular
-trial. There are 10,282 dirty auxiliary coordinates and 1,320
-coordinates in each data bank, hence 17,057,040 scalar output
-coefficients including zeros. Every retained mixer is checked invertible
-on distinct physical registers; its literal chronological inverse
-restores scratch after source subtraction. The separate cube check
-accounts for the source-bank \(K\) contribution.
-
-For the physical lift, use the exact representatives and charged
-monomial adapters of Section 6.2 at every changed gate. Both retirement
-operands reach the same \(V\); each target shear and replacement write
-uses the event frame certified by the frozen word. The imported
-full-size checker reconstructs all role and target chains and width
-differences. The arbitrary-array lift, source-bank \(K\) execution,
-completed-core reversal and orthogonal routing remain the explicit
-dependencies from Section 6. The complete new scalar map and paid new
-paths are substituted into those interfaces. No literal full-size
-complex frame matrix or global cover is materialized by these checks.
-
-\Needspace{23\baselineskip}
-
-\subsection{7.5 Histogram and Fourier
-saving}\label{histogram-and-fourier-saving}
-
-The complete per-vertex child counts are:
-
-{\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}rrrr@{}}
-\toprule\noalign{}
-\(r\) & \(n_r^{(0)}\) & \(r\) & \(n_r^{(0)}\) \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-1 & 91131 & 11 & 981 \\
-2 & 44583 & 12 & 3285 \\
-3 & 29850 & 13 & 552 \\
-4 & 10122 & 14 & 2229 \\
-5 & 7404 & 15 & 3360 \\
-6 & 4116 & 16 & 516 \\
-7 & 2706 & 17 & 69 \\
-8 & 3630 & 18 & 8631 \\
-9 & 1350 & 19 & 3201 \\
-10 & 2871 & 20 & 1302 \\
-\end{longtable}
-}
-
-They include all three completed cores and both data-bank complements.
-With \(W_0=12922\),
-
-\[
-\sum_r r n_r^{(0)}=851532,\qquad
-66W_0-851532=1320,\qquad\max r=20<66.
-\tag{7.3}
-\]
-
-The full stock is still \(W=|O(66,2)|W_0\), with the group and routing
-charged as in Section 6.5. At (7.1), the rational moment bound gives
-
-\[
-1-\Psi(1-a)>1.6106187822204\times10^{-12}.
-\]
-
-A lower moment bound exceeds one at \(a+10^{-12}\). Exact endpoints are
-stored in the reference certificate; the display is rounded downward.
-This rejects that next grid point for this histogram, not all possible
-networks. The positive absorption gap is
-
-\[
-a-\delta=\frac{147467}{100000000000}=0.00000147467.
-\tag{7.4}
-\]
-
-The framework gives the proposed all-length saving \(\delta=0.00067\),
-conditional on the inherited physical interfaces and the transfer
-argument. This is approximately \(9.18\) times the previous published
-round-six Fourier saving and \(1.10\) times our incorporated round-ten
-choice. These ratios compare exponent parameters, not measured runtimes.
-
-\subsection{7.6 Reproduction and review
-boundary}\label{reproduction-and-review-boundary}
-
-Run \texttt{python3\ verification/\allowbreak{}verify\_\allowbreak{}round11.py}; its report must
-match \texttt{verification/\allowbreak{}certificates/\allowbreak{}round11\_\allowbreak{}reference.json}. Source
-hashes, the published inventory and the Lean input histogram are
-checked. The upstream replay and its negative controls are identified as
-imported; the local checker additionally rejects a wrong subtraction
-sign, omitted gauge correction, missing terminal post-shear and the
-excessive next tensor grid point.
-
-The default Python suite does not rerun the network search or Lean
-compiler. The supplied Lean file certifies numerical predicates, not
-this scalar compiler, the physical network or Fourier transfer.
-Same-assistant implementations are not independent review. General
-exact-frame compatibility, cover and completed-core interfaces, the
-uniform cost model and the all-length reduction remain mathematical
-review obligations. Earlier witnesses and checks remain available
-independently.
-
-Jain supplies the round-eleven integration, C1 word and selected
-matching. Retirement reuse is credited to icekylinx, terminal-target
-compilation to jamesyc, and the retained modules and frame/late-read
-lineage to eumemic and the other authors in {[}J11{]}'s NOTICE. Section
-6 retains the original frame, cover, paired-cube and sharing credit,
-including an664, DaysSky, Douglas Colkitt and OpenAI. We propose the
-Fourier transfer and supply additional checks; we do not claim those
-network improvements as our own.
-
-\subsection{References added for round
-eleven}\label{references-added-for-round-eleven}
-
-{[}J11{]} Swapnil Jain. \emph{Integer multiplication: round eleven},
-commit \texttt{1a580dcc91\allowbreak{}dad5fbcffb\allowbreak{}5c80b7641a\allowbreak{}96bfa24e16}.
-\href{https://github.com/Swapnil-jain/integer-mult-kappa/blob/1a580dcc91dad5fbcffb5c80b7641a96bfa24e16/independent/round11-cx-recycle-gate/README.md}{Complex
-construction and validation boundary},
-\href{https://github.com/Swapnil-jain/integer-mult-kappa/blob/1a580dcc91dad5fbcffb5c80b7641a96bfa24e16/certificates/round11/cx_recycle_word_p11.json.gz}{frozen
-word}, and
-\href{https://github.com/Swapnil-jain/integer-mult-kappa/blob/1a580dcc91dad5fbcffb5c80b7641a96bfa24e16/lean/round11-histograms.json}{Lean
-numerical inputs}. Unmodified files, licenses and notices are under
-\texttt{verification/\allowbreak{}vendor/\allowbreak{}jain\_\allowbreak{}round11/\allowbreak{}}.
-
-{[}R184{]} icekylinx.
-\href{https://github.com/CrocSwap/integer-mult-bounds/pull/184}{PR184:
-source-assisted common-frame compression},
-\href{https://github.com/icekylinx/integer-mult-bounds/blob/4b5fc7fb45a77b6c7b9d886d30ad5b57eae553fa/notes/source-assisted-note.tex}{proof
-note}, Sections 2--3. The present word uses the zero-source-control
-retirement specialization described in {[}J11{]}, not PR184's numerical
-supplier. The note discloses substantial GPT-6 Astra and Codex
-assistance.
-
-{[}T166{]} jamesyc.
-\href{https://github.com/CrocSwap/integer-mult-bounds/pull/166}{PR166:
-dirty-target terminal compiler}. The actual 42-sink selection and
-checker are pinned through {[}J11{]}. The target-shear identity is
-restated above; no numerical witness from PR166 is substituted into this
-ledger.
+{[}CB{]} Chafik Boukhalfa.
+\href{https://github.com/CrocSwap/integer-mult-bounds/pull/256}{PR256:
+explicit numbered complex program}, commit
+\texttt{db3f75cdc5\allowbreak{}f03f3131d4\allowbreak{}8fb220f6bf\allowbreak{}1958404ff3};
+\href{https://github.com/jacobalansussman/wht-power-saving-lean/pull/2}{stronger
+Fourier instantiation in Sussman's framework}, commit
+\texttt{fd19e46b72\allowbreak{}8faa414cbf\allowbreak{}bf91b01a6a\allowbreak{}0b7903375d}. These packages retain
+the community circuit authors' notices.
 
 \section{Incorporated result history}\label{incorporated-result-history}
 
-These are project records, not priority claims. All remain proposed
-transfers. Ratios compare exponent savings, not runtimes.
+These are project records, not priority claims. Earlier proposed
+transfers retain their original status; formalized denotes an
+incorporated upstream theorem with a reproduced Lean build and statement
+checks. Ratios compare exponent savings, not runtimes.
 
 {\def\LTcaptype{none} % do not increment counter
-\begin{longtable}[]{@{}llr@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2308}}
+  >{\raggedleft\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3077}}@{}}
 \toprule\noalign{}
-Date & Witness & Fourier saving \\
+\begin{minipage}[b]{\linewidth}\raggedright
+Date
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Witness
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Status
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedleft
+Fourier saving
+\end{minipage} \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-2026-10-08 & legacy-shared-sum & \texttt{0.00000000055} \\
-2026-10-08 & round6 & \texttt{0.000073} \\
-2026-10-09 & round10 & \texttt{0.00061} \\
-2026-10-09 & round11 & \texttt{0.00067} \\
+2026-10-08 & legacy-shared-sum & historical-proposed &
+\texttt{0.00000000055} \\
+2026-10-08 & round6 & proposed & \texttt{0.000073} \\
+2026-10-09 & round10 & proposed & \texttt{0.00061} \\
+2026-10-09 & round11 & proposed & \texttt{0.00067} \\
+2026-10-09 & five-stage-pr233 & formalized & \texttt{0.000754736} \\
 \end{longtable}
 }
 

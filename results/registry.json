@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "current": "round11",
+  "current": "five-stage-pr233",
   "results": [
     {
       "id": "legacy-shared-sum",
@@ -56,6 +56,23 @@
       "verifier": "verification/verify_round11.py",
       "source_manifest": "verification/vendor/jain_round11/SOURCE.json",
       "change": "Re-chosen cube circuit, 386 retired-copy hosts and 42 terminal deletions. Recomputed compensation and exact checks of all 17,057,040 scalar output coefficients; frame and cover dependencies inherited explicitly."
+    },
+    {
+      "id": "five-stage-pr233",
+      "date": "2026-10-09",
+      "name": "Sussman and Boukhalfa five-stage complex network",
+      "status": "formalized",
+      "fourier_saving": "7547360/10000000000",
+      "tensor_saving": "7547361/10000000000",
+      "record": "results/five-stage-pr233.md",
+      "certificate": "verification/certificates/five_stage_reference.json",
+      "verifier": "verification/verify_five_stage.py",
+      "source_manifest": "verification/vendor/five_stage/SOURCE.json",
+      "lean_receipt": "verification/certificates/five_stage_lean_receipt.json",
+      "lean_logs": "verification/receipts/five_stage",
+      "change": "Boukhalfa's PR233/256 source-assisted program in Sussman's five-stage layout and formal Fourier framework. Pinned complete sources, source audit, exact program/ledger/rate checks and theorem reproduction; original circuit authors retain credit.",
+      "formal_credit": "Jacob Sussman's five-stage framework and Chafik Boukhalfa's stronger instantiation of the community circuit",
+      "verification_audit": "verification/FIVE_STAGE_AUDIT.md"
     }
   ]
 }
