@@ -8,7 +8,7 @@ A living research project on **OpenAI Math Problem #130**, *An explicit power sa
 
 **[Read the latest paper (PDF)](manuscript.pdf)** · [Read online (Markdown)](manuscript.md) · [LaTeX source](tex/manuscript.tex)
 
-This is the complete current research draft: the reusable Fourier argument, the selected network construction and the improvement history. These links stay the same as the paper is updated; earlier drafts are preserved under [archive/](archive/).
+This is the complete current paper: the reusable Fourier argument, the selected network construction and the improvement history. These links stay the same as the paper is updated; earlier versions are preserved under [archive/](archive/).
 
 Current selection: **[Jain round-eleven retired-copy refinement](results/round11.md)**, recorded 2026-10-09.
 

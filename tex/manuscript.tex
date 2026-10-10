@@ -75,13 +75,6 @@
 
 \title{Finite Network Improvements for the Exact Discrete Fourier
 Transform}
-\usepackage{etoolbox}
-\makeatletter
-\providecommand{\subtitle}[1]{% add subtitle to \maketitle
-  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
-}
-\makeatother
-\subtitle{Living research draft; selected witness round11}
 \author{Ryan Shea}
 \date{October 9, 2026}
 
@@ -106,12 +99,12 @@ incorporated improvements. No practical FFT speedup is claimed.
 \section{1. Scope and the finite-network
 interface}\label{scope-and-the-finite-network-interface}
 
-This is a living research draft for OpenAI Problem \#130. Its reusable
-argument transfers finite tensor-network improvements to an all-length
-exact discrete Fourier transform. Each selected network is a separate,
-pinned result record. A passing numerical certificate alone is not a
-transfer proof. The result history records which networks have a written
-transfer and which remain candidates.
+This paper addresses OpenAI Problem \#130. Its reusable argument
+transfers finite tensor-network improvements to an all-length exact
+discrete Fourier transform. Each selected network is a separate, pinned
+result record. A passing numerical certificate alone is not a transfer
+proof. The result history records which networks have a written transfer
+and which remain candidates.
 
 We use the exact-complex-arithmetic model of OpenAI's \emph{An explicit
 power saving for the exact discrete Fourier transform} {[}O{]}. Complex
@@ -752,7 +745,7 @@ modules, merged reads, physical frame descent and late-compensation
 lineage include eumemic; birth reuse includes jamesyc; relaxed carrier
 arcs include DaysSky. Douglas Colkitt maintains the community framework,
 with additional predecessors recorded in the preserved NOTICE. This
-draft supplies the proposed Fourier transfer and local checks, not
+paper supplies the proposed Fourier transfer and local checks, not
 authorship of those network improvements. Original licenses and
 AI-assistance disclosures are retained.
 

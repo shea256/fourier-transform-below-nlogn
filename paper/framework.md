@@ -1,6 +1,6 @@
 ## 1. Scope and the finite-network interface
 
-This is a living research draft for OpenAI Problem #130. Its reusable argument transfers finite tensor-network improvements to an all-length exact discrete Fourier transform. Each selected network is a separate, pinned result record. A passing numerical certificate alone is not a transfer proof. The result history records which networks have a written transfer and which remain candidates.
+This paper addresses OpenAI Problem #130. Its reusable argument transfers finite tensor-network improvements to an all-length exact discrete Fourier transform. Each selected network is a separate, pinned result record. A passing numerical certificate alone is not a transfer proof. The result history records which networks have a written transfer and which remain candidates.
 
 We use the exact-complex-arithmetic model of OpenAI's *An explicit power saving for the exact discrete Fourier transform* [O]. Complex field operations have unit cost, coefficients and intermediate magnitudes are unrestricted, and a specified root of unity of order less than $1024n^3$ is supplied. Integer operations and random access on a fixed number of $O(\log(n+2))$-bit words have unit cost. Scalar preparation, index construction, initialization and data movement are charged. This is not a bit-complexity, numerical-stability, bounded-coefficient or practical FFT claim.
 
