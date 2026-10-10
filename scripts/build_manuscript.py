@@ -17,6 +17,7 @@ from result_registry import ROOT, load, exact_decimal
 
 BUILD = ROOT / 'tex/build'
 TITLE = 'Finite Network Improvements for the Exact Discrete Fourier Transform'
+AUTHOR = 'Ryan Shea'
 
 
 def result_table(entries):
@@ -34,6 +35,8 @@ def generated(registry, current):
     a = exact_decimal(current['tensor_saving'])
     updated = current['date']
     intro = f'''# {TITLE}
+
+**{AUTHOR}**
 
 **Living research draft. Selected result: {current['id']}, {updated}.**
 
@@ -153,7 +156,8 @@ def main():
     BUILD.mkdir(exist_ok=True)
     body = outputs['manuscript.md'].split('\n', 2)[2]
     body = '\n'.join(line for line in body.splitlines()
-                     if not line.startswith('**Living research draft.') and not line.startswith('<!--'))
+                     if line != f'**{AUTHOR}**'
+                     and not line.startswith('**Living research draft.') and not line.startswith('<!--'))
     body = body.replace('\n| $r$ |', '\n\\Needspace{19\\baselineskip}\n\n| $r$ |')
     # Keep a table-only subsection's heading and lead-in with its table.
     body = re.sub(r'(### [^\n]+\n\n[^\n]+\n\n)\\Needspace\{19\\baselineskip\}\n\n',
@@ -164,6 +168,7 @@ def main():
     run(['pandoc', str(input_path), '--standalone', '--from=markdown+tex_math_single_backslash',
          '--to=latex', '--shift-heading-level-by=-1', '--output=tex/manuscript.tex', '--include-in-header=tex/preamble.tex',
          '--metadata=title:'+TITLE,
+         '--metadata=author:'+AUTHOR,
          '--metadata=subtitle:Living research draft; selected witness '+current['id'],
          '--metadata=date:'+label_date, '--variable=fontsize:11pt',
          '--variable=geometry:margin=1in', '--variable=colorlinks:true',
