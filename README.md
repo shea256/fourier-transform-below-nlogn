@@ -92,3 +92,9 @@ All previous verification suites remain runnable. Historical audit records apply
 ## Original sources
 
 OpenAI's [#130 Fourier manuscript](https://github.com/openai/math/blob/main/preprints/An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026/main.pdf) supplies the exact-arithmetic model, Fourier compiler and all-length reduction. The network research originates in [#109](https://github.com/openai/math/blob/main/preprints/Integer-multiplication-below-n-log-n-September-23-2026/paper.pdf) and [Douglas Colkitt's community repository](https://github.com/CrocSwap/integer-mult-bounds). Construction-specific sources, immutable commits, licenses and contribution credit are recorded with each version.
+
+## License
+
+Original code, manuscripts and documentation in this repository are licensed under the [Apache License, Version 2.0](LICENSE), except where otherwise indicated. Copyright 2026 Ryan Shea.
+
+Third-party material, including vendored sources and source archives, retains its original licenses and notices. See [NOTICE](NOTICE), the [attribution audit](ATTRIBUTION.md), and the source-specific licenses and notices under [verification/vendor/](verification/vendor/).

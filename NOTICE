@@ -1,0 +1,38 @@
+Finite Network Improvements for the Exact Discrete Fourier Transform
+Copyright 2026 Ryan Shea
+
+Original contributions to this repository, including code, manuscripts and
+documentation, are licensed under the Apache License, Version 2.0, except
+where otherwise indicated. See LICENSE. Third-party material retains its
+original licenses, copyright notices and attribution. This notice does not
+replace or modify those terms.
+
+This project builds on OpenAI's integer-multiplication and exact-Fourier
+research, Douglas (Doug) Colkitt's network research and community repository,
+Rohan Arun's community contributions, and Swapnil Jain's complex-network
+witnesses. The selected five-stage result uses Jacob Sussman's formal
+framework and Chafik Boukhalfa's stronger instantiation of the community
+construction. Those results remain the work of their credited authors.
+
+The construction lineage also includes icekylinx, eumemic, an664,
+James Chang / jamesyc, DaysSky, Avi Eisenberg / ikeboy,
+Zhihao Chen / jacklightChen, Aurel Prosz / Paureel, SovereignSteak,
+hcg890 and other contributors identified in ATTRIBUTION.md and the
+preserved upstream notices. ATTRIBUTION.md records specific contributions,
+source revisions and attribution clarifications.
+
+Upstream licenses and notices are preserved in verification/vendor/:
+- jain_round6/LICENSE and NOTICE
+- jain_round10/LICENSE and NOTICE
+- jain_round11/LICENSE, NOTICE and COMPLEX_NOTICE.txt
+- cover_frames/LICENSE and NOTICE
+- five_stage/LICENSE and FOURIER_NOTICE
+- five_stage/gcert-program-233/NOTICE
+- five_stage/gcert-program-233/references/pr233-layer/NOTICE
+
+Vendored source archives also retain their source-specific licenses and
+notices. SOURCE.json files identify the pinned sources and file hashes.
+
+This project was developed with substantial OpenAI model and Codex
+assistance, as described in README.md. Upstream assistance disclosures
+are preserved with the imported material.
