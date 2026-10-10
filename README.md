@@ -2,6 +2,10 @@
 
 A living research project on **OpenAI Math Problem #130**, *An explicit power saving for the exact discrete Fourier transform*. We study how improvements to the complex networks developed around integer multiplication (#109) transfer to all-length Fourier bounds.
 
+![Exact Fourier transform: exponent-saving record progression](assets/fourier-exponent-progress.png)
+
+<sub>Record order and values from the [Big O Speedrun exact-DFT leaderboard](https://bigospeedrun.com/exact-dft), checked 2026-10-10. The leaderboard lists our 7.3e-5 and 6.7e-4 results as Claimed; the chart marks the exact finite certificates that `python3 verification/run_checks.py` checks for them, while their Fourier transfers are not yet formalized in Lean. Regenerate with `python3 scripts/render_progress_chart.py` (requires Matplotlib).</sub>
+
 <!-- current-result:start -->
 
 ## Latest paper
