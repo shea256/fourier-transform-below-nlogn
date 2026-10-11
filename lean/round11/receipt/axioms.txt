@@ -1,0 +1,5 @@
+info: Work/FourierR11/Axioms.lean:11:0: 'OAI.PowerSaving.RAM.hillsX_program' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FourierR11/Axioms.lean:7:0: 'OAI.PowerSaving.transform_mainX' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FourierR11/Axioms.lean:8:0: 'OAI.PowerSaving.convolution_mainX' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FourierR11/Seam.lean:250:0: 'OAI.PowerSaving.RAM.hillsX_program' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Data/SolutionB2GR11x.lean:38:0: 'OAI.PowerSaving.WHT.wht_main_block_B2GR11x' depends on axioms: [propext, Classical.choice, Quot.sound]
