@@ -16,7 +16,7 @@ import hashlib, os, sys, tarfile
 
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ARCHIVE = sys.argv[1] if len(sys.argv) > 1 else os.path.join(HERE, '../../verification/vendor/five_stage/fourier-proof-source.tar.gz')
-ADDED_PREFIXES = ('Work/GCert/Data/Gen/R11', 'Work/FourierR11/', 'Work/FourierR11Neg/', 'converter/', 'scripts/', 'receipt/')
+ADDED_PREFIXES = ('Work/GCert/Data/Gen/R11', 'Work/FourierR11/', 'Work/FourierR11Neg/', 'converter/', 'scripts/', 'receipt/', 'submission/')
 ADDED_FILES = {
     'README.md', 'NOTICE.round11', '.gitignore',
     'Work/GCert/Data/B2GR11.lean', 'Work/GCert/Data/B2GR11Main.lean', 'Work/GCert/Data/ChallengeB2GR11.lean',
