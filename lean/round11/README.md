@@ -67,11 +67,32 @@ lists the 359 files of that run (README.md, NOTICE.round11, `scripts/check_prove
 Longest module in this run: gate replay `Gen.R11Seg3`, about 10 minutes. Memory was not sampled in this run; in an
 earlier build of the same modules the scalar replays `Gen.R11Scal0`/`Scal1` peaked at 10.5 GB.
 
+## Leaderboard submission (bigospeedrun.com/exact-dft)
+
+`python3 scripts/make_submission.py OUT` writes the folder for
+[bigospeedrun/verifier](https://github.com/bigospeedrun/verifier) (`docs/targets.md`): `submission/Submission.lean`
+exports `Race.bound` at saving `67/100000`, every module reachable from `Work.FourierR11.Main` is copied under
+`Submission/` with only its `import` lines prefixed by `Submission.`, and `submission/NOTICE.lean` keeps the credits.
+
+That folder was staged as the verifier stages a submission (its `lakefile.toml` generator, its pinned
+`profiles/lake-manifest.json`, its challenge `challenges/dft/UniformFourier233.lean` plus the generated `Race.bound`
+target, kept as `receipt/VerifierChallenge-67-100000.lean`) and built from source on 2026-10-11:
+
+- `#print axioms Race.bound`: `[propext, Classical.choice, Quot.sound]`; `tools/Compare.lean` against that challenge:
+  PASS (`receipt/submission-audit-and-compare.log`).
+- The official [comparator](https://github.com/leanprover/comparator) at the verifier's pins (comparator `d03acab`,
+  lean4export `076e8e5`), with the verifier's configuration (`Race.bound`, the three permitted axioms): "Lean default
+  kernel accepts the solution" / "Your solution is okay!", exit 0, 2385 s, 11.3 GB
+  (`receipt/official-comparator-lean.log`, full log `receipt/official-comparator-lean-full.log.gz`).
+  This VM's kernel has no Landlock, so `landrun` was replaced by a pass-through wrapper (no sandbox); the sandbox
+  isolates untrusted submissions and takes no part in the check itself.
+
 ## Not done
 
-The official `comparator` and `leanchecker` were not run; `tools/Compare.lean` is Sussman's comparison script.
-No human has reviewed these additions. The round-six result (δ = 7.3e-5) is not covered: its circuit is in a
-different format and needs its own converter.
+The verifier's own GitHub run (with the real landrun sandbox) has not been done; the leaderboard only runs
+submissions at or above the current record, so this needs a maintainer. `leanchecker` was not run. No human has
+reviewed these additions. The round-six result (δ = 7.3e-5) is not covered: its circuit is in a different format and
+needs its own converter.
 
 ## Credits
 
