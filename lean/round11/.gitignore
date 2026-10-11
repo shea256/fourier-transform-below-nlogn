@@ -1,0 +1,10 @@
+# Lake build directory (Mathlib and all compiled files; about 8 GB)
+.lake/
+# default output directory of tools/gen/ccgen.py and tools/gen/crate.py
+tools/gen/out/
+__pycache__/
+# macOS Finder metadata
+.DS_Store
+# default output directory of tools/gx/gxgen.py and tools/gx/gxrate.py
+tools/gx/out/
+build-logs/
