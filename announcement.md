@@ -1,26 +1,49 @@
-# Announcement text: complex588 Fourier theorem
+# Announcement draft: improved exact DFT bound
 
-Prepared text, not a posting record. The selected sources and proof receipt are recorded in `results/registry.json` and `verification/COMPLEX588_AUDIT.md`.
+Prepared for posting; this file does not record an external announcement. Links
+below pin the verified proof commit, so they work before the PR is merged. The
+comparison uses the [October 12 baseline audit](research/complex-transfer-588-596/verification/leaderboard-2026-10-12.json).
 
 ## Main post
 
-We've updated our paper on OpenAI Problem #130: computing the exact discrete Fourier transform below n log n.
+We've proved an improved exact DFT bound for OpenAI Problem #130:
 
-We've built a new Lean-checked instantiation from Jeremy Kothe's PR588 circuit and the community's formal Fourier machinery:
+T(n) = O(n (log n)^(1 - delta)), with delta = 0.0012331685.
 
-T(n) = O(n(log n)^(1−δ)), with δ = 0.0012331685.
+The exponent saving is about 20.65% larger than Nil Mamano's 0.0010221076, the
+strongest verified DFT baseline in our October 12 audit. This is an asymptotic
+result in the exact-complex-arithmetic RAM model.
 
-That's about a 20.65% increase in the exponent saving over the strongest verified DFT baseline we found, Nil Mamano's 0.0010221076. Both DFT and convolution pass the full OpenAI statement comparison.
+The Lean proof covers DFT and convolution at every positive length. It passes
+the full OpenAI statement comparison and local proof replays in both Lean's
+kernel and nanoda.
 
-Our contribution is the source-copy conversion, cyclic bank schedule and checked instantiation, with reproducible proof sources and exact certificates. The larger native integer-network headlines are not the Fourier exponents proved here.
+Built on Jeremy Kothe's PR588 circuit and the community's formal Fourier
+framework, with our source-copy conversion, cyclic helper-bank schedule and
+checked instantiation. The updated paper, exact certificates and reproduction
+instructions are ready for review.
 
-## Follow-up
+[Paper](https://github.com/shea256/fourier-transform-below-nlogn/blob/52394849c7ecf3412d39b925d75fc7fdb98994d8/manuscript.pdf)
+· [Proof and receipts](https://github.com/shea256/fourier-transform-below-nlogn/tree/52394849c7ecf3412d39b925d75fc7fdb98994d8/lean/complex588)
 
-Sussman supplies the formal engine and checkers, Dugongue and jacklightChen the #401/#377 geometry, and Mamano's submission the published gauged Lean extension. Kothe's circuit retains the complete community predecessor credits in its source notices. Boukhalfa and Sussman's earlier five-stage theorem remains archived as the previous selected publication.
+## Follow-up: credits and verification scope
 
-We also preserve the research lineage through OpenAI, Doug Colkitt, Rohan Arun and Swapnil Jain. OpenAI supplies the original Fourier model and reduction; Jain's networks supplied earlier selected witnesses.
+Jacob Sussman supplies the formal engine and checkers; Dugongue and jacklightChen
+the #401/#377 geometry; Nil Mamano's submission the published gauged Lean
+extension; and OpenAI the original model and Fourier reduction. Jeremy Kothe's
+circuit preserves the complete community predecessor credits in its source
+notices. The earlier Sussman–Boukhalfa theorem remains archived, with the research
+lineage through Doug Colkitt, Rohan Arun and Swapnil Jain recorded in the
+[attribution](https://github.com/shea256/fourier-transform-below-nlogn/blob/52394849c7ecf3412d39b925d75fc7fdb98994d8/ATTRIBUTION.md).
 
-The all-length theorem uses OpenAI's exact-complex-arithmetic RAM model, with a specified supplied root of unity and scalar/index preparation included. The comparison is of exponent savings. No practical FFT speedup is claimed; independent human review remains pending.
+The theorem assumes the specified supplied root of unity and charges scalar
+preparation, indexing and output work. The 20.65% comparison measures exponent
+savings; practical FFT performance has not been measured.
 
-Paper, LaTeX, pinned sources, exact certificates, Lean reproduction receipt and improvement history:
-https://github.com/shea256/fourier-transform-below-nlogn
+The official comparator passed locally using its pinned code and both proof
+kernels. This VM required a pass-through replacement for the unavailable
+`landrun` process sandbox; the proof checks were unchanged. The result has not
+yet been accepted by the leaderboard or independently reviewed by a human.
+
+[Verification audit](https://github.com/shea256/fourier-transform-below-nlogn/blob/52394849c7ecf3412d39b925d75fc7fdb98994d8/verification/COMPLEX588_AUDIT.md)
+· [Pinned baseline](https://github.com/bigospeedrun/verifier/blob/f9ffbc1f9dfbfaf84d819b087c999361d0fa3372/submissions/dft/nmamano-dft-record/Submission.lean)
