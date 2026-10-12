@@ -4,9 +4,10 @@ Historical entries follow https://bigospeedrun.com/exact-dft (checked 2026-10-12
 The final point is the locally verified complex588 result, published in PR #4
 at 2026-10-12 19:40 UTC (12:40 PM PT); leaderboard verification is outstanding.
 """
+from decimal import Decimal, localcontext
 from fractions import Fraction
-from pathlib import Path
 import json
+from pathlib import Path
 
 import matplotlib
 matplotlib.use('Agg')
@@ -14,22 +15,22 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 
 ROOT = Path(__file__).resolve().parents[1] / 'assets'
-# (x label in PT, player, construction, exact score, displayed delta, evidence)
+# (date in PT, contributor, construction, exact score, strict endpoint, evidence)
 # Evidence: 'lean' = Lean verified on the leaderboard; 'checked' = listed as Claimed there,
 # with exact finite certificates passing `python3 verification/run_checks.py` in this repository;
 # 'leanrepo' = local official-comparator, Lean and nanoda checks passed; the
 # leaderboard lists round11 as Claimed and has no entry for complex588 yet.
 ROWS = [
-    ('Oct 6', 'OpenAI', 'Published headline', '1/10000000000000', '1e-13', 'lean'),
-    ('Oct 7\n10:20 PM', 'OpenAI', 'Uniform frontier', '1/50000000000', '2e-11 \u2212 \u03b5', 'lean'),
-    ('Oct 8\n4:56 PM', 'Ryan Shea', 'Two-stage network', '73/1000000', '7.3e-5', 'checked'),
-    ('Oct 9\n2:34 AM', 'eumemic', 'Batched paired-cube', '607/1250000', '4.85e-4 \u2212 \u03b5', 'claimed'),
-    ('Oct 9\n8:24 AM', 'Ryan Shea', 'Retired-copy network', '67/100000', '6.7e-4', 'leanrepo'),
-    ('Oct 9\n12:00 PM', 'Jacob Sussman', 'Five-stage framework', '3737273/5000000000', '7.47e-4', 'claimed'),
-    ('Oct 9\n6:43 PM', 'Sussman & Boukhalfa', 'Five-stage network', '47171/62500000', '7.54e-4', 'lean'),
-    ('Oct 10\n3:44 PM', 'Jacob Sussman', 'E8 unit', '4381239/5000000000', '8.76e-4', 'lean'),
-    ('Oct 11\n6:07 AM', 'Nil Mamano', 'Nine-stage certificate', '2555269/2500000000', '1.0221e-3', 'lean'),
-    ('Oct 12\n12:40 PM', 'Ryan Shea / this project', 'PR588 + cyclic banks', '12331685/10000000000', '0.0012331685', 'leanrepo'),
+    ('Oct 6', 'OpenAI', 'Initial bound', '1/10000000000000', False, 'lean'),
+    ('Oct 7\n10:20 PM', 'OpenAI', 'Uniform bound', '1/50000000000', True, 'lean'),
+    ('Oct 8\n4:56 PM', 'Ryan Shea', 'Two-stage network', '73/1000000', False, 'checked'),
+    ('Oct 9\n2:34 AM', 'eumemic', 'Paired-cube batching', '607/1250000', True, 'claimed'),
+    ('Oct 9\n8:24 AM', 'Ryan Shea', 'Retired-copy network', '67/100000', False, 'leanrepo'),
+    ('Oct 9\n12:00 PM', 'Jacob Sussman', 'Five-stage framework', '3737273/5000000000', False, 'claimed'),
+    ('Oct 9\n6:43 PM', 'Jacob Sussman & Chafik Boukhalfa', 'Five-stage network', '47171/62500000', False, 'lean'),
+    ('Oct 10\n3:44 PM', 'Jacob Sussman', 'E8 unit', '4381239/5000000000', False, 'lean'),
+    ('Oct 11\n6:07 AM', 'Nil Mamano', 'Nine-stage certificate', '2555269/2500000000', False, 'lean'),
+    ('Oct 12\n12:40 PM', 'Ryan Shea', 'PR588 with cyclic banks', '12331685/10000000000', False, 'leanrepo'),
 ]
 scores = [Fraction(r[3]) for r in ROWS]
 assert all(a < b for a, b in zip(scores, scores[1:])), 'each point should improve the bound'
@@ -37,6 +38,7 @@ registry = json.loads((ROOT.parent / 'results/registry.json').read_text())
 current = next(r for r in registry['results'] if r['id'] == registry['current'])
 assert current['id'] == 'complex588', 'update the chart for the new selected result'
 assert scores[-1] == Fraction(current['fourier_saving'])
+saving_gain = float(100 * (scores[-1] / scores[-2] - 1))
 ys = [float(score) for score in scores]
 evidence = [r[5] for r in ROWS]
 gray, blue, green = '#555555', '#2d7dd2', '#19aa80'
@@ -45,9 +47,9 @@ L = .085  # shared left margin for all figure text
 plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 13, 'mathtext.fontset': 'dejavusans'})
 fig, ax = plt.subplots(figsize=(16, 9), dpi=180, facecolor='white')
 fig.subplots_adjust(left=L + .015, right=.955, bottom=.32, top=.80)
-fig.text(L, .935, 'Exact Fourier transform: increasing the exponent saving',
+fig.text(L, .935, 'Exact Fourier transform: exponent savings',
          fontsize=24, color=ink, va='top', fontweight='semibold')
-fig.text(L, .862, r'$T(n) = O\left(n\,(\log n)^{1-\delta}\right)$   ·   larger $\delta$ means a stronger asymptotic bound',
+fig.text(L, .862, r'$T(n) = O\left(n\,(\log n)^{1-\delta}\right)$   ·   Larger $\delta$ gives a stronger bound',
          fontsize=15, color=muted, va='top')
 ax.set_yscale('log')
 ax.set_ylim(3e-14, .03)
@@ -75,17 +77,28 @@ for i in range(n):
     else:
         ax.scatter([i], [ys[i]], s=110, facecolors='white', edgecolors=gray, linewidths=2.5, zorder=4)
 
+def format_saving(score, strict):
+    """Round labels to four significant digits; plot the full rational scores."""
+    with localcontext() as context:
+        context.prec = 40
+        value = Decimal(score.numerator) / Decimal(score.denominator)
+        mantissa, exponent = f'{value:.3E}'.split('E')
+    endpoint = r' - \varepsilon' if strict else ''
+    return rf'$\delta \approx {mantissa} \times 10^{{{int(exponent)}}}{endpoint}$'
+
+
 def label(i, dx, dy, ha='left', va='bottom'):
-    _, player, name, _, value, level = ROWS[i]
+    _, player, name, _, strict, level = ROWS[i]
     color = {'lean': green, 'leanrepo': blue, 'checked': blue, 'claimed': gray}[level]
-    ax.annotate(f'{player}\n{name}\n' + '\u03b4 = ' + value, xy=(i, ys[i]), xytext=(dx, dy),
+    value = format_saving(scores[i], strict)
+    ax.annotate(f'{player}\n{name}\n{value}', xy=(i, ys[i]), xytext=(dx, dy),
                 textcoords='offset points', fontsize=10.6, color=color, ha=ha, va=va, linespacing=1.4,
                 arrowprops=dict(arrowstyle='-', color=color, lw=.8, shrinkA=2, shrinkB=6) if dy < -40 else None,
-                fontweight='semibold' if i == n - 1 else 'normal')
+                fontweight='normal')
 
 label(0, -6, 16)
-label(1, -6, 16)
-label(2, 10, 16)
+label(1, 6, 16, ha='right')
+label(2, -6, 16)
 label(3, 8, -16, va='top')
 label(4, 8, -74, va='top')
 label(5, 8, -16, va='top')
@@ -94,27 +107,31 @@ label(7, 8, -16, va='top')
 label(8, 8, -74, va='top')
 label(9, 6, 16, ha='right')
 ax.legend(handles=[
-    Line2D([], [], marker='o', color=green, markeredgecolor='white', linestyle='none', markersize=10, label='Lean verified by the leaderboard'),
-    Line2D([], [], marker='o', color=blue, markeredgecolor=green, markeredgewidth=2.5, linestyle='none', markersize=10, label='Lean + nanoda checked locally; leaderboard verification outstanding'),
-    Line2D([], [], marker='o', color=blue, markeredgecolor='white', linestyle='none', markersize=10, label='Machine-checked finite certificates in this repo; not in Lean'),
+    Line2D([], [], marker='o', color=green, markeredgecolor='white', linestyle='none', markersize=10, label='Lean verified (leaderboard)'),
+    Line2D([], [], marker='o', color=blue, markeredgecolor=green, markeredgewidth=2.5, linestyle='none', markersize=10, label='Lean verified (local)'),
+    Line2D([], [], marker='o', color=blue, markeredgecolor='white', linestyle='none', markersize=10, label='Finite checks (local)'),
     Line2D([], [], marker='o', color=gray, markerfacecolor='white', markeredgewidth=2, linestyle='none', markersize=8, label='Claimed')],
     loc='lower right', bbox_to_anchor=(1.0, 0.04), frameon=False, fontsize=11.5, labelcolor=muted,
     handletextpad=.4, borderaxespad=0)
 
 notes = [
-    ('Model: exact complex arithmetic · supplied root of unity · unrestricted coefficients · unit-cost logarithmic-word indexing. '
-     'Scalar preparation and array organization included.', muted),
-    ('Values are exponent parameters, not measured speedups; \u2212 \u03b5 marks a strict bound. New result: 20.65% larger saving than the prior verified best.', muted),
-    ('Fourier applications and integration: Ryan Shea / this project. New contribution: source-copy conversion, cyclic banks and checked instantiation.', muted),
-    ('Current circuit: Jeremy Kothe and community predecessors · formal engine: Jacob Sussman · model and Fourier reduction: OpenAI', muted),
-    ('Geometry: Dugongue and jacklightChen · gauged extension: Nil Mamano\u2019s submission · earlier five-stage circuit: Chafik Boukhalfa', muted),
-    ('Full lineage, predecessor credits and notices: ATTRIBUTION.md · lean/complex588/NOTICE.complex588', muted),
+    'Model: exact complex arithmetic · supplied root of unity · unrestricted coefficients · preparation and array work included.',
+    r'Display: 4 significant digits · $-\varepsilon$ marks a strict endpoint · gains compare exponents, not measured runtimes.',
+    f'Local proofs pass Lean and nanoda; leaderboard verification pending. Current exponent saving: {saving_gain:.2f}% above the prior verified best.',
 ]
-y = .218
-for k, (text, color) in enumerate(notes):
-    fig.text(L, y, text, fontsize=10.5, color=color)
-    y -= .029 if k != 1 else .041
-fig.text(L, .016, 'shea256/fourier-transform-below-nlogn · Leaderboard history: bigospeedrun.com/exact-dft, checked Oct 12, 2026 · Local result: PR #4 · Times: PT',
+for y, text in zip((.224, .197, .170), notes):
+    fig.text(L, y, text, fontsize=10.5, color=muted)
+
+credits = [
+    ('Integration: Ryan Shea', 'Circuit: Jeremy Kothe and contributors'),
+    ('Formal engine: Jacob Sussman', 'Geometry: Dugongue and jacklightChen'),
+    ('Fourier reduction: OpenAI', 'Gauged extension: Nil Mamano\u2019s submission'),
+]
+for y, (left, right) in zip((.128, .101, .074), credits):
+    fig.text(L, y, left, fontsize=10.5, color=muted)
+    fig.text(.49, y, right, fontsize=10.5, color=muted)
+fig.text(L, .043, 'Full credits: ATTRIBUTION.md · lean/complex588/NOTICE.complex588', fontsize=10, color=faint)
+fig.text(L, .016, 'Source: bigospeedrun.com/exact-dft · checked Oct 12, 2026 · current result: shea256/fourier-transform-below-nlogn PR #4 · dates: PT',
          fontsize=10, color=faint)
 fig.savefig(ROOT / 'fourier-exponent-progress.png', dpi=180, facecolor='white')
 print('Saved assets/fourier-exponent-progress.png (2880 × 1620).')
