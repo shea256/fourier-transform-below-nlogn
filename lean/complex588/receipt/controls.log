@@ -1,0 +1,3 @@
+'GXD.C588Controls.bad_scalar_rejected' depends on axioms: [propext]
+'GXD.C588Controls.duplicate_owner_rejected' depends on axioms: [propext]
+TIME 8.25 MAXRSS_KB 7267072

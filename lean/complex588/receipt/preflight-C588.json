@@ -1,0 +1,61 @@
+{
+  "checks": [
+    {
+      "mode": "x",
+      "pass": true,
+      "source_count": 112,
+      "denominators": {
+        "x": 1,
+        "y": 8,
+        "s": 8
+      },
+      "maximum_uncancelled_entry": {
+        "x": "1",
+        "y": "81616",
+        "s": "56979/4"
+      },
+      "updates": 125630
+    },
+    {
+      "mode": "y",
+      "pass": true,
+      "source_count": 112,
+      "denominators": {
+        "x": 1,
+        "y": 2,
+        "s": 1
+      },
+      "maximum_uncancelled_entry": {
+        "x": "1",
+        "y": "3/2",
+        "s": "1"
+      },
+      "updates": 504
+    },
+    {
+      "mode": "e",
+      "pass": true,
+      "source_count": 228,
+      "denominators": {
+        "x": 1,
+        "y": 4,
+        "s": 4
+      },
+      "maximum_uncancelled_entry": {
+        "x": "1",
+        "y": "8",
+        "s": "4"
+      },
+      "updates": 3811
+    }
+  ],
+  "SPar": [
+    10,
+    21,
+    1,
+    8,
+    8
+  ],
+  "largest_uncancelled_digit": 652928,
+  "scope": "Exact rational preflight only; Lean kernel checks still required."
+}

@@ -1,0 +1,2430 @@
+ℹ [9018/9044] Replayed WHTCheck.Solution
+info: WHTCheck/Solution.lean:468:0: 'OAI.PowerSaving.RAM.hills_program' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WHTCheck/Solution.lean:469:0: 'OAI.PowerSaving.WHT.wht_can' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WHTCheck/Solution.lean:470:0: 'OAI.PowerSaving.WHT.wht_program_internal' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WHTCheck/Solution.lean:471:0: 'OAI.PowerSaving.WHT.wht_main' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: WHTCheck/Solution.lean:472:0: OAI.PowerSaving.WHT.wht_can : ∀ (cl : OAI.PowerSaving.RAM.Paint) (m : Bool) {ι : Type u_1} (k : ι → ℕ)
+  (v : (i : ι) → OAI.PowerSaving.Binary.Bits (k i) → ℂ),
+  OAI.PowerSaving.RAM.Can m (fun i => 2 ^ k i) (OAI.PowerSaving.RAM.simIn cl) (OAI.PowerSaving.RAM.bundle cl)
+    (fun i => OAI.PowerSaving.RAM.givenBits cl (k i) (v i))
+    (fun i => (OAI.PowerSaving.Binary.bits (k i)).tape (Matrix.mulVec (OAI.PowerSaving.Binary.wal (Fin (k i))) (v i)))
+    fun i => 2 ^ k i * OAI.PowerSaving.hills (k i)
+info: WHTCheck/Solution.lean:473:0: OAI.PowerSaving.WHT.wht_main : OAI.PowerSaving.WHT.WHTGoal
+info: WHTCheck/Solution.lean:474:0: def OAI.PowerSaving.WHT.WHTGoal : Prop :=
+∃ solve W, OAI.PowerSaving.WHT.WHTProgram solve W ∧ OAI.PowerSaving.WHT.WHTTimeBounds W
+ℹ [9019/9044] Replayed Work.BlockAccounting.Moment
+info: Work/BlockAccounting/Moment.lean:139:0: 'OAI.PowerSaving.BlockAccounting.term_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockAccounting/Moment.lean:140:0: 'OAI.PowerSaving.BlockAccounting.log_le_of_le_expsum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockAccounting/Moment.lean:141:0: 'OAI.PowerSaving.BlockAccounting.moment_finset' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockAccounting/Moment.lean:142:0: 'OAI.PowerSaving.BlockAccounting.mem_keys_of_histFn_ne_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9020/9044] Replayed Work.BlockAccounting.Steps
+info: Work/BlockAccounting/Steps.lean:62:0: 'OAI.PowerSaving.BlockAccounting.moment_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockAccounting/Steps.lean:63:0: 'OAI.PowerSaving.BlockAccounting.histFn_eq_of_list' depends on axioms: [propext, Quot.sound]
+ℹ [9023/9276] Replayed Work.Scratch.Engine
+info: Work/Scratch/Engine.lean:1522:0: 'OAI.PowerSaving.RAM.recurse_runS' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1523:0: 'OAI.PowerSaving.RAM.engine_all_scratch' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1524:0: 'OAI.PowerSaving.RAM.engine_program_scratch' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1525:0: 'OAI.PowerSaving.RAM.hills_program_via_scratch' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1526:0: 'OAI.PowerSaving.RAM.LiveKernel.iff_erase_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1527:0: 'OAI.PowerSaving.RAM.no_erase_first' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1528:0: 'OAI.PowerSaving.RAM.Route.gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1529:0: 'OAI.PowerSaving.RAM.LiveKernel.of_route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1530:0: 'OAI.PowerSaving.RAM.endpoint_reversible' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1531:0: 'OAI.PowerSaving.RAM.endpoint_by_copy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1532:0: 'OAI.PowerSaving.two_stage_rate_28' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1533:0: 'OAI.PowerSaving.two_stage_rate_33' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1534:0: 'OAI.PowerSaving.RAM.two_stage_h24_if_word' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Scratch/Engine.lean:1535:0: 'OAI.PowerSaving.RAM.allotC_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9024/9276] Replayed Work.Block.Split
+warning: Work/Block/Split.lean:67:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Split.lean:67:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:67:32: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:68:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:68:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:75:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Split.lean:80:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:82:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:88:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:89:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:109:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Split.lean:109:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Split.lean:109:32: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Split.lean:110:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Split.lean:110:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:110:32: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:111:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Split.lean:111:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Block/Split.lean:257:0: 'OAI.PowerSaving.Binary.blockMat_eq_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Split.lean:258:0: 'OAI.PowerSaving.Binary.exists_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Split.lean:259:0: 'OAI.PowerSaving.Binary.linearIndependent_of_orthonormal' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9025/9276] Replayed Work.Block.Peel
+warning: Work/Block/Peel.lean:118:11: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Block/Peel.lean:133:0: 'OAI.PowerSaving.Binary.Split.act' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9026/9276] Replayed Work.Block.Address
+warning: Work/Block/Address.lean:70:20: Variable name `i` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _i
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Work/Block/Address.lean:181:0: 'OAI.PowerSaving.RAM.Gear.from_gridB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Address.lean:182:0: 'OAI.PowerSaving.RAM.Gear.to_gridB' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9028/9276] Replayed Work.Block.Batches
+info: Work/Block/Batches.lean:353:0: 'OAI.PowerSaving.RAM.Rig.open_blockB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Batches.lean:354:0: 'OAI.PowerSaving.RAM.Rig.sweepB' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9029/9276] Replayed Work.Block.Recursion
+warning: Work/Block/Recursion.lean:52:14: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Work/Block/Recursion.lean:56:14: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Work/Block/Recursion.lean:270:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Recursion.lean:337:40: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Recursion.lean:348:39: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Block/Recursion.lean:386:0: 'OAI.PowerSaving.RAM.amplifyB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Recursion.lean:387:0: 'OAI.PowerSaving.RAM.recurse_runB' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9030/9276] Replayed Work.Block.Engine
+info: Work/Block/Engine.lean:317:0: 'OAI.PowerSaving.RAM.allotB_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Engine.lean:318:0: 'OAI.PowerSaving.RAM.engine_all_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Engine.lean:319:0: 'OAI.PowerSaving.RAM.engine_program_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9031/9276] Replayed Work.Block.Bridge
+info: Work/Block/Bridge.lean:306:0: 'OAI.PowerSaving.RAM.engine_program_block_costR' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Bridge.lean:307:0: 'OAI.PowerSaving.RAM.engine_program_block_of_tally' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Bridge.lean:308:0: 'OAI.PowerSaving.RAM.hills_program_via_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Bridge.lean:309:0: 'OAI.PowerSaving.Binary.SwapEq.walk_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9032/9276] Replayed Work.Block.Frames
+warning: Work/Block/Frames.lean:68:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Frames.lean:68:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Frames.lean:243:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Frames.lean:248:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Frames.lean:250:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Frames.lean:252:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Frames.lean:275:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Frames.lean:280:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Frames.lean:282:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Frames.lean:284:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Block/Frames.lean:327:0: 'OAI.PowerSaving.Binary.OBase.deltas_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Frames.lean:328:0: 'OAI.PowerSaving.Binary.OBase.reframe_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9033/9276] Replayed Work.Block.Paths
+warning: Work/Block/Paths.lean:345:55: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Block/Paths.lean:358:16: This simp argument is unused:
+  Function.update_of_ne hr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.mem_insert, hr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/Block/Paths.lean:416:0: 'OAI.PowerSaving.RAM.BRoute.parallel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Paths.lean:417:0: 'OAI.PowerSaving.RAM.BRoute.liveKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Paths.lean:418:0: 'OAI.PowerSaving.RAM.BPath.reframe' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Paths.lean:419:0: 'OAI.PowerSaving.RAM.engine_program_broute' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9034/9276] Replayed Work.Block.Extras
+warning: Work/Block/Extras.lean:49:43: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Work/Block/Extras.lean:54:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Block/Extras.lean:59:42: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+info: Work/Block/Extras.lean:104:0: 'OAI.PowerSaving.RAM.allotB_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Extras.lean:105:0: 'OAI.PowerSaving.RAM.BRoute.shifts' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Extras.lean:106:0: 'OAI.PowerSaving.RAM.demo_block_engine' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9035/9276] Replayed Work.Block.WHT
+info: Work/Block/WHT.lean:213:0: 'OAI.PowerSaving.BlockWHT.wht_main_of_engine' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/WHT.lean:214:0: 'OAI.PowerSaving.BlockWHT.wht_main_of_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9036/9276] Replayed Work.Block.Port
+warning: Work/Block/Port.lean:54:6: Unused tactic linter: `change frame (A i) (s i) = frame (A i) (t i)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Block/Port.lean:69:6: Unused tactic linter: `change frame (A r) (s r) = frame (A r) (t r)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Work/Block/Port.lean:101:0: 'OAI.PowerSaving.RAM.BPath.parallel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Port.lean:102:0: 'OAI.PowerSaving.RAM.engine_program_bpath' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9037/9276] Replayed Work.Block.Majorant
+info: Work/Block/Majorant.lean:165:0: 'OAI.PowerSaving.RAM.engine_program_block_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Majorant.lean:166:0: 'OAI.PowerSaving.RAM.engine_program_broute_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Block/Majorant.lean:167:0: 'OAI.PowerSaving.RAM.engine_program_block_jensen' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9038/9276] Replayed Work.BlockApply.Exact
+warning: Work/BlockApply/Exact.lean:220:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BlockApply/Exact.lean:220:39: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BlockApply/Exact.lean:249:28: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BlockApply/Exact.lean:249:39: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BlockApply/Exact.lean:555:55: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BlockApply/Exact.lean:568:16: This simp argument is unused:
+  Function.update_of_ne hr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.mem_insert, hr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/BlockApply/Exact.lean:597:6: Unused tactic linter: `change frame (A i) (s i) = frame (A i) (t i)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/BlockApply/Exact.lean:612:6: Unused tactic linter: `change frame (A r) (s r) = frame (A r) (t r)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Work/BlockApply/Exact.lean:647:0: 'OAI.PowerSaving.Binary.BWord.hist_of_listCost' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockApply/Exact.lean:648:0: 'OAI.PowerSaving.Binary.OBase.xreframe_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockApply/Exact.lean:649:0: 'OAI.PowerSaving.RAM.XRoute.parallel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockApply/Exact.lean:650:0: 'OAI.PowerSaving.RAM.XRoute.liveKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockApply/Exact.lean:651:0: 'OAI.PowerSaving.RAM.XPath.reframe' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockApply/Exact.lean:652:0: 'OAI.PowerSaving.RAM.engine_program_xcert' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9039/9276] Replayed Work.SharedSumStructured.GPath
+warning: Work/SharedSumStructured/GPath.lean:196:36: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/SharedSumStructured/GPath.lean:197:39: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/SharedSumStructured/GPath.lean:214:36: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/SharedSumStructured/GPath.lean:216:39: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/SharedSumStructured/GPath.lean:237:24: This simp argument is unused:
+  Function.update_of_ne hri
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [w, hri]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9041/9276] Replayed Work.Combine.XG
+warning: Work/Combine/XG.lean:129:16: This simp argument is unused:
+  Function.update_of_ne hr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.mem_insert, hr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/Combine/XG.lean:354:0: 'OAI.PowerSaving.RAM.XRoute.reach_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Combine/XG.lean:355:0: 'OAI.PowerSaving.CB.xmap1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Combine/XG.lean:356:0: 'OAI.PowerSaving.CB.xmap2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Combine/XG.lean:357:0: 'OAI.PowerSaving.CB.xreach_X' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Combine/XG.lean:358:0: 'OAI.PowerSaving.CB.xreach_idle' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9042/9276] Replayed Work.SharedSumStructured.Invocation
+warning: Work/SharedSumStructured/Invocation.lean:93:25: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/SharedSumStructured/Invocation.lean:106:18: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/SharedSumStructured/Invocation.lean:110:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/SharedSumStructured/Invocation.lean:112:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/SharedSumStructured/Invocation.lean:123:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/SharedSumStructured/Invocation.lean:487:59: This simp argument is unused:
+  aS_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Circuit.fwd, aS_Y, onS_Y, aY_Y, aC_Y, aY_X, aY_S, aS_S, onS_S, aC_S, aC_C, aY_C, aS_C, onS_C, hc,
+    actPoint_eq_ap, ap_add, ap_mneg, ap_mul, ap_madd, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/SharedSumStructured/Invocation.lean:527:28: This simp argument is unused:
+  aX_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Circuit.bwd, onS_X, aS_X, aC_X, aX_S, onS_S, aS_S, aC_S, aX_Y, onS_Y, aS_Y, aC_Y, aX_C, onS_C,
+    aS_C, aC_C, actPoint_eq_ap, key]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/SharedSumStructured/Invocation.lean:527:34: This simp argument is unused:
+  onS_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Circuit.bwd, aX_X, aS_X, aC_X, aX_S, onS_S, aS_S, aC_S, aX_Y, onS_Y, aS_Y, aC_Y, aX_C, onS_C, aS_C,
+    aC_C, actPoint_eq_ap, key]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/SharedSumStructured/Invocation.lean:527:41: This simp argument is unused:
+  aS_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Circuit.bwd, aX_X, onS_X, aC_X, aX_S, onS_S, aS_S, aC_S, aX_Y, onS_Y, aS_Y, aC_Y, aX_C, onS_C,
+    aS_C, aC_C, actPoint_eq_ap, key]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/SharedSumStructured/Invocation.lean:527:47: This simp argument is unused:
+  aC_X
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Circuit.bwd, aX_X, onS_X, aS_X, aX_S, onS_S, aS_S, aC_S, aX_Y, onS_Y, aS_Y, aC_Y, aX_C, onS_C,
+    aS_C, aC_C, actPoint_eq_ap, key]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ℹ [9043/9276] Replayed Work.Combine.XInvocation
+info: Work/Combine/XInvocation.lean:277:0: 'OAI.PowerSaving.CB.xinvocation_fwd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Combine/XInvocation.lean:278:0: 'OAI.PowerSaving.CB.xinvocation_bwd' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9045/9276] Replayed Work.SharedSumChecker.Phase
+warning: Work/SharedSumChecker/Phase.lean:51:45: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/SharedSumChecker/Phase.lean:51:45: Unused tactic linter: `linear_combination hS` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/SharedSumChecker/Phase.lean:57:45: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/SharedSumChecker/Phase.lean:57:45: Unused tactic linter: `linear_combination hs` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+ℹ [9051/9276] Replayed Work.Combine.Chunks
+info: Work/Combine/Chunks.lean:725:0: 'SSC.Complete.xpath' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9054/9276] Replayed Work.SharedSumChecker.Scalar
+warning: Work/SharedSumChecker/Scalar.lean:412:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [9055/9276] Replayed Work.CarrierCheck.ScalSound
+warning: Work/CarrierCheck/ScalSound.lean:206:35: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+ℹ [9056/9276] Replayed Work.GCert.Scalar.Bits
+info: Work/GCert/Scalar/Bits.lean:216:0: 'GS.gAcc_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Bits.lean:217:0: 'GS.coef_wgt' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9058/9276] Replayed Work.GCert.Scalar.Step
+info: Work/GCert/Scalar/Step.lean:169:0: 'GS.modK_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Step.lean:170:0: 'GS.gAdd_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9059/9276] Replayed Work.GCert.Scalar.Ops
+info: Work/GCert/Scalar/Ops.lean:206:0: 'GS.gChunks_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9060/9276] Replayed Work.GCert.Scalar.Scat
+info: Work/GCert/Scalar/Scat.lean:92:0: 'GS.gScat_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9061/9276] Replayed Work.GCert.Scalar.Fin
+info: Work/GCert/Scalar/Fin.lean:178:0: 'GS.gPre_sound' depends on axioms: [propext]
+info: Work/GCert/Scalar/Fin.lean:179:0: 'GS.init_ok' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9062/9276] Replayed Work.GCert.Scalar.End
+info: Work/GCert/Scalar/End.lean:148:0: 'GS.gFin_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/End.lean:149:0: 'GS.cont_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/End.lean:150:0: 'GS.cont_end' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/End.lean:151:0: 'GS.beqK_eq' depends on axioms: [propext]
+ℹ [9063/9276] Replayed Work.GCert.Scalar.Runs
+info: Work/GCert/Scalar/Runs.lean:188:0: 'GS.SegOK.append' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Runs.lean:189:0: 'GS.XRun.of_seg' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9064/9276] Replayed Work.GCert.Scalar.Check
+info: Work/GCert/Scalar/Check.lean:143:0: 'GS.SegOK.of_check' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Check.lean:144:0: 'GS.XRun.of_check' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Check.lean:145:0: 'GS.YRun.of_check' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9065/9276] Replayed Work.CarrierCheck.Roles
+warning: Work/CarrierCheck/Roles.lean:52:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/CarrierCheck/Roles.lean:60:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/CarrierCheck/Roles.lean:60:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/CarrierCheck/Roles.lean:70:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/CarrierCheck/Roles.lean:70:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/CarrierCheck/Roles.lean:80:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/CarrierCheck/Roles.lean:83:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/CarrierCheck/Roles.lean:85:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/CarrierCheck/Roles.lean:90:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+ℹ [9067/9276] Replayed Work.GCert.Scalar.Id
+info: Work/GCert/Scalar/Id.lean:212:0: 'GS.GRun_Cm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Id.lean:213:0: 'GS.scatFrom_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9072/9276] Replayed Work.Reframe.Basic
+info: Work/Reframe/Basic.lean:123:0: 'OAI.PowerSaving.RAM.XRoute.reframe' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Basic.lean:124:0: 'OAI.PowerSaving.RAM.XRoute.reframe_actPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Basic.lean:125:0: 'OAI.PowerSaving.CB.XReach.mul_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9073/9276] Replayed Work.Reframe.Erase
+warning: Work/Reframe/Erase.lean:91:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Erase.lean:96:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Erase.lean:101:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Reframe/Erase.lean:169:0: 'OAI.PowerSaving.CB.xerase' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Erase.lean:170:0: 'OAI.PowerSaving.CB.erase_fwd_erase' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Erase.lean:171:0: 'OAI.PowerSaving.CB.erase_bwd_erase' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Erase.lean:172:0: 'OAI.PowerSaving.CB.shearF_comm' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9074/9276] Replayed Work.Reframe.FrameAlg
+warning: Work/Reframe/FrameAlg.lean:131:9: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Reframe/FrameAlg.lean:153:0: 'OAI.PowerSaving.CB.frameM_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/FrameAlg.lean:154:0: 'OAI.PowerSaving.CB.frameM_add_reD' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/FrameAlg.lean:155:0: 'OAI.PowerSaving.Binary.OBase.mat_orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/FrameAlg.lean:156:0: 'OAI.PowerSaving.CB.frame_mul_unframe' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9075/9276] Replayed Work.Reframe.Shared
+info: Work/Reframe/Shared.lean:283:0: 'OAI.PowerSaving.CB.xinvocation_fwd_erased' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Shared.lean:284:0: 'OAI.PowerSaving.CB.xinvocation_bwd_erased' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Shared.lean:285:0: 'OAI.PowerSaving.CB.xinvocation_fwd_reframed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Shared.lean:286:0: 'OAI.PowerSaving.CB.xinvocation_bwd_reframed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Shared.lean:287:0: 'OAI.PowerSaving.CB.xinvocation_fwd_dirty' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Shared.lean:288:0: 'OAI.PowerSaving.CB.xinvocation_bwd_dirty' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Shared.lean:289:0: 'OAI.PowerSaving.CB.xinvocation_fwd_shared' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Shared.lean:290:0: 'OAI.PowerSaving.CB.xinvocation_bwd_shared' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Shared.lean:291:0: 'OAI.PowerSaving.CB.xinvocation_fwd_shared_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Shared.lean:292:0: 'OAI.PowerSaving.CB.xinvocation_bwd_shared_basis' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9076/9276] Replayed Work.Reframe.SNet
+info: Work/Reframe/SNet.lean:241:0: 'OAI.PowerSaving.RF.sstage' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/SNet.lean:242:0: 'OAI.PowerSaving.RF.sstage_fwd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/SNet.lean:243:0: 'OAI.PowerSaving.RF.sstage_bwd' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9077/9276] Replayed Work.BlockApply.Copies
+info: Work/BlockApply/Copies.lean:286:0: 'OAI.PowerSaving.RAM.walk_copies' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockApply/Copies.lean:287:0: 'OAI.PowerSaving.RAM.BCert.prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockApply/Copies.lean:288:0: 'OAI.PowerSaving.RAM.BCert.sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockApply/Copies.lean:289:0: 'OAI.PowerSaving.RAM.BCert.spare' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockApply/Copies.lean:290:0: 'OAI.PowerSaving.RAM.BCert.copies' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BlockApply/Copies.lean:291:0: 'OAI.PowerSaving.RAM.engine_program_bcert' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9078/9276] Replayed Work.Bridge.Roles
+info: Work/Bridge/Roles.lean:264:0: 'OAI.PowerSaving.BR.blift1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Roles.lean:265:0: 'OAI.PowerSaving.BR.blift2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Roles.lean:266:0: 'OAI.PowerSaving.BR.gateP' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9079/9276] Replayed Work.Bridge.Inv
+info: Work/Bridge/Inv.lean:159:0: 'OAI.PowerSaving.CB.XCircuit.inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Inv.lean:160:0: 'OAI.PowerSaving.BR.istage_fwd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Inv.lean:161:0: 'OAI.PowerSaving.BR.istage_bwd' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9080/9276] Replayed Work.Carrier.Sched
+info: Work/Carrier/Sched.lean:198:0: 'OAI.PowerSaving.CR.Step.route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Carrier/Sched.lean:199:0: 'OAI.PowerSaving.CR.sched_route' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9081/9276] Replayed Work.Carrier.Pack
+info: Work/Carrier/Pack.lean:182:0: 'OAI.PowerSaving.CR.route_erased' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Carrier/Pack.lean:183:0: 'OAI.PowerSaving.CR.dirty_of_erased' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Carrier/Pack.lean:184:0: 'OAI.PowerSaving.CR.Carrier.inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9082/9276] Replayed Work.Carrier.Ring
+warning: Work/Carrier/Ring.lean:60:13: This simp argument is unused:
+  mul_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy, yx, xm, my,
+    im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:60:67: This simp argument is unused:
+  mul_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, zero_mul, mul_assoc, xx, yy, xy, yx, xm, my,
+    im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:60:77: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, mul_assoc, xx, yy, xy, yx, xm, my,
+    im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:61:15: This simp argument is unused:
+  xx
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, yy, xy, yx,
+    xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:61:27: This simp argument is unused:
+  yx
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:61:43: This simp argument is unused:
+  mi'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:61:52: This simp argument is unused:
+  iy
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:61:56: This simp argument is unused:
+  xx'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:61:71: This simp argument is unused:
+  yx'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:61:76: This simp argument is unused:
+  xm'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:61:86: This simp argument is unused:
+  im'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:62:4: This simp argument is unused:
+  mi''
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:62:10: This simp argument is unused:
+  xi'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:62:15: This simp argument is unused:
+  iy'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:62:30: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:81:77: This simp argument is unused:
+  zero_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, mul_assoc, xx, yy, xy, yx, xm, my,
+    im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:82:56: This simp argument is unused:
+  xx'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:82:71: This simp argument is unused:
+  yx'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', xm', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:82:76: This simp argument is unused:
+  xm'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', my', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:82:81: This simp argument is unused:
+  my'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', im', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:82:86: This simp argument is unused:
+  im'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', mi'', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:83:4: This simp argument is unused:
+  mi''
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', xi', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:83:10: This simp argument is unused:
+  xi'
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', iy', sub_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:83:30: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Ring.lean:83:40: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [mul_add, add_mul, mul_sub, sub_mul, mul_one, one_mul, mul_zero, zero_mul, mul_assoc, xx, yy, xy,
+    yx, xm, my, im, mi', xi, iy, xx', yy', xy', yx', xm', my', im', mi'', xi', iy', sub_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/Carrier/Ring.lean:133:0: 'OAI.PowerSaving.CR.dirt_fwd' depends on axioms: [propext]
+info: Work/Carrier/Ring.lean:134:0: 'OAI.PowerSaving.CR.dirt_bwd' depends on axioms: [propext]
+⚠ [9083/9276] Replayed Work.Carrier.Live
+warning: Work/Carrier/Live.lean:60:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Carrier/Live.lean:61:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Carrier/Live.lean:75:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Carrier/Live.lean:76:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+⚠ [9084/9276] Replayed Work.Carrier.Scat
+warning: Work/Carrier/Scat.lean:131:59: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [iX, iY, Sum.elim_inl, Sum.elim_inr, Rat.cast_one, Rat.cast_zero, one_mul, zero_mul, mul_zero,
+    Finset.sum_const_zero, add_zero, hid]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/Carrier/Scat.lean:195:0: 'OAI.PowerSaving.CR.scat_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Carrier/Scat.lean:196:0: 'OAI.PowerSaving.CR.act_shear' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Carrier/Scat.lean:197:0: 'OAI.PowerSaving.CR.act_shearT' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9085/9276] Replayed Work.Carrier.Glue
+warning: Work/Carrier/Glue.lean:104:18: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr, Finset.sum_const_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Glue.lean:100:66: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Carrier/Glue.lean:105:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Carrier/Glue.lean:100:66: Unused tactic linter: `simp [zeroL]` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Carrier/Glue.lean:104:29: Unused tactic linter: `done` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Carrier/Glue.lean:105:6: Unused tactic linter: `simp [Fintype.sum_sum_type]` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Carrier/Glue.lean:122:18: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr, Finset.sum_const_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Glue.lean:118:64: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Carrier/Glue.lean:123:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Carrier/Glue.lean:118:64: Unused tactic linter: `simp [zeroL]` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Carrier/Glue.lean:122:29: Unused tactic linter: `done` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Carrier/Glue.lean:123:6: Unused tactic linter: `simp [Fintype.sum_sum_type]` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Carrier/Glue.lean:134:40: This simp argument is unused:
+  aC_S
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [gateS, aY_Y, aC_Y, aC_C, hc, zero_add, ap_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Carrier/Glue.lean:161:40: This simp argument is unused:
+  aC_Y
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [gateS, aS_S, aC_S, aC_C, hc, zero_add, ap_mneg, Matrix.transpose_mul, ap_mul]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/Carrier/Glue.lean:210:0: 'OAI.PowerSaving.CR.lift_live' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Carrier/Glue.lean:211:0: 'OAI.PowerSaving.CR.scat_glue' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Carrier/Glue.lean:212:0: 'OAI.PowerSaving.CR.scat_glueT' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9086/9276] Replayed Work.Carrier.Phases
+info: Work/Carrier/Phases.lean:191:0: 'OAI.PowerSaving.CR.Phased.fwd_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Carrier/Phases.lean:192:0: 'OAI.PowerSaving.CR.Phased.bwd_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9088/9276] Replayed Work.GCert.Scalar.Roles
+info: Work/GCert/Scalar/Roles.lean:171:0: 'GS.unemb_emb' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Roles.lean:172:0: 'GS.emb_unemb' depends on axioms: [propext, Quot.sound]
+info: Work/GCert/Scalar/Roles.lean:173:0: 'GS.cm_scat' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9089/9276] Replayed Work.GCert.Scalar.Mat3
+info: Work/GCert/Scalar/Mat3.lean:152:0: 'GS.XU_mic' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Mat3.lean:153:0: 'GS.ycol_filter' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Mat3.lean:154:0: 'GS.GRun_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9090/9276] Replayed Work.GCert.Scalar.Cols
+info: Work/GCert/Scalar/Cols.lean:141:0: 'GS.XRun.addA' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Cols.lean:142:0: 'GS.XRun.addB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Cols.lean:143:0: 'GS.XRun.xcol' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9091/9276] Replayed Work.GCert.Scalar.Main
+info: Work/GCert/Scalar/Main.lean:204:0: 'GS.ScalOK.hx' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Main.lean:205:0: 'GS.ScalOK.hy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Main.lean:206:0: 'GS.ScalOK.hid' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Main.lean:207:0: 'GS.ScalOK.hAi' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Scalar/Main.lean:208:0: 'GS.ScalOK.hBi' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9092/9276] Replayed Work.Gauge.ECheck
+info: Work/Gauge/ECheck.lean:249:0: 'GS.eCheck_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9093/9276] Replayed Work.GFrame.Labels.Calc
+info: Work/GFrame/Labels/Calc.lean:175:0: 'OAI.PowerSaving.GF.xcalc' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Calc.lean:176:0: 'OAI.PowerSaving.GF.FMv.step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Calc.lean:177:0: 'OAI.PowerSaving.GF.FMv.factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9094/9276] Replayed Work.GFrame.Labels.Quad
+info: Work/GFrame/Labels/Quad.lean:224:0: 'OAI.PowerSaving.GF.QPh.unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Quad.lean:225:0: 'OAI.PowerSaving.GF.wrap_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Quad.lean:226:0: 'OAI.PowerSaving.GF.wrap_astep' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9095/9276] Replayed Work.GFrame.Labels.Sched
+info: Work/GFrame/Labels/Sched.lean:169:0: 'OAI.PowerSaving.GF.GSt.route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Sched.lean:170:0: 'OAI.PowerSaving.GF.gsched_route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Sched.lean:171:0: 'OAI.PowerSaving.GF.gsched_xroute' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9096/9276] Replayed Work.GFrame.Labels.GXMap
+info: Work/GFrame/Labels/GXMap.lean:185:0: 'OAI.PowerSaving.GF.GXMap.orth' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/GXMap.lean:186:0: 'OAI.PowerSaving.GF.GXMap.alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/GXMap.lean:187:0: 'OAI.PowerSaving.GF.GXMap.mv' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9097/9276] Replayed Work.GFrame.Labels.Embed
+info: Work/GFrame/Labels/Embed.lean:192:0: 'OAI.PowerSaving.GF.Climb.gclimbO' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Embed.lean:193:0: 'OAI.PowerSaving.GF.GXMap.toXMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Embed.lean:194:0: 'OAI.PowerSaving.GF.emb_ok' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Embed.lean:195:0: 'OAI.PowerSaving.GF.sched_route_any' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9098/9276] Replayed Work.GFrame.Labels.Maps
+info: Work/GFrame/Labels/Maps.lean:155:0: 'OAI.PowerSaving.GF.gxmap1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Maps.lean:156:0: 'OAI.PowerSaving.GF.gxmap2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Maps.lean:157:0: 'OAI.PowerSaving.GF.gxmap1_Φ' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9099/9276] Replayed Work.Reframe.GeomBase
+warning: Work/Reframe/GeomBase.lean:87:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/GeomBase.lean:90:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/GeomBase.lean:91:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/GeomBase.lean:92:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/GeomBase.lean:144:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/GeomBase.lean:144:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/GeomBase.lean:147:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/GeomBase.lean:148:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Reframe/GeomBase.lean:245:0: 'OAI.PowerSaving.RF.frame_ofCols' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/GeomBase.lean:246:0: 'OAI.PowerSaving.RF.submatrix_diagI' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/GeomBase.lean:247:0: 'OAI.PowerSaving.RF.frameM_conj_add' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/GeomBase.lean:248:0: 'OAI.PowerSaving.RF.Orth.conjPerm_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9100/9276] Replayed Work.Reframe.Geom3
+warning: Work/Reframe/Geom3.lean:67:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:67:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:69:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:69:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:70:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:71:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:72:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:72:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:74:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:76:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:81:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:81:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:83:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:83:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:84:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:85:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:86:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:86:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:95:37: This simp argument is unused:
+  Matrix.one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [cmat_orth, Matrix.transpose_zero, Matrix.transpose_one, Matrix.mul_zero, Matrix.zero_mul,
+    Matrix.mul_one, add_zero, zero_add, Matrix.fromBlocks_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Reframe/Geom3.lean:142:86: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:144:2: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:146:43: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:148:48: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/Geom3.lean:270:89: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/Geom3.lean:272:2: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Reframe/Geom3.lean:317:0: 'OAI.PowerSaving.RF.PhiQ_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Geom3.lean:318:0: 'OAI.PowerSaving.RF.PhiQ_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Geom3.lean:319:0: 'OAI.PowerSaving.RF.map_piF_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Geom3.lean:320:0: 'OAI.PowerSaving.RF.map_piF_compl' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/Geom3.lean:321:0: 'OAI.PowerSaving.RF.map_tauF' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9101/9276] Replayed Work.BridgeGeom.Blocks
+warning: Work/BridgeGeom/Blocks.lean:68:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:68:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:70:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:70:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:71:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:72:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:73:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:73:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:75:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:77:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:82:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:82:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:84:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:84:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:85:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:86:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:87:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:87:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:97:37: This simp argument is unused:
+  Matrix.one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [cmat_orth, Matrix.transpose_zero, Matrix.transpose_one, Matrix.mul_zero, Matrix.zero_mul,
+    Matrix.mul_one, add_zero, zero_add, Matrix.fromBlocks_one]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/BridgeGeom/Blocks.lean:144:85: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:146:2: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:148:44: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:150:49: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeGeom/Blocks.lean:272:88: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeGeom/Blocks.lean:274:2: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/BridgeGeom/Blocks.lean:319:0: 'OAI.PowerSaving.BG.PhiB_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Blocks.lean:320:0: 'OAI.PowerSaving.BG.PhiB_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Blocks.lean:321:0: 'OAI.PowerSaving.BG.map_piB_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Blocks.lean:322:0: 'OAI.PowerSaving.BG.map_piB_compl' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Blocks.lean:323:0: 'OAI.PowerSaving.BG.map_tauB' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9102/9276] Replayed Work.GFrame.Labels.Conj
+info: Work/GFrame/Labels/Conj.lean:119:0: 'OAI.PowerSaving.GF.GXMap.ofConj' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Conj.lean:120:0: 'OAI.PowerSaving.GF.gxmapQ_Φ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Conj.lean:121:0: 'OAI.PowerSaving.GF.gxmapB_Φ' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9103/9276] Replayed Work.GFrame.Engine.Letters
+info: Work/GFrame/Engine/Letters.lean:197:0: 'OAI.PowerSaving.GF.gwalk_ofB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Letters.lean:198:0: 'OAI.PowerSaving.GF.GLiveKernel.ofB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Letters.lean:199:0: 'OAI.PowerSaving.GF.GWord.costR_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9104/9276] Replayed Work.GFrame.Engine.Free
+warning: Work/GFrame/Engine/Free.lean:88:62: Variable name `f` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _f
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Work/GFrame/Engine/Free.lean:88:64: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Work/GFrame/Engine/Free.lean:118:0: 'OAI.PowerSaving.GF.gstep_free' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Free.lean:119:0: 'OAI.PowerSaving.GF.gstep_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Free.lean:120:0: 'OAI.PowerSaving.GF.gstep_of_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Free.lean:121:0: 'OAI.PowerSaving.GF.gstep_of_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9105/9276] Replayed Work.GFrame.Engine.Route
+warning: Work/GFrame/Engine/Route.lean:35:45: Variable name `f` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _f
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Work/GFrame/Engine/Route.lean:35:47: Variable name `x` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _x
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+info: Work/GFrame/Engine/Route.lean:111:0: 'OAI.PowerSaving.GF.GRoute.trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Route.lean:112:0: 'OAI.PowerSaving.GF.GRoute.gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Route.lean:113:0: 'OAI.PowerSaving.GF.GRoute.on_role' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Route.lean:114:0: 'OAI.PowerSaving.GF.GRoute.liveKernel' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9106/9276] Replayed Work.GFrame.Labels.GCalc
+info: Work/GFrame/Labels/GCalc.lean:106:0: 'OAI.PowerSaving.GF.gcalc' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/GCalc.lean:107:0: 'OAI.PowerSaving.GF.fmv_of_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/GCalc.lean:108:0: 'OAI.PowerSaving.GF.gsched_groute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/GCalc.lean:109:0: 'OAI.PowerSaving.GF.GSchedOk.ofX' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9107/9276] Replayed Work.GFrame.Clifford.Basic
+warning: Work/GFrame/Clifford/Basic.lean:87:25: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [permMat, apId, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/GFrame/Clifford/Basic.lean:136:0: 'OAI.PowerSaving.GF.mul_permMat_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Basic.lean:137:0: 'OAI.PowerSaving.GF.wrap_conj_tint' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Basic.lean:138:0: 'OAI.PowerSaving.GF.invdir_mul_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9108/9276] Replayed Work.GFrame.Clifford.Fibre
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: `if_false` has been deprecated: Use `ite_false` instead
+warning: Work/GFrame/Clifford/Fibre.lean:30:65: This simp argument is unused:
+  if_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [littleC, tint, one_add_one_F, zero_add, add_zero, if_false, zero_ne_one, one_ne_zero, mul_one,
+    one_mul, ↓reduceIte, ca, cb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/GFrame/Clifford/Fibre.lean:30:74: This simp argument is unused:
+  if_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [littleC, tint, one_add_one_F, zero_add, add_zero, if_true, zero_ne_one, one_ne_zero, mul_one,
+    one_mul, ↓reduceIte, ca, cb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/GFrame/Clifford/Fibre.lean:31:41: This simp argument is unused:
+  one_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [littleC, tint, one_add_one_F, zero_add, add_zero, if_true, if_false, zero_ne_one, one_ne_zero,
+    mul_one, ↓reduceIte, ca, cb]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/GFrame/Clifford/Fibre.lean:34:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/GFrame/Clifford/Fibre.lean:35:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/GFrame/Clifford/Fibre.lean:33:37: Unused tactic linter: `done` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/GFrame/Clifford/Fibre.lean:34:8: Unused tactic linter: `(ring_nf; simp only [Complex.I_sq, Complex.I_pow_four]; ring_nf; done)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/GFrame/Clifford/Fibre.lean:35:8: Unused tactic linter: `(apply Complex.ext <;> simp <;> norm_num; done)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/GFrame/Clifford/Fibre.lean:131:23: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Fibre.lean:131:34: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Fibre.lean:131:45: `if_pos` has been deprecated: Use `ite_eq_left` instead
+info: Work/GFrame/Clifford/Fibre.lean:172:0: 'OAI.PowerSaving.GF.alt_fibre' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9109/9276] Replayed Work.GFrame.Clifford.FreeLift
+warning: Work/GFrame/Clifford/FreeLift.lean:81:12: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/GFrame/Clifford/FreeLift.lean:122:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:122:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:122:32: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:123:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:123:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:148:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:148:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:148:32: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:149:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:149:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:149:32: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:150:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/FreeLift.lean:150:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/GFrame/Clifford/FreeLift.lean:193:0: 'OAI.PowerSaving.GF.free_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/FreeLift.lean:194:0: 'OAI.PowerSaving.GF.free_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/FreeLift.lean:195:0: 'OAI.PowerSaving.GF.free_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9110/9276] Replayed Work.GFrame.Clifford.AltBlock
+info: Work/GFrame/Clifford/AltBlock.lean:128:0: 'OAI.PowerSaving.GF.alt_block_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/AltBlock.lean:129:0: 'OAI.PowerSaving.GF.alt_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/AltBlock.lean:130:0: 'OAI.PowerSaving.GF.alt_block_dirs' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9111/9276] Replayed Work.GFrame.Labels.StageA
+info: Work/GFrame/Labels/StageA.lean:106:0: 'OAI.PowerSaving.GF.altAt_gcalc' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageA.lean:107:0: 'OAI.PowerSaving.GF.gstep_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageA.lean:108:0: 'OAI.PowerSaving.GF.asched_groute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageA.lean:109:0: 'OAI.PowerSaving.GF.emb_aok' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9112/9276] Replayed Work.GFrame.Labels.GCarrier
+info: Work/GFrame/Labels/GCarrier.lean:182:0: 'OAI.PowerSaving.GF.GCarrier.fwd_route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/GCarrier.lean:183:0: 'OAI.PowerSaving.GF.GCarrier.bwd_route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/GCarrier.lean:184:0: 'OAI.PowerSaving.GF.Carrier.toG' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9113/9276] Replayed Work.GFrame.Labels.Proj
+info: Work/GFrame/Labels/Proj.lean:128:0: 'OAI.PowerSaving.GF.gclimbO_of_list' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Proj.lean:129:0: 'OAI.PowerSaving.GF.complete_gram' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Proj.lean:130:0: 'OAI.PowerSaving.GF.complete_indep' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/Proj.lean:131:0: 'OAI.PowerSaving.GF.complete_proj' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9114/9276] Replayed Work.GFrame.Clifford.Core
+warning: Work/GFrame/Clifford/Core.lean:105:19: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Core.lean:108:18: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [kg, h', h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/GFrame/Clifford/Core.lean:139:22: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [kg, apId, hxy]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/GFrame/Clifford/Core.lean:163:0: 'OAI.PowerSaving.GF.free_kg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Core.lean:164:0: 'OAI.PowerSaving.GF.core_id_univ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Core.lean:165:0: 'OAI.PowerSaving.GF.core_nested_ex' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9115/9276] Replayed Work.GFrame.Labels.StageB
+info: Work/GFrame/Labels/StageB.lean:166:0: 'OAI.PowerSaving.GF.core_down' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageB.lean:167:0: 'OAI.PowerSaving.GF.SMv.fmv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageB.lean:168:0: 'OAI.PowerSaving.GF.bsched_groute' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9116/9276] Replayed Work.GFrame.Clifford.Entry
+warning: Work/GFrame/Clifford/Entry.lean:62:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Entry.lean:67:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Entry.lean:69:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Entry.lean:73:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Entry.lean:74:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Work/GFrame/Clifford/Entry.lean:77:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Entry.lean:77:21: This simp argument is unused:
+  Matrix.one_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [if_neg hk, hne]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/GFrame/Clifford/Entry.lean:103:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Entry.lean:103:42: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Entry.lean:114:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Entry.lean:114:57: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/GFrame/Clifford/Entry.lean:122:0: 'OAI.PowerSaving.GF.pk_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Entry.lean:123:0: 'OAI.PowerSaving.GF.core_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9117/9276] Replayed Work.GFrame.Clifford.Rep
+warning: Work/GFrame/Clifford/Rep.lean:63:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Rep.lean:72:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Rep.lean:73:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Rep.lean:136:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Rep.lean:136:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Rep.lean:157:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Rep.lean:157:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/GFrame/Clifford/Rep.lean:164:0: 'OAI.PowerSaving.GF.rep_change_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9118/9276] Replayed Work.GFrame.Clifford.RepFree
+info: Work/GFrame/Clifford/RepFree.lean:205:0: 'OAI.PowerSaving.GF.free_repMat' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9119/9276] Replayed Work.GFrame.Clifford.Climb
+warning: Work/GFrame/Clifford/Climb.lean:100:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Climb.lean:104:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Climb.lean:122:37: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Climb.lean:122:48: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Climb.lean:131:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Climb.lean:131:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Climb.lean:132:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Climb.lean:132:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/GFrame/Clifford/Climb.lean:139:0: 'OAI.PowerSaving.GF.rep_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Climb.lean:140:0: 'OAI.PowerSaving.GF.climb_any' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Climb.lean:141:0: 'OAI.PowerSaving.GF.climb_rank' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Climb.lean:142:0: 'OAI.PowerSaving.GF.core_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9120/9276] Replayed Work.GFrame.Labels.StageBFull
+info: Work/GFrame/Labels/StageBFull.lean:84:0: 'OAI.PowerSaving.GF.repChange' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageBFull.lean:85:0: 'OAI.PowerSaving.GF.SMv.nested' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageBFull.lean:86:0: 'OAI.PowerSaving.GF.SLbl.rep_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageBFull.lean:87:0: 'OAI.PowerSaving.GF.bsched_groute_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9121/9276] Replayed Work.GFrame.Labels.BXMap
+info: Work/GFrame/Labels/BXMap.lean:127:0: 'OAI.PowerSaving.GF.BXMap.smv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/BXMap.lean:128:0: 'OAI.PowerSaving.GF.BXMap.fmv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/BXMap.lean:129:0: 'OAI.PowerSaving.GF.hsched_groute' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9122/9276] Replayed Work.GFrame.Labels.ConjB
+info: Work/GFrame/Labels/ConjB.lean:109:0: 'OAI.PowerSaving.GF.insub_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/ConjB.lean:110:0: 'OAI.PowerSaving.GF.BXMap.ofConj' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9123/9276] Replayed Work.GFrame.Clifford.Old
+warning: Work/GFrame/Clifford/Old.lean:59:51: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Clifford/Old.lean:72:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Old.lean:72:27: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Clifford/Old.lean:82:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GFrame/Clifford/Old.lean:82:42: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/GFrame/Clifford/Old.lean:159:0: 'OAI.PowerSaving.GF.frame_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Old.lean:160:0: 'OAI.PowerSaving.GF.frame_core_free' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9124/9276] Replayed Work.GFrame.Clifford.Base
+warning: Work/GFrame/Clifford/Base.lean:54:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+info: Work/GFrame/Clifford/Base.lean:153:0: 'OAI.PowerSaving.GF.exists_flag_base' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Base.lean:154:0: 'OAI.PowerSaving.GF.exists_rep' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Base.lean:155:0: 'OAI.PowerSaving.GF.frame_lemma' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Base.lean:156:0: 'OAI.PowerSaving.GF.card_le_of_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9125/9276] Replayed Work.GFrame.Clifford.Cross
+info: Work/GFrame/Clifford/Cross.lean:138:0: 'OAI.PowerSaving.GF.core_cross' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Cross.lean:139:0: 'OAI.PowerSaving.GF.cross_any' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Cross.lean:140:0: 'OAI.PowerSaving.GF.frame_lemma_down' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Cross.lean:141:0: 'OAI.PowerSaving.GF.kernel_mul_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9126/9276] Replayed Work.GFrame.Clifford.Pair
+warning: Work/GFrame/Clifford/Pair.lean:31:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+warning: Work/GFrame/Clifford/Pair.lean:86:39: `Set.union_diff_cancel` has been deprecated: Use `Set.union_sdiff_cancel` instead
+warning: Work/GFrame/Clifford/Pair.lean:95:72: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
+warning: Work/GFrame/Clifford/Pair.lean:99:31: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
+info: Work/GFrame/Clifford/Pair.lean:150:0: 'OAI.PowerSaving.GF.exists_pair_base' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Pair.lean:151:0: 'OAI.PowerSaving.GF.cross_lemma' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9127/9276] Replayed Work.GFrame.Clifford.Step
+info: Work/GFrame/Clifford/Step.lean:129:0: 'OAI.PowerSaving.GF.gstep_rep' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:130:0: 'OAI.PowerSaving.GF.gstep_frame' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:131:0: 'OAI.PowerSaving.GF.gstep_old_nested' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:132:0: 'OAI.PowerSaving.GF.gstep_alt_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:133:0: 'OAI.PowerSaving.GF.gstep_frame_down' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:134:0: 'OAI.PowerSaving.GF.gstep_cross' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:135:0: 'OAI.PowerSaving.GF.gstep_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:136:0: 'OAI.PowerSaving.GF.cross_lemma' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:137:0: 'OAI.PowerSaving.GF.gstep_compl'' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:138:0: 'OAI.PowerSaving.GF.kernel_mul_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:139:0: 'OAI.PowerSaving.GF.frame_lemma' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:140:0: 'OAI.PowerSaving.GF.rep_change' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:141:0: 'OAI.PowerSaving.GF.core_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:142:0: 'OAI.PowerSaving.GF.frame_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Clifford/Step.lean:143:0: 'OAI.PowerSaving.GF.alt_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9128/9276] Replayed Work.GFrame.Labels.StageBSem
+info: Work/GFrame/Labels/StageBSem.lean:115:0: 'OAI.PowerSaving.GF.SMv.of_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageBSem.lean:116:0: 'OAI.PowerSaving.GF.SMv.of_sup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageBSem.lean:117:0: 'OAI.PowerSaving.GF.fmv_old_to_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/StageBSem.lean:118:0: 'OAI.PowerSaving.GF.BXMap.fmv_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9129/9276] Replayed Work.GFrame.Labels.SchedR
+info: Work/GFrame/Labels/SchedR.lean:113:0: 'OAI.PowerSaving.GF.gsched_route_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/SchedR.lean:114:0: 'OAI.PowerSaving.GF.gsched_groute_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/SchedR.lean:115:0: 'OAI.PowerSaving.GF.GSchedOk.toR' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9130/9276] Replayed Work.Reframe.SCert
+info: Work/Reframe/SCert.lean:252:0: 'OAI.PowerSaving.RF.Fold3S.stage1_x' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/SCert.lean:253:0: 'OAI.PowerSaving.RF.Fold3S.stage2_x' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/SCert.lean:254:0: 'OAI.PowerSaving.RF.Fold3S.stage3_x' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/SCert.lean:255:0: 'OAI.PowerSaving.RF.fold3s_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9131/9276] Replayed Work.Reframe.GeomNet
+info: Work/Reframe/GeomNet.lean:451:0: 'OAI.PowerSaving.RF.fmapQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/GeomNet.lean:452:0: 'OAI.PowerSaving.RF.helper_fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/GeomNet.lean:453:0: 'OAI.PowerSaving.RF.geomNet' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/GeomNet.lean:454:0: 'OAI.PowerSaving.RF.fold3s_bcert_geom' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9132/9276] Replayed Work.BridgeGeom.Stage
+info: Work/BridgeGeom/Stage.lean:597:0: 'OAI.PowerSaving.BG.fmapB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Stage.lean:598:0: 'OAI.PowerSaving.BG.bank_xx' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Stage.lean:599:0: 'OAI.PowerSaving.BG.bank_yy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Stage.lean:600:0: 'OAI.PowerSaving.BG.climb_X0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Stage.lean:601:0: 'OAI.PowerSaving.BG.climb_Yend' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Stage.lean:602:0: 'OAI.PowerSaving.BG.win_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Stage.lean:603:0: 'OAI.PowerSaving.BG.win_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Stage.lean:604:0: 'OAI.PowerSaving.BG.class_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9133/9276] Replayed Work.GFrame.Labels.GeomOld
+info: Work/GFrame/Labels/GeomOld.lean:39:0: 'OAI.PowerSaving.GF.gxmapQ_toXMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/GeomOld.lean:40:0: 'OAI.PowerSaving.GF.gxmapB_toXMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9134/9276] Replayed Work.GFrame.Labels.All
+info: Work/GFrame/Labels/All.lean:18:0: 'OAI.PowerSaving.GF.gsched_route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:19:0: 'OAI.PowerSaving.GF.gsched_groute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:20:0: 'OAI.PowerSaving.GF.gsched_groute_R' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:21:0: 'OAI.PowerSaving.GF.sched_route_any' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:22:0: 'OAI.PowerSaving.GF.GXMap.toXMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:23:0: 'OAI.PowerSaving.GF.altAt_gcalc' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:24:0: 'OAI.PowerSaving.GF.asched_groute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:25:0: 'OAI.PowerSaving.GF.bsched_groute_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:26:0: 'OAI.PowerSaving.GF.hsched_groute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:27:0: 'OAI.PowerSaving.GF.SMv.of_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:28:0: 'OAI.PowerSaving.GF.SMv.of_sup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:29:0: 'OAI.PowerSaving.GF.fmv_old_to_core' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:30:0: 'OAI.PowerSaving.GF.BXMap.fmv_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:31:0: 'OAI.PowerSaving.GF.SLbl.rep_eq_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:32:0: 'OAI.PowerSaving.GF.gxmap1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:33:0: 'OAI.PowerSaving.GF.gxmap2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:34:0: 'OAI.PowerSaving.GF.gxmapQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:35:0: 'OAI.PowerSaving.GF.gxmapB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:36:0: 'OAI.PowerSaving.GF.gxmapB_toXMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:37:0: 'OAI.PowerSaving.GF.BXMap.ofConj' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:38:0: 'OAI.PowerSaving.GF.GCarrier.fwd_route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:39:0: 'OAI.PowerSaving.GF.GCarrier.bwd_route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:40:0: 'OAI.PowerSaving.GF.Carrier.toG' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Labels/All.lean:41:0: 'OAI.PowerSaving.GF.complete_proj' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9135/9276] Replayed Work.GCert.Chain.Phased
+info: Work/GCert/Chain/Phased.lean:198:0: 'OAI.PowerSaving.GX.Scal.fwd_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Phased.lean:199:0: 'OAI.PowerSaving.GX.Scal.bwd_scalar' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9137/9276] Replayed Work.Combine.Split
+info: Work/Combine/Split.lean:291:0: 'SSC.chunksK_seg' depends on axioms: [propext, Quot.sound]
+info: Work/Combine/Split.lean:292:0: 'SSC.PCert.labelCheck_of_split' depends on axioms: [propext, Quot.sound]
+⚠ [9139/9276] Replayed Work.GCert.Labels.Bits
+warning: Work/GCert/Labels/Bits.lean:41:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GCert/Labels/Bits.lean:41:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GCert/Labels/Bits.lean:52:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GCert/Labels/Bits.lean:52:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GCert/Labels/Bits.lean:77:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GCert/Labels/Bits.lean:91:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GCert/Labels/Bits.lean:91:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GCert/Labels/Bits.lean:95:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GCert/Labels/Bits.lean:95:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/GCert/Labels/Bits.lean:122:0: 'GLab.sel_mul_bit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Bits.lean:123:0: 'GLab.acc_bit' depends on axioms: [propext, Quot.sound]
+info: Work/GCert/Labels/Bits.lean:124:0: 'GLab.rep_of_mul' depends on axioms: [propext, Quot.sound]
+⚠ [9140/9276] Replayed Work.GCert.Labels.Canon
+warning: Work/GCert/Labels/Canon.lean:46:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GCert/Labels/Canon.lean:47:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GCert/Labels/Canon.lean:95:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GCert/Labels/Canon.lean:98:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GCert/Labels/Canon.lean:105:32: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/GCert/Labels/Canon.lean:160:18: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Work/GCert/Labels/Canon.lean:164:18: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Work/GCert/Labels/Canon.lean:173:30: `if_pos` has been deprecated: Use `ite_eq_left` instead
+info: Work/GCert/Labels/Canon.lean:190:0: 'GLab.insub_canon' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Canon.lean:191:0: 'GLab.lab_bas' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Canon.lean:192:0: 'GLab.lab_sub' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9141/9276] Replayed Work.GCert.Labels.Elim
+info: Work/GCert/Labels/Elim.lean:210:0: 'GLab.elimT_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Elim.lean:211:0: 'GLab.goodK_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Elim.lean:212:0: 'GLab.tabK_good' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9142/9276] Replayed Work.GCert.Labels.Spec
+info: Work/GCert/Labels/Spec.lean:189:0: 'GLab.Run.append' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Spec.lean:190:0: 'GLab.Feeds.step' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9143/9276] Replayed Work.GCert.Labels.Sound
+info: Work/GCert/Labels/Sound.lean:195:0: 'GLab.Run.of_seg' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9144/9276] Replayed Work.GCert.Labels.Route
+info: Work/GCert/Labels/Route.lean:195:0: 'GLab.vroute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Route.lean:196:0: 'GLab.rroute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Route.lean:197:0: 'GLab.adds_route' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9145/9276] Replayed Work.GCert.Labels.RouteRun
+info: Work/GCert/Labels/RouteRun.lean:170:0: 'GLab.Run.route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/RouteRun.lean:171:0: 'GLab.Run.route_id' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9147/9276] Replayed Work.GCert.Labels.Ends
+info: Work/GCert/Labels/Ends.lean:154:0: 'GLab.unit_of_pars' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Ends.lean:155:0: 'GLab.gap_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Ends.lean:156:0: 'GLab.dots_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Ends.lean:157:0: 'GLab.mem_of_elim' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Ends.lean:158:0: 'GLab.perp_of_dots' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Ends.lean:159:0: 'GLab.wfK_sound' depends on axioms: [propext]
+ℹ [9148/9276] Replayed Work.GCert.Labels.EndSound
+info: Work/GCert/Labels/EndSound.lean:163:0: 'GLab.endK_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9149/9276] Replayed Work.GCert.Labels.Main
+info: Work/GCert/Labels/Main.lean:189:0: 'GLab.Valid.lab' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Labels/Main.lean:190:0: 'GLab.Valid.lab_ranks' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9150/9276] Replayed Work.GFrame.Engine.Over
+info: Work/GFrame/Engine/Over.lean:200:0: 'OAI.PowerSaving.GF.gwalk_over' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Over.lean:201:0: 'OAI.PowerSaving.GF.gwalk_out' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Over.lean:202:0: 'OAI.PowerSaving.GF.GRoute.lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Over.lean:203:0: 'OAI.PowerSaving.GF.GRoute.parallel' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9151/9276] Replayed Work.GFrame.Engine.Cert
+info: Work/GFrame/Engine/Cert.lean:210:0: 'OAI.PowerSaving.GF.gwalk_copies' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Cert.lean:211:0: 'OAI.PowerSaving.GF.GCert.ofB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Cert.lean:212:0: 'OAI.PowerSaving.GF.GCert.copies' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9152/9276] Replayed Work.GFrame.Engine.Adapt
+warning: Work/GFrame/Engine/Adapt.lean:123:37: `if_true` has been deprecated: Use `ite_true` instead
+warning: Work/GFrame/Engine/Adapt.lean:160:37: `if_true` has been deprecated: Use `ite_true` instead
+info: Work/GFrame/Engine/Adapt.lean:182:0: 'OAI.PowerSaving.RAM.Rig.perm_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Adapt.lean:183:0: 'OAI.PowerSaving.RAM.GRig.phase_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9153/9276] Replayed Work.GFrame.Engine.Sweep
+info: Work/GFrame/Engine/Sweep.lean:123:0: 'OAI.PowerSaving.RAM.GRig.open_gmove' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Sweep.lean:124:0: 'OAI.PowerSaving.RAM.GRig.gsweep' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Sweep.lean:125:0: 'OAI.PowerSaving.RAM.gamplifies' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9154/9276] Replayed Work.GFrame.Engine.Level
+info: Work/GFrame/Engine/Level.lean:163:0: 'OAI.PowerSaving.RAM.gamplify' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9155/9276] Replayed Work.GFrame.Engine.Recursion
+warning: Work/GFrame/Engine/Recursion.lean:73:21: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Engine/Recursion.lean:140:40: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/GFrame/Engine/Recursion.lean:151:39: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/GFrame/Engine/Recursion.lean:189:0: 'OAI.PowerSaving.RAM.grecurse_run' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9156/9276] Replayed Work.GFrame.Engine.Main
+info: Work/GFrame/Engine/Main.lean:109:0: 'OAI.PowerSaving.RAM.engine_all_g' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Main.lean:110:0: 'OAI.PowerSaving.RAM.engine_program_g' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Main.lean:111:0: 'OAI.PowerSaving.RAM.engine_program_g_costR' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Main.lean:112:0: 'OAI.PowerSaving.RAM.engine_program_block_costR_via_g' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9157/9276] Replayed Work.FoldRate.Arith
+info: Work/FoldRate/Arith.lean:136:0: 'OAI.PowerSaving.FoldRate.table_split' depends on axioms: [propext]
+info: Work/FoldRate/Arith.lean:137:0: 'OAI.PowerSaving.FoldRate.copies_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FoldRate/Arith.lean:138:0: 'OAI.PowerSaving.FoldRate.block_arith' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FoldRate/Arith.lean:139:0: 'OAI.PowerSaving.FoldRate.rank_arith' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FoldRate/Arith.lean:140:0: 'OAI.PowerSaving.FoldRate.spare_ge_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9158/9276] Replayed Work.FoldRate.Group
+info: Work/FoldRate/Group.lean:267:0: 'OAI.PowerSaving.FoldRate.table_bcert' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FoldRate/Group.lean:268:0: 'OAI.PowerSaving.RAM.engine_program_group' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FoldRate/Group.lean:269:0: 'OAI.PowerSaving.RAM.engine_program_group_list' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FoldRate/Group.lean:270:0: 'OAI.PowerSaving.RAM.engine_program_group_perRank' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FoldRate/Group.lean:271:0: 'OAI.PowerSaving.BlockWHT.wht_main_of_group' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FoldRate/Group.lean:272:0: 'OAI.PowerSaving.BlockWHT.wht_main_of_group_list' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FoldRate/Group.lean:273:0: 'OAI.PowerSaving.BlockWHT.wht_main_of_group_perRank' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9159/9276] Replayed Work.GFrame.Engine.Group
+info: Work/GFrame/Engine/Group.lean:147:0: 'OAI.PowerSaving.GF.gtable_cert' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Group.lean:148:0: 'OAI.PowerSaving.RAM.engine_program_ggroup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Group.lean:149:0: 'OAI.PowerSaving.RAM.engine_program_ggroup_list' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Group.lean:150:0: 'OAI.PowerSaving.BlockWHT.wht_main_of_ggroup' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Engine/Group.lean:151:0: 'OAI.PowerSaving.BlockWHT.wht_main_of_ggroup_list' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9160/9276] Replayed Work.GFrame.Top.Assemble
+info: Work/GFrame/Top/Assemble.lean:151:0: 'OAI.PowerSaving.GF.gcert_of_sched' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Assemble.lean:152:0: 'OAI.PowerSaving.GF.gcert_of_groute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Assemble.lean:153:0: 'OAI.PowerSaving.RAM.engine_program_gsched' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Assemble.lean:154:0: 'OAI.PowerSaving.RAM.engine_program_groute' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Assemble.lean:155:0: 'OAI.PowerSaving.BlockWHT.wht_main_of_gsched' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9161/9276] Replayed Work.GFrame.Top.Menu
+info: Work/GFrame/Top/Menu.lean:139:0: 'OAI.PowerSaving.GF.Reach.trans' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Menu.lean:140:0: 'OAI.PowerSaving.GF.reach_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Menu.lean:141:0: 'OAI.PowerSaving.GF.reach_nested' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Menu.lean:142:0: 'OAI.PowerSaving.GF.reach_nested_down' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Menu.lean:143:0: 'OAI.PowerSaving.GF.reach_rep' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Menu.lean:144:0: 'OAI.PowerSaving.GF.reach_pair' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Menu.lean:145:0: 'OAI.PowerSaving.GF.reach_compl' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Menu.lean:146:0: 'OAI.PowerSaving.GF.reach_old_nested' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Menu.lean:147:0: 'OAI.PowerSaving.GF.reach_alt' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9162/9276] Replayed Work.GFrame.Top.Api
+warning: Work/GFrame/Top/Api.lean:98:16: This simp argument is unused:
+  Function.update_of_ne hr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Finset.mem_insert, hr]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/GFrame/Top/Api.lean:119:0: 'OAI.PowerSaving.GF.GStep.mul_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Api.lean:120:0: 'OAI.PowerSaving.GF.GReach.ofX' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Api.lean:121:0: 'OAI.PowerSaving.GF.GReach.mul_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Api.lean:122:0: 'OAI.PowerSaving.GF.GRoute.reach_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GFrame/Top/Api.lean:123:0: 'OAI.PowerSaving.GF.GRoute.reframe_actPoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9163/9276] Replayed Work.GCert.Chain.Win
+info: Work/GCert/Chain/Win.lean:148:0: 'OAI.PowerSaving.GX.insub_iff_of_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Win.lean:149:0: 'OAI.PowerSaving.GX.GWin.line' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Win.lean:150:0: 'OAI.PowerSaving.GX.GWin.zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Win.lean:151:0: 'OAI.PowerSaving.GX.GWin.full' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Win.lean:152:0: 'OAI.PowerSaving.GX.GWin.perp' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9164/9276] Replayed Work.Carrier.PhasedInv
+info: Work/Carrier/PhasedInv.lean:186:0: 'OAI.PowerSaving.CR.Phased.fwd_erased' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Carrier/PhasedInv.lean:187:0: 'OAI.PowerSaving.CR.Phased.bwd_erased' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Carrier/PhasedInv.lean:188:0: 'OAI.PowerSaving.CR.Phased.inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9165/9276] Replayed Work.GCert.Chain.Inv
+warning: Work/GCert/Chain/Inv.lean:148:18: This simp argument is unused:
+  add_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Fintype.sum_sum_type, Sum.elim_inl, Sum.elim_inr, Finset.sum_const_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/GCert/Chain/Inv.lean:149:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/GCert/Chain/Inv.lean:148:29: Unused tactic linter: `done` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/GCert/Chain/Inv.lean:149:6: Unused tactic linter: `simp [Fintype.sum_sum_type]` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Work/GCert/Chain/Inv.lean:169:0: 'OAI.PowerSaving.GX.glift_live' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Inv.lean:170:0: 'OAI.PowerSaving.GX.Lab.ad0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Inv.lean:171:0: 'OAI.PowerSaving.GX.Lab.adF' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Inv.lean:172:0: 'OAI.PowerSaving.GX.Lab.cdown' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Inv.lean:173:0: 'OAI.PowerSaving.GX.Lab.cup' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9166/9276] Replayed Work.GCert.Chain.InvThm
+info: Work/GCert/Chain/InvThm.lean:162:0: 'OAI.PowerSaving.GX.Lab.fwd_erased' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/InvThm.lean:163:0: 'OAI.PowerSaving.GX.Lab.bwd_erased' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/InvThm.lean:164:0: 'OAI.PowerSaving.GX.Lab.inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9168/9276] Replayed Work.Gauge.Labels
+info: Work/Gauge/Labels.lean:236:0: 'GLab.endKE_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Gauge/Labels.lean:237:0: 'GLab.ValidE.glab' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Gauge/Labels.lean:238:0: 'GLab.ValidE.glab_ranks' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9169/9276] Replayed Work.Gauge.Inv
+warning: Work/Gauge/Inv.lean:163:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Gauge/Inv.lean:164:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Gauge/Inv.lean:180:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Gauge/Inv.lean:181:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Gauge/Inv.lean:248:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Gauge/Inv.lean:376:0: 'OAI.PowerSaving.GX.GLab.fwd_erasedE' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Gauge/Inv.lean:377:0: 'OAI.PowerSaving.GX.GLab.bwd_erasedE' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Gauge/Inv.lean:378:0: 'OAI.PowerSaving.GX.GLab.inv' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9170/9276] Replayed Work.GCert.Data.Glue
+warning: Work/GCert/Data/Glue.lean:84:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/GCert/Data/Glue.lean:93:0: 'GXD.roles' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Data/Glue.lean:94:0: 'GXD.scalOf' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Data/Glue.lean:95:0: 'GXD.scalOf_MA' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Data/Glue.lean:96:0: 'GXD.reg_slot' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Data/Glue.lean:97:0: 'GXD.reg_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9171/9276] Replayed Work.Gauge.Glue
+info: Work/Gauge/Glue.lean:87:0: 'GXD.gscalOf' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Gauge/Glue.lean:88:0: 'GXD.ginvOf' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Gauge/Glue.lean:89:0: 'GXD.ginvOf_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Gauge/Glue.lean:90:0: 'GXD.ginvOf_ent_dim' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9172/9276] Replayed Work.Bridge401.Roles
+warning: Work/Bridge401/Roles.lean:166:20: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ0, mkS, rqX1, rqY1, dqX1, dqY1, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, true_and, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:166:38: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ0, mkS, rqX1, rqY1, dqX1, dqY1, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:166:48: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ0, mkS, rqX1, rqY1, dqX1, dqY1, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, true_and] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:180:20: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ1, mkS, rqX1, rqY1, dqX1, dqY1, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, true_and, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:180:38: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ1, mkS, rqX1, rqY1, dqX1, dqY1, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:180:48: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ1, mkS, rqX1, rqY1, dqX1, dqY1, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, true_and] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:194:20: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ2, mkS, rqX1, rqY1, dqX1, dqY1, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, true_and, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:194:38: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ2, mkS, rqX1, rqY1, dqX1, dqY1, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:194:48: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ2, mkS, rqX1, rqY1, dqX1, dqY1, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, true_and] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:208:20: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ3, mkS, rqX2, rqY2, dqX2, dqY2, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, true_and, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:208:38: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ3, mkS, rqX2, rqY2, dqX2, dqY2, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:208:48: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ3, mkS, rqX2, rqY2, dqX2, dqY2, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, true_and] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:222:20: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ4, mkS, rqX2, rqY2, dqX2, dqY2, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, true_and, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:222:38: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ4, mkS, rqX2, rqY2, dqX2, dqY2, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:222:48: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ4, mkS, rqX2, rqY2, dqX2, dqY2, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, true_and] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:236:20: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ5, mkS, rqX3, rqY3, dqX3, dqY3, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, true_and, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:236:38: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ5, mkS, rqX3, rqY3, dqX3, dqY3, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:236:48: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ5, mkS, rqX3, rqY3, dqX3, dqY3, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, true_and] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:250:20: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ6, mkS, rqX3, rqY3, dqX3, dqY3, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, true_and, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:250:38: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ6, mkS, rqX3, rqY3, dqX3, dqY3, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:250:48: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ6, mkS, rqX3, rqY3, dqX3, dqY3, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, true_and] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:264:20: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ7, mkS, rqX4, rqY4, dqX4, dqY4, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, true_and, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:264:38: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ7, mkS, rqX4, rqY4, dqX4, dqY4, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:264:48: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ7, mkS, rqX4, rqY4, dqX4, dqY4, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, true_and] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:278:20: This simp argument is unused:
+  eq_self_iff_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ8, mkS, rqX4, rqY4, dqX4, dqY4, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, true_and, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:278:38: This simp argument is unused:
+  true_and
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ8, mkS, rqX4, rqY4, dqX4, dqY4, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, and_true] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:278:48: This simp argument is unused:
+  and_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [posQ8, mkS, rqX4, rqY4, dqX4, dqY4, rqS, rqC, Sum.inl.injEq, Sum.inr.injEq, Prod.mk.injEq,
+    reduceCtorEq, eq_self_iff_true, true_and] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Roles.lean:350:2: `if_pos` has been deprecated: Use `ite_eq_left` instead
+ℹ [9173/9276] Replayed Work.Bridge377.Sweep
+info: Work/Bridge377/Sweep.lean:102:0: 'OAI.PowerSaving.GF.sweepMap_const' does not depend on any axioms
+info: Work/Bridge377/Sweep.lean:103:0: 'OAI.PowerSaving.GF.GRoute.sweep' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge377/Sweep.lean:104:0: 'OAI.PowerSaving.GF.GRoute.sweep_const' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge377/Sweep.lean:105:0: 'OAI.PowerSaving.GF.sweepMap_fix' does not depend on any axioms
+info: Work/Bridge377/Sweep.lean:106:0: 'OAI.PowerSaving.GF.sweepMap_local' depends on axioms: [propext]
+⚠ [9174/9276] Replayed Work.Bridge401.Gates
+warning: Work/Bridge401/Gates.lean:78:439: This simp argument is unused:
+  jS
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [chainQ, Function.comp_apply, id_eq, gscQ, liftQ0, liftQ1, liftQ2, liftQ3, liftQ4, liftQ5, liftQ6,
+    liftQ7, liftQ8, GF, GB, mkR4, mkD4, mkS, pABQ_2, kAQ_2, kBQ_2, pCQ_2, kCQ_2, pABQ_3, kAQ_3, kBQ_3, pCQ_3, kCQ_3,
+    pABQ_4, kAQ_4, kBQ_4, pCQ_4, kCQ_4, posQ0, posQ1, posQ2, posQ3, posQ4, posQ5, posQ6, posQ7, posQ8, rqX1, rqY1, rqX2,
+    rqY2, rqX3, rqY3, rqX4, rqY4, dqX1, dqY1, dqX2, dqY2, dqX3, dqY3, dqX4, dqY4, rqS, rqC, jX, jY, jC]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/Gates.lean:81:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/Gates.lean:82:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/Gates.lean:81:8: Unused tactic linter: `(push_cast; done)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/Gates.lean:82:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/Gates.lean:89:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Bridge401/Gates.lean:172:0: 'OAI.PowerSaving.GX.chainQ_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/Gates.lean:173:0: 'OAI.PowerSaving.GX.sweep_data4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/Gates.lean:174:0: 'OAI.PowerSaving.GX.sweep_bank4' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9175/9276] Replayed Work.Bridge.Net
+warning: Work/Bridge/Net.lean:329:69: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sum_const, card_univ, nsmul_eq_mul, mul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/Bridge/Net.lean:338:0: 'OAI.PowerSaving.BR.Bridge2.stage0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Net.lean:339:0: 'OAI.PowerSaving.BR.Bridge2.stage1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Net.lean:340:0: 'OAI.PowerSaving.BR.Bridge2.stage2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Net.lean:341:0: 'OAI.PowerSaving.BR.Bridge2.stage3' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Net.lean:342:0: 'OAI.PowerSaving.BR.Bridge2.stage4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Net.lean:343:0: 'OAI.PowerSaving.BR.Bridge2.climbA' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Net.lean:344:0: 'OAI.PowerSaving.BR.Bridge2.climbB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Net.lean:345:0: 'OAI.PowerSaving.BR.Bridge2.fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9176/9276] Replayed Work.Bridge.Cert
+warning: Work/Bridge/Cert.lean:100:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge/Cert.lean:101:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge/Cert.lean:100:8: Unused tactic linter: `(push_cast; done)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge/Cert.lean:101:8: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge/Cert.lean:176:32: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge/Cert.lean:213:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge/Cert.lean:217:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge/Cert.lean:221:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge/Cert.lean:225:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge/Cert.lean:229:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge/Cert.lean:176:32: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge/Cert.lean:213:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge/Cert.lean:217:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge/Cert.lean:221:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge/Cert.lean:225:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge/Cert.lean:229:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Work/Bridge/Cert.lean:239:0: 'OAI.PowerSaving.BR.chain_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Cert.lean:240:0: 'OAI.PowerSaving.BR.Bridge2.route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge/Cert.lean:241:0: 'OAI.PowerSaving.BR.bridge2_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9177/9276] Replayed Work.GFrame.Top.Stage
+info: Work/GFrame/Top/Stage.lean:52:0: 'OAI.PowerSaving.GF.gsstage' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9178/9276] Replayed Work.GCert.Chain.Stage
+info: Work/GCert/Chain/Stage.lean:161:0: 'OAI.PowerSaving.GX.gblift1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Stage.lean:162:0: 'OAI.PowerSaving.GX.gblift2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Stage.lean:163:0: 'OAI.PowerSaving.GX.gistage_fwd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Stage.lean:164:0: 'OAI.PowerSaving.GX.gistage_bwd' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9179/9276] Replayed Work.Bridge401.GStage
+warning: Work/Bridge401/GStage.lean:88:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Work/Bridge401/GStage.lean:151:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Work/Bridge401/GStage.lean:214:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Work/Bridge401/GStage.lean:277:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Work/Bridge401/GStage.lean:340:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Work/Bridge401/GStage.lean:403:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Work/Bridge401/GStage.lean:466:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Work/Bridge401/GStage.lean:529:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: Work/Bridge401/GStage.lean:592:8: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Work/Bridge401/GStage.lean:602:0: 'OAI.PowerSaving.GX.gbliftQ0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GStage.lean:603:0: 'OAI.PowerSaving.GX.gbliftQ1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GStage.lean:604:0: 'OAI.PowerSaving.GX.gbliftQ2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GStage.lean:605:0: 'OAI.PowerSaving.GX.gbliftQ3' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GStage.lean:606:0: 'OAI.PowerSaving.GX.gbliftQ4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GStage.lean:607:0: 'OAI.PowerSaving.GX.gbliftQ5' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GStage.lean:608:0: 'OAI.PowerSaving.GX.gbliftQ6' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GStage.lean:609:0: 'OAI.PowerSaving.GX.gbliftQ7' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GStage.lean:610:0: 'OAI.PowerSaving.GX.gbliftQ8' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9180/9276] Replayed Work.Bridge401.StageE
+info: Work/Bridge401/StageE.lean:84:0: 'OAI.PowerSaving.GX.gistageE_fwd' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/StageE.lean:85:0: 'OAI.PowerSaving.GX.gistageE_bwd' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9182/9276] Replayed Work.Bridge401.GNetDef
+info: Work/Bridge401/GNetDef.lean:281:0: 'OAI.PowerSaving.GX.G401.unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9183/9276] Replayed Work.Bridge401.GNetStage
+warning: Work/Bridge401/GNetStage.lean:682:69: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sum_const, card_univ, nsmul_eq_mul, mul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/Bridge401/GNetStage.lean:736:0: 'OAI.PowerSaving.GX.G401.stage0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetStage.lean:737:0: 'OAI.PowerSaving.GX.G401.stage1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetStage.lean:738:0: 'OAI.PowerSaving.GX.G401.stage2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetStage.lean:739:0: 'OAI.PowerSaving.GX.G401.stage3' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetStage.lean:740:0: 'OAI.PowerSaving.GX.G401.stage4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetStage.lean:741:0: 'OAI.PowerSaving.GX.G401.stage5' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetStage.lean:742:0: 'OAI.PowerSaving.GX.G401.stage6' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetStage.lean:743:0: 'OAI.PowerSaving.GX.G401.stage7' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetStage.lean:744:0: 'OAI.PowerSaving.GX.G401.stage8' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetStage.lean:745:0: 'OAI.PowerSaving.GX.G401.fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9184/9276] Replayed Work.Bridge401.GNetCert
+warning: Work/Bridge401/GNetCert.lean:47:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Bridge401/GNetCert.lean:53:14: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Bridge401/GNetCert.lean:64:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Bridge401/GNetCert.lean:71:14: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Bridge401/GNetCert.lean:100:80: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Bridge401/GNetCert.lean:109:79: This simp argument is unused:
+  Finset.sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sum_const, card_univ, nsmul_eq_mul, mul_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge401/GNetCert.lean:192:36: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GNetCert.lean:196:36: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GNetCert.lean:200:36: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GNetCert.lean:204:36: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GNetCert.lean:208:36: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GNetCert.lean:212:36: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GNetCert.lean:216:36: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GNetCert.lean:220:36: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GNetCert.lean:223:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GNetCert.lean:192:36: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GNetCert.lean:196:36: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GNetCert.lean:200:36: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GNetCert.lean:204:36: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GNetCert.lean:208:36: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GNetCert.lean:212:36: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GNetCert.lean:216:36: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GNetCert.lean:220:36: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GNetCert.lean:223:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Work/Bridge401/GNetCert.lean:233:0: 'OAI.PowerSaving.GX.G401.run' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetCert.lean:234:0: 'OAI.PowerSaving.GX.G401.runFull' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GNetCert.lean:235:0: 'OAI.PowerSaving.GX.g401_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9185/9276] Replayed Work.Bank401.Adapt
+warning: Work/Bank401/Adapt.lean:83:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Bank401/Adapt.lean:83:18: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Bank401/Adapt.lean:89:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Bank401/Adapt.lean:89:18: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Bank401/Adapt.lean:186:0: 'OAI.PowerSaving.B401.pk_cperm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bank401/Adapt.lean:187:0: 'OAI.PowerSaving.B401.gauged_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bank401/Adapt.lean:188:0: 'OAI.PowerSaving.B401.gauged_Wn' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bank401/Adapt.lean:189:0: 'OAI.PowerSaving.B401.bank_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bank401/Adapt.lean:190:0: 'OAI.PowerSaving.B401.bank_adapt' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bank401/Adapt.lean:191:0: 'OAI.PowerSaving.B401.bank_pad' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bank401/Adapt.lean:192:0: 'OAI.PowerSaving.B401.bank_full' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9186/9276] Replayed Work.Bank401.Frames
+warning: Work/Bank401/Frames.lean:89:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: Work/Bank401/Frames.lean:201:0: 'OAI.PowerSaving.B401.bank_frames' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9187/9276] Replayed Work.Bridge401.Sched
+info: Work/Bridge401/Sched.lean:164:0: 'OAI.PowerSaving.GX.BankSched.L_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/Sched.lean:165:0: 'OAI.PowerSaving.GX.sched_frames' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9188/9276] Replayed Work.BridgeC.Blocks
+warning: Work/BridgeC/Blocks.lean:73:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Blocks.lean:73:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Blocks.lean:75:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Blocks.lean:75:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Blocks.lean:76:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:77:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:78:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:78:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:80:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:82:21: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:87:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Blocks.lean:87:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Blocks.lean:89:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Blocks.lean:89:23: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Blocks.lean:90:12: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:91:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:92:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:92:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:151:50: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Work/BridgeC/Blocks.lean:153:61: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Work/BridgeC/Blocks.lean:155:57: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Blocks.lean:157:60: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/BridgeC/Blocks.lean:276:0: 'OAI.PowerSaving.BC.card_LC' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Blocks.lean:277:0: 'OAI.PowerSaving.BC.PhiC_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Blocks.lean:278:0: 'OAI.PowerSaving.BC.PhiC_perm' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Blocks.lean:279:0: 'OAI.PowerSaving.BC.map_piC_single' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Blocks.lean:280:0: 'OAI.PowerSaving.BC.map_piC_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Blocks.lean:281:0: 'OAI.PowerSaving.BC.map_piC_univ' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Blocks.lean:282:0: 'OAI.PowerSaving.BC.map_piC_compl' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9189/9276] Replayed Work.BridgeC.Stage
+info: Work/BridgeC/Stage.lean:520:0: 'OAI.PowerSaving.BC.fmapC' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Stage.lean:521:0: 'OAI.PowerSaving.BC.bank_xx' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Stage.lean:522:0: 'OAI.PowerSaving.BC.bank_yy' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Stage.lean:523:0: 'OAI.PowerSaving.BC.climb_X0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Stage.lean:524:0: 'OAI.PowerSaving.BC.climb_Yend' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Stage.lean:525:0: 'OAI.PowerSaving.BC.class_term' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Stage.lean:526:0: 'OAI.PowerSaving.BC.idle_Xend' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Stage.lean:527:0: 'OAI.PowerSaving.BC.idle_Yend' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Stage.lean:528:0: 'OAI.PowerSaving.BC.bankT_xx' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9190/9276] Replayed Work.Bridge377.WinC
+warning: Work/Bridge377/WinC.lean:30:16: This simp argument is unused:
+  Matrix.fromBlocks_transpose
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [blkC, Matrix.mulVec, dotProduct, Fintype.sum_sum_type, cmat, dot]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/Bridge377/WinC.lean:33:16: This simp argument is unused:
+  Matrix.fromBlocks_transpose
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [blkC, Matrix.mulVec, dotProduct, Fintype.sum_sum_type, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/Bridge377/WinC.lean:122:0: 'OAI.PowerSaving.GX.insub_old_newC' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge377/WinC.lean:123:0: 'OAI.PowerSaving.GX.old_to_newC' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge377/WinC.lean:124:0: 'OAI.PowerSaving.GX.new_to_oldC' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge377/WinC.lean:125:0: 'OAI.PowerSaving.GX.gwinC' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9191/9276] Replayed Work.BridgeC.Bank
+warning: Work/BridgeC/Bank.lean:164:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Bank.lean:164:17: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Work/BridgeC/Bank.lean:169:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Bank.lean:169:17: `dif_neg` has been deprecated: Use `dite_eq_right` instead
+warning: Work/BridgeC/Bank.lean:174:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Bank.lean:174:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Bank.lean:178:6: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Bank.lean:178:17: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Bank.lean:178:46: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/BridgeC/Bank.lean:186:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Bank.lean:186:19: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/BridgeC/Bank.lean:186:30: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/BridgeC/Bank.lean:347:0: 'OAI.PowerSaving.BC.card_blk' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Bank.lean:348:0: 'OAI.PowerSaving.BC.biUnion_blk' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Bank.lean:349:0: 'OAI.PowerSaving.BC.map_sig' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Bank.lean:350:0: 'OAI.PowerSaving.BC.W_sig' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Bank.lean:351:0: 'OAI.PowerSaving.BC.bwin_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Bank.lean:352:0: 'OAI.PowerSaving.BC.bupto_last' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Bank.lean:353:0: 'OAI.PowerSaving.BC.pad_climb' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Bank.lean:354:0: 'OAI.PowerSaving.BC.bank_start' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeC/Bank.lean:355:0: 'OAI.PowerSaving.BC.enumOf' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9192/9276] Replayed Work.GCert.Chain.NetDef
+info: Work/GCert/Chain/NetDef.lean:157:0: 'OAI.PowerSaving.GX.GBridge2.unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9193/9276] Replayed Work.GCert.Chain.NetStage
+warning: Work/GCert/Chain/NetStage.lean:170:69: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sum_const, card_univ, nsmul_eq_mul, mul_zero, add_zero]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/GCert/Chain/NetStage.lean:179:0: 'OAI.PowerSaving.GX.GBridge2.stage0' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/NetStage.lean:180:0: 'OAI.PowerSaving.GX.GBridge2.stage1' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/NetStage.lean:181:0: 'OAI.PowerSaving.GX.GBridge2.stage2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/NetStage.lean:182:0: 'OAI.PowerSaving.GX.GBridge2.stage3' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/NetStage.lean:183:0: 'OAI.PowerSaving.GX.GBridge2.stage4' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/NetStage.lean:184:0: 'OAI.PowerSaving.GX.GBridge2.climbA' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/NetStage.lean:185:0: 'OAI.PowerSaving.GX.GBridge2.climbB' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/NetStage.lean:186:0: 'OAI.PowerSaving.GX.GBridge2.fin' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9194/9276] Replayed Work.GCert.Chain.NetCert
+warning: Work/GCert/Chain/NetCert.lean:93:32: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/GCert/Chain/NetCert.lean:129:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/GCert/Chain/NetCert.lean:133:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/GCert/Chain/NetCert.lean:137:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/GCert/Chain/NetCert.lean:141:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/GCert/Chain/NetCert.lean:145:34: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/GCert/Chain/NetCert.lean:93:32: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/GCert/Chain/NetCert.lean:129:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/GCert/Chain/NetCert.lean:133:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/GCert/Chain/NetCert.lean:137:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/GCert/Chain/NetCert.lean:141:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/GCert/Chain/NetCert.lean:145:34: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Work/GCert/Chain/NetCert.lean:156:0: 'OAI.PowerSaving.GX.GBridge2.route' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/NetCert.lean:157:0: 'OAI.PowerSaving.GX.gbridge2_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9195/9276] Replayed Work.GCert.Chain.WinB
+warning: Work/GCert/Chain/WinB.lean:36:16: This simp argument is unused:
+  Matrix.fromBlocks_transpose
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [blkB, Matrix.mulVec, dotProduct, Fintype.sum_sum_type, cmat, dot]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/GCert/Chain/WinB.lean:39:16: This simp argument is unused:
+  Matrix.fromBlocks_transpose
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [blkB, Matrix.mulVec, dotProduct, Fintype.sum_sum_type, Matrix.one_apply]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/GCert/Chain/WinB.lean:129:0: 'OAI.PowerSaving.GX.insub_old_new' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/WinB.lean:130:0: 'OAI.PowerSaving.GX.old_to_new' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/WinB.lean:131:0: 'OAI.PowerSaving.GX.new_to_old' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/WinB.lean:132:0: 'OAI.PowerSaving.GX.gwinB' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9196/9276] Replayed Work.BridgeGeom.Net
+warning: Work/BridgeGeom/Net.lean:43:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/BridgeGeom/Net.lean:44:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/BridgeGeom/Net.lean:43:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/BridgeGeom/Net.lean:44:6: Unused tactic linter: `decide` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/BridgeGeom/Net.lean:52:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/BridgeGeom/Net.lean:53:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/BridgeGeom/Net.lean:52:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/BridgeGeom/Net.lean:53:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/BridgeGeom/Net.lean:57:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/BridgeGeom/Net.lean:58:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/BridgeGeom/Net.lean:57:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/BridgeGeom/Net.lean:58:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/BridgeGeom/Net.lean:70:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/BridgeGeom/Net.lean:70:6: Unused tactic linter: `(ext x; fin_cases x <;> simp)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Work/BridgeGeom/Net.lean:248:0: 'OAI.PowerSaving.BG.helper_fin5' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/Net.lean:249:0: 'OAI.PowerSaving.BG.geomBridge2' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9197/9276] Replayed Work.SharedSumStructured.Network
+warning: Work/SharedSumStructured/Network.lean:261:54: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: Work/SharedSumStructured/Network.lean:265:54: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: Work/SharedSumStructured/Network.lean:302:54: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: Work/SharedSumStructured/Network.lean:306:54: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: Work/SharedSumStructured/Network.lean:335:50: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: Work/SharedSumStructured/Network.lean:339:50: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+⚠ [9198/9276] Replayed Work.SharedSumStructured.Certificate
+warning: Work/SharedSumStructured/Certificate.lean:62:4: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: Work/SharedSumStructured/Certificate.lean:62:15: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: Work/SharedSumStructured/Certificate.lean:75:4: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: Work/SharedSumStructured/Certificate.lean:75:15: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: Work/SharedSumStructured/Certificate.lean:76:4: This simp argument is unused:
+  zero_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [FMap.lab, NetData.F1, NetData.F2, fmap1, fmap2, perpL, zeroL, fullL, NetData.top, cond_true,
+    cond_false, sum_const, card_univ, Fintype.card_prod, smul_eq_mul, add_zero, mul_zero, NetData.cst, NetData.mm,
+    sum_add_distrib, Fintype.card_fin]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Work/SharedSumStructured/Certificate.lean:253:36: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: Work/SharedSumStructured/Certificate.lean:256:36: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+⚠ [9199/9276] Replayed Work.Combine.XNetwork
+warning: Work/Combine/XNetwork.lean:79:52: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: Work/Combine/XNetwork.lean:83:52: `cond_true` has been deprecated: Use `Bool.cond_true` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif true then a else b) = a
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif true then a else b) = a
+warning: Work/Combine/XNetwork.lean:128:52: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: Work/Combine/XNetwork.lean:132:52: `cond_false` has been deprecated: Use `Bool.cond_false` instead
+
+Note: The updated constant has a different type:
+  ∀ {α : Sort u} {a b : α}, (bif false then a else b) = b
+instead of
+  ∀ {α : Sort u_1} (a b : α), (bif false then a else b) = b
+warning: Work/Combine/XNetwork.lean:274:24: This simp argument is unused:
+  sum_const_zero
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sum_const, card_univ, Fintype.card_prod, nsmul_eq_mul, Nat.cast_mul, mul_zero, add_zero, zero_add]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+info: Work/Combine/XNetwork.lean:366:0: 'OAI.PowerSaving.CB.xnetwork_certificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9200/9276] Replayed Work.SharedSumChecker.Net
+warning: Work/SharedSumChecker/Net.lean:35:6: `if_pos` has been deprecated: Use `ite_eq_left` instead
+ℹ [9201/9276] Replayed Work.Combine.XCirc
+info: Work/Combine/XCirc.lean:336:0: 'SSC.PCert.Valid.xcircuit' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Combine/XCirc.lean:337:0: 'SSC.PCert.Valid.xcertificate' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9202/9276] Replayed Work.Reframe.F3
+warning: Work/Reframe/F3.lean:40:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/F3.lean:40:22: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Reframe/F3.lean:41:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Reframe/F3.lean:41:20: `if_neg` has been deprecated: Use `ite_eq_right` instead
+info: Work/Reframe/F3.lean:101:0: 'OAI.PowerSaving.RF.fold3s_bcert' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Reframe/F3.lean:102:0: 'SSC.PCert.Valid.fold3s_bcert' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9203/9276] Replayed Work.BridgeGeom.B2
+info: Work/BridgeGeom/B2.lean:111:0: 'OAI.PowerSaving.BG.bridge2_bcert_geom' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/B2.lean:112:0: 'OAI.PowerSaving.BG.bridge2_bcert' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/BridgeGeom/B2.lean:113:0: 'SSC.PCert.Valid.bridge2_bcert' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9204/9276] Replayed Work.GCert.Chain.Geom
+info: Work/GCert/Chain/Geom.lean:209:0: 'OAI.PowerSaving.GX.ggeomBridge2' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/Geom.lean:210:0: 'OAI.PowerSaving.GX.bridge2_gcert' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9205/9276] Replayed Work.Bridge401.GGeom
+warning: Work/Bridge401/GGeom.lean:51:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:52:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:51:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:52:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:56:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:57:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:56:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:57:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:61:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:62:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:61:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:62:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:66:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:67:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:66:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:67:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:71:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:72:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:71:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:72:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:76:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:77:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:76:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:77:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:81:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:82:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:81:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:82:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:86:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:87:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:86:6: Unused tactic linter: `rfl` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:87:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:92:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:93:6: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:92:6: Unused tactic linter: `simp` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:93:6: Unused tactic linter: `decide` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:471:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:472:8: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/Bridge401/GGeom.lean:471:8: Unused tactic linter: `(norm_num; ring)` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+warning: Work/Bridge401/GGeom.lean:472:8: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Work/Bridge401/GGeom.lean:482:0: 'OAI.PowerSaving.GX.ggeom401' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/GGeom.lean:483:0: 'OAI.PowerSaving.GX.bridge401_gcert' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9209/9276] Replayed Work.Combine.Hist
+warning: Work/Combine/Hist.lean:47:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Combine/Hist.lean:50:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Combine/Hist.lean:166:17: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Combine/Hist.lean:167:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Combine/Hist.lean:177:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
+warning: Work/Combine/Hist.lean:178:8: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Combine/Hist.lean:203:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
+warning: Work/Combine/Hist.lean:224:53: `if_true` has been deprecated: Use `ite_true` instead
+info: Work/Combine/Hist.lean:237:0: 'SSC.PCert.sumW_eq' depends on axioms: [propext, Quot.sound]
+info: Work/Combine/Hist.lean:238:0: 'SSC.PCert.rcost_sumW' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9210/9276] Replayed Work.GCert.Data.Count
+info: Work/GCert/Data/Count.lean:44:0: 'GXD.wsumK_eq' depends on axioms: [propext]
+info: Work/GCert/Data/Count.lean:45:0: 'GXD.sum_of_wsumK' depends on axioms: [propext]
+ℹ [9211/9276] Replayed Work.GCert.Data.Price
+info: Work/GCert/Data/Price.lean:30:0: 'GXD.rcost_wsumK' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9212/9276] Replayed Work.GCert.Data.Gen.C588Hist
+info: Work/GCert/Data/Gen/C588Hist.lean:45:0: 'GXD.C588.rankBoundA' does not depend on any axioms
+info: Work/GCert/Data/Gen/C588Hist.lean:46:0: 'GXD.C588.rankA0_ok' does not depend on any axioms
+ℹ [9213/9276] Replayed Work.GCert.Data.C588Price
+info: Work/GCert/Data/C588Price.lean:53:0: 'GXD.C588.inv_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Data/C588Price.lean:54:0: 'GXD.C588.inv_moves' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9214/9276] Replayed Work.GCert.Data.Gen.C588Tab0
+info: Work/GCert/Data/Gen/C588Tab0.lean:10:0: 'GXD.C588.tab0_ok' depends on axioms: [propext]
+ℹ [9215/9276] Replayed Work.GCert.Data.Gen.C588Tab1
+info: Work/GCert/Data/Gen/C588Tab1.lean:10:0: 'GXD.C588.tab1_ok' depends on axioms: [propext]
+ℹ [9216/9276] Replayed Work.GCert.Data.Gen.C588Tab2
+info: Work/GCert/Data/Gen/C588Tab2.lean:10:0: 'GXD.C588.tab2_ok' depends on axioms: [propext]
+ℹ [9217/9276] Replayed Work.GCert.Data.Gen.C588Tab3
+info: Work/GCert/Data/Gen/C588Tab3.lean:10:0: 'GXD.C588.tab3_ok' depends on axioms: [propext]
+ℹ [9219/9276] Replayed Work.GCert.Data.Gen.C588Seg0
+info: Work/GCert/Data/Gen/C588Seg0.lean:9:0: 'GXD.C588.seg0_ok' depends on axioms: [propext]
+ℹ [9220/9276] Replayed Work.GCert.Data.Gen.C588Seg1
+info: Work/GCert/Data/Gen/C588Seg1.lean:9:0: 'GXD.C588.seg1_ok' depends on axioms: [propext]
+ℹ [9221/9276] Replayed Work.GCert.Data.Gen.C588Seg2
+info: Work/GCert/Data/Gen/C588Seg2.lean:9:0: 'GXD.C588.seg2_ok' depends on axioms: [propext]
+ℹ [9222/9276] Replayed Work.GCert.Data.Gen.C588Seg3
+info: Work/GCert/Data/Gen/C588Seg3.lean:9:0: 'GXD.C588.seg3_ok' depends on axioms: [propext]
+ℹ [9223/9276] Replayed Work.GCert.Data.Gen.C588SegF
+info: Work/GCert/Data/Gen/C588SegF.lean:9:0: 'GXD.C588.segF_ok' depends on axioms: [propext]
+ℹ [9224/9276] Replayed Work.GCert.Data.Gen.C588End
+info: Work/GCert/Data/Gen/C588End.lean:11:0: 'GXD.C588.end_ok' depends on axioms: [propext]
+ℹ [9225/9276] Replayed Work.GCert.Data.C588Cert
+info: Work/GCert/Data/C588Cert.lean:60:0: 'GXD.C588.validE' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9226/9276] Replayed Work.GCert.Data.Gen.C588Scal0
+info: Work/GCert/Data/Gen/C588Scal0.lean:10:0: 'GXD.C588.scal0_ok' depends on axioms: [propext]
+ℹ [9227/9276] Replayed Work.GCert.Data.Gen.C588Scal1
+info: Work/GCert/Data/Gen/C588Scal1.lean:10:0: 'GXD.C588.scal1_ok' depends on axioms: [propext]
+ℹ [9228/9276] Replayed Work.GCert.Data.Gen.C588Scal2
+info: Work/GCert/Data/Gen/C588Scal2.lean:10:0: 'GXD.C588.scal2_ok' depends on axioms: [propext]
+ℹ [9229/9276] Replayed Work.GCert.Data.Gen.C588Scal3
+info: Work/GCert/Data/Gen/C588Scal3.lean:10:0: 'GXD.C588.scal3_ok' depends on axioms: [propext]
+ℹ [9230/9276] Replayed Work.GCert.Data.Gen.C588YChk
+info: Work/GCert/Data/Gen/C588YChk.lean:10:0: 'GXD.C588.ychk_ok' depends on axioms: [propext]
+ℹ [9231/9276] Replayed Work.GCert.Data.C588ScalOK
+info: Work/GCert/Data/C588ScalOK.lean:21:0: 'GXD.C588.scalOK' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9232/9276] Replayed Work.GCert.Data.Gen.C588EChk
+info: Work/GCert/Data/Gen/C588EChk.lean:10:0: 'GXD.C588.echk0_ok' depends on axioms: [propext]
+info: Work/GCert/Data/Gen/C588EChk.lean:11:0: 'GXD.C588.echk1_ok' depends on axioms: [propext]
+info: Work/GCert/Data/Gen/C588EChk.lean:12:0: 'GXD.C588.echk2_ok' depends on axioms: [propext]
+ℹ [9233/9276] Replayed Work.GCert.Data.RateC588x
+info: Work/GCert/Data/RateC588x.lean:97:0: 'OAI.PowerSaving.BlockAccounting.fold_C588x' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9234/9276] Replayed Work.GCert.Data.InstC588
+info: Work/GCert/Data/InstC588.lean:20:0: 'OAI.PowerSaving.BridgeRate.C588.unit_cost_x' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9253/9276] Replayed Work.Bridge401.SchedK
+warning: Work/Bridge401/SchedK.lean:114:64: `if_pos` has been deprecated: Use `ite_eq_left` instead
+info: Work/Bridge401/SchedK.lean:298:0: 'OAI.PowerSaving.GX.BankSched.ofTab_fits' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/SchedK.lean:299:0: 'OAI.PowerSaving.GX.BankSched.ofTab_padPrice' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9254/9276] Replayed Work.GCert.Data.Gen.C588Sched
+info: Work/GCert/Data/Gen/C588Sched.lean:39:0: 'GXD.C588.sched_ok' depends on axioms: [propext]
+⚠ [9255/9276] Replayed Work.GCert.Data.C588Glue401
+warning: Work/GCert/Data/C588Glue401.lean:23:61: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Work/GCert/Data/C588Glue401.lean:23:61: Unused tactic linter: `decide` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+info: Work/GCert/Data/C588Glue401.lean:83:0: 'GXD.C588.ginv_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Data/C588Glue401.lean:84:0: 'GXD.C588.price' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9256/9276] Replayed Work.Gauge.Step
+info: Work/Gauge/Step.lean:55:0: 'OAI.PowerSaving.GX.gauge_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9258/9276] Replayed Work.GCert.Chain.End
+info: Work/GCert/Chain/End.lean:77:0: 'OAI.PowerSaving.GX.wht_of_ginv' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/End.lean:78:0: 'OAI.PowerSaving.GX.wht_of_halves' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/GCert/Chain/End.lean:79:0: 'OAI.PowerSaving.GX.gcert_of_halves' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9259/9276] Replayed Work.Bridge401.End
+info: Work/Bridge401/End.lean:130:0: 'OAI.PowerSaving.GX.wht_of_halves_401' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/End.lean:131:0: 'OAI.PowerSaving.GX.engine_of_halves_401' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/Bridge401/End.lean:132:0: 'OAI.PowerSaving.GX.gcert_of_halves_401' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [9260/9276] Replayed Work.FourierC588.Seam
+info: Work/FourierC588/Seam.lean:170:0: 'OAI.PowerSaving.RAM.hillsC588_program' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FourierC588/Seam.lean:171:0: 'OAI.PowerSaving.RAM.envelope_program_geC588' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FourierC588/Seam.lean:172:0: 'OAI.PowerSaving.SeamC588.alphaC588_theta' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FourierC588/Seam.lean:173:0: 'OAI.PowerSaving.hillsC588_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9262/9276] Replayed Work.FourierC588.UniformFourierChallenge
+warning: Work/FourierC588/UniformFourierChallenge.lean:326:8: declaration uses `sorry`
+warning: Work/FourierC588/UniformFourierChallenge.lean:330:8: declaration uses `sorry`
+⚠ [9265/9277] Built Work.FourierC588Neg.UniformFourierChallenge (8.5s)
+warning: Work/FourierC588Neg/UniformFourierChallenge.lean:326:8: declaration uses `sorry`
+warning: Work/FourierC588Neg/UniformFourierChallenge.lean:330:8: declaration uses `sorry`
+ℹ [9276/9277] Built Work.GCert.Data.C588Controls (10s)
+info: Work/GCert/Data/C588Controls.lean:18:0: 'GXD.C588Controls.bad_scalar_rejected' depends on axioms: [propext]
+info: Work/GCert/Data/C588Controls.lean:19:0: 'GXD.C588Controls.duplicate_owner_rejected' depends on axioms: [propext]
+ℹ [9277/9277] Built Work.FourierC588.Axioms (4.5s)
+info: Work/FourierC588/Axioms.lean:2:0: 'OAI.PowerSaving.transform_mainC588' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FourierC588/Axioms.lean:3:0: 'OAI.PowerSaving.convolution_mainC588' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: Work/FourierC588/Axioms.lean:4:0: 'OAI.PowerSaving.RAM.hillsC588_program' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (9277 jobs).

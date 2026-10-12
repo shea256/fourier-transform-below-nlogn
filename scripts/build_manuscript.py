@@ -35,10 +35,16 @@ def generated(registry, current):
     a = exact_decimal(current['tensor_saving'])
     updated = current['date']
     formalized = current['status'] == 'formalized'
+    local_formal = formalized and current.get('formal_origin') == 'local-instantiation'
     bound_status = 'recorded' if formalized else 'proposed'
     proof_status = (
         f'The selected bound is the upstream theorem from {current["formal_credit"]}, reproduced from pinned project sources with the standard Lean axioms and theorem/definition comparisons. Independent human mathematical review remains pending. The reusable written transfer argument in this paper is distinct from that imported formal proof.'
         if formalized else 'Independent mathematical review and end-to-end formal verification remain pending.')
+    if local_formal:
+        proof_status = ('The selected bound is a new Lean-checked instantiation of the credited community circuit, '
+                        'geometry and OpenAI reduction. Its source bundle, standard-axiom audit and full-statement '
+                        'comparisons are retained. Independent human mathematical review remains pending. '
+                        'The reusable written transfer argument is distinct from this formal proof.')
     intro = f'''# {TITLE}
 
 **{AUTHOR}**
@@ -61,7 +67,7 @@ The selected finite witness has strict tensor saving $a={a}$. {proof_status} Thi
     manuscript += '\n' + (ROOT/'paper/attribution.md').read_text().rstrip() + '\n'
     # The publication carries a compact history as well as the standalone log.
     history = '\n## Incorporated result history\n\n'
-    history += 'These are project records, not priority claims. Earlier proposed transfers retain their original status; formalized denotes an incorporated upstream theorem with a reproduced Lean build and statement checks. Ratios compare exponent savings, not runtimes.\n\n'
+    history += 'These are project records, not priority claims. Earlier proposed transfers retain their original status; formalized denotes a pinned theorem with a checked Lean build and statement comparisons, either reproduced upstream or newly instantiated here. Ratios compare exponent savings, not runtimes.\n\n'
     history += '| Date | Witness | Status | Fourier saving |\n| --- | --- | --- | ---: |\n'
     for r in registry['results']:
         if r['status'] != 'candidate':
@@ -70,7 +76,7 @@ The selected finite witness has strict tensor saving $a={a}$. {proof_status} Thi
     manuscript += history
     log = '''# Improvement log
 
-Generated from [results/registry.json](results/registry.json). Dates identify project records, not priority claims. `proposed` means a written conditional transfer with finite checks; `formalized` means an incorporated upstream theorem with a reproduced Lean build, standard-axiom audit and statement comparisons. Neither status means independent human review. Candidate values never replace the current result automatically.
+Generated from [results/registry.json](results/registry.json). Dates identify project records, not priority claims. `proposed` means a written conditional transfer with finite checks; `formalized` means a pinned theorem with a checked Lean build, standard-axiom audit and statement comparisons, either reproduced upstream or newly instantiated here. Neither status means independent human review. Candidate values never replace the current result automatically.
 
 '''
     log += f'Current selection: **[{current["name"]}]({current["record"]})**, with {bound_status} `delta={delta}`.\n\n'
@@ -110,6 +116,11 @@ Generated from [results/registry.json](results/registry.json). Dates identify pr
     result_status = (
         f'**An incorporated upstream result with a reproduced Lean proof.** The bound comes from {current["formal_credit"]}. Independent human mathematical review remains pending.'
         if formalized else '**A proposed conditional transfer**, supported by a written argument and finite checks. Independent mathematical review and end-to-end formal verification remain pending.')
+    if local_formal:
+        result_status = (f'**A new instantiation checked by Lean.** It combines {current["formal_credit"]}. '
+                         'The exact all-length DFT and convolution statements pass the statement and axiom checks. '
+                         'Independent human mathematical review remains pending.')
+    tensor_description = 'checked complex-tensor witness' if local_formal else 'upstream complex-tensor witness'
     summary = f'''## Latest paper
 
 **[Read the latest paper (PDF)](manuscript.pdf)** · [Read online (Markdown)](manuscript.md) · [LaTeX source](tex/manuscript.tex)
@@ -126,7 +137,7 @@ T(n)=O\\left(n(\\log n)^{{1-\\delta}}\\right),\\qquad \\delta={delta}.
 
 {comparison}
 
-The Fourier saving is chosen below the upstream complex-tensor witness `a={a}`, leaving a positive gap to absorb the Fourier reduction's overhead. The integer-multiplication headline `kappa` is a separate parameter.{evidence}'''
+The Fourier saving is chosen below the {tensor_description} `a={a}`, leaving a positive gap to absorb the Fourier reduction's overhead. The integer-multiplication headline `kappa` is a separate parameter.{evidence}'''
     readme = (ROOT/'README.md').read_text()
     start, end = '<!-- current-result:start -->', '<!-- current-result:end -->'
     if start not in readme or end not in readme:

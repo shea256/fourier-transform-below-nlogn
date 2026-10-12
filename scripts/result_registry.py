@@ -8,6 +8,44 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def validate_local_formal(result, source):
+    """Bind a new local instantiation to its exact source bundle and check logs."""
+    proof = source['fourier_proof']
+    manifest_path = ROOT / proof['manifest']
+    manifest_bytes = manifest_path.read_bytes()
+    digest = hashlib.sha256(manifest_bytes).hexdigest()
+    if digest != proof['manifest_sha256']:
+        raise ValueError('local proof manifest differs from its pin')
+    manifest = json.loads(manifest_bytes)
+    for path, expected in manifest['files'].items():
+        if hashlib.sha256((ROOT/path).read_bytes()).hexdigest() != expected:
+            raise ValueError('local proof source differs: '+path)
+    receipt = json.loads((ROOT/result['lean_receipt']).read_text())
+    if (receipt.get('success') is not True or receipt['source_manifest_sha256'] != digest
+            or receipt['mathlib_commit'] != proof['mathlib_commit']
+            or manifest['mathlib_commit'] != proof['mathlib_commit']):
+        raise ValueError('local proof receipt does not bind its sources')
+    certificate = json.loads((ROOT/result['certificate']).read_text())
+    if (certificate['proof_manifest_sha256'] != digest
+            or Q(receipt['fourier_saving']) != Q(result['fourier_saving'])
+            or Q(receipt['tensor_saving']) != Q(result['tensor_saving'])):
+        raise ValueError('local proof parameters differ from the selected certificate')
+    commands = {item['label']: item for item in receipt['commands']}
+    for label in ('build', 'axioms', 'compare_fourier', 'finite', 'regenerate_lean'):
+        if commands.get(label, {}).get('exit_code') != 0:
+            raise ValueError('local formal check did not pass: '+label)
+    if commands.get('negative_control', {}).get('exit_code') != 1:
+        raise ValueError('stronger-statement negative control was not rejected')
+    expected_axioms = {'propext', 'Classical.choice', 'Quot.sound'}
+    for name in proof['axiom_theorems']:
+        if set(receipt['axioms'].get(name, [])) != expected_axioms:
+            raise ValueError('unexpected local theorem axioms: '+name)
+    for command in receipt['commands']:
+        data = (ROOT/result['lean_logs']/command['log']).read_bytes()
+        if hashlib.sha256(data).hexdigest() != command['log_sha256']:
+            raise ValueError('local formal log differs: '+command['label'])
+
+
 def fraction(value):
     if isinstance(value, dict):
         return Q(int(value['numerator']), int(value['denominator']))
@@ -61,6 +99,9 @@ def load():
                 raise ValueError('formalized result requires author credit and a verification audit')
             if source is None or 'fourier_proof' not in source:
                 raise ValueError('formalized result requires a pinned Fourier proof source')
+            if source['fourier_proof'].get('kind') == 'local-instantiation':
+                validate_local_formal(result, source)
+                continue
             receipt = json.loads((ROOT/result['lean_receipt']).read_text())
             proof = source['fourier_proof']
             if (receipt.get('success') is not True or receipt['source_commit'] != proof['commit']

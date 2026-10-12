@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "current": "five-stage-pr233",
+  "current": "complex588",
   "results": [
     {
       "id": "legacy-shared-sum",
@@ -73,6 +73,24 @@
       "change": "Boukhalfa's PR233/256 source-assisted program in Sussman's five-stage layout and formal Fourier framework. Pinned complete sources, source audit, exact program/ledger/rate checks and theorem reproduction; original circuit authors retain credit.",
       "formal_credit": "Jacob Sussman's five-stage framework and Chafik Boukhalfa's stronger instantiation of the community circuit",
       "verification_audit": "verification/FIVE_STAGE_AUDIT.md"
+    },
+    {
+      "id": "complex588",
+      "date": "2026-10-12",
+      "name": "PR588 circuit with source copies and cyclic banks",
+      "status": "formalized",
+      "formal_origin": "local-instantiation",
+      "fourier_saving": "12331685/10000000000",
+      "tensor_saving": "12331686/10000000000",
+      "record": "results/complex588.md",
+      "certificate": "verification/certificates/complex588_reference.json",
+      "verifier": "verification/verify_complex588.py",
+      "source_manifest": "verification/vendor/complex588/SOURCE.json",
+      "lean_receipt": "lean/complex588/receipt/verification.json",
+      "lean_logs": "lean/complex588/receipt",
+      "formal_credit": "Jeremy Kothe's PR588 circuit and its community predecessors, Jacob Sussman's formal engine, Dugongue and jacklightChen's #401/#377 geometry, Nil Mamano's published gauged Lean extension, and OpenAI's all-length reduction",
+      "verification_audit": "verification/COMPLEX588_AUDIT.md",
+      "change": "New checked instantiation: source-copy lowering, exact target preconditioning, and 5,040 cyclic helper banks; all-length DFT/convolution saving 0.0012331685. The prior verified baseline is 0.0010221076."
     }
   ]
 }

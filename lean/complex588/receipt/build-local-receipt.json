@@ -1,0 +1,1725 @@
+{
+  "targets": [
+    "Work.GCert.Data.C588Cert",
+    "Work.GCert.Data.C588ScalOK",
+    "Work.GCert.Data.Gen.C588EChk"
+  ],
+  "reused_modules": [
+    "OAI.Computability.FourierCircuit.Core",
+    "OAI.Computability.FourierTransform.AddressTables",
+    "OAI.Computability.FourierTransform.ArbitraryLength",
+    "OAI.Computability.FourierTransform.Asymptotics",
+    "OAI.Computability.FourierTransform.BinaryBasis",
+    "OAI.Computability.FourierTransform.BinaryFFT",
+    "OAI.Computability.FourierTransform.BinaryFrames",
+    "OAI.Computability.FourierTransform.BitLayout",
+    "OAI.Computability.FourierTransform.ChineseRemainder",
+    "OAI.Computability.FourierTransform.ChirpConvolution",
+    "OAI.Computability.FourierTransform.ChunkCompiler",
+    "OAI.Computability.FourierTransform.ChunkPrograms",
+    "OAI.Computability.FourierTransform.CirculantUpdates",
+    "OAI.Computability.FourierTransform.ColumnAddresses",
+    "OAI.Computability.FourierTransform.CompilerEnvironment",
+    "OAI.Computability.FourierTransform.ConvolutionProgram",
+    "OAI.Computability.FourierTransform.Cost",
+    "OAI.Computability.FourierTransform.DirectionalWords",
+    "OAI.Computability.FourierTransform.DisjointIntervals",
+    "OAI.Computability.FourierTransform.FourierCompilation",
+    "OAI.Computability.FourierTransform.FourierIdentities",
+    "OAI.Computability.FourierTransform.FourierWords",
+    "OAI.Computability.FourierTransform.FrameLifting",
+    "OAI.Computability.FourierTransform.Goal",
+    "OAI.Computability.FourierTransform.IntegerPrograms",
+    "OAI.Computability.FourierTransform.IntervalEffects",
+    "OAI.Computability.FourierTransform.IntervalPrograms",
+    "OAI.Computability.FourierTransform.LayerCompilation",
+    "OAI.Computability.FourierTransform.LayerPrograms",
+    "OAI.Computability.FourierTransform.LayerWords",
+    "OAI.Computability.FourierTransform.Layout",
+    "OAI.Computability.FourierTransform.LayoutPrograms",
+    "OAI.Computability.FourierTransform.LengthSelection",
+    "OAI.Computability.FourierTransform.LocalCompiler",
+    "OAI.Computability.FourierTransform.LocalPreparation",
+    "OAI.Computability.FourierTransform.LoopBounds",
+    "OAI.Computability.FourierTransform.Main",
+    "OAI.Computability.FourierTransform.MeasuredFit",
+    "OAI.Computability.FourierTransform.MeasuredPrograms",
+    "OAI.Computability.FourierTransform.NetworkInvocation",
+    "OAI.Computability.FourierTransform.NetworkLabels",
+    "OAI.Computability.FourierTransform.NetworkRoles",
+    "OAI.Computability.FourierTransform.NetworkStages",
+    "OAI.Computability.FourierTransform.NewtonFactorization",
+    "OAI.Computability.FourierTransform.PackingPrograms",
+    "OAI.Computability.FourierTransform.ParameterPrograms",
+    "OAI.Computability.FourierTransform.PolynomialBounds",
+    "OAI.Computability.FourierTransform.PolynomialPrograms",
+    "OAI.Computability.FourierTransform.PowerTables",
+    "OAI.Computability.FourierTransform.PrefixTraversal",
+    "OAI.Computability.FourierTransform.PrimeSelection",
+    "OAI.Computability.FourierTransform.ProductMatrix",
+    "OAI.Computability.FourierTransform.ProgramBounds",
+    "OAI.Computability.FourierTransform.ProgramConstruction",
+    "OAI.Computability.FourierTransform.RAM",
+    "OAI.Computability.FourierTransform.RecursionBounds",
+    "OAI.Computability.FourierTransform.RecursiveBatches",
+    "OAI.Computability.FourierTransform.RecursiveContract",
+    "OAI.Computability.FourierTransform.RegisterBounds",
+    "OAI.Computability.FourierTransform.RoleArrays",
+    "OAI.Computability.FourierTransform.RootPreparation",
+    "OAI.Computability.FourierTransform.ScalarNetwork",
+    "OAI.Computability.FourierTransform.ScalarPreparation",
+    "OAI.Computability.FourierTransform.SectorAlgorithm",
+    "OAI.Computability.FourierTransform.SectorIdentities",
+    "OAI.Computability.FourierTransform.SectorPacking",
+    "OAI.Computability.FourierTransform.SectorPrograms",
+    "OAI.Computability.FourierTransform.SynchronizedAlgorithm",
+    "OAI.Computability.FourierTransform.TensorAlgorithm",
+    "OAI.Computability.FourierTransform.TensorCertificate",
+    "OAI.Computability.FourierTransform.TensorFibers",
+    "OAI.Computability.FourierTransform.TensorIndexing",
+    "OAI.Computability.FourierTransform.TensorProgram",
+    "OAI.Computability.FourierTransform.TensorRecursion",
+    "OAI.Computability.FourierTransform.TensorSaving",
+    "OAI.Computability.FourierTransform.ToeplitzCompiler",
+    "OAI.Computability.FourierTransform.ToeplitzIdentities",
+    "OAI.Computability.FourierTransform.ToeplitzLayers",
+    "OAI.Computability.FourierTransform.ToeplitzPreparation",
+    "OAI.Computability.FourierTransform.ToeplitzUpdates",
+    "OAI.Computability.FourierTransform.TransformProgram",
+    "OAI.Computability.FourierTransform.TraversalPrograms",
+    "OAI.Computability.FourierTransform.UniformBounds",
+    "OAI.Computability.FourierTransform.WordCompilation",
+    "OAI.Computability.FourierTransform.WordPrograms",
+    "OAI.Computability.FourierTransform.WorkBounds",
+    "OAI.Computability.FourierTransform.WorkingCompiler",
+    "OAI.Computability.FourierTransform.WorkingPreparation",
+    "OAI.Computability.FourierTransform.WorkingTransform",
+    "WHTCheck.Solution",
+    "Work.Block.Address",
+    "Work.Block.Batches",
+    "Work.Block.Bridge",
+    "Work.Block.Engine",
+    "Work.Block.Extras",
+    "Work.Block.Frames",
+    "Work.Block.Majorant",
+    "Work.Block.Paths",
+    "Work.Block.Peel",
+    "Work.Block.Port",
+    "Work.Block.Recursion",
+    "Work.Block.Split",
+    "Work.Block.WHT",
+    "Work.Block.Word",
+    "Work.BlockAccounting.Moment",
+    "Work.BlockAccounting.Steps",
+    "Work.BlockApply.Copies",
+    "Work.BlockApply.Exact",
+    "Work.Bridge.Inv",
+    "Work.Bridge.Roles",
+    "Work.BridgeGeom.Blocks",
+    "Work.BridgeGeom.Stage",
+    "Work.Carrier.Glue",
+    "Work.Carrier.Live",
+    "Work.Carrier.Pack",
+    "Work.Carrier.PhasedInv",
+    "Work.Carrier.Phases",
+    "Work.Carrier.Ring",
+    "Work.Carrier.Scat",
+    "Work.Carrier.Sched",
+    "Work.CarrierCheck.CCert",
+    "Work.CarrierCheck.Mat",
+    "Work.CarrierCheck.Roles",
+    "Work.CarrierCheck.Routes",
+    "Work.CarrierCheck.ScalDef",
+    "Work.CarrierCheck.ScalFin",
+    "Work.CarrierCheck.ScalId",
+    "Work.CarrierCheck.ScalOps",
+    "Work.CarrierCheck.ScalRun",
+    "Work.CarrierCheck.ScalSound",
+    "Work.CarrierCheck.Scat",
+    "Work.CarrierCheck.Valid",
+    "Work.Combine.Chunks",
+    "Work.Combine.Hist",
+    "Work.Combine.Ranks",
+    "Work.Combine.Split",
+    "Work.Combine.SplitDef",
+    "Work.Combine.XCirc",
+    "Work.Combine.XG",
+    "Work.Combine.XInvocation",
+    "Work.Combine.XNetwork",
+    "Work.FoldRate.Arith",
+    "Work.FoldRate.Group",
+    "Work.GCert.Chain.Inv",
+    "Work.GCert.Chain.InvThm",
+    "Work.GCert.Chain.Phased",
+    "Work.GCert.Chain.Win",
+    "Work.GCert.Data.Count",
+    "Work.GCert.Data.Price",
+    "Work.GCert.Data.Raw",
+    "Work.GCert.Labels.Bits",
+    "Work.GCert.Labels.Canon",
+    "Work.GCert.Labels.Def",
+    "Work.GCert.Labels.Elim",
+    "Work.GCert.Labels.EndDef",
+    "Work.GCert.Labels.EndSound",
+    "Work.GCert.Labels.Ends",
+    "Work.GCert.Labels.Main",
+    "Work.GCert.Labels.Route",
+    "Work.GCert.Labels.RouteRun",
+    "Work.GCert.Labels.Sound",
+    "Work.GCert.Labels.Spec",
+    "Work.GCert.Scalar.Bits",
+    "Work.GCert.Scalar.Check",
+    "Work.GCert.Scalar.Cols",
+    "Work.GCert.Scalar.Def",
+    "Work.GCert.Scalar.End",
+    "Work.GCert.Scalar.Fin",
+    "Work.GCert.Scalar.Id",
+    "Work.GCert.Scalar.Main",
+    "Work.GCert.Scalar.Mat3",
+    "Work.GCert.Scalar.Ops",
+    "Work.GCert.Scalar.Roles",
+    "Work.GCert.Scalar.Runs",
+    "Work.GCert.Scalar.Scat",
+    "Work.GCert.Scalar.Seg",
+    "Work.GCert.Scalar.Step",
+    "Work.GFrame.Clifford.AltBlock",
+    "Work.GFrame.Clifford.Base",
+    "Work.GFrame.Clifford.Basic",
+    "Work.GFrame.Clifford.Climb",
+    "Work.GFrame.Clifford.Core",
+    "Work.GFrame.Clifford.Cross",
+    "Work.GFrame.Clifford.Entry",
+    "Work.GFrame.Clifford.Fibre",
+    "Work.GFrame.Clifford.FreeLift",
+    "Work.GFrame.Clifford.Old",
+    "Work.GFrame.Clifford.Pair",
+    "Work.GFrame.Clifford.Rep",
+    "Work.GFrame.Clifford.RepFree",
+    "Work.GFrame.Clifford.Step",
+    "Work.GFrame.Engine.Adapt",
+    "Work.GFrame.Engine.Cert",
+    "Work.GFrame.Engine.Free",
+    "Work.GFrame.Engine.Group",
+    "Work.GFrame.Engine.Letters",
+    "Work.GFrame.Engine.Level",
+    "Work.GFrame.Engine.Main",
+    "Work.GFrame.Engine.Over",
+    "Work.GFrame.Engine.Recursion",
+    "Work.GFrame.Engine.Route",
+    "Work.GFrame.Engine.Sweep",
+    "Work.GFrame.Labels.All",
+    "Work.GFrame.Labels.BXMap",
+    "Work.GFrame.Labels.Calc",
+    "Work.GFrame.Labels.Conj",
+    "Work.GFrame.Labels.ConjB",
+    "Work.GFrame.Labels.Embed",
+    "Work.GFrame.Labels.GCalc",
+    "Work.GFrame.Labels.GCarrier",
+    "Work.GFrame.Labels.GXMap",
+    "Work.GFrame.Labels.GeomOld",
+    "Work.GFrame.Labels.Maps",
+    "Work.GFrame.Labels.Proj",
+    "Work.GFrame.Labels.Quad",
+    "Work.GFrame.Labels.Sched",
+    "Work.GFrame.Labels.SchedR",
+    "Work.GFrame.Labels.StageA",
+    "Work.GFrame.Labels.StageB",
+    "Work.GFrame.Labels.StageBFull",
+    "Work.GFrame.Labels.StageBSem",
+    "Work.GFrame.Top.Api",
+    "Work.GFrame.Top.Assemble",
+    "Work.GFrame.Top.Menu",
+    "Work.Reframe.Basic",
+    "Work.Reframe.Erase",
+    "Work.Reframe.FrameAlg",
+    "Work.Reframe.Geom3",
+    "Work.Reframe.GeomBase",
+    "Work.Reframe.GeomNet",
+    "Work.Reframe.SCert",
+    "Work.Reframe.SNet",
+    "Work.Reframe.Shared",
+    "Work.Scratch.Engine",
+    "Work.SharedSumChecker.Bits",
+    "Work.SharedSumChecker.Check",
+    "Work.SharedSumChecker.Circ",
+    "Work.SharedSumChecker.Impl",
+    "Work.SharedSumChecker.Mats",
+    "Work.SharedSumChecker.Net",
+    "Work.SharedSumChecker.PCert",
+    "Work.SharedSumChecker.Phase",
+    "Work.SharedSumChecker.Proj",
+    "Work.SharedSumChecker.Scalar",
+    "Work.SharedSumChecker.ScalarDef",
+    "Work.SharedSumChecker.Sound",
+    "Work.SharedSumStructured.Certificate",
+    "Work.SharedSumStructured.GPath",
+    "Work.SharedSumStructured.Invocation",
+    "Work.SharedSumStructured.Labels",
+    "Work.SharedSumStructured.Network"
+  ],
+  "build_order": [
+    "Work.Gauge.Defs",
+    "Work.Gauge.Labels",
+    "Work.GCert.Data.Gen.C588.S0",
+    "Work.GCert.Data.Gen.C588",
+    "Work.GCert.Data.Gen.C588Gl",
+    "Work.GCert.Data.Gen.C588Hist",
+    "Work.GCert.Data.C588Price",
+    "Work.GCert.Data.Gen.C588Tab0",
+    "Work.GCert.Data.Gen.C588Tab1",
+    "Work.GCert.Data.Gen.C588Tab2",
+    "Work.GCert.Data.Gen.C588Tab3",
+    "Work.GCert.Data.Gen.C588Par",
+    "Work.GCert.Data.Gen.C588Seg0",
+    "Work.GCert.Data.Gen.C588Seg1",
+    "Work.GCert.Data.Gen.C588Seg2",
+    "Work.GCert.Data.Gen.C588Seg3",
+    "Work.GCert.Data.Gen.C588SegF",
+    "Work.GCert.Data.Gen.C588End",
+    "Work.GCert.Data.C588Cert",
+    "Work.GCert.Data.Gen.C588Scal0",
+    "Work.GCert.Data.Gen.C588Scal1",
+    "Work.GCert.Data.Gen.C588Scal2",
+    "Work.GCert.Data.Gen.C588Scal3",
+    "Work.GCert.Data.Gen.C588YChk",
+    "Work.GCert.Data.C588ScalOK",
+    "Work.Gauge.ECheck",
+    "Work.GCert.Data.Gen.C588EChk"
+  ],
+  "provenance": {
+    "Work.Gauge.Labels": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Gauge/Labels.lean",
+      "source_sha256": "4c86f86790de3d7081ace9fe7ee0a451b2eb6375a83b576ef9b7d77e118e8ce2",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.Main": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/Main.lean",
+      "source_sha256": "8a23b9856196d8678b3495ec5d4d15778944cb3627312cded79d2966a3d229a9",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.Phased": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/Phased.lean",
+      "source_sha256": "6cc82fe0b6923236eb2e87b6959e0772cd49a88da724ec25d83eb3597dae760f",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Carrier.Phases": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Carrier/Phases.lean",
+      "source_sha256": "19697c70a4f2a58e6f5d4c395f1001ed823bb3c7ad950748f1bd5bcc26056cb2",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Carrier.Glue": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Carrier/Glue.lean",
+      "source_sha256": "a652708d7c108c5279a006609088ea7224e572e4d20f7c458da912afd74dc863",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Carrier.Scat": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Carrier/Scat.lean",
+      "source_sha256": "8e80edbcff0c7e9c96f9ab28cf66db9b777ac84c99d17817af21db7db8403c05",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Carrier.Live": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Carrier/Live.lean",
+      "source_sha256": "7e830da401db6cd475ea26ce62c4f0e7fe6d2cc41a07aa197ae15937223b24eb",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Carrier.Pack": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Carrier/Pack.lean",
+      "source_sha256": "c85ef60da67b807ffbddbb808fb5d45aced2d7f5ac63c15d69ab63259229f7fd",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Carrier.Sched": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Carrier/Sched.lean",
+      "source_sha256": "7b3484c038a1559091f486e1667e4c1457ab9c0abd75202c9a3ad4d18fcdaacd",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge.Inv": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge/Inv.lean",
+      "source_sha256": "b0df1588d91f105dcd56c6597b628764e44607414c06bf52ef9a99f97708a786",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge.Roles": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge/Roles.lean",
+      "source_sha256": "8983d7787e27ae2af1302992734546e1fe85191a3c42e50262daf31d89d06b0c",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Reframe.SNet": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Reframe/SNet.lean",
+      "source_sha256": "5846bd6e14d4b8022cc7fff56fb8c005003312c276019158e86c02ef0ec0c757",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Reframe.Shared": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Reframe/Shared.lean",
+      "source_sha256": "7e4506a8df7e7e8792b7ac8736da7a8457cbcb4ea125c2ac534038c73ac4f143",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Reframe.Erase": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Reframe/Erase.lean",
+      "source_sha256": "47c504188693c54e37a1c221c617d6c88fc9d06c6111ac800053acb9d1687e9b",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Reframe.Basic": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Reframe/Basic.lean",
+      "source_sha256": "c8c168e5b659ea53f7e9cc934774e6423e95808469fcc2e40a5f53776c45810e",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Combine.XInvocation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Combine/XInvocation.lean",
+      "source_sha256": "c2bf96f3a0034f6f5efef685e06ce794029301d8b67285117a4fbd137fcd7932",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Combine.XG": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Combine/XG.lean",
+      "source_sha256": "0df71a496b6a1b7b0a2621210167874fbd2cac79273f838c36e93f41e1e2cbbe",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BlockApply.Exact": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BlockApply/Exact.lean",
+      "source_sha256": "fa51e1d848d10785fb4bc93595eaff495563ba377812fe84c0689d6f961b0a5c",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Majorant": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Majorant.lean",
+      "source_sha256": "b9c32bff873c1bc334fd6181edf521d6e3e9b869c02ab557bf60f42ede2eccb1",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Port": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Port.lean",
+      "source_sha256": "933ee340224e1365c6088f52b92f8a6067bc61316deb73acf779700997f43537",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.WHT": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/WHT.lean",
+      "source_sha256": "e5c875ddb0d434a03955f9f8b15fe0649131e10b6ab56faeb96ed5321ad6ef28",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Extras": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Extras.lean",
+      "source_sha256": "5ac897eeef7af8b473b380b43e0987be4d3e54f9b99db307a691ce63ffcee1b5",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Paths": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Paths.lean",
+      "source_sha256": "5a1e769bf58d8611528b7786145df6ba3f56cd07dbde707bd5a5c216f7e6ffc2",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Frames": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Frames.lean",
+      "source_sha256": "c6fdf8d2dfbe2cae16d65776544170481286509ac95c66bed01e565db47ba07d",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Bridge": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Bridge.lean",
+      "source_sha256": "6ea0db681c970891eb7e2d73a6401377cf874ea832dda13bc2d1097f9ab57376",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Engine": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Engine.lean",
+      "source_sha256": "47e6ea19dcb5c25c19eff37c287009e6ac5194b6310f575100a5b8c3fcf4d3b8",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Recursion": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Recursion.lean",
+      "source_sha256": "e440bd42abf6a46cca496cd66ca113ae0e7213b4b0d15f03f02b72d385f94da3",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Batches": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Batches.lean",
+      "source_sha256": "cf1f07ae034342c32b2976f4b92c2ceefa0e5b05c83e35e154ac12c47b1a5b40",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Address": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Address.lean",
+      "source_sha256": "c3536965f1de68f58fa35c372715abbc7585e6ab47e478d089785e27834a3dcd",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Peel": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Peel.lean",
+      "source_sha256": "44e7fe34b22b556306f4a74f5f76d6f770058b0f4e9a17780143667f4569cfc9",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Split": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Split.lean",
+      "source_sha256": "0ed08884c2a8bcecc17f81287b1f386fb6084f0bf16dd4d43897196c75187713",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Scratch.Engine": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Scratch/Engine.lean",
+      "source_sha256": "e8621d52ff6a0a6b058a1a947eb37a68ef9062f017429ec0e81eedc96737cedb",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.Main": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/Main.lean",
+      "source_sha256": "b4c08f55c7cc193de31f9666ffe2fc73fc05d1852f6e08a504cd9b43be4eb4dd",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.Asymptotics": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/Asymptotics.lean",
+      "source_sha256": "9c35f18f2b8812dcc78ff3150dbc2f8f046d76e3758a56c9db171926b8b8385b",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.UniformBounds": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/UniformBounds.lean",
+      "source_sha256": "53dc0e4abf76b60c84bfa1e6068ccb1b08014c138f04ee39de0b6833db9aa9f1",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ConvolutionProgram": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ConvolutionProgram.lean",
+      "source_sha256": "2ab7a81fc0375358e9eca43c06f000f64c6e049021e3a656e39265501aa4212e",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.TransformProgram": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/TransformProgram.lean",
+      "source_sha256": "fe75b6ba89030156c99566305a5418729c0f4d417f8ee832dcda0098b2c032a0",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ArbitraryLength": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ArbitraryLength.lean",
+      "source_sha256": "8c9294761c1be4bc5a243ce938ee7c1df76cb54c8eea0c114634dbdd7f3c82f1",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.PowerTables": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/PowerTables.lean",
+      "source_sha256": "855dcad58bca197b0e7a9415f70b3fc56c73a4f39476191e14e629eb66d0e41c",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ParameterPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ParameterPrograms.lean",
+      "source_sha256": "7949042fb7174719824de07ef4dea2608e9b4b40f18a7d25b521108951947fa8",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.WorkBounds": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/WorkBounds.lean",
+      "source_sha256": "9a40c8742e1b391af21e5adad77066ae1cf139021edc51c5e2d38d80d6c2850b",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.CompilerEnvironment": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/CompilerEnvironment.lean",
+      "source_sha256": "7b5c3a0500d5405fc75804ca79adeb021b8823d7a1f6e7588ca2d56f6ce9f240",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.PolynomialPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/PolynomialPrograms.lean",
+      "source_sha256": "06190490490ceacedb3e9a494e8b6bdc533a2cddd0a8b25f0d323ac1c6e15777",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ProgramConstruction": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ProgramConstruction.lean",
+      "source_sha256": "baa0080bd2969ab3e60745d5896b87cec47d616d6de07c65b57b69a333a2cf9a",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.LoopBounds": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/LoopBounds.lean",
+      "source_sha256": "6a30ae05b2f1f25c59a52706d26d143dea7e98e8c20faa9527e390a9850dfb70",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ProgramBounds": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ProgramBounds.lean",
+      "source_sha256": "11e62914cdabf017e78ae16bfb0cd0540499bcae076deaf6d6da65fbf340ee50",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.PolynomialBounds": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/PolynomialBounds.lean",
+      "source_sha256": "267189286e819abaaf6fa12df1e168cade86fcdfed3334862dc98575742da298",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.Cost": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/Cost.lean",
+      "source_sha256": "2f4a65c6c7de4e31d0ad8ef0f02d4fed0d1713956cb55c7211ffedf07d210c31",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.RAM": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/RAM.lean",
+      "source_sha256": "4eb8a7cbd1566b9a0537c3423e32528c3d6be691a4780bd549768a96e568fa8d",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.IntegerPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/IntegerPrograms.lean",
+      "source_sha256": "0641f19f37f7a3fd64f5b17eaabc2fd9f443e9b197b69dfdc0a623d372bd0c7b",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.LayoutPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/LayoutPrograms.lean",
+      "source_sha256": "6c4184c615ff25d4a60a04a0e712f7e69ee2fed41b3468e8be4658568192ebb1",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.Layout": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/Layout.lean",
+      "source_sha256": "631d5e674c8cef589873338e5128d5ba306edc5b4ed87ba811f3b4e6323aac37",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ChirpConvolution": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ChirpConvolution.lean",
+      "source_sha256": "f040bd2ea256bda881a4ab1d5059a3bbbff4c89f0b5ecb0f205d5d209efb739b",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.FourierIdentities": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/FourierIdentities.lean",
+      "source_sha256": "80fca0677935620c74c25ad5c95f0158b117ea00e4b98ba218605294507f106a",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.Goal": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/Goal.lean",
+      "source_sha256": "0bdcb9a96d336cfff6076207d1ec9d56051958af40732d9cd41795346464fa25",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierCircuit.Core": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierCircuit/Core.lean",
+      "source_sha256": "45fd659a66b3bb93ea9e55ebf0c06fde26a3038e2c7fb369cbd8dada371603a6",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.WorkingPreparation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/WorkingPreparation.lean",
+      "source_sha256": "3a98ece7b943d58a2fc2a41afa0892185b29931d8c3a065df1e0a1eb6e55d875",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.RootPreparation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/RootPreparation.lean",
+      "source_sha256": "5946d32844438ccad8bbfe3d35d566a875d8ececc6b2b9796f3a9d704449baf0",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.LocalPreparation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/LocalPreparation.lean",
+      "source_sha256": "186aac98c6dcd1158d3ad1372b575a698d4d4f01c506fa786679aeb640ad0496",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.LengthSelection": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/LengthSelection.lean",
+      "source_sha256": "90b135e77a4449bac4841d55bca14bb527e4d7345d17e35b134dcd09e4d779e7",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.PrimeSelection": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/PrimeSelection.lean",
+      "source_sha256": "184501d47199a889d5734754993bf7732739b595a652f3ee37b0186e70a3f66e",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ChineseRemainder": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ChineseRemainder.lean",
+      "source_sha256": "3ef57d04c4a59ac15a386cab26469802a2a12e2a80e3e0e18e092d1048485077",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.SectorPacking": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/SectorPacking.lean",
+      "source_sha256": "63d906d8e7acb9c4906c476adf258098748a88f6b8d38321e7281ea82f11f123",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.TensorIndexing": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/TensorIndexing.lean",
+      "source_sha256": "071d3fc97a0e2557934083d101cd7b87460f9a382e1869bac89b23fa9d74d90c",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.FourierWords": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/FourierWords.lean",
+      "source_sha256": "bee1dfaf2e696e820e272b48bcb8811fb7256ec2b7940a312cb6f7b45183b042",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ToeplitzLayers": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ToeplitzLayers.lean",
+      "source_sha256": "4888a25c1b6ce906fd8933cbeb62c193bee951979bf549b8d88a092fe8238196",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.MeasuredFit": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/MeasuredFit.lean",
+      "source_sha256": "0aae646a9aadfdb503a3f96a484b915ac29f294cfbb8339112221fcc492ec580",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ChunkCompiler": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ChunkCompiler.lean",
+      "source_sha256": "d7b62642b30eef9ca1b409aa19ed5a04ec55f4e73199f09087438a4613e53398",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ToeplitzUpdates": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ToeplitzUpdates.lean",
+      "source_sha256": "86655fd2b191b209a39bc2918861c507755aec8f3705eb7dfe44c9c4f5f6ce5c",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.CirculantUpdates": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/CirculantUpdates.lean",
+      "source_sha256": "1845c199041511fc2b9c2405cfdbbc435ce9f74d8c1c9ab8280daa5a93a242e1",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.BinaryFFT": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/BinaryFFT.lean",
+      "source_sha256": "fbad2c9d88d2f637b7be8fa439dce9dc61173f5e3dddbba44f3b31b31fae9da9",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.DisjointIntervals": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/DisjointIntervals.lean",
+      "source_sha256": "9b5f954b6f6bef079e8ddca634e95bb911a3d4a23f4844fedd72eb1827504442",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.IntervalEffects": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/IntervalEffects.lean",
+      "source_sha256": "8a4065fa5dd66f56bd905ee4f820f1f1de5cd5e076851323680be369fd196de7",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.LayerWords": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/LayerWords.lean",
+      "source_sha256": "65b8646ae49223b5beb8b94a5d59d489add83483e63d62e13e1f91f24f2091a7",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.BinaryFrames": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/BinaryFrames.lean",
+      "source_sha256": "6bae0c9538add4385b3fb114d1d367f025916a67138b5475c312a9d6a19483f8",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.BinaryBasis": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/BinaryBasis.lean",
+      "source_sha256": "6553614249c4bc80d453db04a584046f024ccb3a171ecd2c4734b8fad0ec9170",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ProductMatrix": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ProductMatrix.lean",
+      "source_sha256": "7508fa85fc588567237dc8133e17a26d1883253df72f5e2f1459a16f33434a2e",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ToeplitzIdentities": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ToeplitzIdentities.lean",
+      "source_sha256": "f4cecf6568fc7665c855f09c408a66484766b7d2971b255e54c271cc324b60ef",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.NewtonFactorization": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/NewtonFactorization.lean",
+      "source_sha256": "19acb204079ba55a978edebdea1ff9da6ec206547115d40f36f2ce297e9fbc10",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.WorkingCompiler": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/WorkingCompiler.lean",
+      "source_sha256": "2e72220031e7db36220ed5630154aed5b0f3dbc39c0acc74e300c0765bd5bac7",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.WorkingTransform": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/WorkingTransform.lean",
+      "source_sha256": "2662877aee02f29025343ec4a85aeca76b3ce4151595c31e9d179a83a46e9dfc",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.SynchronizedAlgorithm": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/SynchronizedAlgorithm.lean",
+      "source_sha256": "9ba8e0690e81b112eb678b9f1085e03d3150d0fb04fbe9fd9cd4daa62f712b3d",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.SectorAlgorithm": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/SectorAlgorithm.lean",
+      "source_sha256": "b4b3cbdb01a231075aea3280ac106a9e167679fd66ddb1eff8099de36abd18bc",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.TensorProgram": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/TensorProgram.lean",
+      "source_sha256": "da4dfb1aec152f5b13dc08ee068f2249cd5afec8879a5a6926179c9e2663a613",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.TensorSaving": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/TensorSaving.lean",
+      "source_sha256": "2a7f54ddf2422e592f6ceb0ac270921190fb53018d4dc714befd359b06d32168",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.RecursionBounds": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/RecursionBounds.lean",
+      "source_sha256": "771a6cc5929af054f05ce46ed4cff453e427ca1aacdba93b14c15e28e99791b0",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.TensorAlgorithm": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/TensorAlgorithm.lean",
+      "source_sha256": "5b244e3093b9063f16c1bbac4717d427e7a981127eed9d72403365a6d5481104",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.TensorRecursion": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/TensorRecursion.lean",
+      "source_sha256": "fa925312e7bbaf04e0cfc8d21c4a64d03e327508047ae2c1eee16c266f71a03c",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.RecursiveContract": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/RecursiveContract.lean",
+      "source_sha256": "69893cf255c6668a5ac1a2629edfb702f825b9a8101df1552d7aa90ebd8bc3da",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.RecursiveBatches": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/RecursiveBatches.lean",
+      "source_sha256": "52456e6d3ba415d68e0aab4e77266a2b2cbc085aff4aaf58d3d6e182db46750b",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.RoleArrays": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/RoleArrays.lean",
+      "source_sha256": "ab753a631a58361be851e2e07170eae264a2bb9e3206094b33c5abc7fbb26b45",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ColumnAddresses": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ColumnAddresses.lean",
+      "source_sha256": "84bee13f9889bee7dc5a446af57d292fe4c02112424a1f67aa636a1cc01754ce",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.AddressTables": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/AddressTables.lean",
+      "source_sha256": "9c9da585854636dec2e136fd2086927b572be02d1f27c8b576fa280c774fa384",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.TensorFibers": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/TensorFibers.lean",
+      "source_sha256": "d80a55f56422c26b470e2883e710755e907e0087810c9d35af1e51863c901858",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.BitLayout": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/BitLayout.lean",
+      "source_sha256": "1149ae561d8fc6f3045371f02fadf8cde45a9f42b59bac528b034015aeb9399b",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.DirectionalWords": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/DirectionalWords.lean",
+      "source_sha256": "e52f045bd1bf0a20753d06f67ca5c97e841591abdb2ced02d18d4af0ba6a62f8",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.TensorCertificate": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/TensorCertificate.lean",
+      "source_sha256": "e341459779d99f2b1757133be4fbcc7f50063699d5458450072c4fe497e17e07",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.NetworkStages": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/NetworkStages.lean",
+      "source_sha256": "9a20cde5d040d27b29e956572c770fadf56f3956c6c364de00845514a945850c",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.NetworkInvocation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/NetworkInvocation.lean",
+      "source_sha256": "acf7e4a1efb061f33346732782669662f73b17051e73c629c76b341bcd7537c2",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.NetworkLabels": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/NetworkLabels.lean",
+      "source_sha256": "f6e6ac42e5497e7465470dc2f6616fedb32d3ef02cb28ab537b12c4cdd352e68",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ScalarNetwork": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ScalarNetwork.lean",
+      "source_sha256": "78ce759ac0d97b25a3bfd438e37feccc88f710cc4895a5d4bb4fdcd638516f22",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.NetworkRoles": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/NetworkRoles.lean",
+      "source_sha256": "6affc33247a98ae104620ff7e47774b97aa36396dab4895a08dca5c824a5211b",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.FrameLifting": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/FrameLifting.lean",
+      "source_sha256": "5627a2025ea55d2ec67c73ac572820f6b91cacf664f64b2b60da7e7f80e5ebcc",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.SectorPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/SectorPrograms.lean",
+      "source_sha256": "bc300e678cc509a312aa97b9ee8a28d90fdf7d348f7c1143a195c43dfafd02b5",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.PackingPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/PackingPrograms.lean",
+      "source_sha256": "de3cb55483c5572eb27df1b2001bbd2b360e38d57c710968350dc4fde989d08d",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.WordCompilation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/WordCompilation.lean",
+      "source_sha256": "f1400c4cdb1299cc7b96f546d5b0605db422a802b1abe6310de2dd30d911e393",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.LayerPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/LayerPrograms.lean",
+      "source_sha256": "51831abed937f870d5382476786dce40dc9cef3b704c9b81d805489ccec4a363",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.WordPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/WordPrograms.lean",
+      "source_sha256": "7221727b2b2b0af9893c804d1ddd1d0309e989e2c6534fb3ba4224875d0efc52",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.FourierCompilation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/FourierCompilation.lean",
+      "source_sha256": "b928b50e431d7a625543587211697f18cb1e227151de17fca2df0cbe43b003d9",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.LayerCompilation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/LayerCompilation.lean",
+      "source_sha256": "aaf161a391dbafbca54deab113d1dea5f49d953256ff205396a44e7823cc5d2c",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.TraversalPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/TraversalPrograms.lean",
+      "source_sha256": "7487ea74f4138de924f37807f4f78dfb9ca610046f07af3702b3bb1b520c5904",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.PrefixTraversal": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/PrefixTraversal.lean",
+      "source_sha256": "d8c3e9a7ba1f356b4671fe646c53872e08cf9452c877ff33b809a998fa3ff256",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.SectorIdentities": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/SectorIdentities.lean",
+      "source_sha256": "5b6ff499f732bbab08c3a6e4df359a3c420c10104bce5343dcdd6fc74acff4c7",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.LocalCompiler": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/LocalCompiler.lean",
+      "source_sha256": "7049d62a6fe96c465f16dd4afaa6d246e3c4c0324ce22734575a8c7ef52bd2b9",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ToeplitzCompiler": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ToeplitzCompiler.lean",
+      "source_sha256": "b86def89cfc657ba5b821e555eac3f0a8bd0dd3f8d1f3cddf9c76597faad06f3",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.MeasuredPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/MeasuredPrograms.lean",
+      "source_sha256": "9812a5feded3e73d75db9acc59ebeedf8fa4df333eafc87d48236cd31c234bc1",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ChunkPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ChunkPrograms.lean",
+      "source_sha256": "1368431ebf14278d2e6175d931c306e9690f1767aec0752ca4da3f3c46e86cc1",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ToeplitzPreparation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ToeplitzPreparation.lean",
+      "source_sha256": "de3d135a65a103727b2dd8e487282dfd144ebb815e9adf282c7919e0406f87c8",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.ScalarPreparation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/ScalarPreparation.lean",
+      "source_sha256": "1ccd21b0e297137ac1d461dbece8ad2c5071a70c217477f89cb0b305f84bc267",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.IntervalPrograms": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/IntervalPrograms.lean",
+      "source_sha256": "74f75d5ce49fab456a61de011ba33f9d00e55c705fee64d5319e9410dd60781c",
+      "transformation": "strip Submission. from imports"
+    },
+    "OAI.Computability.FourierTransform.RegisterBounds": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/OAI/Computability/FourierTransform/RegisterBounds.lean",
+      "source_sha256": "644cb7a927049cb66f5a1b5a75b247ddbf197eeff675f8735ca6ea68d019e6bb",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Block.Word": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Block/Word.lean",
+      "source_sha256": "cb59fc59732ab06aec6d9bba12a462d529d73368a7151813817cbc32a91b3658",
+      "transformation": "strip Submission. from imports"
+    },
+    "WHTCheck.Solution": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/WHTCheck/Solution.lean",
+      "source_sha256": "89fb8201f63ee69413d6772eb3ddef2922a02e1c762a90842b8c49617055df47",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BlockAccounting.Steps": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BlockAccounting/Steps.lean",
+      "source_sha256": "5778c91fe4ba5898975e02ae1eaa5bcea6619c941c4babdd444ba4ebdcb39fd0",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BlockAccounting.Moment": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BlockAccounting/Moment.lean",
+      "source_sha256": "248b3b5705d0ed5c629622119a59ae763f5e1559bd612ac834d1608886c98c99",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumStructured.Labels": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumStructured/Labels.lean",
+      "source_sha256": "c2cea8a534954f14a3725311210b2028576cd3dbb16fb2dbfa425dc3cb03f0eb",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumStructured.GPath": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumStructured/GPath.lean",
+      "source_sha256": "6ce463d3b0dd5fcca3f202be2932dfc684f8c8b5bf3e06f061f786828237b121",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumStructured.Invocation": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumStructured/Invocation.lean",
+      "source_sha256": "6f0682e19a98cc6c84946302f7a05a52e1a91325191fd7e361382a16fdcdb31c",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Reframe.FrameAlg": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Reframe/FrameAlg.lean",
+      "source_sha256": "e33e8b795bd5f49c27bed9945a687cbb2e5bd64a7e61c584d0fc14d9f4904515",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BlockApply.Copies": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BlockApply/Copies.lean",
+      "source_sha256": "413daa3f2953324ef4ffd5c22f20cb9ae1ee874a8fb45fee9f6463127f15e2b1",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Carrier.Ring": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Carrier/Ring.lean",
+      "source_sha256": "e7e48e9d946a289f0c59dc9a6c8c8e70804951438d111bffdf3297f715af2b15",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.All": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/All.lean",
+      "source_sha256": "1ea7531101d6c60903cfc4317f9a411292fd9afa082b4a02896abc659547d22f",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.Maps": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/Maps.lean",
+      "source_sha256": "5797f7e4a701ea0d9d3dc7165e9a1cf5bbb5e50797cc6386fbd148e4521e493b",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.Embed": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/Embed.lean",
+      "source_sha256": "9155ffcb0e04a4695cd8ae6e4afcadb8174523320ee06e3dc854ff080ec6c84d",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.GXMap": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/GXMap.lean",
+      "source_sha256": "4a9e6909f034987660ae001046edf8898a15dd0f90616a1fc5842fe413464b47",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.Quad": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/Quad.lean",
+      "source_sha256": "694bff6cc4c7ade3713d1b0e96d4a9d10441cdc9a83c90cb273249d14dbb862e",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.Calc": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/Calc.lean",
+      "source_sha256": "584c439710e2a0b9c45c2bcdb1df48c571d9fc71ccedda9326fd18ad6d7d524f",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.Sched": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/Sched.lean",
+      "source_sha256": "941e832ab42dc9ba9e780b05f495e37b999b582e965056a6b601e4092e045b77",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.Conj": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/Conj.lean",
+      "source_sha256": "313d2bba299893c38257dd1b51c7743909daf9a6bc3415569f062bbc43fe1255",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Reframe.Geom3": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Reframe/Geom3.lean",
+      "source_sha256": "378c4dac3c7ede70f821cedb20ef04df4c7a1c484e8eecda93a5d0b0cd4f25de",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Reframe.GeomBase": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Reframe/GeomBase.lean",
+      "source_sha256": "6fc79fb0c6c911d6922d347fa67042b1341e2eb4aff28236de7b009fa66a4b16",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BridgeGeom.Blocks": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BridgeGeom/Blocks.lean",
+      "source_sha256": "d892faa57d7cb46ee6a9bd3ed07fdaaba8c68789d6e521afc8a095bc54c17693",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.GCarrier": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/GCarrier.lean",
+      "source_sha256": "2b0fafa9f71187f4bfdad8306c7dad1397877d5340f68d50f9da02c195357dc4",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.StageA": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/StageA.lean",
+      "source_sha256": "474fc081738f3734d9258b8e8ceb86dfb594b401cb236c70b1b63cca56585ac0",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.GCalc": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/GCalc.lean",
+      "source_sha256": "0a0603fdc32ef75c0750a73b067cb77137bf7c9686d38c72d66c35da4bdc28e2",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Route": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Route.lean",
+      "source_sha256": "2178d44f78de6da1a8a5d203b3c7dad2baef6eaee75fb9c96bfcd6ad5d457666",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Free": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Free.lean",
+      "source_sha256": "13503228786e9250d6df72e5bd580b824dd740a87bb95aeba80e582af141edcb",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Letters": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Letters.lean",
+      "source_sha256": "c556529f3b7a2107b723c050f15a9de2d1d4bff06cee47b667c4df13e0b21fde",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.AltBlock": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/AltBlock.lean",
+      "source_sha256": "1511a915ea619f5f98becfc7bce82c8309e87cba18329c228f625582070ecfd6",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Fibre": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Fibre.lean",
+      "source_sha256": "5a28e4a399f776e8c7b516076f86c05fd20a85cd5ce92e3cccb4bab29638beec",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Basic": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Basic.lean",
+      "source_sha256": "1d321c3ea994a4d7390b01e8dea28a0871f4990a81bb46e325f42cebef761d91",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.FreeLift": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/FreeLift.lean",
+      "source_sha256": "6b660d601cd7272df1a098dd1b95936046ff3c0a80bba83247436348d3072c8b",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.Proj": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/Proj.lean",
+      "source_sha256": "aa9168b3fe27a987a01c552d592d02b193b8bb00bf586a0f42c2698ea4991f46",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.ConjB": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/ConjB.lean",
+      "source_sha256": "ec14bfaf44b24dc924889ef5cd8fbc202b4a7fdc8fd49a346697b0fa48ccabae",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.BXMap": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/BXMap.lean",
+      "source_sha256": "9a1e628e4d78b0c75b17e19369c32b5a46ad73b17409c291e16a01bf85ecbfd4",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.StageBFull": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/StageBFull.lean",
+      "source_sha256": "0fe780e8263e2e2877a1da1cb587a072f9cf85ca33a02bf5c8382f3c0352de64",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.StageB": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/StageB.lean",
+      "source_sha256": "b0bc4e68e7d83802a36bec40ab236666035c84874d65e4576894b36f4b506875",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Core": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Core.lean",
+      "source_sha256": "485f8576b7a02f6740309af4c24c3c25cfc22e07c1e8074be2e5a0b73b0ab84f",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Climb": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Climb.lean",
+      "source_sha256": "a77dc7738b6a0565b67ab55a25aaaecda8494644d1b5f3c9872c5d1b4c662393",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.RepFree": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/RepFree.lean",
+      "source_sha256": "d2eb721dcefc2fe9b144486b4c17de7e6052c196672629ae005742be040ffa70",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Rep": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Rep.lean",
+      "source_sha256": "b1b7822969958bbc0d3149f655dcad97259700ed6b6cd416e2bafff1e20accaa",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Entry": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Entry.lean",
+      "source_sha256": "f8410ddd9296d555a2e59012202a9e826a35c1ad2195480cbc2e70df62f6f648",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.StageBSem": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/StageBSem.lean",
+      "source_sha256": "36c0ddf5c940b61a97d2ad43cb9f84caa063a6126b3eff0ea4e6d9d4aa408dfe",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Step": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Step.lean",
+      "source_sha256": "26ac58af30974eae207df0bf2aaf002fd8a8c6e96a04a0ef83c4ed7abfdd3d74",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Pair": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Pair.lean",
+      "source_sha256": "911df2bcb45849186c3e185f42a90cc7b81fb00111b57409b04ec4642aa5c536",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Cross": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Cross.lean",
+      "source_sha256": "c71968e4bb172bae75d2704ff79ddafe6430f2b91225518539c30524fa32a367",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Base": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Base.lean",
+      "source_sha256": "88e615db6484bb7b4babd15572e8967147fcbfe8e30e58f75bbd1151bfcbed4e",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Clifford.Old": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Clifford/Old.lean",
+      "source_sha256": "b39a8c4360ba2cd3f3821782ec0f764d595d943590860d068af73069aa6fae97",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.SchedR": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/SchedR.lean",
+      "source_sha256": "23413ff8859c7268bc8e018cb6b7702452c3bf87e67cf1284b767c49dad1432d",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Labels.GeomOld": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Labels/GeomOld.lean",
+      "source_sha256": "60cd0fd08ea3cc1f1a2e73774d02a2e81519083a27ec8da93717f5b8a909a85e",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Reframe.GeomNet": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Reframe/GeomNet.lean",
+      "source_sha256": "f1f6fb9cc751969c05caefa3175bed4382815d0979f1d299754f530e4be13bbb",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Reframe.SCert": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Reframe/SCert.lean",
+      "source_sha256": "fff93e38e9f9c1d83a749c1be3716a49cd1400f0c7d2db704e5975439481d9c5",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BridgeGeom.Stage": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BridgeGeom/Stage.lean",
+      "source_sha256": "7f4fa6caa0ccfee8a636597d4458d93903cc0f9403d84a14d0e983e8a0ccb1fd",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.RouteRun": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/RouteRun.lean",
+      "source_sha256": "818eafca4bb24c0352379433a9583247e9904b38260e27b5d6e3bb592639d7c2",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.Route": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/Route.lean",
+      "source_sha256": "b7235815a22cc8bbd2034416a8d75d11afc6a19b8b6fcebab40ed8282342c166",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.Mat": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/Mat.lean",
+      "source_sha256": "7da5025dec4f38c0ac18c217afe23147bc01d3b4e6b009857db453ca27ab8ace",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.Roles": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/Roles.lean",
+      "source_sha256": "6e537eede51affd50ed1867a044697d8c4d0ec877a13a356f514cd599b4a4ce7",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.Valid": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/Valid.lean",
+      "source_sha256": "73929afeb6f4db829fd74e2a130e89c5f6dd114296a60a5cad405b32611fbcac",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.CCert": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/CCert.lean",
+      "source_sha256": "58929cfac7e3a98304cc88cc4afd7bf64065f7eeeb9a090cda98233b358094cb",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.PCert": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/PCert.lean",
+      "source_sha256": "c469990119b0d87dd79e93f268b13348da55d8c13a2d3a1312fe50b267077523",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.Check": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/Check.lean",
+      "source_sha256": "e74782bb97b326ad480ce0140a1eec75745d823a9307535200f1b17ca9d81028",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Combine.Ranks": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Combine/Ranks.lean",
+      "source_sha256": "a8f4f2d392ca6a67533b682976367060e38d56157ec1b1839d84b9b4ca923033",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Combine.Chunks": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Combine/Chunks.lean",
+      "source_sha256": "ac1c684686f7c8ec832932e209e54da3d5eaef90686e80151545aad7b565dfba",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.Circ": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/Circ.lean",
+      "source_sha256": "a03b45f3cee3b2b0b76d843890f0ab753498eb22404d15de0428567c3c892691",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.Mats": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/Mats.lean",
+      "source_sha256": "0964faaa038564390bfb57eb0cbf7b157cb82bbcd498663b7f5677bf29c4faf4",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.Proj": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/Proj.lean",
+      "source_sha256": "a6ae0ad436f6693d099fa57eb12504b44a8b2b2517e35502d31ea5a123bb7a79",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.Impl": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/Impl.lean",
+      "source_sha256": "d6e46c1569632585e58cc73467f7f9ece2943ca7a4ac26cb64d3c6b942a61fc1",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.Sound": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/Sound.lean",
+      "source_sha256": "a32f812d6448e837b9398daa7c26df3f6b5b5092643c6390f1a533396424a882",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.Phase": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/Phase.lean",
+      "source_sha256": "4c2132d8bd37ee2fabb9f01ae7bdf0a93ad16c7a1c0ba771c0c40068655e8ad1",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.Bits": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/Bits.lean",
+      "source_sha256": "6fd196492a6a3394a03b8bb0b45ed93905f19bf9391952b51d774e9f1d0077c3",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.Scalar": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/Scalar.lean",
+      "source_sha256": "c89a73d4c7ce407ac61263b8dd5ab62482303f4c8077c3dee5fbfbabbabf7840",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.ScalarDef": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/ScalarDef.lean",
+      "source_sha256": "d936ac4113390e9e28a3db030ef9e7ed1ebffe7f74c58ae2b5075c79806f0863",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.Sound": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/Sound.lean",
+      "source_sha256": "cd48af96f0707ba5170db1a5537f2c71f8a1b8453551bcabc6a95a7cb7466ff1",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Combine.Split": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Combine/Split.lean",
+      "source_sha256": "4969e9fb6f71ad2c7f1f741fd53f2cb4590711165816f69a89c340c3150b74c8",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Combine.SplitDef": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Combine/SplitDef.lean",
+      "source_sha256": "ad2be95de73c1b108f2ff6ddd89b6c0025f5008880586e2f6331641f826db3f0",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.Spec": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/Spec.lean",
+      "source_sha256": "06b5266162ea13b6580717bbcbd65018c80aa9023eb23d4bb36d8c48974f762a",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.Elim": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/Elim.lean",
+      "source_sha256": "c06680ca475a8f1a8a8f4ab55f16c2fc8722c88944ace1da97ae81c982afb757",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.Bits": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/Bits.lean",
+      "source_sha256": "9c62b041e30b979c532f9ba4c5b6b08d1f112cce76e51b445df0430d0d62d61e",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.Def": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/Def.lean",
+      "source_sha256": "9b55f55ead7af9b93b60a2368d893349b5885029dc929f84f336ab65f40b9b20",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Data.Raw": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Data/Raw.lean",
+      "source_sha256": "aba94a004c94dcae7cf3047c88a6da9561555f4ebe8ab92e299e6ce09ee7aa66",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.Canon": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/Canon.lean",
+      "source_sha256": "ff08d91340a59de62cfc4f64e9e3a90ca52a0659ec4671b1ff3f9b9ed25dafa6",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.EndSound": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/EndSound.lean",
+      "source_sha256": "2c601e00c6d7829432bc30a13233954f569f53e3b1cee59eacac3b14b2da2bed",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.Ends": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/Ends.lean",
+      "source_sha256": "0c1ce66c0757d9582f173961e384b11f497a1c4d55a608f0cdf818618ba04fd0",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Labels.EndDef": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Labels/EndDef.lean",
+      "source_sha256": "ffd0db99d0ef81262ee26f1da0a6e10e6e6bd20c5652151e8144819bdd5286b9",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Gauge.Defs": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Gauge/Defs.lean",
+      "source_sha256": "6a311b389167616f15e22cd4c5a0cdab7816a5ecc931b7184364664d47f243a1",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.InvThm": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/InvThm.lean",
+      "source_sha256": "b876f7f07e70abce5a15aa9660d7febae4563e78fab98cddec6cea7cc14c5d15",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.Inv": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/Inv.lean",
+      "source_sha256": "9756d6ea2d9a9dfe6429b7a483d7dcfd8147bddb51770c6a95b7c1872797f3b5",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.Win": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/Win.lean",
+      "source_sha256": "d3009482c691de7ea84038b452fafee1988b132015ff6dd807635ab2e0f1e9e6",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Top.Api": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Top/Api.lean",
+      "source_sha256": "3a5232e74185b28192d7a016bce4f0d939a6518c4bcd0ce20ee8d90db9668a1a",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Top.Menu": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Top/Menu.lean",
+      "source_sha256": "79c5583b48260828a565e48d136319a3023ac78f2eb1bbe91dffe4c4d8cb831b",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Top.Assemble": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Top/Assemble.lean",
+      "source_sha256": "b1d4a10c464a98030f0025e522410d5ef921ac152938859b35e21a87f4d40a35",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Group": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Group.lean",
+      "source_sha256": "f54afeb8043e73f882694c57f49f400479cc8f37c3abdf679576e2daa2eb748f",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Cert": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Cert.lean",
+      "source_sha256": "1232b41f4f3df8d5290bc98eb01086998f44e255612291a35c93c69a67278dce",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Over": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Over.lean",
+      "source_sha256": "b2747c1237ca74a12a1d91d337ec785d33d90ad480601eced1a16ad9ca7c8000",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Main": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Main.lean",
+      "source_sha256": "f0e07f5fc2a677672acb6469de6d0eb467a8ae970f4791e9f0b54b7323388b02",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Recursion": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Recursion.lean",
+      "source_sha256": "171d992c02153bc90102a3cc927a690e9a690e4149c4c861799b5edc32590a0a",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Level": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Level.lean",
+      "source_sha256": "5ce2c701cbcab946e152d549fa2b0f327658cb6f75c2616d8dee1a9bc71c881e",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Sweep": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Sweep.lean",
+      "source_sha256": "85b7fe9adff5570740c8c059f1cae8b457407cc325f64be557a26be1282ea79a",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Engine.Adapt": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Engine/Adapt.lean",
+      "source_sha256": "eecb50aa087a8662c033d56563230b01b543063a3205c692042d9805cee320ab",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.FoldRate.Group": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/FoldRate/Group.lean",
+      "source_sha256": "344f1b35d5867af88510e64e3a9d14957f175c3efb99f991de9abc384e3c055f",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.FoldRate.Arith": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/FoldRate/Arith.lean",
+      "source_sha256": "7bf3082c81b204ab3cbaa9335c1e3d4d4346e38209e88e86daa22a8218bbc57d",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Carrier.PhasedInv": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Carrier/PhasedInv.lean",
+      "source_sha256": "3ffa87fc4c38e34b642e90a8d031daef091d298d188696f9daec2db16750e063",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Data.Price": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Data/Price.lean",
+      "source_sha256": "031200bb59c9250eca58e4dbb23a31e5757f02c0161f57ed9ab75d029adddef8",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Combine.Hist": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Combine/Hist.lean",
+      "source_sha256": "3e086ed030b80d76aa69c23e32e082fbc3134e68dc50b06126d070a905867566",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Combine.XCirc": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Combine/XCirc.lean",
+      "source_sha256": "ddf6388748350045859096975367c76054e52902abb8b47650bab218d8655a99",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Combine.XNetwork": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Combine/XNetwork.lean",
+      "source_sha256": "cc0598e727537a504349a2e6dc809f2f89f8254f8f42de2e23a50f2c52b4363b",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumStructured.Certificate": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumStructured/Certificate.lean",
+      "source_sha256": "497682c51b01ddbb133e835d2ac5d1cf560361d27333cbba6b3ec2be7f8a2611",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumStructured.Network": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumStructured/Network.lean",
+      "source_sha256": "6ba64486bc432e91b12b97026f37296106f812855d90b21225fe27d3fef172cf",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.SharedSumChecker.Net": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/SharedSumChecker/Net.lean",
+      "source_sha256": "59c5875970926aa3ad69665c61e0a1164fbc9d8e18a08921062e679706bc8298",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Data.Count": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Data/Count.lean",
+      "source_sha256": "61f6ed6e63186f93bab6242a96c91854a125da9cd0d8f0addc782d0bf4120713",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Main": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Main.lean",
+      "source_sha256": "fddee08d00aed9cfad4934b484a97e4d9fc457273ecc91d1c151170ec8afece9",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Cols": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Cols.lean",
+      "source_sha256": "d1d3423582be52c915b581a2ae282d81e6efd3f0796aef4c4752b175aac4c7cd",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Mat3": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Mat3.lean",
+      "source_sha256": "8380589e10db08d53f9388029b4a51d5c9bfacb46edc6b05e1d3f997bccc8be5",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Roles": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Roles.lean",
+      "source_sha256": "e47fd37ccfea345e51029d21f589cddef4368d9d129a7194b459f51139f74361",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Id": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Id.lean",
+      "source_sha256": "7ee41559c6a3c12ac42f77f55a580c03e6fa72ae933b1833932520f909f2e881",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Check": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Check.lean",
+      "source_sha256": "3c1fb90b36972a0d20e0932c3a8352846bb11e5f36aa9ad4096b343fa7c2a23c",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Runs": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Runs.lean",
+      "source_sha256": "b51ca7a8cd7c7ff3aab3801289d4ce3d3fbc5a119da0d83af9df7c22e3e4e344",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.End": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/End.lean",
+      "source_sha256": "fbbd61abb625651ad54e267e4cdd5228990239ca2b041fb27a68645e255fc35b",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Fin": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Fin.lean",
+      "source_sha256": "5f6900bb493f35ad88a490cb0544d3666cbbf110dbbcb17a3d919cf2ec0b39c7",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Scat": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Scat.lean",
+      "source_sha256": "7b4bb12bdd107526b985dde55f54e48f8fdd8f91a13bcc130965c9bcd44b8160",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Ops": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Ops.lean",
+      "source_sha256": "a006f49076212a3ffd509f1722ba6216359e85770f784b1da1417cbda9b08ee7",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Step": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Step.lean",
+      "source_sha256": "e7cfb12f249a1d9f24b738ad18460d919e7b0a30624b1e64cf5b8dcf80de1ca8",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Bits": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Bits.lean",
+      "source_sha256": "5f00d45dd41052e24f4a8a81be92677d8ee16a43a759c175c957bccfc5ff5d3b",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Seg": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Seg.lean",
+      "source_sha256": "0e9ea9d7009e8da05d9ea162614f638ea7efacf6e2e5ede123b82f184dda5e3c",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Scalar.Def": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Scalar/Def.lean",
+      "source_sha256": "0e93d09ba521aec25625a0591fe1cd9f3bc4460128b672b18c46e7463a1708b2",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.ScalDef": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/ScalDef.lean",
+      "source_sha256": "e492e917ef9a88216ec37594b86b6c20e16976ba5f5109c50ad5fca9d123b2a9",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.ScalSound": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/ScalSound.lean",
+      "source_sha256": "f5da2d57d36cce0556257cc880136344bb7e28a04d46dbe3dc2714f6bda03f3e",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.ScalRun": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/ScalRun.lean",
+      "source_sha256": "5c0fe7270f4c554fdb22593b9f170d6807039326966cb64b0bb440957e960e7b",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.Scat": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/Scat.lean",
+      "source_sha256": "59b273bd5c07badced9f3405466ceeb1b1ab599cc7dd6b0db20d7f846e517064",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.Routes": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/Routes.lean",
+      "source_sha256": "1640d33c3d3b05cb97175b43ead46c7f64d87d34f6e6505db2764b28d6abeb10",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.ScalFin": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/ScalFin.lean",
+      "source_sha256": "ac63aa00c395509a5f82f2932d2bc3bff1c0d7ceec515b8be71ab9c79ae38325",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.ScalId": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/ScalId.lean",
+      "source_sha256": "7b76830418fab4a68b990cb2ec66594e56ca823c1230e6c019840bc994e44337",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.CarrierCheck.ScalOps": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/CarrierCheck/ScalOps.lean",
+      "source_sha256": "7d2357d240fb025d957178a727ed0f6f994e935e309b3394b27925c9798aa49e",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Gauge.ECheck": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Gauge/ECheck.lean",
+      "source_sha256": "7c47db52a97a949d7bab1aba049d976ea3bad4434c678e93867e4d02e453f3ae",
+      "transformation": "strip Submission. from imports"
+    }
+  },
+  "results": [
+    {
+      "module": "Work.Gauge.Defs",
+      "exit": 0,
+      "seconds": 25.586812410999983,
+      "source_sha256": "c5423488007d6df4ac81f3b4b90d00945f6e1afa435c74214da5d89bec8d70d6"
+    },
+    {
+      "module": "Work.Gauge.Labels",
+      "exit": 0,
+      "seconds": 5.3402318460000515,
+      "source_sha256": "06f55c2422591519ab32b52631f5994b8e8ee44dbc9e01c0fce05ab700817645"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588.S0",
+      "exit": 0,
+      "seconds": 12.102603962999865,
+      "source_sha256": "36c0c39774c3d248c2be5af6e1aaa444d2218fe03b56d729c265a87fe8f01420"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588",
+      "exit": 0,
+      "seconds": 0.22968261100004383,
+      "source_sha256": "77d8f0fbbab3f102f876181f3f72e06e182c09d188fea07109d9a0a072303ac3"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Gl",
+      "exit": 0,
+      "seconds": 0.39164837600014835,
+      "source_sha256": "7dfff2474be1d1213528ba7fc48b9fe31d2bd237554c06d30c4a9da6788ed9e3"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Hist",
+      "exit": 0,
+      "seconds": 2.3912454169999364,
+      "source_sha256": "4074e69ee3a00cf62818be0cc840262d49b61e3fa03ddb1c967d24a5ec74428f"
+    },
+    {
+      "module": "Work.GCert.Data.C588Price",
+      "exit": 0,
+      "seconds": 4.311534101000007,
+      "source_sha256": "65c12b7d8a44a8f159f6e1151a8783e4ad414fd2db575a928c64fd2eb32143cf"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Tab0",
+      "exit": 0,
+      "seconds": 0.2831600769998204,
+      "source_sha256": "67a3d89c725468da80f74d91921ab727d718b619ae1d2262051ffa5700640039"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Tab1",
+      "exit": 0,
+      "seconds": 0.3350103619998208,
+      "source_sha256": "6a37757e18e34fee805fef815f6aa36f6389acd8fc321eb5571af3bd10eccca6"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Tab2",
+      "exit": 0,
+      "seconds": 0.3012647600000946,
+      "source_sha256": "de36dc65a971bede6086217679e55de6420ac284176fc6b00019c069c542109e"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Tab3",
+      "exit": 0,
+      "seconds": 0.28896635199998855,
+      "source_sha256": "10b2d04fe04f4e9d564a6c03bb83c72ea9ea5476b1b6ec83fc09a669f533a7ac"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Par",
+      "exit": 0,
+      "seconds": 0.22808065399999577,
+      "source_sha256": "ab6e13d55021106d0188057a9cf397eb41720662438e470b9b9e68c55e506048"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Seg0",
+      "exit": 0,
+      "seconds": 1.0969116249998478,
+      "source_sha256": "dc71125fc3a65829637c47544b54fc92bafc03f69fe41599eca23097e37144fc"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Seg1",
+      "exit": 0,
+      "seconds": 1.0732951699999376,
+      "source_sha256": "ccaa6a17f6a9346038bb88d5ca17ac209e9879e50fbff0b2b154e1c55f9569c6"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Seg2",
+      "exit": 0,
+      "seconds": 1.9367654709999442,
+      "source_sha256": "fb55a57d2093966985187135693e57eb11bda679dcad52ac35f3daa09a7c49f4"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Seg3",
+      "exit": 0,
+      "seconds": 1.7488158180001392,
+      "source_sha256": "394b2b7a74300f5d935b7a694372c6b90badf3002915c1f2ca7fe9edf051f9c8"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588SegF",
+      "exit": 0,
+      "seconds": 0.24895310100009738,
+      "source_sha256": "503558d28532bc5cbc293b30fa7bd9056c19fa0dd78387d091b65ae271e16df2"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588End",
+      "exit": 0,
+      "seconds": 4.890447651999921,
+      "source_sha256": "555855035ff8c7a25e4f8ab194d6025f2ea667fc69d19b4bb5678cbb6d580a3f"
+    },
+    {
+      "module": "Work.GCert.Data.C588Cert",
+      "exit": 0,
+      "seconds": 4.200933147999876,
+      "source_sha256": "4156805d11ac5280bf21ea64f38786e07141a502cfda590a4ac0c4cab9cc15aa"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Scal0",
+      "exit": 0,
+      "seconds": 3.7403228870000476,
+      "source_sha256": "0127393879aad048c66a3a82114155cc0e6a8e53c30fa100362dc4c4ce7d298a"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Scal1",
+      "exit": 0,
+      "seconds": 3.800530815000002,
+      "source_sha256": "20769bd8d91cf8003501743a599d5cf805490afc2d8cd6d564e5228e2df29ac8"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Scal2",
+      "exit": 0,
+      "seconds": 3.908009019000019,
+      "source_sha256": "f80e8df899f41330156b27dd4784a91c206a846eafaa90a23b6ec91996ccea73"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Scal3",
+      "exit": 0,
+      "seconds": 3.7738379699999314,
+      "source_sha256": "31634e6aebdca59772c4290b1b733c606561debe17b53e1bbbaeba0935ac90ca"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588YChk",
+      "exit": 0,
+      "seconds": 0.6198600950001492,
+      "source_sha256": "47b3551a958bb86f30b51418dd596cef012e52235ee29df18aa0675ed2ecbc5e"
+    },
+    {
+      "module": "Work.GCert.Data.C588ScalOK",
+      "exit": 0,
+      "seconds": 5.959228236000172,
+      "source_sha256": "aa041bb3b7644a44c9b6aa8c954cdc50ebace8b122536d13f4209efee55cc6da"
+    },
+    {
+      "module": "Work.Gauge.ECheck",
+      "exit": 0,
+      "seconds": 5.759461486999953,
+      "source_sha256": "0e94d3b3831cd70f9c88e6801bbd5f1864866f616cefd86ae748308445f7c26b"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588EChk",
+      "exit": 0,
+      "seconds": 15.301726964999943,
+      "source_sha256": "0b3beb5cdc04f7efade459eb8b3ebbea08dc66480abd08f040b796226658b7bc"
+    }
+  ]
+}

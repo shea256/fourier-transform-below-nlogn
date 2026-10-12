@@ -1,0 +1,122 @@
+[
+  {
+    "url": "https://bigospeedrun.com/exact-dft",
+    "fetched_utc": "2026-10-12T18:32:13.885395+00:00",
+    "top_scores": [
+      {
+        "score": "2555269/2500000000",
+        "level": "lean-verified",
+        "links": [
+          "https://github.com/bigospeedrun/verifier/actions/runs/38142057874",
+          "https://github.com/nmamano",
+          "https://x.com/Nil053",
+          "https://github.com/bigospeedrun/verifier/blob/f9ffbc1f9dfbfaf84d819b087c999361d0fa3372/submissions/dft/nmamano-dft-record/Submission.lean",
+          "https://github.com/nmamano",
+          "https://x.com/Nil053"
+        ]
+      },
+      {
+        "score": "4381239/5000000000",
+        "level": "lean-verified",
+        "links": [
+          "https://github.com/bigospeedrun/verifier/actions/runs/38106559475",
+          "https://github.com/jacobalansussman",
+          "https://github.com/jacobalansussman/wht-power-saving-lean/blob/9c94857bbaee886f8649edee0bc2d3c738f9555e/README.md",
+          "https://github.com/jacobalansussman"
+        ]
+      },
+      {
+        "score": "47171/62500000",
+        "level": "lean-verified",
+        "links": [
+          "https://github.com/bigospeedrun/verifier/actions/runs/38050668997",
+          "https://github.com/jacobalansussman",
+          "https://github.com/chafreaky",
+          "https://x.com/cfky_",
+          "https://github.com/chafreaky/wht-power-saving-lean/blob/fd19e46b728faa414cbfbf91b01a6a0b7903375d/README.md",
+          "https://github.com/jacobalansussman",
+          "https://github.com/chafreaky",
+          "https://x.com/cfky_"
+        ]
+      },
+      {
+        "score": "3737273/5000000000",
+        "level": "claimed",
+        "links": [
+          "https://github.com/jacobalansussman/wht-power-saving-lean/blob/f010392c923279e3dd59ef3aa5fedad23affc5fd/README.md",
+          "https://github.com/jacobalansussman",
+          "https://github.com/jacobalansussman/wht-power-saving-lean/blob/f010392c923279e3dd59ef3aa5fedad23affc5fd/README.md",
+          "https://github.com/jacobalansussman"
+        ]
+      },
+      {
+        "score": "67/100000",
+        "level": "claimed",
+        "links": [
+          "https://github.com/shea256/fourier-transform-below-nlogn/blob/53f03853aea8caf46de7cc9d93efc9bb034bb4c7/results/round11.md",
+          "https://github.com/shea256",
+          "https://x.com/ryaneshea",
+          "https://github.com/shea256/fourier-transform-below-nlogn/blob/53f03853aea8caf46de7cc9d93efc9bb034bb4c7/results/round11.md",
+          "https://github.com/shea256",
+          "https://x.com/ryaneshea"
+        ]
+      }
+    ]
+  },
+  {
+    "url": "https://bigospeedrun.com/integer-multiplication",
+    "fetched_utc": "2026-10-12T18:32:13.923309+00:00",
+    "top_scores": [
+      {
+        "score": "162536523418317/100000000000000000",
+        "level": "claimed",
+        "links": [
+          "https://github.com/CrocSwap/integer-mult-bounds/pull/610",
+          "https://github.com/DreamingOfClouds",
+          "https://github.com/CrocSwap/integer-mult-bounds/pull/610",
+          "https://github.com/DreamingOfClouds"
+        ]
+      },
+      {
+        "score": "324457099582947/200000000000000000",
+        "level": "claimed",
+        "links": [
+          "https://github.com/CrocSwap/integer-mult-bounds/pull/609",
+          "https://github.com/jeremykothe2",
+          "https://github.com/CrocSwap/integer-mult-bounds/pull/609",
+          "https://github.com/jeremykothe2"
+        ]
+      },
+      {
+        "score": "20266063618123/12500000000000000",
+        "level": "claimed",
+        "links": [
+          "https://github.com/CrocSwap/integer-mult-bounds/pull/604",
+          "https://github.com/DreamingOfClouds",
+          "https://github.com/CrocSwap/integer-mult-bounds/pull/604",
+          "https://github.com/DreamingOfClouds"
+        ]
+      },
+      {
+        "score": "810123377429359/500000000000000000",
+        "level": "claimed",
+        "links": [
+          "https://github.com/CrocSwap/integer-mult-bounds/pull/607",
+          "https://github.com/jeremykothe2",
+          "https://github.com/CrocSwap/integer-mult-bounds/pull/607",
+          "https://github.com/jeremykothe2"
+        ]
+      },
+      {
+        "score": "1614217970939911/1000000000000000000",
+        "level": "claimed",
+        "links": [
+          "https://github.com/CrocSwap/integer-mult-bounds/pull/603",
+          "https://github.com/jeremykothe2",
+          "https://github.com/CrocSwap/integer-mult-bounds/pull/603",
+          "https://github.com/jeremykothe2"
+        ]
+      }
+    ]
+  }
+]

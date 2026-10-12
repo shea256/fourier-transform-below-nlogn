@@ -1,0 +1,51 @@
+{
+  "status": "EXACT_ARITHMETIC_CANDIDATE_LOCAL_LEAN_BRIDGE_UNPROVED",
+  "source_copies": true,
+  "schedule": "cyclic",
+  "source_sha256": "a3168e3b1d9eb3a001d2ae3632a01d41280481b6be78cf46dd4ebaf6f331225d",
+  "schedule_sha256": "5b18d19de2ec27cab71f9353e93854f935059c2a909dfefe61715f9af98a9cbe",
+  "h": 9,
+  "m": 73,
+  "v": 112,
+  "local_profile": {
+    "1": 2596,
+    "2": 492,
+    "3": 280,
+    "4": 232,
+    "5": 56,
+    "6": 56,
+    "8": 120
+  },
+  "local_residual_count": 616,
+  "banks": 5040,
+  "W": 12208,
+  "deficit": 2560,
+  "profile": {
+    "1": 189360,
+    "2": 35424,
+    "3": 20160,
+    "4": 16704,
+    "5": 4032,
+    "6": 4032,
+    "8": 14088,
+    "16": 3584,
+    "32": 3584,
+    "48": 3584
+  },
+  "exact_rate": {
+    "root_lower": "9634139259/7812500000000",
+    "root_upper": "1233169825153/1000000000000000",
+    "root_lower_decimal": "0.001233169825152",
+    "root_upper_decimal": "0.001233169825153",
+    "lower_endpoint_margin_at_least": "2.274799451923540807636251132957072071861186754094131702E-15",
+    "upper_endpoint_excess_at_least": "5.925892668632277860175762120672899665791713484994914181E-17",
+    "moment_upper_at_dft_record": "0.9995075358414671970972153379942190295214543188266457138",
+    "strictly_beats_record_as_a_moment": true,
+    "method": "80-term rational atanh log; 30-degree rational exponential; explicit tails",
+    "scope": "Arithmetic only; no circuit realization or DFT transfer is inferred"
+  },
+  "negative_controls_rejected": [
+    "duplicate owner in one call",
+    "wrong padding"
+  ]
+}

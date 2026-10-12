@@ -1,12 +1,31 @@
 # Reproducing the finite checks for Problem #130
 
-Run from the repository root with **Python 3.10+**, standard library only:
+Run from the repository root with **Python 3.11+**, standard library only:
 
 ```sh
-python3 verification/run_checks.py
+python3.11 verification/run_checks.py
 ```
 
-The runner executes the earlier suites, round-six, round-ten, round-eleven and five-stage verifiers, and generated-document/registry consistency checks. It writes fresh console transcripts under ignored `outputs/` files. Finite checks support the written proofs; they do not establish an end-to-end formal theorem or constitute independent review. The separate Lean workflow below reproduces the imported formal theorem. Incorporated versions are listed in [the improvement log](../IMPROVEMENTS.md).
+The runner executes the earlier suites, round-six, round-ten, round-eleven, five-stage and complex588 verifiers, and generated-document/registry consistency checks. The complex588 suite requires **Python 3.11+**. The runner writes fresh console transcripts under ignored `outputs/` files. Finite checks support the written proofs; they do not establish an end-to-end formal theorem or constitute independent review. The separate Lean workflows below reproduce the formal theorems. Incorporated versions are listed in [the improvement log](../IMPROVEMENTS.md).
+
+## Current complex588 theorem: `0.0012331685`
+
+```sh
+python3.11 verification/verify_complex588.py
+```
+
+The verifier checks the pinned proof sources and retained Lean receipt, regenerates the source-copy circuit and cyclic bank table, replays every scalar basis vector over exact rationals, and checks the moment with rational intervals. It rejects four circuit/schedule mutations and four corrupted proof receipts. These finite checks supplement the complete all-length Lean theorem.
+
+To rebuild that theorem, compare both full OpenAI challenge statements, inspect permitted axioms and reject a stronger challenge:
+
+```sh
+cd lean/complex588
+python3.11 scripts/check_provenance.py
+python3.11 scripts/regenerate.py
+bash scripts/build_and_check.sh build-logs
+```
+
+The [proof package](../lean/complex588/README.md) documents the pinned Lean/Mathlib environment and official comparator command. The [audit](COMPLEX588_AUDIT.md) and [receipt](../lean/complex588/receipt/verification.json) distinguish completed local checks from site acceptance. This new instantiation credits PR588's circuit, the #401/#377 geometry, Sussman's formal engine, Mamano's published gauged extension and OpenAI's reduction; full upstream notices are retained.
 
 ## Five-stage Fourier result: `0.0007547360`
 

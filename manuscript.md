@@ -8,10 +8,10 @@ We give a reusable conditional transfer from finite complex tensor networks to t
 
 \[
 \boxed{T(n)=O\!\left(n(\log n)^{1-\delta}\right),\qquad
-\delta=0.000754736.}
+\delta=0.0012331685.}
 \]
 
-The selected finite witness has strict tensor saving $a=0.0007547361$. The selected bound is the upstream theorem from Jacob Sussman's five-stage framework and Chafik Boukhalfa's stronger instantiation of the community circuit, reproduced from pinned project sources with the standard Lean axioms and theorem/definition comparisons. Independent human mathematical review remains pending. The reusable written transfer argument in this paper is distinct from that imported formal proof. This paper separates the reusable transfer theorem, the selected construction, and the history of incorporated improvements. No practical FFT speedup is claimed.
+The selected finite witness has strict tensor saving $a=0.0012331686$. The selected bound is a new Lean-checked instantiation of the credited community circuit, geometry and OpenAI reduction. Its source bundle, standard-axiom audit and full-statement comparisons are retained. Independent human mathematical review remains pending. The reusable written transfer argument is distinct from this formal proof. This paper separates the reusable transfer theorem, the selected construction, and the history of incorporated improvements. No practical FFT speedup is claimed.
 
 ## 1. Scope and the finite-network interface
 
@@ -146,112 +146,115 @@ A result record contains its exact tensor witness $a$, Fourier choice $\delta$, 
 
 The stable source of Sections 1--5 is `paper/framework.md`. Network-specific arguments live under `results/`; `results/registry.json` selects the current result explicitly. The build assembles the selected record into this paper and generates the improvement log. It never selects the largest upstream number automatically.
 
-An incorporated result requires a written discharge of the network contract or an imported formal Fourier theorem, a pinned complete witness, exact moment and absorption checks, a reproducible finite verifier, and a review record stating its limitations. The status **proposed** does not mean independently reviewed or formally verified. The status **formalized** identifies an incorporated upstream theorem with a reproduced Lean project build, axiom audit and statement comparisons; it does not extend that claim to these reusable written arguments or imply independent human review. Candidates remain visibly separate from incorporated results. Earlier proofs, certificates and publication artifacts remain available even after a newer result is selected.
+An incorporated result requires a written discharge of the network contract or a formal Fourier theorem, a pinned complete witness, exact moment and absorption checks, a reproducible finite verifier, and a review record stating its limitations. The status **proposed** does not mean independently reviewed or formally verified. The status **formalized** identifies a pinned theorem with a reproduced Lean project build, axiom audit and statement comparisons. The result record distinguishes an imported theorem from a new local instantiation. This status does not extend to these reusable written arguments or imply independent human review. Candidates remain visibly separate from incorporated results. Earlier proofs, certificates and publication artifacts remain available even after a newer result is selected.
 
 This work is AI-assisted. Additional checks written in this repository are not independent mathematical review. Vendor checkers are identified as such; random exact or modular trials are not described as universal identities. Lean arithmetic certificates are distinguished from a formal network or Fourier theorem. No novelty or priority is claimed for imported network improvements.
 
 The following selected witness supplies the construction-specific arguments and attribution. Its status and source pins belong to that record; future updates need not rewrite the general transfer theorem.
 
-## 6. Sussman and Boukhalfa's five-stage Fourier result
+## 6. PR588 circuit in the gauged nine-stage Fourier layout
 
-### 6.1 Sources, theorem and status
+### 6.1 Statement and comparison
 
-This record incorporates the community complex circuit exported by Chafik Boukhalfa in CrocSwap PR256 [CB], in Jacob Sussman's five-stage construction and formal Fourier framework [JS]. The explicit-program package is pinned to `db3f75cdc5f03f3131d48fb220f6bf1958404ff3`; the corresponding Fourier proof is pinned to `fd19e46b728faa414cbfbf91b01a6a0b7903375d`. The latter instantiates Sussman's framework with the stronger PR233 circuit. These are upstream constructions and theorems. This project's contribution in this update is their incorporation, source audit and reproducible checks.
+One fixed deterministic program computes the exact DFT at every positive length
+with saving `delta = 12331685/10^10 = 0.0012331685`, in OpenAI's exact complex
+arithmetic RAM model. Scalar preparation, array and index work, and the
+specified-root interface are included. A companion theorem proves exact
+convolution. Coefficients are unrestricted; integer indices have a polynomial
+bound and logarithmic-size words. No floating-point, bit-complexity or practical
+crossover claim follows.
 
-The selected exponents are
+The all-length saving is about **20.65% above** the strongest verified baseline
+we found, Nil Mamano's `2555269/2500000000 = 0.0010221076`, from the pinned Big O
+Speedrun submission. It is a new instantiation assembled in this project, not
+a theorem already contained in CrocSwap PR588. The comparison concerns the
+logarithmic exponent, not measured speed.
 
-\[
-a=\frac{7547361}{10^{10}}=0.0007547361,\qquad
-\delta=\frac{7547360}{10^{10}}=0.0007547360,
-\qquad a-\delta=10^{-10}.
-\]
+The proof is in [lean/complex588](../lean/complex588/). The theorems
+`OAI.PowerSaving.transform_mainC588`, `convolution_mainC588`, and
+`RAM.hillsC588_program` report only `propext`, `Classical.choice` and `Quot.sound`.
+DFT and convolution pass the full OpenAI statement/dependency comparison; a
+one-unit-stronger challenge fails. The official comparator also accepts the
+exported proof in both nanoda and Lean's kernel. Human mathematical review
+remains pending.
+The [verification audit](../verification/COMPLEX588_AUDIT.md) records the exact
+scope, build and independent-kernel status.
 
-In OpenAI's exact-complex-arithmetic RAM model, the imported theorem states that one fixed program computes the exact DFT for every positive length in
+### 6.2 Construction and exact invoice
 
-\[
-T(n)=O\!\left(n(\log n)^{1-\delta}\right).
-\]
+The local provider is `atm3` from Jeremy Kothe's PR588 at commit
+`6d0e53b66c29abd17981881a09eaff41ac862d85`. It incorporates the cited community
+entrance promotions, cold kernels, joint prefixes and frame coalescences.
+We introduce 112 source-copy helpers so its mutable sources fit the existing
+invocation interface. Target preconditioning is moved across scatter with its
+inverse applied to the scatter matrix; rational register units absorb scales.
+The resulting certificate is checked in full by the unchanged Lean predicates.
 
-It includes scalar preparation, array/index work and the supplied-root interface. The root order is computed by a program and is less than $1024n^3$; the solver receives that specified root. Integer values and indices have a polynomial bound in $n$. A separate theorem supplies exact convolution. This changes neither the model nor the absence of a practical FFT-speed claim.
+The local parameters are `h=9`, `v=112`, `R=616`, entrance rank sum `476`, and
+eight rank-8 centre copies (`cst=64`). Its histogram is
+`{1:2596, 2:492, 3:280, 4:232, 5:56, 6:56, 8:120}`, with total rank `6924`.
+The 112 extra source-copy helpers and the remaining rank-8 climbs of the real
+sources are fully charged. Terminal cleanup now affects helpers only and is
+omitted after the final charged climbs; Lean checks all required outputs and
+dirty-helper conditions after this change.
 
-The pinned Lean project was rebuilt from source, using the pinned Mathlib cache. The WHT and all-length DFT/convolution statement comparisons passed, and the Fourier and tensor-program theorems report only the standard Lean axioms. The result is selected as **formalized**, referring to that imported theorem. The receipt, exact commands and limits are recorded in `verification/FIVE_STAGE_AUDIT.md`; independent human review remains pending.
+Place this circuit in all 72 calls of the #401/#377 dedicated-bank layout. A
+cyclic bank schedule packs the 616 residual helper widths into 70 bins of
+capacity 73 and replicates each bin 72 times. Within a bin, helper position `j`
+uses bank `(t+j) mod 72` in call `t`. The literal table is injective in every
+call and satisfies every bank's exact load equation, checked by Lean.
 
-### 6.2 The explicit complex program
+There are 5,040 helper banks, `W=12208` live roles and `m=73` coordinates per
+unit. The fully charged global histogram is:
 
-The underlying lineage is icekylinx's paired cubes and source-assisted flow, eumemic's PR168 v4 modules and frames, Avi Eisenberg's PR191/193/194 reconstruction and pairing, and Boukhalfa's PR200/233 maximum-weight reuse pairing. PR233 retains the operation frames and replaces the reuse pairing. Sussman supplies the general frame formalization, certificate format and checker; Boukhalfa's PR256 emitter lowers the flow witness and exact local lifts into that format. an664's sharing principle and the earlier carrier, producer and endpoint work retain their source credits.
+| Rank | Count | Rank | Count |
+| ---: | ---: | ---: | ---: |
+| 1 | 189360 | 6 | 4032 |
+| 2 | 35424 | 8 | 14088 |
+| 3 | 20160 | 16 | 3584 |
+| 4 | 16704 | 32 | 3584 |
+| 5 | 4032 | 48 | 3584 |
 
-The certificate has $h=22$, $v=1320$, $R=9412$ helper slots, $12052$ numbered registers, $18248$ frames, and $52300$ gates across its two phases. Its $69683$ transformation blocks have total rank $262944$. The retained-center contribution is $440$ units of rank. These counts include the retained-center copies; no center-return or dirty-register work is silently discarded.
+Its total rank is `888624 = 12208*73 - 2560`, and every child rank is below 73.
+The native integer witness's idle-data hosting has been replaced by the explicit
+dedicated banks; no unproved hosting lemma is an assumption of this theorem.
 
-The Python reference checker verifies nested frame labels, gate shape and scatter conditions, the block ledger, and the exact response of every source column. It checks that each target receives the required source and that the sources are restored. This scalar check alone is not a replay of every dirty input column. The formal invocation theorem derives the dirty-response subtraction and inverse cleanup from the checked invertible program and the scalar identities. The full proof, rather than the Python source-column test alone, establishes the arbitrary-scratch behavior.
+### 6.3 Rate and all-length transfer
 
-The certificates supplied to the Python and Lean pipelines have identical mathematical fields. Only their descriptive provenance string differs. The local verifier checks that equality, as well as the source hashes and the numerical parameters used by the formal rate theorem.
+An exact rational interval calculation brackets the ordinary moment root
+between `0.001233169825152` and `0.001233169825153`. The formal engine requires
+a stricter finite-fill inequality, with fill parameter `s=40`. Its rational
+Lean certificate proves that premise at `a=12331686/10^10`. The Fourier saving
+is `delta=a-10^-10`, absorbing the all-length reduction's overhead.
 
-### 6.3 Five-stage construction and its ledger
+The invocation checks, bank table, invoice and rate feed the unchanged
+`GX.engine_of_ginv_401`. The resulting tensor-program interface is substituted
+into the existing OpenAI all-length reduction. The full challenge comparison
+checks its original computational model and quantifiers, not just a displayed
+asymptotic formula. Finite Python checks alone are not used to assert this
+universal conclusion.
 
-Sussman's bridged construction gives each source pair a twin and arranges compatible labels so that two exchanges use five helper invocations in place of six. The helpers are shared across completed stages. Per finite-cover vertex,
+### 6.4 Provenance and alternatives checked
 
-\[
-m=5h=110,\qquad W_0=4v+R=14692.
-\]
+The full unchanged PR588 and PR596 verifiers passed locally. PR596 reports a
+larger native complex exponent, but its hyperplane endpoints and native hosting
+scheme do not fit the reused Lean interface. Its headline is not claimed here.
+Within the source-copy and cyclic-bank construction tested here, PR588's other
+providers `ck` and `jp8` price below `atm3`. No global optimality claim is made.
 
-If $H_{\mathrm{inv}}$ is the complete block histogram of one certified invocation, the five-stage histogram is
+The source circuit belongs to its credited upstream authors. Sussman supplies
+the formal engine/checkers; Dugongue and jacklightChen the #401/#377 geometry;
+Mamano's submission supplies the published gauged Lean extension; OpenAI supplies
+the model and Fourier reduction. This project's contribution is the new checked
+instantiation, conversion, bank schedule and verification. Full predecessor
+credits and AI disclosures are preserved in `lean/complex588/NOTICE.complex588`
+and its third-party notices.
 
-\[
-H_5=5H_{\mathrm{inv}}+2v(e_{42}+e_{21}+e_{46}+e_4),
-\]
-
-where $e_r$ denotes one child of width $r$. The extra terms are the twins' remaining frame transitions. The resulting per-vertex histogram is:
-
-| $r$ | $n_r$ | $r$ | $n_r$ | $r$ | $n_r$ |
-| ---: | ---: | ---: | ---: | ---: | ---: |
-| 1 | 145890 | 9 | 2020 | 17 | 195 |
-| 2 | 63335 | 10 | 4025 | 18 | 13200 |
-| 3 | 49940 | 11 | 1765 | 19 | 7205 |
-| 4 | 21835 | 12 | 5705 | 20 | 110 |
-| 5 | 9880 | 13 | 840 | 21 | 2640 |
-| 6 | 7455 | 14 | 3625 | 42 | 2640 |
-| 7 | 3210 | 15 | 3025 | 46 | 2640 |
-| 8 | 7390 | 16 | 405 | | |
-
-Thus there are $358975$ children, the largest width is $46<110$, and
-
-\[
-\sum_r r n_r=1613040=110\cdot14692-3080.
-\]
-
-The cover multiplier cancels in the normalized moment but remains part of the finite algorithm's stock and constants. The imported proof constructs the network over the orthogonal group in dimension $110$ and proves its routing and adapter costs. Neither this integration nor the upstream implementation enumerates that enormous cover on actual arrays.
-
-### 6.4 Exact rate and the formal tensor-to-Fourier connection
-
-Our rational checker verifies
-
-\[
-\Psi(1-a)=\frac1{14692}\sum_r n_r(r/110)^{1-a}<1,
-\qquad 1-\Psi(1-a)>8.05\cdot10^{-10}.
-\]
-
-The imported recursion engine uses a finite-fill correction with $s=40$. We separately check its actual rate premise:
-
-\[
-(1-2^{-40})\Psi(1-a)+2^{-40}
-\left((109/110)^{1-a}+(1/110)^{1-a}\right)<1.
-\]
-
-The formal lemma `BlockAccounting.fold_B2Gp233x` proves this rate inequality using its own rational bounds. At $a=7547365/10^{10}$ the ordinary moment is greater than one, providing a negative control for this fixed histogram. This is not a ceiling on other networks.
-
-The formal chain applies the checked certificate to the generalized frame/recursion engine. `RAM.hillsY_program` supplies OpenAI's tensor-program interface, with exponent $1-a$, for every required mode, color and input batch. The subsequent files under `Work/Fourier233/` reproduce OpenAI's Fourier reduction with the exponent and declaration names changed. Its overhead is absorbed using the positive gap $a-\delta=10^{-10}$. The final theorem is `OAI.PowerSaving.transform_mainY : DFTGoalY`; `convolution_mainY` proves the companion convolution statement.
-
-The challenge file is OpenAI's complete uniform Fourier statement with its exponent and seven declaration names changed, plus explanatory comments. Our source comparison checks those limited differences. The theorem comparison additionally checks the declarations on which the statement depends and the axioms used by its proof. The original model, supplied root, preparation costs and integer bounds remain in the statement.
-
-Sections 1--5 give this paper's reusable written transfer argument. The selected result is also available directly through the imported formal theorem and its own recursion engine; the local Python moment check is not presented as a replacement proof of that theorem.
-
-### 6.5 Reproduction and attribution
-
-Run `python3 verification/verify_five_stage.py` for source hashes, exact scalar/label checks, the histogram, both rate inequalities, the absorption gap and binding to the Lean sources. Full PR256 regeneration additionally requires its pinned NumPy/SciPy environment. The complete upstream Lean source is preserved in `verification/vendor/five_stage/fourier-proof-source.tar.gz`, with immutable repository pins and licenses in the accompanying manifest.
-
-The separate `verification/verify_five_stage_lean.py` rebuilds the formal development with Lean 4.34.1 and the pinned Mathlib revision, regenerates the 41 certificate/proof files and 14 Fourier files, checks the reported axioms, and runs the upstream theorem/definition comparator. Its receipt distinguishes fresh project compilation from the downloaded Mathlib cache. These checks do not constitute independent human review, an execution of the DFT on large arrays, or a run of an independent proof kernel.
-
-Sussman receives credit for the five-stage geometry and formal framework; Boukhalfa for the stronger pairing, explicit program and Fourier instantiation; Eisenberg, icekylinx, eumemic and the named predecessors for the underlying circuit and algorithms. SovereignSteak's PR250 and hcg890's PR234 are credited in the incoming package's five-stage composition and ledger lineage. OpenAI supplies the original Fourier model and all-length reduction. The source audit preserves the broader community and our earlier Jain-based history. This update does not claim a newly discovered exponent or authorship of the imported proof.
+The scripts regenerate all 63 new Lean modules byte for byte. The other 291
+dependency modules match the pinned prior submission after reversing the import
+prefix change. Reproduction commands and failed attempts are retained in
+`research/complex-transfer-588-596/`; the source manifest and hashed check logs
+bind the selected result to the exact proof bundle.
 
 ## Acknowledgements and source lineage
 
@@ -259,7 +262,9 @@ We acknowledge OpenAI for the original #109 and #130 research and the exact Four
 
 The adopted constructions also depend on icekylinx's whole-residual batching, copied centers, generalized Clifford frames, three-stage covers, paired cubes and retirement reuse; eumemic's batching, producers, modules, frame descent and late compensation; an664's completed-core sharing; James Chang's birth reuse and terminal-target compiler; and DaysSky's carrier extensions. Aurel Prosz's two-stage topology and endpoint corrections are predecessors of the earlier Jain witness. Chafik Boukhalfa's terminal paired-cube work is already credited in Jain's round-eleven source, alongside his related local-circuit configuration. Avi Eisenberg, Zhihao Chen, Andrew Barnes, David Leen and the other authors named in the preserved notices retain their specific predecessor credits.
 
-The selected five-stage result incorporates Jacob Sussman's general frame formalization, five-stage construction and formal all-length DFT theorem [JS], with Chafik Boukhalfa's stronger pairing, explicit certificate and Fourier instantiation [CB]. Its circuit passes through icekylinx's source-assisted flow, eumemic's v4 modules and Avi Eisenberg's reconstruction and pairing; SovereignSteak and hcg890 retain their cited composition and ledger credits. We reproduced the pinned upstream Lean proof and theorem comparisons. Those network and formalization contributions belong to their authors. Related Fourier work includes eumemic's written batched-network transfer [EF] and danadran01's Lean development [DF]. Our project contributes its earlier written conditional transfers, this incorporation, the attribution audit and additional local checks; it does not claim discovery of the imported exponent or authorship of OpenAI's reduction.
+The earlier five-stage selection incorporates Jacob Sussman's general frame formalization, five-stage construction and formal all-length DFT theorem [JS], with Chafik Boukhalfa's stronger pairing, explicit certificate and Fourier instantiation [CB]. Its circuit passes through icekylinx's source-assisted flow, eumemic's v4 modules and Avi Eisenberg's reconstruction and pairing; SovereignSteak and hcg890 retain their cited composition and ledger credits. We reproduced that pinned upstream Lean proof and theorem comparisons. Those contributions belong to their authors. Related Fourier work includes eumemic's written batched-network transfer [EF] and danadran01's Lean development [DF].
+
+The current complex588 selection is a new checked instantiation of Jeremy Kothe's PR588 local provider, with its credited community refinements by eumemic, DominikScholz, jon314159, Chafik Boukhalfa and the predecessors named in the preserved notices. It uses Sussman's formal engine and checkers, Dugongue's entrance-gauged #401 layout on jacklightChen's #377 geometry, and the published Lean extension in Nil Mamano's verifier submission. The source headers retain the DFT Bridge3, DFT New Sums and DFT Lean credits. OpenAI supplies the unchanged model and all-length reduction. This project's additions are source-copy lowering, target-preconditioning conversion, the cyclic bank schedule, the generated instance and its checks. They establish a new parameter value with existing credited mathematical machinery; no authorship of the imported circuit, general soundness theorems or OpenAI reduction is claimed. Exact pins and scope appear in the complex588 result record and `lean/complex588/NOTICE.complex588`.
 
 The repository's `ATTRIBUTION.md` records immutable revisions, incorporated, historical and related dependencies, source discrepancies and the broader contributor ledger. Contributor-specific licenses and AI-assistance notices are preserved. Acknowledgement does not imply collaboration, endorsement or independent mathematical review.
 
@@ -285,7 +290,7 @@ The repository's `ATTRIBUTION.md` records immutable revisions, incorporated, his
 
 ## Incorporated result history
 
-These are project records, not priority claims. Earlier proposed transfers retain their original status; formalized denotes an incorporated upstream theorem with a reproduced Lean build and statement checks. Ratios compare exponent savings, not runtimes.
+These are project records, not priority claims. Earlier proposed transfers retain their original status; formalized denotes a pinned theorem with a checked Lean build and statement comparisons, either reproduced upstream or newly instantiated here. Ratios compare exponent savings, not runtimes.
 
 | Date | Witness | Status | Fourier saving |
 | --- | --- | --- | ---: |
@@ -294,5 +299,6 @@ These are project records, not priority claims. Earlier proposed transfers retai
 | 2026-10-09 | round10 | proposed | `0.00061` |
 | 2026-10-09 | round11 | proposed | `0.00067` |
 | 2026-10-09 | five-stage-pr233 | formalized | `0.000754736` |
+| 2026-10-12 | complex588 | formalized | `0.0012331685` |
 
 The full log, record links and update workflow are in `IMPROVEMENTS.md` and `results/README.md`. Earlier assembled papers remain under `archive/`.

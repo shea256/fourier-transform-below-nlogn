@@ -1,0 +1,98 @@
+RUN frozen558-full-replay
+PASS frozen558-full-replay
+RUN atm3-step0-promote-construction
+RUN ck-step0-greedy_kernels-construction
+PASS atm3-step0-promote-construction
+RUN atm3-step1-greedy_kernels-construction
+PASS ck-step0-greedy_kernels-construction
+RUN ck-step0-greedy_kernels-omissions
+PASS atm3-step1-greedy_kernels-construction
+RUN atm3-step1-greedy_kernels-omissions
+PASS ck-step0-greedy_kernels-omissions
+RUN ck-step1-frame_coalesce-construction
+PASS atm3-step1-greedy_kernels-omissions
+RUN atm3-step2-frame_coalesce-construction
+PASS ck-step1-frame_coalesce-construction
+RUN ck-step2-gate_move_coalesce-construction
+PASS atm3-step2-frame_coalesce-construction
+RUN atm3-step3-gate_move_coalesce-construction
+PASS ck-step2-gate_move_coalesce-construction
+RUN ck-step3-hyperplane_end-construction
+PASS ck-step3-hyperplane_end-construction
+RUN ck-step3-hyperplane_end-controls
+PASS atm3-step3-gate_move_coalesce-construction
+RUN atm3-step4-hyperplane_end-construction
+PASS atm3-step4-hyperplane_end-construction
+RUN atm3-step4-hyperplane_end-controls
+PASS ck-step3-hyperplane_end-controls
+RUN ck-all-columns-native-frames
+PASS atm3-step4-hyperplane_end-controls
+RUN atm3-all-columns-native-frames
+PASS ck-all-columns-native-frames
+RUN ck-both-reflected-ledgers
+PASS ck-both-reflected-ledgers
+RUN ck-independent-local-controls
+PASS atm3-all-columns-native-frames
+RUN atm3-both-reflected-ledgers
+PASS atm3-both-reflected-ledgers
+RUN atm3-independent-local-controls
+PASS ck-independent-local-controls
+RUN ck-normalized-wrappers
+PASS atm3-independent-local-controls
+RUN atm3-normalized-wrappers
+PASS ck-normalized-wrappers
+RUN ck-all-phase-edges
+PASS atm3-normalized-wrappers
+RUN atm3-all-phase-edges
+PASS ck-all-phase-edges
+PASS atm3-all-phase-edges
+RUN bind-providers
+PASS bind-providers
+RUN emit-controller
+PASS emit-controller
+RUN independent-controller-and-controls
+PASS independent-controller-and-controls
+RUN fresh-invoice
+PASS fresh-invoice
+RUN conservative-and-native-exact-assembly
+PASS conservative-and-native-exact-assembly
+RUN admission-controls
+PASS admission-controls
+RUN phase-timing-portability-controls
+PASS phase-timing-portability-controls
+RUN actual-recompression-and-rebound-controls
+PASS actual-recompression-and-rebound-controls
+{
+  "status": "PASS_HPEQ5_NATIVE_COMPLEX_AND_CITED_BIT",
+  "kappa": "16127213726553/10000000000000000",
+  "kappa_decimal": "0.0016127213726553",
+  "complex_lower": "1615326444135573078563/1000000000000000000000000",
+  "bit_lower": "413456747036699736067/250000000000000000000000",
+  "conservative_kappa_decimal": "0.001612721369804261",
+  "conservative_complex_lower": "807663220637657966257/500000000000000000000000",
+  "global_profile": {
+    "1": 182817,
+    "2": 34192,
+    "3": 22561,
+    "4": 14584,
+    "5": 4032,
+    "6": 4032,
+    "8": 576,
+    "12": 1,
+    "48": 1969
+  },
+  "provider_counts": {
+    "ck": 53,
+    "atm3": 19
+  },
+  "surcharge_model": {
+    "complex": false,
+    "bit": true
+  },
+  "seconds": 560.7398841280001,
+  "reused": {
+    "baseline": false,
+    "locals": []
+  },
+  "scope": "Conditional native exact-complex witness after complete conservative admission, moment and outer checks; PR559 exact-cover recurrence correction only, bit bad-residue surcharge and H1-H5 retained. The frozen PR582 plain-joint-prefix, added-kernel and entrance-promoted provider dispatch with the new frame coalescences composed with cited unchanged PR543 bit supplier. All-size compiler, common-label/mutable-source realization, whole-call hosting, precision/tape and analytic transfer remain assumptions. No unconditional theorem or full Lean certification."
+}

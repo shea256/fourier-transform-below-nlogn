@@ -1,8 +1,8 @@
 # Improvement log
 
-Generated from [results/registry.json](results/registry.json). Dates identify project records, not priority claims. `proposed` means a written conditional transfer with finite checks; `formalized` means an incorporated upstream theorem with a reproduced Lean build, standard-axiom audit and statement comparisons. Neither status means independent human review. Candidate values never replace the current result automatically.
+Generated from [results/registry.json](results/registry.json). Dates identify project records, not priority claims. `proposed` means a written conditional transfer with finite checks; `formalized` means a pinned theorem with a checked Lean build, standard-axiom audit and statement comparisons, either reproduced upstream or newly instantiated here. Neither status means independent human review. Candidate values never replace the current result automatically.
 
-Current selection: **[Sussman and Boukhalfa five-stage complex network](results/five-stage-pr233.md)**, with recorded `delta=0.000754736`.
+Current selection: **[PR588 circuit with source copies and cyclic banks](results/complex588.md)**, with recorded `delta=0.0012331685`.
 
 | Date | Result | Status | Fourier saving $\delta$ | Tensor witness $a$ |
 | --- | --- | --- | ---: | ---: |
@@ -11,6 +11,7 @@ Current selection: **[Sussman and Boukhalfa five-stage complex network](results/
 | 2026-10-09 | [Jain round-ten paired-cube cover](results/round10.md) | proposed | `0.00061` | `0.00061609676` |
 | 2026-10-09 | [Jain round-eleven retired-copy refinement](results/round11.md) | proposed | `0.00067` | `0.00067147467` |
 | 2026-10-09 | [Sussman and Boukhalfa five-stage complex network](results/five-stage-pr233.md) | formalized | `0.000754736` | `0.0007547361` |
+| 2026-10-12 | [PR588 circuit with source copies and cyclic banks](results/complex588.md) | formalized | `0.0012331685` | `0.0012331686` |
 
 ## 2026-10-08: Earlier shared-sum construction
 
@@ -49,5 +50,13 @@ Boukhalfa's PR233/256 source-assisted program in Sussman's five-stage layout and
 [Result record](results/five-stage-pr233.md) · [Reference certificate](verification/certificates/five_stage_reference.json) · [Verifier](verification/verify_five_stage.py)
 
 The Fourier exponent saving is approximately **1.13 times** the preceding incorporated result. This compares exponent parameters, not running times.
+
+## 2026-10-12: PR588 circuit with source copies and cyclic banks
+
+New checked instantiation: source-copy lowering, exact target preconditioning, and 5,040 cyclic helper banks; all-length DFT/convolution saving 0.0012331685. The prior verified baseline is 0.0010221076.
+
+[Result record](results/complex588.md) · [Reference certificate](verification/certificates/complex588_reference.json) · [Verifier](verification/verify_complex588.py)
+
+The Fourier exponent saving is approximately **1.63 times** the preceding incorporated result. This compares exponent parameters, not running times.
 
 The original OpenAI #130 published headline is `delta=1e-13`. The older short proof also retains the `5.2e-10` and `5.3e-10` fallbacks. See [the update workflow](results/README.md) before adding or promoting a result.
