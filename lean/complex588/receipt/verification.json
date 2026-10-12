@@ -1,0 +1,130 @@
+{
+  "success": true,
+  "scope": "All-length exact DFT and convolution: full-statement comparison, fresh source build, Lean kernel and nanoda replay, exact finite checks and regeneration.",
+  "source_manifest_sha256": "c42b37167a3f1ecb06158e5ca3d529243a45d675bc95eb76fd7e3b74f04d738f",
+  "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "axioms": {
+    "OAI.PowerSaving.transform_mainC588": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OAI.PowerSaving.convolution_mainC588": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "OAI.PowerSaving.RAM.hillsC588_program": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "commands": [
+    {
+      "label": "initial_build",
+      "exit_code": 0,
+      "log": "build-global.log",
+      "log_sha256": "f57a8b5089ec4e42a93e61408b678b8c3aa454f7ef8e696ee8df4ca758ae6d13"
+    },
+    {
+      "label": "axioms",
+      "exit_code": 0,
+      "log": "final/axioms.log",
+      "log_sha256": "62ecb31b769b9557c45b436ddf7f655dbdbd26acc92c36270a9678553fd79f0d"
+    },
+    {
+      "label": "compare_fourier",
+      "exit_code": 0,
+      "log": "final/compare-fourier.log",
+      "log_sha256": "c9307ad62b92e30ea0e7dc0b544234dd0236710ca7515aa1445f0cd1fcf48527"
+    },
+    {
+      "label": "negative_control",
+      "exit_code": 1,
+      "log": "compare-negative.log",
+      "log_sha256": "8142f08129f4f29f1c83c7b9caf5e47a9467af0a7eeed5f3ab554a9253d26708"
+    },
+    {
+      "label": "finite",
+      "exit_code": 0,
+      "log": "finite-checks.json",
+      "log_sha256": "f2fc79280f008a12f84335623ddfb330f90f6edec3cb4e4fa748033b494232c0"
+    },
+    {
+      "label": "regenerate_lean",
+      "exit_code": 0,
+      "log": "final/regenerate.log",
+      "log_sha256": "7fd14847f9ff170790e6347ef28d41e4500f92c5463a2bb6ae879ddb8c4b6bb7"
+    },
+    {
+      "label": "repository_checks",
+      "exit_code": 0,
+      "log": "repository-checks.log",
+      "log_sha256": "d3b69237d37df7b1ccd93d940f20fe709f0595ef65b7b41c856fb8398e35b7bf"
+    },
+    {
+      "label": "official_comparator",
+      "exit_code": 0,
+      "log": "official-comparator.log",
+      "log_sha256": "afda4366fe68c5026bb05f877badfd5ee0ffd00ef2281f4b6a0cf6b7d6190674"
+    },
+    {
+      "label": "build",
+      "exit_code": 0,
+      "log": "final/build.log",
+      "log_sha256": "6dbc0f9bdf3e041dfdec1e89e6c668a94a4671aecc310c9d8a090c0630fe667f"
+    },
+    {
+      "label": "reproduction_script",
+      "exit_code": 0,
+      "log": "final-script.log",
+      "log_sha256": "e1ef1f33b13aeb4a018a1d4cbd130fa131db4251102b3be51df1bc3914d2cd0b"
+    }
+  ],
+  "official_comparator": {
+    "status": "passed",
+    "comparator_commit": "d03acab154d269c06e60e4de7e4cc85deebff94b",
+    "nanoda_commit": "3a2407216ee84a75f9e1aead6803d0578be06ae7",
+    "sandbox": "pass-through landrun wrapper; VM lacks sandbox support",
+    "log": "official-comparator.log",
+    "exit_code": 0,
+    "lean4export_commit": "076e8e57707e813375e8f9da8bf989799ace9680",
+    "nanoda": "accepted",
+    "lean_kernel": "accepted",
+    "elapsed_seconds": 2175.68,
+    "max_rss_kb": 9174708,
+    "log_sha256": "afda4366fe68c5026bb05f877badfd5ee0ffd00ef2281f4b6a0cf6b7d6190674",
+    "configuration_sha256": "2906700b6fd983997facd26499c5c294a8f498449411af1a6b00243928cd562c",
+    "landrun_wrapper_sha256": "9a5347b85eb9a81fb91a9dbc3b2e4cbda9ef624548ae3be5f8ffd24cc886aef8"
+  },
+  "fourier_saving": "12331685/10000000000",
+  "tensor_saving": "12331686/10000000000",
+  "source_comment_correction": {
+    "initial_manifest_sha256": "0a694872eae380d5e1824783e4707aa6ef9046b8f1b74283aff2e572ea8196f1",
+    "files": {
+      "lean/complex588/Work/GCert/Data/C588Price.lean": {
+        "before": "65c12b7d8a44a8f159f6e1151a8783e4ad414fd2db575a928c64fd2eb32143cf",
+        "after": "e2df6546c6d5aadfb1256fe7b49efdee1e429d83ff7108cdd10d0894b0f3a5c0"
+      },
+      "research/complex-transfer-588-596/experiments/generate_local_lean.py": {
+        "before": "a41bd2fc4d0b20f6a9146da0f281855ade03c7df24af32035e75a364172d07e2",
+        "after": "146be55313a635c2b404250fe0c6c19d7d5fed65f598d5a5fb109b27bfcbf44d"
+      }
+    },
+    "scope": "Corrected the generated invocation-cost documentation to subtract entrance ranks. All Lean declaration and proof bodies are unchanged. The fresh official build uses the corrected file."
+  },
+  "reproduction_script": {
+    "command": "bash scripts/build_and_check.sh receipt/final",
+    "exit_code": 0,
+    "negative_control": "The script requires nonzero exit plus the precise stronger-exponent definition mismatch. The separately captured earlier negative-control exit is 1.",
+    "logs": {
+      "final/axioms.log": "62ecb31b769b9557c45b436ddf7f655dbdbd26acc92c36270a9678553fd79f0d",
+      "final/build.log": "6dbc0f9bdf3e041dfdec1e89e6c668a94a4671aecc310c9d8a090c0630fe667f",
+      "final/cache.log": "29e284dc7d8024aa6a333a92d0b23035028d78ada47b37f7dd77d8e1a0293483",
+      "final/compare-fourier.log": "c9307ad62b92e30ea0e7dc0b544234dd0236710ca7515aa1445f0cd1fcf48527",
+      "final/compare-negative.log": "8142f08129f4f29f1c83c7b9caf5e47a9467af0a7eeed5f3ab554a9253d26708",
+      "final/regenerate.log": "7fd14847f9ff170790e6347ef28d41e4500f92c5463a2bb6ae879ddb8c4b6bb7"
+    }
+  }
+}

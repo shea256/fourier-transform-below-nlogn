@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "tensor_saving": "12331686/10000000000",
+  "fourier_saving": "12331685/10000000000",
+  "source": {
+    "commit": "6d0e53b66c29abd17981881a09eaff41ac862d85",
+    "repository": "CrocSwap/integer-mult-bounds"
+  },
+  "proof_manifest_sha256": "c42b37167a3f1ecb06158e5ca3d529243a45d675bc95eb76fd7e3b74f04d738f",
+  "local_provider": "atm3",
+  "m": 73,
+  "W": 12208,
+  "deficit": 2560,
+  "banks": 5040,
+  "profile": {
+    "1": 189360,
+    "2": 35424,
+    "3": 20160,
+    "4": 16704,
+    "5": 4032,
+    "6": 4032,
+    "8": 14088,
+    "16": 3584,
+    "32": 3584,
+    "48": 3584
+  },
+  "ordinary_moment": {
+    "root_lower": "9634139259/7812500000000",
+    "root_upper": "1233169825153/1000000000000000",
+    "root_lower_decimal": "0.001233169825152",
+    "root_upper_decimal": "0.001233169825153",
+    "lower_endpoint_margin_at_least": "2.274799451923540807636251132957072071861186754094131702E-15",
+    "upper_endpoint_excess_at_least": "5.925892668632277860175762120672899665791713484994914181E-17",
+    "moment_upper_at_dft_record": "0.9995075358414671970972153379942190295214543188266457138",
+    "strictly_beats_record_as_a_moment": true,
+    "method": "80-term rational atanh log; 30-degree rational exponential; explicit tails",
+    "scope": "Arithmetic only; no circuit realization or DFT transfer is inferred"
+  },
+  "finite_fill_s": 40,
+  "finite_fill_rational_slack": "5.000741781763849e-11",
+  "proof_package": "lean/complex588"
+}

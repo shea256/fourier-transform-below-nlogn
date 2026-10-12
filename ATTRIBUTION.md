@@ -1,5 +1,28 @@
 # Attribution and source-history audit
 
+## October 12 addition: complex588
+
+The new [complex588 result](results/complex588.md) uses the `atm3` provider
+from Jeremy Kothe's [PR588](https://github.com/CrocSwap/integer-mult-bounds/pull/588),
+at `6d0e53b66c29abd17981881a09eaff41ac862d85`. It retains the provider's
+credits to eumemic, DominikScholz, jon314159, chafreaky and its other predecessors.
+The [preserved notices](lean/complex588/third-party/complex588/) give their
+specific constructions and AI disclosures.
+
+General Lean geometry/checkers come from Nil Mamano's published
+[submission](https://github.com/bigospeedrun/verifier/tree/025396033eede56e3af6e02ed2679ba828381bd5/submissions/dft/nmamano-dft-record),
+with its Sussman, Dugongue, jacklightChen, DaysSky, lydakis, DFT Bridge3,
+DFT New Sums and DFT Lean credits retained. OpenAI supplies the unchanged model
+and all-length reduction. The source manifest classifies 291 unchanged general
+modules and 63 new instantiation/check modules.
+
+This project's additions are the explicit source-copy conversion, exact
+target-preconditioning conversion, cyclic helper banks, generated instance and
+verification. They prove a new parameter value, `0.0012331685`; they do not claim
+authorship of the imported circuit, general geometry or soundness framework.
+PR596 was replayed and assessed but is not a premise of the selected theorem.
+The historical audit below retains the earlier sources and contribution record.
+
 Audited on 2026-10-09 (America/New_York), beginning with this project's round-eleven `53f0385` baseline and completed with the five-stage incorporation below. This records the sources of our work, distinguishing the earlier Jain witnesses, the selected five-stage theorem and related work. It is a contribution audit, not a new mathematical review of every contributor's results or a worldwide priority determination.
 
 ## How to cite this work's predecessors

@@ -1,0 +1,896 @@
+{
+  "targets": [
+    "Work.FourierC588.Main"
+  ],
+  "reused_modules": [
+    "OAI.Computability.FourierCircuit.Core",
+    "OAI.Computability.FourierTransform.AddressTables",
+    "OAI.Computability.FourierTransform.ArbitraryLength",
+    "OAI.Computability.FourierTransform.Asymptotics",
+    "OAI.Computability.FourierTransform.BinaryBasis",
+    "OAI.Computability.FourierTransform.BinaryFFT",
+    "OAI.Computability.FourierTransform.BinaryFrames",
+    "OAI.Computability.FourierTransform.BitLayout",
+    "OAI.Computability.FourierTransform.ChineseRemainder",
+    "OAI.Computability.FourierTransform.ChirpConvolution",
+    "OAI.Computability.FourierTransform.ChunkCompiler",
+    "OAI.Computability.FourierTransform.ChunkPrograms",
+    "OAI.Computability.FourierTransform.CirculantUpdates",
+    "OAI.Computability.FourierTransform.ColumnAddresses",
+    "OAI.Computability.FourierTransform.CompilerEnvironment",
+    "OAI.Computability.FourierTransform.ConvolutionProgram",
+    "OAI.Computability.FourierTransform.Cost",
+    "OAI.Computability.FourierTransform.DirectionalWords",
+    "OAI.Computability.FourierTransform.DisjointIntervals",
+    "OAI.Computability.FourierTransform.FourierCompilation",
+    "OAI.Computability.FourierTransform.FourierIdentities",
+    "OAI.Computability.FourierTransform.FourierWords",
+    "OAI.Computability.FourierTransform.FrameLifting",
+    "OAI.Computability.FourierTransform.Goal",
+    "OAI.Computability.FourierTransform.IntegerPrograms",
+    "OAI.Computability.FourierTransform.IntervalEffects",
+    "OAI.Computability.FourierTransform.IntervalPrograms",
+    "OAI.Computability.FourierTransform.LayerCompilation",
+    "OAI.Computability.FourierTransform.LayerPrograms",
+    "OAI.Computability.FourierTransform.LayerWords",
+    "OAI.Computability.FourierTransform.Layout",
+    "OAI.Computability.FourierTransform.LayoutPrograms",
+    "OAI.Computability.FourierTransform.LengthSelection",
+    "OAI.Computability.FourierTransform.LocalCompiler",
+    "OAI.Computability.FourierTransform.LocalPreparation",
+    "OAI.Computability.FourierTransform.LoopBounds",
+    "OAI.Computability.FourierTransform.Main",
+    "OAI.Computability.FourierTransform.MeasuredFit",
+    "OAI.Computability.FourierTransform.MeasuredPrograms",
+    "OAI.Computability.FourierTransform.NetworkInvocation",
+    "OAI.Computability.FourierTransform.NetworkLabels",
+    "OAI.Computability.FourierTransform.NetworkRoles",
+    "OAI.Computability.FourierTransform.NetworkStages",
+    "OAI.Computability.FourierTransform.NewtonFactorization",
+    "OAI.Computability.FourierTransform.PackingPrograms",
+    "OAI.Computability.FourierTransform.ParameterPrograms",
+    "OAI.Computability.FourierTransform.PolynomialBounds",
+    "OAI.Computability.FourierTransform.PolynomialPrograms",
+    "OAI.Computability.FourierTransform.PowerTables",
+    "OAI.Computability.FourierTransform.PrefixTraversal",
+    "OAI.Computability.FourierTransform.PrimeSelection",
+    "OAI.Computability.FourierTransform.ProductMatrix",
+    "OAI.Computability.FourierTransform.ProgramBounds",
+    "OAI.Computability.FourierTransform.ProgramConstruction",
+    "OAI.Computability.FourierTransform.RAM",
+    "OAI.Computability.FourierTransform.RecursionBounds",
+    "OAI.Computability.FourierTransform.RecursiveBatches",
+    "OAI.Computability.FourierTransform.RecursiveContract",
+    "OAI.Computability.FourierTransform.RegisterBounds",
+    "OAI.Computability.FourierTransform.RoleArrays",
+    "OAI.Computability.FourierTransform.RootPreparation",
+    "OAI.Computability.FourierTransform.ScalarNetwork",
+    "OAI.Computability.FourierTransform.ScalarPreparation",
+    "OAI.Computability.FourierTransform.SectorAlgorithm",
+    "OAI.Computability.FourierTransform.SectorIdentities",
+    "OAI.Computability.FourierTransform.SectorPacking",
+    "OAI.Computability.FourierTransform.SectorPrograms",
+    "OAI.Computability.FourierTransform.SynchronizedAlgorithm",
+    "OAI.Computability.FourierTransform.TensorAlgorithm",
+    "OAI.Computability.FourierTransform.TensorCertificate",
+    "OAI.Computability.FourierTransform.TensorFibers",
+    "OAI.Computability.FourierTransform.TensorIndexing",
+    "OAI.Computability.FourierTransform.TensorProgram",
+    "OAI.Computability.FourierTransform.TensorRecursion",
+    "OAI.Computability.FourierTransform.TensorSaving",
+    "OAI.Computability.FourierTransform.ToeplitzCompiler",
+    "OAI.Computability.FourierTransform.ToeplitzIdentities",
+    "OAI.Computability.FourierTransform.ToeplitzLayers",
+    "OAI.Computability.FourierTransform.ToeplitzPreparation",
+    "OAI.Computability.FourierTransform.ToeplitzUpdates",
+    "OAI.Computability.FourierTransform.TransformProgram",
+    "OAI.Computability.FourierTransform.TraversalPrograms",
+    "OAI.Computability.FourierTransform.UniformBounds",
+    "OAI.Computability.FourierTransform.WordCompilation",
+    "OAI.Computability.FourierTransform.WordPrograms",
+    "OAI.Computability.FourierTransform.WorkBounds",
+    "OAI.Computability.FourierTransform.WorkingCompiler",
+    "OAI.Computability.FourierTransform.WorkingPreparation",
+    "OAI.Computability.FourierTransform.WorkingTransform",
+    "WHTCheck.Solution",
+    "Work.Block.Address",
+    "Work.Block.Batches",
+    "Work.Block.Bridge",
+    "Work.Block.Engine",
+    "Work.Block.Extras",
+    "Work.Block.Frames",
+    "Work.Block.Majorant",
+    "Work.Block.Paths",
+    "Work.Block.Peel",
+    "Work.Block.Port",
+    "Work.Block.Recursion",
+    "Work.Block.Split",
+    "Work.Block.WHT",
+    "Work.Block.Word",
+    "Work.BlockAccounting.Moment",
+    "Work.BlockAccounting.Steps",
+    "Work.BlockApply.Copies",
+    "Work.BlockApply.Exact",
+    "Work.Bridge.Cert",
+    "Work.Bridge.Inv",
+    "Work.Bridge.Net",
+    "Work.Bridge.Roles",
+    "Work.BridgeGeom.B2",
+    "Work.BridgeGeom.Blocks",
+    "Work.BridgeGeom.Net",
+    "Work.BridgeGeom.Stage",
+    "Work.Carrier.Glue",
+    "Work.Carrier.Live",
+    "Work.Carrier.Pack",
+    "Work.Carrier.PhasedInv",
+    "Work.Carrier.Phases",
+    "Work.Carrier.Ring",
+    "Work.Carrier.Scat",
+    "Work.Carrier.Sched",
+    "Work.CarrierCheck.CCert",
+    "Work.CarrierCheck.Mat",
+    "Work.CarrierCheck.Roles",
+    "Work.CarrierCheck.Routes",
+    "Work.CarrierCheck.ScalDef",
+    "Work.CarrierCheck.ScalFin",
+    "Work.CarrierCheck.ScalId",
+    "Work.CarrierCheck.ScalOps",
+    "Work.CarrierCheck.ScalRun",
+    "Work.CarrierCheck.ScalSound",
+    "Work.CarrierCheck.Scat",
+    "Work.CarrierCheck.Valid",
+    "Work.Combine.Chunks",
+    "Work.Combine.Hist",
+    "Work.Combine.Ranks",
+    "Work.Combine.Split",
+    "Work.Combine.SplitDef",
+    "Work.Combine.XCirc",
+    "Work.Combine.XG",
+    "Work.Combine.XInvocation",
+    "Work.Combine.XNetwork",
+    "Work.FoldRate.Arith",
+    "Work.FoldRate.Group",
+    "Work.GCert.Chain.End",
+    "Work.GCert.Chain.Geom",
+    "Work.GCert.Chain.Inv",
+    "Work.GCert.Chain.InvThm",
+    "Work.GCert.Chain.NetCert",
+    "Work.GCert.Chain.NetDef",
+    "Work.GCert.Chain.NetStage",
+    "Work.GCert.Chain.Phased",
+    "Work.GCert.Chain.Stage",
+    "Work.GCert.Chain.Win",
+    "Work.GCert.Chain.WinB",
+    "Work.GCert.Data.Count",
+    "Work.GCert.Data.Glue",
+    "Work.GCert.Data.Price",
+    "Work.GCert.Data.Raw",
+    "Work.GCert.Labels.Bits",
+    "Work.GCert.Labels.Canon",
+    "Work.GCert.Labels.Def",
+    "Work.GCert.Labels.Elim",
+    "Work.GCert.Labels.EndDef",
+    "Work.GCert.Labels.EndSound",
+    "Work.GCert.Labels.Ends",
+    "Work.GCert.Labels.Main",
+    "Work.GCert.Labels.Route",
+    "Work.GCert.Labels.RouteRun",
+    "Work.GCert.Labels.Sound",
+    "Work.GCert.Labels.Spec",
+    "Work.GCert.Scalar.Bits",
+    "Work.GCert.Scalar.Check",
+    "Work.GCert.Scalar.Cols",
+    "Work.GCert.Scalar.Def",
+    "Work.GCert.Scalar.End",
+    "Work.GCert.Scalar.Fin",
+    "Work.GCert.Scalar.Id",
+    "Work.GCert.Scalar.Main",
+    "Work.GCert.Scalar.Mat3",
+    "Work.GCert.Scalar.Ops",
+    "Work.GCert.Scalar.Roles",
+    "Work.GCert.Scalar.Runs",
+    "Work.GCert.Scalar.Scat",
+    "Work.GCert.Scalar.Seg",
+    "Work.GCert.Scalar.Step",
+    "Work.GFrame.Clifford.AltBlock",
+    "Work.GFrame.Clifford.Base",
+    "Work.GFrame.Clifford.Basic",
+    "Work.GFrame.Clifford.Climb",
+    "Work.GFrame.Clifford.Core",
+    "Work.GFrame.Clifford.Cross",
+    "Work.GFrame.Clifford.Entry",
+    "Work.GFrame.Clifford.Fibre",
+    "Work.GFrame.Clifford.FreeLift",
+    "Work.GFrame.Clifford.Old",
+    "Work.GFrame.Clifford.Pair",
+    "Work.GFrame.Clifford.Rep",
+    "Work.GFrame.Clifford.RepFree",
+    "Work.GFrame.Clifford.Step",
+    "Work.GFrame.Engine.Adapt",
+    "Work.GFrame.Engine.Cert",
+    "Work.GFrame.Engine.Free",
+    "Work.GFrame.Engine.Group",
+    "Work.GFrame.Engine.Letters",
+    "Work.GFrame.Engine.Level",
+    "Work.GFrame.Engine.Main",
+    "Work.GFrame.Engine.Over",
+    "Work.GFrame.Engine.Recursion",
+    "Work.GFrame.Engine.Route",
+    "Work.GFrame.Engine.Sweep",
+    "Work.GFrame.Labels.All",
+    "Work.GFrame.Labels.BXMap",
+    "Work.GFrame.Labels.Calc",
+    "Work.GFrame.Labels.Conj",
+    "Work.GFrame.Labels.ConjB",
+    "Work.GFrame.Labels.Embed",
+    "Work.GFrame.Labels.GCalc",
+    "Work.GFrame.Labels.GCarrier",
+    "Work.GFrame.Labels.GXMap",
+    "Work.GFrame.Labels.GeomOld",
+    "Work.GFrame.Labels.Maps",
+    "Work.GFrame.Labels.Proj",
+    "Work.GFrame.Labels.Quad",
+    "Work.GFrame.Labels.Sched",
+    "Work.GFrame.Labels.SchedR",
+    "Work.GFrame.Labels.StageA",
+    "Work.GFrame.Labels.StageB",
+    "Work.GFrame.Labels.StageBFull",
+    "Work.GFrame.Labels.StageBSem",
+    "Work.GFrame.Top.Api",
+    "Work.GFrame.Top.Assemble",
+    "Work.GFrame.Top.Menu",
+    "Work.GFrame.Top.Stage",
+    "Work.Reframe.Basic",
+    "Work.Reframe.Erase",
+    "Work.Reframe.F3",
+    "Work.Reframe.FrameAlg",
+    "Work.Reframe.Geom3",
+    "Work.Reframe.GeomBase",
+    "Work.Reframe.GeomNet",
+    "Work.Reframe.SCert",
+    "Work.Reframe.SNet",
+    "Work.Reframe.Shared",
+    "Work.Scratch.Engine",
+    "Work.SharedSumChecker.Bits",
+    "Work.SharedSumChecker.Check",
+    "Work.SharedSumChecker.Circ",
+    "Work.SharedSumChecker.Impl",
+    "Work.SharedSumChecker.Mats",
+    "Work.SharedSumChecker.Net",
+    "Work.SharedSumChecker.PCert",
+    "Work.SharedSumChecker.Phase",
+    "Work.SharedSumChecker.Proj",
+    "Work.SharedSumChecker.Scalar",
+    "Work.SharedSumChecker.ScalarDef",
+    "Work.SharedSumChecker.Sound",
+    "Work.SharedSumStructured.Certificate",
+    "Work.SharedSumStructured.GPath",
+    "Work.SharedSumStructured.Invocation",
+    "Work.SharedSumStructured.Labels",
+    "Work.SharedSumStructured.Network"
+  ],
+  "build_order": [
+    "Work.Gauge.ECheck",
+    "Work.Gauge.Defs",
+    "Work.Gauge.Labels",
+    "Work.Gauge.Inv",
+    "Work.Gauge.Glue",
+    "Work.Bridge401.Roles",
+    "Work.Bridge377.Sweep",
+    "Work.Bridge401.Gates",
+    "Work.Bridge401.GStage",
+    "Work.Bridge401.StageE",
+    "Work.Bridge377.Bank",
+    "Work.Bridge401.GNetDef",
+    "Work.Bridge401.GNetStage",
+    "Work.Bridge401.GNetCert",
+    "Work.Bank401.Adapt",
+    "Work.Bank401.Frames",
+    "Work.Bridge401.Sched",
+    "Work.BridgeC.Blocks",
+    "Work.BridgeC.Stage",
+    "Work.Bridge377.WinC",
+    "Work.BridgeC.Bank",
+    "Work.Bridge401.GGeom",
+    "Work.GCert.Data.Gen.C588.S0",
+    "Work.GCert.Data.Gen.C588",
+    "Work.GCert.Data.Gen.C588Gl",
+    "Work.GCert.Data.Gen.C588Hist",
+    "Work.GCert.Data.C588Price",
+    "Work.GCert.Data.Gen.C588Tab0",
+    "Work.GCert.Data.Gen.C588Tab1",
+    "Work.GCert.Data.Gen.C588Tab2",
+    "Work.GCert.Data.Gen.C588Tab3",
+    "Work.GCert.Data.Gen.C588Par",
+    "Work.GCert.Data.Gen.C588Seg0",
+    "Work.GCert.Data.Gen.C588Seg1",
+    "Work.GCert.Data.Gen.C588Seg2",
+    "Work.GCert.Data.Gen.C588Seg3",
+    "Work.GCert.Data.Gen.C588SegF",
+    "Work.GCert.Data.Gen.C588End",
+    "Work.GCert.Data.C588Cert",
+    "Work.GCert.Data.Gen.C588Scal0",
+    "Work.GCert.Data.Gen.C588Scal1",
+    "Work.GCert.Data.Gen.C588Scal2",
+    "Work.GCert.Data.Gen.C588Scal3",
+    "Work.GCert.Data.Gen.C588YChk",
+    "Work.GCert.Data.C588ScalOK",
+    "Work.GCert.Data.Gen.C588EChk",
+    "Work.GCert.Data.RateC588x",
+    "Work.GCert.Data.InstC588",
+    "Work.GCert.Data.Gen.C588Rows0",
+    "Work.GCert.Data.Gen.C588Rows1",
+    "Work.GCert.Data.Gen.C588Rows2",
+    "Work.GCert.Data.Gen.C588Rows3",
+    "Work.GCert.Data.Gen.C588Rows4",
+    "Work.GCert.Data.Gen.C588Rows5",
+    "Work.GCert.Data.Gen.C588Rows6",
+    "Work.GCert.Data.Gen.C588Rows7",
+    "Work.GCert.Data.Gen.C588Rows8",
+    "Work.GCert.Data.Gen.C588Rows9",
+    "Work.GCert.Data.Gen.C588Rows10",
+    "Work.GCert.Data.Gen.C588Rows11",
+    "Work.GCert.Data.Gen.C588Rows12",
+    "Work.GCert.Data.Gen.C588Rows13",
+    "Work.GCert.Data.Gen.C588Rows14",
+    "Work.GCert.Data.Gen.C588Rows15",
+    "Work.GCert.Data.Gen.C588Rows16",
+    "Work.GCert.Data.Gen.C588Rows17",
+    "Work.Bridge401.SchedK",
+    "Work.GCert.Data.Gen.C588Sched",
+    "Work.GCert.Data.C588Glue401",
+    "Work.Gauge.Step",
+    "Work.Gauge.Iface",
+    "Work.Bridge401.End",
+    "Work.FourierC588.Seam",
+    "Work.FourierC588.SectorAlgorithm",
+    "Work.FourierC588.SynchronizedAlgorithm",
+    "Work.FourierC588.WorkingTransform",
+    "Work.FourierC588.WorkingCompiler",
+    "Work.FourierC588.WorkingPreparation",
+    "Work.FourierC588.ArbitraryLength",
+    "Work.FourierC588.TransformProgram",
+    "Work.FourierC588.ConvolutionProgram",
+    "Work.FourierC588.UniformBounds",
+    "Work.FourierC588.Asymptotics",
+    "Work.FourierC588.Goal",
+    "Work.FourierC588.Main"
+  ],
+  "provenance": {
+    "Work.Gauge.Glue": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Gauge/Glue.lean",
+      "source_sha256": "6c2d506935b76019a04253ab3dab4622564659657c8c30a8ddb344f7d208ef32",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Gauge.Inv": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Gauge/Inv.lean",
+      "source_sha256": "ba16c21103f99a1bbd4f68b6e0ec2c798a46c6a59dcbae3ca902dcfecdcabc1e",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Data.Glue": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Data/Glue.lean",
+      "source_sha256": "e9730d07787dd88cfb10eae0c3c588b66f8ffd9aa65837ea9f776aa47a4b9e8a",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.GGeom": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/GGeom.lean",
+      "source_sha256": "6e2f0a4da89ecb7a97161d76d7ca77eb75a2f4db1d69866d68e34de64a4975b0",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.GNetCert": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/GNetCert.lean",
+      "source_sha256": "4e4ffec171d90609ff322e05d17525240f8d8a88c64c5eba70b22d8c5e7dbab3",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.GNetStage": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/GNetStage.lean",
+      "source_sha256": "d35dd0647d55dd564389458f429d002b9ca321f94c6e25a2011146b5b90c130e",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.GNetDef": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/GNetDef.lean",
+      "source_sha256": "d5880a8948fd9acfc335a9d78d358a97bcc7ab94d94a0eff6386501b59bd2840",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.GStage": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/GStage.lean",
+      "source_sha256": "69f34510aca9a953876851342d052ae3971d93d76ddfc8e0bcef75cd1dfc06f2",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.Gates": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/Gates.lean",
+      "source_sha256": "ef3c17d3e4a396fff2718f6e9e46e949bfd994adcc75cce502d20bcca603dce8",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.Roles": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/Roles.lean",
+      "source_sha256": "ef6345788c39545e0d9d977eabb5a96ecac477467f35430dbefd7c2367a09f8a",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge377.Sweep": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge377/Sweep.lean",
+      "source_sha256": "03c8e943fa0330e83f4c7255627dbe353861702dfed500b26c857b12237ff254",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.Stage": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/Stage.lean",
+      "source_sha256": "11646772b6a24b4f07412f01825fa0eb4099829f17a92cd3c711469b5e394a05",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge.Cert": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge/Cert.lean",
+      "source_sha256": "e8f1248d7336f05ae9bb607f76ac315bd8fe1648634df145ca7b49bbf71a0e0b",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge.Net": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge/Net.lean",
+      "source_sha256": "2089e1d313a1564cfd5bdd47f04631146f7d0021f49a483bf5b95c74eb79039d",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GFrame.Top.Stage": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GFrame/Top/Stage.lean",
+      "source_sha256": "d67a5048fb5f88e8ab2a2bacd88513317b868e32b1c7baa482b7e772a8cf848c",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.StageE": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/StageE.lean",
+      "source_sha256": "23d15912b2796d30fd095afbed79e3f99bca67a4c0e4e0c4f4eda18cdc146689",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge377.Bank": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge377/Bank.lean",
+      "source_sha256": "4ac039667f93c74be253bb9bed2422615a3f41c8f84911fa43cf21a18c72a226",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.Sched": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/Sched.lean",
+      "source_sha256": "e69bc4db968395b1db69dbdfed3036faf2bef1b8445ba0c9e96f4ca4671450d2",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bank401.Frames": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bank401/Frames.lean",
+      "source_sha256": "7587a9863f5d9f2b64bd554b40434106ffefd62a7e056f6e08a239c2ac9d88bb",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bank401.Adapt": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bank401/Adapt.lean",
+      "source_sha256": "fbfe5e7a6974923b15486fb461a905fecc72ebd9be0ea3ad11d38571e3dd178c",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge377.WinC": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge377/WinC.lean",
+      "source_sha256": "951ddbdc18e9322960e16f7131f005604cdb04af01b778432833f1961dc25074",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BridgeC.Stage": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BridgeC/Stage.lean",
+      "source_sha256": "5b2f3ed05f5d349ebc51bd60503b9d3019832853ffae07704b018e6a83f57017",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BridgeC.Blocks": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BridgeC/Blocks.lean",
+      "source_sha256": "90e7a869a5cca88bea443b656ab1c456b78be1b8e207baae3a2f0754a43450ad",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BridgeC.Bank": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BridgeC/Bank.lean",
+      "source_sha256": "fc0d910e1e6b9ca04999fd73bec4f5eb9329d6909bb680876d30ea6fae11fdcc",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.Geom": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/Geom.lean",
+      "source_sha256": "ce9d74e69b8ed6328423f2738214e6c2ad4a4b56c501ff6bb8a7878dc6b03e3f",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.NetCert": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/NetCert.lean",
+      "source_sha256": "d8a2a1201ca987c087147272cdf81914e7b19fbf6f25c08ede8140629523db90",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.NetStage": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/NetStage.lean",
+      "source_sha256": "8de8fcf071468348e93cfbade9f7021fd5a31f19469cdc34b53bec26565eb071",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.NetDef": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/NetDef.lean",
+      "source_sha256": "b4a98094e30e351265b397c8e733555eb7e08e89b3afb0665c8323532a652cfb",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.WinB": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/WinB.lean",
+      "source_sha256": "a90c7ba9231e9cc7b6f47a5c90219706bcedc6c85366cf78c0735253a212e59a",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BridgeGeom.B2": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BridgeGeom/B2.lean",
+      "source_sha256": "c3a4129df1a342849e49ccd326b702dfd2f5fdc7a05560c79c7bdaf1b1f5a873",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.BridgeGeom.Net": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/BridgeGeom/Net.lean",
+      "source_sha256": "6adbc8be9b702bf311e8fe3dd2dc51bdc44c93ff20ee0585b84fe8ec478f8754",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Reframe.F3": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Reframe/F3.lean",
+      "source_sha256": "b2c85ee15db7bedff16c1d5ccabac452851de786de4e310786d59252c76700c1",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.SchedK": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/SchedK.lean",
+      "source_sha256": "d0e93afe1442870003eb3d7ba5370fab411c0240125d6ddb68fffe840f493ea8",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Bridge401.End": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Bridge401/End.lean",
+      "source_sha256": "61421ea4addf6d671bd4c21d391363637b5199370e0b7ccf21882b859ed0356c",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Gauge.Iface": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Gauge/Iface.lean",
+      "source_sha256": "caa6e070a3e0fcc3b4e4b2e92905a4dab899ed10245bac7af0765f229ad44a93",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.Gauge.Step": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/Gauge/Step.lean",
+      "source_sha256": "069ed4375a2f904918c34f306ce3d4a51ff446daef7fc2978545480cf3c0af22",
+      "transformation": "strip Submission. from imports"
+    },
+    "Work.GCert.Chain.End": {
+      "source": "/tmp/bigover/submissions/dft/nmamano-dft-record/Submission/Work/GCert/Chain/End.lean",
+      "source_sha256": "b0a6daf192db660ae6003977c912629292f009e22d968a212bdf5f38183797db",
+      "transformation": "strip Submission. from imports"
+    }
+  },
+  "results": [
+    {
+      "module": "Work.Gauge.Inv",
+      "exit": 0,
+      "seconds": 7.719519169000023,
+      "source_sha256": "75d5e1766c71aafac9cfc51fbce4e092ba235e253d759b723fbca024e1de14c8"
+    },
+    {
+      "module": "Work.Gauge.Glue",
+      "exit": 0,
+      "seconds": 4.980538261999982,
+      "source_sha256": "df179b620b19685d898c7d34c3a2ba029be6e4d30455b06c7219bb24ac68645d"
+    },
+    {
+      "module": "Work.Bridge401.Roles",
+      "exit": 0,
+      "seconds": 7.879155459999993,
+      "source_sha256": "1f5c60cd0d5e3032b6693550cf55261e0fbcca3d181d66afa57b2b956215ba55"
+    },
+    {
+      "module": "Work.Bridge377.Sweep",
+      "exit": 0,
+      "seconds": 5.3539953049998985,
+      "source_sha256": "a0b362007434c953aafb6947d30194461f59b82fa2f79a503fbbe0513f846243"
+    },
+    {
+      "module": "Work.Bridge401.Gates",
+      "exit": 0,
+      "seconds": 24.439820297000097,
+      "source_sha256": "077bcf0362a06cdf222477ae8fb68a1c556aa740119df50520efaa6705715d3f"
+    },
+    {
+      "module": "Work.Bridge401.GStage",
+      "exit": 0,
+      "seconds": 8.26567371300007,
+      "source_sha256": "5271204f839ad8cc14f41495a95f57e4c1ad840049b4e4d551a13363f557eb36"
+    },
+    {
+      "module": "Work.Bridge401.StageE",
+      "exit": 0,
+      "seconds": 5.43995010499998,
+      "source_sha256": "fd553871936b599d97afb0b3cf21a479c7bac473d815de89f16815e44cbbd00d"
+    },
+    {
+      "module": "Work.Bridge377.Bank",
+      "exit": 0,
+      "seconds": 3.839175243999989,
+      "source_sha256": "c0dc3ac6186f2b792ebf0dd702112f5408aee871e0e18b8fbc0cf9a1c0bcc1df"
+    },
+    {
+      "module": "Work.Bridge401.GNetDef",
+      "exit": 0,
+      "seconds": 12.997092436000003,
+      "source_sha256": "c4f0bf4a3326cf3190015db14c1d0e3f1bc4b9dc43eaedbce46502f66992724e"
+    },
+    {
+      "module": "Work.Bridge401.GNetStage",
+      "exit": 0,
+      "seconds": 24.154546084000003,
+      "source_sha256": "5d497b94efbfbd27f12895811ae0ac995e98c4a01031e4bb81a96eb4d39bbb4d"
+    },
+    {
+      "module": "Work.Bridge401.GNetCert",
+      "exit": 0,
+      "seconds": 5.963779467999984,
+      "source_sha256": "f0d3d482f31d2b86fc1b440e75799e7ed5b54f4825ec9244171e1e7c9e28740d"
+    },
+    {
+      "module": "Work.Bank401.Adapt",
+      "exit": 0,
+      "seconds": 5.407376367999859,
+      "source_sha256": "d1e8804a36c505e220d8103363d2a744d05e49238af362e5e03d27ce940fa87e"
+    },
+    {
+      "module": "Work.Bank401.Frames",
+      "exit": 0,
+      "seconds": 5.3548554640001385,
+      "source_sha256": "f90ce2325c98b9a5397a25d234df6567495999c5d31144373919000d325c59f8"
+    },
+    {
+      "module": "Work.Bridge401.Sched",
+      "exit": 0,
+      "seconds": 5.250468339000008,
+      "source_sha256": "20187bedbdf4a8afc65b2b1e08a9058c179afbc813af20678962fca92756471a"
+    },
+    {
+      "module": "Work.BridgeC.Blocks",
+      "exit": 0,
+      "seconds": 5.799676533000138,
+      "source_sha256": "de3aa1b5c4fdc10894da376f905ff079ef2eed992661bad6a13af1ceeb6e68b4"
+    },
+    {
+      "module": "Work.BridgeC.Stage",
+      "exit": 0,
+      "seconds": 7.095282536000013,
+      "source_sha256": "25883fc272271c03d6c0ea057bc01ab46c6974cb3585b7a5b8d3e80b2af2eb5a"
+    },
+    {
+      "module": "Work.Bridge377.WinC",
+      "exit": 0,
+      "seconds": 5.6735001269998975,
+      "source_sha256": "90e211d7a5e59159ae46ab518f5a8f18501db36539a23bf19de8bc5d54fe8c52"
+    },
+    {
+      "module": "Work.BridgeC.Bank",
+      "exit": 0,
+      "seconds": 5.603371940999978,
+      "source_sha256": "ccc7821ead7312fe7df0d91cbd39ac9d5a2accec93237beb0cd22386e9ae3879"
+    },
+    {
+      "module": "Work.Bridge401.GGeom",
+      "exit": 0,
+      "seconds": 10.571289161999857,
+      "source_sha256": "8c8720d174765465551f520952a79ceee2d02c1f30ca9ea7da077d1177f0457e"
+    },
+    {
+      "module": "Work.GCert.Data.RateC588x",
+      "exit": 0,
+      "seconds": 6.340116660999911,
+      "source_sha256": "63cca0f2365cac703a2e112e8a5715fba70d5645c79c6915b42c548e6f207e4e"
+    },
+    {
+      "module": "Work.GCert.Data.InstC588",
+      "exit": 0,
+      "seconds": 5.13237352200008,
+      "source_sha256": "c2f98c135747a61affbfcc48b9a74f805339a0d9a0c199f6524a795378755fcb"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows0",
+      "exit": 0,
+      "seconds": 1.1564341589999003,
+      "source_sha256": "aa7fbd3f3ff479f4df2f6a943bcd2e94800a492288bf695cd9cef0a8b3ebd52f"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows1",
+      "exit": 0,
+      "seconds": 1.1513060459999451,
+      "source_sha256": "77253ff4921d55433deef9a993b52c4f539a472475dfd8ad545cac6a92b2e9d6"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows2",
+      "exit": 0,
+      "seconds": 1.1837478960001135,
+      "source_sha256": "eb863455b3d154a5182a48a174b3c5538c5a4889c7537a7d5e9ba253ef69cdba"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows3",
+      "exit": 0,
+      "seconds": 1.1396697289999338,
+      "source_sha256": "e2c605d52898fa8ed4878fb6aab92ef69c513c6866a418401930eb776403bf23"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows4",
+      "exit": 0,
+      "seconds": 1.0959172569998827,
+      "source_sha256": "559e4b1eba221c4ba67a603443ce22fa36b227bae9d4a00502170efda90cfc9e"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows5",
+      "exit": 0,
+      "seconds": 1.1522619760000907,
+      "source_sha256": "6daaf9635ce633be273797da9175eb8af582bf5350ba27081e14ec8423197716"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows6",
+      "exit": 0,
+      "seconds": 1.1151196969999546,
+      "source_sha256": "531b8fa1e441cc49c04646eea5165aa6aa968c2b2ef48003075a5a491627da84"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows7",
+      "exit": 0,
+      "seconds": 1.1518706550000388,
+      "source_sha256": "24195ff2663c53a561a2c91b97b85e1485edb36808c2eb4ca4e92c7180b0600b"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows8",
+      "exit": 0,
+      "seconds": 1.1546498560001055,
+      "source_sha256": "0e1f066d413ebe1f7c260083ba5bdad462c9927850bb879bbcec38592bff1830"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows9",
+      "exit": 0,
+      "seconds": 1.1074173459999201,
+      "source_sha256": "a8e1d0968a91a08760e8656c224e5013308e2151f5c768c3ecdc6edceb74a1ea"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows10",
+      "exit": 0,
+      "seconds": 1.1262911549999899,
+      "source_sha256": "01c3f441530d82b9ecc150255d6143bf2a453472349397232718a9a07f3ea4d4"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows11",
+      "exit": 0,
+      "seconds": 1.1435212859998956,
+      "source_sha256": "0393d68af3bdb5081680e5b57668b32bd2664a270f2764c4836c2d000ea5d509"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows12",
+      "exit": 0,
+      "seconds": 1.1145399559998168,
+      "source_sha256": "60830e46ecc4d93594da244df29d58ad412337a0e1e20a6a64510459bd37b839"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows13",
+      "exit": 0,
+      "seconds": 1.1444891049998205,
+      "source_sha256": "cad7fdb17f3803fa1c9743539c598743db80cd40986aa74df4cff8f77e0f9051"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows14",
+      "exit": 0,
+      "seconds": 1.1614957249998952,
+      "source_sha256": "87a05415919f9a11b4cfe270c96d1a9fd15ee1279bb98e61a390049b54bd0813"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows15",
+      "exit": 0,
+      "seconds": 1.1469814049999059,
+      "source_sha256": "768f1e32687e0888740b029725a9bc3db85afe2dd38bdcb20516495e1d87bc0b"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows16",
+      "exit": 0,
+      "seconds": 1.126883972000087,
+      "source_sha256": "fe9ceaed6026b122ff6ef6688f8380802140acb4465fb9974ad9c4a06178b1d3"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Rows17",
+      "exit": 0,
+      "seconds": 1.1784045480001168,
+      "source_sha256": "4af676158044c96ce07dc0f4ffcee9a34056813aaf137fa5015953fdb79ba077"
+    },
+    {
+      "module": "Work.Bridge401.SchedK",
+      "exit": 0,
+      "seconds": 5.677391519999901,
+      "source_sha256": "a8fba57d68db5fb40e80df7f385fe90b2ea6c000b600988349df07ca1e4e32eb"
+    },
+    {
+      "module": "Work.GCert.Data.Gen.C588Sched",
+      "exit": 0,
+      "seconds": 21.99132398400002,
+      "source_sha256": "8daddffcd2f16316698aa022705d5b724153136f8f3ac619827e3917cd40ee1f"
+    },
+    {
+      "module": "Work.GCert.Data.C588Glue401",
+      "exit": 0,
+      "seconds": 15.737177009000106,
+      "source_sha256": "0945cd6f7b8c95591104c8020ef1bf4d15cd90329413593d6c326fba3fd0a8d2"
+    },
+    {
+      "module": "Work.Gauge.Step",
+      "exit": 0,
+      "seconds": 4.6039902909999455,
+      "source_sha256": "b3b45291fb2071703fb5608d5464bbdf0901352459e6e65c2c4ff82c1462c897"
+    },
+    {
+      "module": "Work.Gauge.Iface",
+      "exit": 0,
+      "seconds": 3.8823468690000027,
+      "source_sha256": "3c26c9db48d53aa294434dc6222f3815b59fbafc34633b77c767195b3095b947"
+    },
+    {
+      "module": "Work.Bridge401.End",
+      "exit": 0,
+      "seconds": 4.457491502000039,
+      "source_sha256": "61104234cdd1560591d196974bb49ce6ccf4337a3ef6c56fc5906d7e2cca2aaa"
+    },
+    {
+      "module": "Work.FourierC588.Seam",
+      "exit": 0,
+      "seconds": 4.762089521999997,
+      "source_sha256": "12e107cf2f9d194141a04f9cd97eede9faa10323dfbe86b949451e1c90be37e7"
+    },
+    {
+      "module": "Work.FourierC588.SectorAlgorithm",
+      "exit": 0,
+      "seconds": 4.630093093999903,
+      "source_sha256": "18ade62085ef974b42c02e23cd20549e747271ad5382944563cc57072f2ae205"
+    },
+    {
+      "module": "Work.FourierC588.SynchronizedAlgorithm",
+      "exit": 0,
+      "seconds": 4.357022097000026,
+      "source_sha256": "1d37ad9f953934e1d32e402794404a839800864744e900713a81be8e16e3ddad"
+    },
+    {
+      "module": "Work.FourierC588.WorkingTransform",
+      "exit": 0,
+      "seconds": 4.6361959710000065,
+      "source_sha256": "67bd84266599647a9676837bf160851d57e63494b045b974c7eb9412ec2deb6b"
+    },
+    {
+      "module": "Work.FourierC588.WorkingCompiler",
+      "exit": 0,
+      "seconds": 4.800155372000063,
+      "source_sha256": "18dfac26da54f974aad14fbad43e85b125b32544809bd8a5bf108935b2a3b118"
+    },
+    {
+      "module": "Work.FourierC588.WorkingPreparation",
+      "exit": 0,
+      "seconds": 6.046189088999881,
+      "source_sha256": "2a647b86f1ffd243d56d3af9a28ea6570e78f2fc05e25a66a4983510104e7c0b"
+    },
+    {
+      "module": "Work.FourierC588.ArbitraryLength",
+      "exit": 0,
+      "seconds": 5.341799000000037,
+      "source_sha256": "e8ff67e606ca1b9b643fae87ca43d87a45d6e4c3babb727748a1df7ed83b4239"
+    },
+    {
+      "module": "Work.FourierC588.TransformProgram",
+      "exit": 0,
+      "seconds": 5.369566656000188,
+      "source_sha256": "ac554e6fc6d435ccca2aee815b1d0d258d466c0088895b92d8cf6e173094e194"
+    },
+    {
+      "module": "Work.FourierC588.ConvolutionProgram",
+      "exit": 0,
+      "seconds": 4.994268650999857,
+      "source_sha256": "b9dd8a6612a11002388cfff021118f8e4e02e36573dd52ef44542f183ea8a726"
+    },
+    {
+      "module": "Work.FourierC588.UniformBounds",
+      "exit": 0,
+      "seconds": 5.110582771000054,
+      "source_sha256": "5c9300c3786e05cfc8e69fe7f702f458a0229d1a2f3381acf6090a0aa6cafa71"
+    },
+    {
+      "module": "Work.FourierC588.Asymptotics",
+      "exit": 0,
+      "seconds": 8.38940654299995,
+      "source_sha256": "9489da5ddf10a8bb80b71993cb121d552659732220fe6c6082e3819a00884634"
+    },
+    {
+      "module": "Work.FourierC588.Goal",
+      "exit": 0,
+      "seconds": 3.792624172999922,
+      "source_sha256": "ee7c1cede7486f162b28943fd0acb5b6ea7c8e34d8c234672a5cfda157143b68"
+    },
+    {
+      "module": "Work.FourierC588.Main",
+      "exit": 0,
+      "seconds": 5.479487159999962,
+      "source_sha256": "dec7af02f1b81380c89d4758924af8c63b12dce7990a037f386b22f0b6c47f99"
+    }
+  ]
+}

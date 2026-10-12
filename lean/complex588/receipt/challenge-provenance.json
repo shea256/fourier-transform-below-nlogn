@@ -1,0 +1,9 @@
+{
+  "source": "/tmp/lean-r11/third-party/openai-math/lean/ComparatorChallenges/UniformFourier.lean",
+  "source_sha256": "4c571f275bd7506c3ccd1e6d78f2fca77e07112c969c1c62ad8359d61544ec74",
+  "changes": {
+    "exponent": "1 - 12331685/10^10",
+    "seven_names_suffix": "C588"
+  },
+  "negative_control": "one unit stronger: 12331686/10^10"
+}

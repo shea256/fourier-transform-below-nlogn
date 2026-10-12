@@ -1,0 +1,18 @@
+{
+  "repository": "CrocSwap/integer-mult-bounds",
+  "commit": "6d0e53b66c29abd17981881a09eaff41ac862d85",
+  "provider": "atm3",
+  "fourier_proof": {
+    "kind": "local-instantiation",
+    "upstream_repository": "bigospeedrun/verifier",
+    "upstream_commit": "025396033eede56e3af6e02ed2679ba828381bd5",
+    "manifest": "lean/complex588/SOURCE_MANIFEST.json",
+    "manifest_sha256": "c42b37167a3f1ecb06158e5ca3d529243a45d675bc95eb76fd7e3b74f04d738f",
+    "mathlib_commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+    "axiom_theorems": [
+      "OAI.PowerSaving.transform_mainC588",
+      "OAI.PowerSaving.convolution_mainC588",
+      "OAI.PowerSaving.RAM.hillsC588_program"
+    ]
+  }
+}

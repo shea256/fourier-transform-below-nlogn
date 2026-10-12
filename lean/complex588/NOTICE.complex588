@@ -1,0 +1,47 @@
+Exact DFT: complex588 instantiation, October 12, 2026
+
+This package retains the Apache-2.0 LICENSE and Jacob Sussman's original NOTICE.
+Additional upstream package notices are preserved in third-party/complex588/.
+They retain their authors' AI disclosures, including disclosures for work
+prepared with Claude. They are provenance notices, not coauthor trailers on
+this project's commits.
+
+The source circuit is the atm3 provider reconstructed from Jeremy Kothe's
+CrocSwap/integer-mult-bounds PR588, commit
+6d0e53b66c29abd17981881a09eaff41ac862d85. Its direct lineage includes
+eumemic's complex witnesses; DominikScholz's entrance promotions and structural
+gain; jeremykothe2's multi-cut kernels; jon314159's joint-prefix work; and
+Chafik Boukhalfa/chafreaky's frame coalescences and portable identity checks.
+The inherited notices also credit rohanarun, Dugongue, icekylinx,
+DreamingOfClouds, higherbeing, lydakis, and the earlier community contributors.
+Douglas Colkitt/CrocSwap maintains the community repository. OpenAI supplies
+the original #109/#130 framework. The native conditional integer-multiplication
+headline is not claimed as a Fourier theorem.
+
+The general Lean program engine, frame/circuit checker, cost accounting and
+Fourier formalization are Jacob Sussman's, with the community extensions
+identified in the preserved source headers. The dedicated entrance-gauged
+nine-stage layout is Dugongue's #401 on Zhihao Chen/jacklightChen's #377,
+building on DaysSky's bridged layout and lydakis's bank patterns. The #401
+Lean files name DFT Bridge3 and DFT New Sums; the record instance names DFT Lean.
+These files are taken from Nil Mamano's published Big O Speedrun submission,
+bigospeedrun/verifier commit 025396033eede56e3af6e02ed2679ba828381bd5.
+Their mathematical definitions and proofs are unchanged; only the Submission.
+import prefix is removed. OpenAI's exact model and all-length reduction remain
+the source of the final Fourier theorem.
+
+New integration in Ryan Shea's project, with OpenAI Codex assistance:
+source-copy lowering of the mutable-source provider; rational handling of
+target preconditioning and register scales; exact cyclic bank packing;
+generated C588 local checks and the C588 Fourier instance; reproducibility,
+negative controls, source audit, comparisons and reporting. No authorship of
+the imported local circuit, geometry, checker soundness proofs or Fourier
+reduction is claimed. This is a new checked instantiation, not verification
+of the native idle-data hosting or hyperplane-ended #596 construction.
+
+The general generator headers in generated files are retained as lineage
+information. The current reproducible entry points are the scripts under
+research/complex-transfer-588-596 and scripts/regenerate.py; SOURCE_MANIFEST.json
+classifies all 63 new modules and the unchanged upstream dependency closure.
+
+Same-agent second-pass checks are not independent human mathematical review.

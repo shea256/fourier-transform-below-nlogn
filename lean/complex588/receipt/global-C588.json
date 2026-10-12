@@ -1,0 +1,31 @@
+{
+  "kernel_numerator": 12331686,
+  "dft_numerator": 12331685,
+  "denominator": 10000000000,
+  "rational_slack": 5.000741781763849e-11,
+  "fourier_source_sha256": {
+    "ArbitraryLength.lean": "cf803c43ae197bac5227f738bde7d92170dda0a732e856f13bde4e152b7a11ab",
+    "Asymptotics.lean": "50437766787ff5b7e882b707e9190a14de9c0baa00189ca78ac73df25c9459c2",
+    "ConvolutionProgram.lean": "c8577374bea33890f87b8ab486f784f530438f9d6f08c721b250528fa89d0263",
+    "Goal.lean": "586a4c54c4e20156c5be873a1c036d51c123e76f297f95e4d322de8d87f230a6",
+    "Main.lean": "b2e3ddb4f05e030c9d48d27e15bab6543d898deae39776e3c7f0024a61984f6b",
+    "Seam.lean": "dcaf79508a504bf72c39608405281f29a2cd16d8396c48947621fe1b0c62ac90",
+    "SectorAlgorithm.lean": "257636f414492784bdc434e3d9d64b4fedf346dcfc585f237b746622e8a9eba8",
+    "SynchronizedAlgorithm.lean": "1ccb5afb4de74f1630683a4e88fc1477ab10db92374111269c0278047c1fc5ce",
+    "TransformProgram.lean": "a4892f9943ada1947befdfb2665bad4f0d7d2620811667360874a8b3296e5300",
+    "UniformBounds.lean": "49f06f7653b30e5f8973b1f3636b2e45b184148abca4b47bca75f18f514b27a4",
+    "WorkingCompiler.lean": "7c79f161d6c7b1ac934354674c9dd3ba011d62c0a5a59abe8e296d1bb1edd3c0",
+    "WorkingPreparation.lean": "a25542b4e319da2dfb6fc143316374f4a27092ebb04a2f5c3c7f1b55b56447fa",
+    "WorkingTransform.lean": "ec14b2c2698e471c3251adc6ebb96e8f2b1ec60352a909e72e18f692b68e0546"
+  },
+  "fourier_substitutions": {
+    "C401Gg5": "C588",
+    "C401G5": "C588",
+    "GXD.G5": "GXD.C588",
+    ".G5": ".C588",
+    "/G5": "/C588",
+    "10221077": "12331686",
+    "10221076": "12331685",
+    "14353": "12208"
+  }
+}

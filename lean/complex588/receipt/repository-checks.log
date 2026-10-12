@@ -1,0 +1,87 @@
+Running verify_extension.py ...
+uploaded-paper a in ['2.10643843004018108344164050369551257E-13', '2.10643843004018108344164050369551257E-13'] W 1873807244643542670000 Delta 6871402692000000
+retune-only a in ['3.95761002385911337491790630096667165E-10', '3.95761002385911337491790630096667165E-10'] W 34666942577344 Delta 1835266048
+reduced-center-padded a in ['5.22969896327091092820622673312175625E-10', '5.22969896327091092820622673312175625E-10'] W 34666930287616 Delta 2425172992
+reduced-center-unpadded a in ['5.30775793289320984110991875351713513E-10', '5.30775793289320984110991875351713513E-10'] W 34666930287616 Delta 2425172992
+shared-center-unpadded a in ['5.51272588493242900133502862985381175E-10', '5.51272588493242900133502862985381175E-10'] W 33377983614976 Delta 2425172992
+PASS: original counts, center identity, three exponent witnesses; no floating point comparisons.
+PASS: full local coefficient matrix, dirty replay, global role support trace at h= 24
+PASS: full local coefficient matrix, dirty replay, global role support trace at h= 25
+PASS: all canonical frame edges for stages 1,2,3 at h=24,25, with explicit F2 residual checks.
+PASS: full reduced-center + shared-sum scalar word, reversed middle word, and signed bank exchange on rational dirty inputs at h=7,8.
+Certificate: /home/vercel-sandbox/open-math-problems/.context/fourier-transfer-work/verification/certificate.json
+Running clean_room_audit.py ...
+PASS negative controls
+PASS exact constants, exponent bounds, batching accounting, central rank bound
+PASS full symbolic scalar operators at h=7,8
+PASS full multi-pair graph coefficients and projector-based frame paths at h=24
+PASS full multi-pair graph coefficients and projector-based frame paths at h=25
+ALL CHECKS PASSED. Certificate: /home/vercel-sandbox/open-math-problems/.context/fourier-transfer-work/verification/clean_room_certificate.json seconds: 15.628
+Running compare_certificates.py ...
+PASS original suite: regenerated certificate matches archived reference
+PASS second implementation: regenerated certificate matches archived reference
+Running verify_round6.py ...
+PASS: pinned producer and all local coefficient entries.
+PASS: both physical schedules, copied-centre charges, and complete rank histogram.
+PASS: scalar/endpoint identities and negative controls.
+PASS: a=36926111/500000000000, delta=73/1000000, rational moment gap=7.91950201573749054254691720483977892E-14
+Certificate: /home/vercel-sandbox/open-math-problems/.context/fourier-transfer-work/verification/round6_certificate.json
+Running verify_round10.py ...
+Checking exact decoder coefficients...
+Checking compiled carriers and exact compensation reads...
+[   1s] PASS decoder identity H x + K x = x on random x mod P (0 wrong of 1320)
+[   1s] PASS pairs are a matching (3180)
+[   4s] PASS legality: spans, chains, pairs, chronology, target order (violations {})
+[   4s] PASS telescoping deficit W m - s = 2v - 3 loss (1320 = 1320)
+[   4s] PASS every child narrower than m (max 20 < 66)
+[   4s] PASS child histogram and W equal the claim
+[   4s] PASS a_c = 15402419/25000000000: grid point accepted (F < 1), denominator divides 1e12
+[   4s] PASS next grid point 616096761/1000000000000 rejected (F >= 1)
+[   8s] PASS dirty-scratch replay seed 1 (11952 slots): slots restored and y correct
+[   9s] PASS dirty-scratch replay seed 2 (11952 slots): slots restored and y correct
+[  11s] PASS control omitted recipient read rejected
+[  12s] PASS control read after first touch rejected
+[  14s] PASS control read before donor last write rejected
+[  14s] RESULT check_word pf_G37_rx p=11 a_c=15402419/25000000000: ALL PASS
+Tensor moment gap > 5.59313221166491734834202498430938352E-13
+Fourier saving 61/100000 with slack 152419/25000000000
+Round-ten finite checks passed.
+Running verify_round11.py ...
+[   3s] side roots 3135; eligible 59 by |T| {8: 42, 4: 17}; rejected {'source': 105, 'controls another op': 1626, 'gauge/alias': 1340, 'centre-phase write': 2, 'no clean pivot': 3}
+[   4s] PASS decoder identity H x + K x = x on random x mod P (0 wrong of 1320)
+[   4s] PASS 42 frozen sinks: each eligible with a clean pivot, target groups disjoint
+[   4s] PASS pairs are a matching (2332)
+[   4s] PASS recycling chronology and kinds ({})
+[   4s] PASS birth pairs and gauge clocks legal ({})
+[  10s] PASS new word: spans, role chains, all target chains nested incl. shears and pivot writes ({})
+[  10s] PASS children delta = sum over sinks of -3[r] - 3[h-r]; W delta = -42
+[  10s] PASS telescoping deficit W m - s = 2v - 3 loss (1320)
+[  10s] PASS every child narrower than m (max 20)
+[  10s] PASS child histogram and W (recounted from chains) equal the exporter claim
+[  10s] PASS a_c = 67147467/100000000000: grid point accepted, denominator divides 1e12
+[  10s] PASS next grid point rejected
+[  12s] PASS replay seed 1 (42 sinks, dirty slots and targets): slots restored, every target exact
+[  14s] PASS replay seed 2 (42 sinks, dirty slots and targets): slots restored, every target exact
+[  17s] PASS control omitted recipient read rejected
+[  19s] PASS control read after first touch rejected
+[  21s] PASS control read before donor last write rejected
+[  27s] PASS control reduced_decoder rejected
+[  29s] PASS control post_early rejected
+[  31s] PASS control wrong_sign rejected
+[  33s] PASS control drop_pre rejected
+[  36s] PASS control host_skip_mix rejected
+[  38s] PASS control host_plus rejected
+[  38s] RESULT check_word2 @cfgC1v4.json p=11 a_c=67147467/100000000000 sinks=42: ALL PASS
+Checking every rational input, dirty-scratch and target coefficient...
+Tensor moment gap > 1.61061878222048751152141892863608121E-12
+Fourier saving 67/100000 with slack 147467/100000000000
+Round-eleven finite checks passed.
+Running verify_five_stage.py ...
+PASS: explicit PR256 program, five-stage ledger, exact moment, finite fill, absorption gap and Lean source bindings.
+Tensor a = 0.0007547361; Fourier delta = 0.0007547360; gap = 1/10000000000.
+Running verify_complex588.py ...
+PASS: 425 hashes and all upstream Lean import-prefix identities
+PASS: exact regeneration, three scalar identities, schedule, four mutation controls and interval boundaries
+PASS: complex588 finite checks, source bundle, retained formal receipt and four corrupted-receipt controls
+Result registry, reference parameters, and generated text agree.
+All finite checks passed and reference certificates matched.

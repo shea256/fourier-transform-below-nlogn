@@ -1,0 +1,196 @@
+{
+ "name": "C588",
+ "src": "/home/vercel-sandbox/open-math-problems/.context/dft-transfer-runs/pr588-atm3-source-copies-no-cleanup.gcert.json.gz",
+ "h": 9,
+ "v": 112,
+ "R": 616,
+ "N": 6924,
+ "cst": 64,
+ "nc": 8,
+ "hist": {
+  "1": 2596,
+  "2": 492,
+  "3": 280,
+  "4": 232,
+  "5": 56,
+  "6": 56,
+  "8": 120
+ },
+ "H": {
+  "x": {
+   "8": 112
+  },
+  "y": {
+   "1": 392,
+   "2": 44,
+   "3": 32,
+   "4": 80
+  },
+  "s": {
+   "1": 2204,
+   "2": 448,
+   "3": 248,
+   "4": 152,
+   "5": 56,
+   "6": 56
+  },
+  "c": {
+   "8": 8
+  }
+ },
+ "data_modules": [
+  "Work.GCert.Data.Gen.C588.S0",
+  "Work.GCert.Data.Gen.C588"
+ ],
+ "data_bytes": [
+  377028
+ ],
+ "check_modules": [
+  [
+   "Work.GCert.Data.Gen.C588Scal0",
+   "scal0_ok",
+   "GS.scalCheck raw \u27e810, 21, 1, 8, 8\u27e9 0 28 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Scal1",
+   "scal1_ok",
+   "GS.scalCheck raw \u27e810, 21, 1, 8, 8\u27e9 28 28 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Scal2",
+   "scal2_ok",
+   "GS.scalCheck raw \u27e810, 21, 1, 8, 8\u27e9 56 28 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Scal3",
+   "scal3_ok",
+   "GS.scalCheck raw \u27e810, 21, 1, 8, 8\u27e9 84 28 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588YChk",
+   "ychk_ok",
+   "GS.yCheck raw \u27e810, 21, 1, 8, 8\u27e9 0 112 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Tab0",
+   "tab0_ok",
+   "GLab.tabK 9 tab_n00 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Tab1",
+   "tab1_ok",
+   "GLab.tabK 9 tab_n01 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Tab2",
+   "tab2_ok",
+   "GLab.tabK 9 tab_n10 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Tab3",
+   "tab3_ok",
+   "GLab.tabK 9 tab_n11 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Seg0",
+   "seg0_ok",
+   "GLab.segK par seg0 st0 st1 rs0 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Seg1",
+   "seg1_ok",
+   "GLab.segK par seg1 st1 st2 rs1 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Seg2",
+   "seg2_ok",
+   "GLab.segK par seg2 st2 st3 rs2 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588Seg3",
+   "seg3_ok",
+   "GLab.segK par seg3 st3 st4 rs3 = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588SegF",
+   "segF_ok",
+   "GLab.segK par fins st4 st5 rF = true"
+  ],
+  [
+   "Work.GCert.Data.Gen.C588End",
+   "end_ok",
+   "GLab.endKE par 112 ports (raw.ret.map Prod.fst) gl st0 st2 st5 = true"
+  ]
+ ],
+ "hist_module": "Work.GCert.Data.Gen.C588Hist",
+ "price_module": "Work.GCert.Data.C588Price",
+ "cert_module": "Work.GCert.Data.C588Cert",
+ "scalok_module": "Work.GCert.Data.C588ScalOK",
+ "spar": {
+  "d": 10,
+  "sw": 21,
+  "ux": 1,
+  "us": 8,
+  "uy": 8,
+  "source": "exact rational and packed preflight",
+  "digits": {
+   "x": [
+    1,
+    0
+   ],
+   "y": [
+    4,
+    4
+   ],
+   "s": [
+    4,
+    8
+   ]
+  }
+ },
+ "lab": {
+  "dF": 11,
+  "d": 10,
+  "nseg": 4,
+  "nsegA": 2,
+  "K": 18,
+  "ts": 2
+ },
+ "cuts": [
+  0,
+  1069,
+  2139,
+  3608,
+  5077
+ ],
+ "visits": [
+  2044,
+  2016,
+  2882,
+  2042
+ ],
+ "batches": [
+  [
+   0,
+   28
+  ],
+  [
+   28,
+   56
+  ],
+  [
+   56,
+   84
+  ],
+  [
+   84,
+   112
+  ]
+ ],
+ "per_batch": [
+  12751,
+  13044,
+  12983,
+  12944
+ ]
+}

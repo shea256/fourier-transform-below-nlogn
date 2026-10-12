@@ -1,0 +1,6 @@
+reused=265; compile=89
+{"module": "Work.FourierC588.UniformFourierChallenge", "exit": 0, "seconds": 6.4516406400000506, "source_sha256": "0bf486c0b53e926baf73c8623e2325aa01fd23dad9afa013d4a49a99afce6eb1"}
+{"module": "Work.FourierC588Neg.UniformFourierChallenge", "exit": 0, "seconds": 5.779063495999935, "source_sha256": "48dc58ce40322daad76b67f9b1bb5259aa6711e2616d44c2f016f6a4f295d67c"}
+{"module": "Work.FourierC588.Axioms", "exit": 0, "seconds": 4.571534973000098, "source_sha256": "d28d260830f6e3f392d4c09edf75b42791e570a6476bb55e83c876017311abfd"}
+{"module": "Work.GCert.Data.C588Controls", "exit": 0, "seconds": 8.254450211999938, "source_sha256": "d8013fbe2892065d175e7477464d70e84131eba99b4672c11c90bb72d5f6eeca"}
+ALL REQUESTED MODULES BUILT
