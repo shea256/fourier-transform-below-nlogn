@@ -84,6 +84,10 @@ target, kept as `receipt/VerifierChallenge-67-100000.lean`) and built from sourc
   lean4export `076e8e5`), with the verifier's configuration (`Race.bound`, the three permitted axioms): "Lean default
   kernel accepts the solution" / "Your solution is okay!", exit 0, 2385 s, 11.3 GB
   (`receipt/official-comparator-lean.log`, full log `receipt/official-comparator-lean-full.log.gz`).
+- The same comparator with `enable_nanoda` (the verifier's advisory second kernel): "nanoda kernel accepts the
+  solution", then "Lean default kernel accepts the solution" / "Your solution is okay!", exit 0, 2658 s, 12.0 GB with
+  16 GB of swap as the verifier provides (`receipt/official-comparator-nanoda.log`, full log
+  `receipt/official-comparator-nanoda-full.log.gz`).
   This VM's kernel has no Landlock, so `landrun` was replaced by a pass-through wrapper (no sandbox); the sandbox
   isolates untrusted submissions and takes no part in the check itself.
 

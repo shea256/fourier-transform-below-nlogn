@@ -14,19 +14,22 @@ from matplotlib.lines import Line2D
 ROOT = Path(__file__).resolve().parents[1] / 'assets'
 # (x label in PT, player, construction, exact score, displayed delta, evidence)
 # Evidence: 'lean' = Lean verified on the leaderboard; 'checked' = listed as Claimed there,
-# with exact finite certificates passing `python3 verification/run_checks.py` in this repository.
+# with exact finite certificates passing `python3 verification/run_checks.py` in this repository;
+# 'leanrepo' = listed as Claimed there, with a Lean proof in lean/round11 that passes the official comparator locally.
 ROWS = [
     ('Oct 6', 'OpenAI', 'Published headline', '1/10000000000000', '1e-13', 'lean'),
     ('Oct 7\n10:20 PM', 'OpenAI', 'Uniform frontier', '1/50000000000', '2e-11 \u2212 \u03b5', 'lean'),
     ('Oct 8\n4:56 PM', 'Ryan Shea', 'Two-stage network', '73/1000000', '7.3e-5', 'checked'),
     ('Oct 9\n2:34 AM', 'eumemic', 'Batched paired-cube', '607/1250000', '4.85e-4 \u2212 \u03b5', 'claimed'),
-    ('Oct 9\n8:24 AM', 'Ryan Shea', 'Retired-copy network', '67/100000', '6.7e-4', 'checked'),
+    ('Oct 9\n8:24 AM', 'Ryan Shea', 'Retired-copy network', '67/100000', '6.7e-4', 'leanrepo'),
     ('Oct 9\n12:00 PM', 'Jacob Sussman', 'Five-stage framework', '3737273/5000000000', '7.47e-4', 'claimed'),
     ('Oct 9\n6:43 PM', 'Sussman & Boukhalfa', 'Five-stage network', '47171/62500000', '7.54e-4', 'lean'),
+    ('Oct 10\n3:44 PM', 'Jacob Sussman', 'E8 unit', '4381239/5000000000', '8.76e-4', 'lean'),
+    ('Oct 11\n6:07 AM', 'Nil Mamano', 'Nine-stage certificate', '2555269/2500000000', '1.0221e-3', 'lean'),
 ]
 ys = [float(Fraction(r[3])) for r in ROWS]
 assert ys == sorted(ys), 'each leaderboard entry should improve the record'
-assert ys[-1] == 0.000754736
+assert ys[-1] == 0.0010221076
 evidence = [r[5] for r in ROWS]
 gray, blue, green = '#555555', '#2d7dd2', '#19aa80'
 ink, muted, faint = '#1a1a1a', '#6b6b6b', '#9a9a9a'
@@ -40,7 +43,7 @@ fig.text(L, .862, r'$T(n) = O\left(n\,(\log n)^{1-\delta}\right)$   ·   larger 
          fontsize=15, color=muted, va='top')
 ax.set_yscale('log')
 ax.set_ylim(3e-14, .03)
-ax.set_xlim(-.35, 6.35)
+ax.set_xlim(-.35, 8.4)
 ax.set_yticks([1e-13, 1e-11, 1e-9, 1e-7, 1e-5, 1e-3])
 ax.set_yticklabels([rf'$10^{{{e}}}$' for e in (-13, -11, -9, -7, -5, -3)])
 ax.set_ylabel(r'Exponent saving $\delta$ (log scale)', labelpad=12, color=muted)
@@ -57,6 +60,8 @@ ax.step(range(n), ys, where='post', color=blue, lw=2.5, zorder=2, solid_joinstyl
 for i in range(n):
     if evidence[i] == 'lean':
         ax.scatter([i], [ys[i]], s=140, color=green, edgecolors='white', linewidths=2, zorder=4)
+    elif evidence[i] == 'leanrepo':
+        ax.scatter([i], [ys[i]], s=120, color=blue, edgecolors=green, linewidths=2.5, zorder=4)
     elif evidence[i] == 'checked':
         ax.scatter([i], [ys[i]], s=140, color=blue, edgecolors='white', linewidths=2, zorder=4)
     else:
@@ -64,23 +69,27 @@ for i in range(n):
 
 def label(i, dx, dy, ha='left', va='bottom'):
     _, player, name, _, value, level = ROWS[i]
-    color = {'lean': green, 'checked': blue, 'claimed': gray}[level]
+    color = {'lean': green, 'leanrepo': blue, 'checked': blue, 'claimed': gray}[level]
     ax.annotate(f'{player}\n{name}\n' + '\u03b4 = ' + value, xy=(i, ys[i]), xytext=(dx, dy),
-                textcoords='offset points', fontsize=11.2, color=color, ha=ha, va=va, linespacing=1.4,
+                textcoords='offset points', fontsize=10.6, color=color, ha=ha, va=va, linespacing=1.4,
+                arrowprops=dict(arrowstyle='-', color=color, lw=.8, shrinkA=2, shrinkB=6) if dy < -40 else None,
                 fontweight='semibold' if i == n - 1 else 'normal')
 
 label(0, -6, 16)
 label(1, -6, 16)
 label(2, 10, -16, va='top')
-label(3, 10, -18, va='top')
-label(4, 10, -18, va='top')
-label(5, 10, -18, va='top')
-label(6, 6, 16, ha='right')
+label(3, 8, -16, va='top')
+label(4, 8, -74, va='top')
+label(5, 8, -16, va='top')
+label(6, 8, -74, va='top')
+label(7, 8, -16, va='top')
+label(8, 6, 16, ha='right')
 ax.legend(handles=[
     Line2D([], [], marker='o', color=green, markeredgecolor='white', linestyle='none', markersize=10, label='Lean verified'),
-    Line2D([], [], marker='o', color=blue, markeredgecolor='white', linestyle='none', markersize=10, label='Machine-checked finite certificates in this repo; Fourier transfer not yet in Lean'),
+    Line2D([], [], marker='o', color=blue, markeredgecolor=green, markeredgewidth=2.5, linestyle='none', markersize=10, label='Lean proof in this repo (lean/round11), official comparator passes; leaderboard lists Claimed'),
+    Line2D([], [], marker='o', color=blue, markeredgecolor='white', linestyle='none', markersize=10, label='Machine-checked finite certificates in this repo; not in Lean'),
     Line2D([], [], marker='o', color=gray, markerfacecolor='white', markeredgewidth=2, linestyle='none', markersize=8, label='Claimed')],
-    loc='upper left', bbox_to_anchor=(0, 1.0), frameon=False, fontsize=11.5, labelcolor=muted,
+    loc='lower right', bbox_to_anchor=(1.0, 0.04), frameon=False, fontsize=11.5, labelcolor=muted,
     handletextpad=.4, borderaxespad=0)
 
 notes = [
@@ -96,7 +105,7 @@ y = .218
 for k, (text, color) in enumerate(notes):
     fig.text(L, y, text, fontsize=10.5, color=color)
     y -= .029 if k != 1 else .041
-fig.text(L, .016, 'github.com/shea256/fourier-transform-below-nlogn  ·  Order, values and times (PT): bigospeedrun.com/exact-dft, checked Oct 10, 2026',
+fig.text(L, .016, 'github.com/shea256/fourier-transform-below-nlogn  ·  Order, values and times (PT): bigospeedrun.com/exact-dft, checked Oct 12, 2026',
          fontsize=10, color=faint)
 fig.savefig(ROOT / 'fourier-exponent-progress.png', dpi=180, facecolor='white')
 print('Saved assets/fourier-exponent-progress.png (2880 × 1620).')
