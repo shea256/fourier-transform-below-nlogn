@@ -1,0 +1,24 @@
+START lean 20:59:33
+Building VerifierChallenge
+Build completed successfully (8925 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Race.bound, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, St
+Building Submission
+∃ solve W, OAI.PowerSaving.WHT.WHTProgram solve W ∧ OAI.PowerSaving.WHT.WHTTimeBounds W
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+```
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+Build completed successfully (9237 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, Race.bound, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, St
+Running Lean default kernel on solution.
+Lean default kernel accepts the solution
+Your solution is okay!
+TIME 2384.61 s MAXRSS 11321604 KB
+EXIT 0 21:39:18

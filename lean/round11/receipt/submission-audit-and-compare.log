@@ -1,0 +1,4 @@
+=== lake build VerifierAudit 20:17:54
+ℹ [9237/9238] Built VerifierAudit (4.6s)
+info: VerifierAudit.lean:2:0: 'Race.bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+RESULT: PASS
