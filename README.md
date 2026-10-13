@@ -2,9 +2,24 @@
 
 A living research project on **OpenAI Math Problem #130**, *An explicit power saving for the exact discrete Fourier transform*. We study how improvements to the complex networks developed around integer multiplication (#109) transfer to all-length Fourier bounds.
 
-![Exact Fourier transform: exponent-saving record progression](assets/fourier-exponent-progress.png)
+![Exact Fourier transform: exponent-saving history and our new strongest bound](assets/fourier-exponent-progress.png)
 
-<sub>Leaderboard history through 2026-10-12; the new local result below is not yet a leaderboard entry. The [Big O Speedrun exact-DFT leaderboard](https://bigospeedrun.com/exact-dft) lists our 7.3e-5 and 6.7e-4 results as Claimed. Our 6.7e-4 result has a [Lean proof](lean/round11/) that passes the official comparator (Lean and nanoda kernels) locally; it uses the round-eleven circuit in Sussman's five-stage layout, not our written transfer. The 7.3e-5 point is backed by exact finite certificates, not Lean. Regenerate with `python3 scripts/render_progress_chart.py` (requires Matplotlib).</sub>
+Our [new bound](results/complex588.md), `delta=0.0012331685`, has a **20.65% larger exponent saving** than the prior verified best shown above.
+
+<details>
+<summary>Chart sources, verification and credits</summary>
+
+The chart combines the [Big O Speedrun exact-DFT leaderboard](https://bigospeedrun.com/exact-dft), checked October 12, 2026, with our new result. Dates are in Pacific Time; the final point uses the publication time of [PR #4](https://github.com/shea256/fourier-transform-below-nlogn/pull/4). Points use the exact scores, while labels are rounded to four significant digits. The `− ε` notation marks a strict endpoint. Comparisons concern exponent savings, not measured runtimes.
+
+The model uses exact complex arithmetic, a supplied root of unity, unrestricted coefficients and unit-cost logarithmic-word indexing. Scalar preparation and array work are included.
+
+Our [new Lean proof](lean/complex588/) passes the official comparator and both Lean and nanoda kernels locally; leaderboard verification is outstanding. The leaderboard lists our earlier 7.3e-5 and 6.7e-4 results as Claimed. The 6.7e-4 result also has a [locally checked Lean proof](lean/round11/), using the round-eleven circuit in Sussman's five-stage layout rather than our written transfer. The 7.3e-5 result has exact finite certificates, not a full Lean proof.
+
+Ryan Shea supplies the conversion and integration; Jeremy Kothe and the credited community predecessors supply the current circuit; Jacob Sussman the formal engine; Dugongue and jacklightChen the geometry; Nil Mamano's submission the gauged extension; and OpenAI the model and Fourier reduction. See the [full attribution](ATTRIBUTION.md) and [preserved notices](lean/complex588/NOTICE.complex588).
+
+Regenerate with `python3 scripts/render_progress_chart.py` (requires Matplotlib).
+
+</details>
 
 <!-- current-result:start -->
 
