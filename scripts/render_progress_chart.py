@@ -38,15 +38,14 @@ registry = json.loads((ROOT.parent / 'results/registry.json').read_text())
 current = next(r for r in registry['results'] if r['id'] == registry['current'])
 assert current['id'] == 'complex588', 'update the chart for the new selected result'
 assert scores[-1] == Fraction(current['fourier_saving'])
-saving_gain = float(100 * (scores[-1] / scores[-2] - 1))
 ys = [float(score) for score in scores]
 evidence = [r[5] for r in ROWS]
 gray, blue, green = '#555555', '#2d7dd2', '#19aa80'
 ink, muted, faint = '#1a1a1a', '#6b6b6b', '#9a9a9a'
 L = .085  # shared left margin for all figure text
 plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 13, 'mathtext.fontset': 'dejavusans'})
-fig, ax = plt.subplots(figsize=(16, 9), dpi=180, facecolor='white')
-fig.subplots_adjust(left=L + .015, right=.955, bottom=.32, top=.80)
+fig, ax = plt.subplots(figsize=(16, 7.2), dpi=180, facecolor='white')
+fig.subplots_adjust(left=L + .015, right=.955, bottom=.15, top=.77)
 fig.text(L, .935, 'Exact Fourier transform: exponent savings',
          fontsize=24, color=ink, va='top', fontweight='semibold')
 fig.text(L, .862, r'$T(n) = O\left(n\,(\log n)^{1-\delta}\right)$   ·   Larger $\delta$ gives a stronger bound',
@@ -114,24 +113,8 @@ ax.legend(handles=[
     loc='lower right', bbox_to_anchor=(1.0, 0.04), frameon=False, fontsize=11.5, labelcolor=muted,
     handletextpad=.4, borderaxespad=0)
 
-notes = [
-    'Model: exact complex arithmetic · supplied root of unity · unrestricted coefficients · preparation and array work included.',
-    r'Display: 4 significant digits · $-\varepsilon$ marks a strict endpoint · gains compare exponents, not measured runtimes.',
-    f'Local proofs pass Lean and nanoda; leaderboard verification pending. Current exponent saving: {saving_gain:.2f}% above the prior verified best.',
-]
-for y, text in zip((.224, .197, .170), notes):
-    fig.text(L, y, text, fontsize=10.5, color=muted)
-
-credits = [
-    ('Integration: Ryan Shea', 'Circuit: Jeremy Kothe and contributors'),
-    ('Formal engine: Jacob Sussman', 'Geometry: Dugongue and jacklightChen'),
-    ('Fourier reduction: OpenAI', 'Gauged extension: Nil Mamano\u2019s submission'),
-]
-for y, (left, right) in zip((.128, .101, .074), credits):
-    fig.text(L, y, left, fontsize=10.5, color=muted)
-    fig.text(.49, y, right, fontsize=10.5, color=muted)
-fig.text(L, .043, 'Full credits: ATTRIBUTION.md · lean/complex588/NOTICE.complex588', fontsize=10, color=faint)
-fig.text(L, .016, 'Source: bigospeedrun.com/exact-dft · checked Oct 12, 2026 · current result: shea256/fourier-transform-below-nlogn PR #4 · dates: PT',
+# Model details, display conventions and contributor credits live in the README.
+fig.text(L, .025, 'bigospeedrun.com/exact-dft + this repo · Oct 12, 2026 · Local results await leaderboard verification.',
          fontsize=10, color=faint)
 fig.savefig(ROOT / 'fourier-exponent-progress.png', dpi=180, facecolor='white')
-print('Saved assets/fourier-exponent-progress.png (2880 × 1620).')
+print('Saved assets/fourier-exponent-progress.png (2880 × 1296).')
